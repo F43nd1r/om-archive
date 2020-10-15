@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P081"
-    name = "B CGX NOGIF"
-    arm(ARM1) {
+    name = "B CI NOGIF"
+    arm(PISTON) {
         number = 1
         position = 1 to 3
         rotation = 1
@@ -250,11 +250,6 @@ solution {
                 grab()
                 retract()
                 drop()
-                extend()
-                wait(1)
-                grab()
-                rotateCounterClockwise()
-                drop()
             }
         }
         , 
@@ -293,14 +288,6 @@ solution {
                 grab()
                 extend()
                 rotateClockwise()
-                drop()
-                extend()
-                grab()
-                retract()
-                drop()
-                wait(1)
-                grab()
-                extend()
                 drop()
             }
         }
@@ -351,35 +338,6 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(8)
-                back()
-                grab()
-                rotateCounterClockwise()
-                forward()
-                pivotCounterClockwise()
-                drop()
-                forward()
-                reset()
-                wait(8)
-                repeat()
-                wait(15)
-                repeat()
-                wait(15)
-                repeat()
-                wait(15)
-                repeat()
-                wait(15)
-                back()
-                grab()
-                rotateCounterClockwise()
-                forward()
-                pivotCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(1) {
                 grab()
                 forward()
@@ -414,6 +372,41 @@ solution {
                 grab()
                 forward()
                 rotateClockwise()
+                extend()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                retract()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(8)
+                back()
+                grab()
+                rotateCounterClockwise()
+                forward()
+                pivotCounterClockwise()
+                drop()
+                forward()
+                reset()
+                wait(8)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                back()
+                grab()
+                rotateCounterClockwise()
+                forward()
+                pivotCounterClockwise()
                 drop()
             }
         }
