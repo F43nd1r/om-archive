@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P083"
-    name = "B ICX 1-4T"
-    arm(ARM3) {
+    name = "B IG 1-6T"
+    arm(ARM1) {
         number = 1
         position = 1 to 0
         rotation = 1
@@ -69,14 +69,41 @@ solution {
     tape {
         parallel(
         {
+            sequence(2) {
+                wait(2)
+                grab()
+                back()
+                drop()
+                grab()
+                extend()
+                drop()
+                retract()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                extend()
+                drop()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                extend()
+                pivotClockwise()
+                drop()
+                retract()
+                retract()
+                rotateClockwise()
+            }
+        }
+        , 
+        {
             sequence(3) {
                 wait(8)
                 grab()
                 extend()
                 forward()
                 drop()
-                back()
                 retract()
+                back()
                 grab()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
@@ -109,33 +136,6 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(2) {
-                wait(2)
-                grab()
-                back()
-                drop()
-                grab()
-                extend()
-                drop()
-                retract()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                extend()
-                drop()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                extend()
-                pivotClockwise()
-                drop()
-                retract()
-                retract()
-                rotateClockwise()
             }
         }
         )
