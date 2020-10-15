@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P084"
-    name = "B CI"
+    name = "B X CGX"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 7 to 5
@@ -26,13 +26,13 @@ solution {
         rotation = 4
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 5
-        position = 5 to 5
+        position = 5 to 4
         rotation = 5
         size = 2
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 6
         position = 8 to 2
         rotation = 2
@@ -81,7 +81,7 @@ solution {
     }
     track {
         position = 5 to 6
-        positions = listOf(-1 to 0, -1 to -1, 0 to -1)
+        positions = listOf(-1 to 0, -1 to -1, 0 to -2, 0 to -1)
     }
     track {
         position = 9 to 4
@@ -104,6 +104,8 @@ solution {
                 grab()
                 forward()
                 forward()
+                drop()
+                back()
                 reset()
             }
         }
@@ -114,13 +116,13 @@ solution {
                 forward()
                 grab()
                 forward()
-                wait(1)
+                wait(2)
                 forward()
                 drop()
                 forward()
+                wait(1)
                 grab()
-                forward()
-                forward()
+                back()
                 reset()
             }
         }
@@ -150,21 +152,10 @@ solution {
                 wait(1)
                 grab()
                 back()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(3)
-                back()
-                grab()
-                extend()
                 drop()
-                retract()
-                wait(2)
-                grab()
-                forward()
+                back()
+                wait(1)
+                back()
                 reset()
             }
         }
@@ -183,17 +174,31 @@ solution {
         , 
         {
             sequence(6) {
-                wait(4)
+                wait(5)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                wait(3)
+                wait(2)
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 forward()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(3)
+                back()
+                grab()
+                forward()
                 drop()
                 back()
+                grab()
+                back()
+                back()
+                reset()
             }
         }
         )
