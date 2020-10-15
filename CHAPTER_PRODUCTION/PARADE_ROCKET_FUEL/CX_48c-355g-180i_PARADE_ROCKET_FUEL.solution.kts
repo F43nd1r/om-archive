@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P082"
-    name = "B CG NOGIF"
+    name = "B CX NOGIF"
     arm(PISTON) {
         number = 1
         position = 1 to 4
@@ -32,7 +32,7 @@ solution {
         rotation = 1
         size = 1
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 6
         position = 0 to -1
         rotation = 1
@@ -150,21 +150,20 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 drop()
+                wait(7)
+                grab()
+                drop()
+                wait(1)
                 retract()
                 rotateClockwise()
-                wait(10)
                 grab()
                 pivotClockwise()
                 extend()
                 extend()
                 drop()
                 retract()
-                rotateCounterClockwise()
-                grab()
-                drop()
-                wait(1)
                 retract()
-                rotateClockwise()
+                wait(5)
                 grab()
                 pivotClockwise()
                 extend()
@@ -228,6 +227,34 @@ solution {
         }
         , 
         {
+            sequence(6) {
+                wait(4)
+                grab()
+                forward()
+                wait(2)
+                back()
+                reset()
+                grab()
+                forward()
+                rotateCounterClockwise()
+                drop()
+                extend()
+                wait(7)
+                grab()
+                back()
+                retract()
+                rotateClockwise()
+                wait(4)
+                drop()
+                extend()
+                wait(2)
+                grab()
+                retract()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(7) {
                 wait(4)
                 grab()
@@ -240,17 +267,7 @@ solution {
                 wait(1)
                 grab()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                wait(4)
-                grab()
-                rotateCounterClockwise()
                 reset()
-                wait(4)
-                grab()
-                forward()
-                rotateCounterClockwise()
-                drop()
             }
         }
         , 
@@ -265,26 +282,14 @@ solution {
                 extend()
                 pivotClockwise()
                 retract()
+                reset()
+                retract()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                wait(1)
+                extend()
                 drop()
-                retract()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                extend()
-                reset()
-                retract()
-                rotateCounterClockwise()
-                wait(2)
-                grab()
-                rotateClockwise()
-                extend()
-                reset()
-                retract()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                extend()
-                reset()
             }
         }
         , 
@@ -303,21 +308,6 @@ solution {
                 pivotClockwise()
                 retract()
                 retract()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(4)
-                grab()
-                forward()
-                wait(2)
-                back()
-                reset()
-                grab()
-                forward()
-                rotateCounterClockwise()
                 drop()
             }
         }
