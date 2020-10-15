@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P064"
-    name = "B GA"
+    name = "B GX"
     arm(ARM1) {
         number = 1
         position = 0 to 1
@@ -26,6 +26,10 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = 1 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 2 to -2
         rotation = 0
     }
     io(INPUT) {
@@ -65,9 +69,7 @@ solution {
                 forward()
                 pivotCounterClockwise()
                 drop()
-                back()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 back()
                 drop()
@@ -76,9 +78,7 @@ solution {
                 grab()
                 pivotCounterClockwise()
                 drop()
-                back()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 back()
                 drop()
@@ -87,9 +87,7 @@ solution {
                 grab()
                 pivotCounterClockwise()
                 drop()
-                back()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 back()
                 drop()
@@ -106,9 +104,7 @@ solution {
                 grab()
                 pivotCounterClockwise()
                 drop()
-                back()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 back()
                 drop()
@@ -129,9 +125,7 @@ solution {
                 grab()
                 pivotCounterClockwise()
                 drop()
-                back()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 back()
                 drop()
