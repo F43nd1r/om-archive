@@ -1,39 +1,39 @@
 
 solution {
     puzzle = "P054"
-    name = "B GC"
+    name = "B GX"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
-        position = -1 to 2
+        position = -3 to 3
         rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = 2 to -3
+        position = 0 to -1
         rotation = 2
         size = 2
     }
     glyph(BONDER) {
-        position = 1 to -1
+        position = -1 to 1
         rotation = 0
     }
     glyph(DUPLICATION) {
-        position = 0 to 1
-        rotation = 5
+        position = -2 to 2
+        rotation = 6
     }
     io(INPUT) {
         index = 0
-        position = 0 to -1
+        position = -2 to 1
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 4 to -2
+        position = 2 to 0
         rotation = 5
     }
     track {
-        position = 2 to -3
+        position = 0 to -1
         positions = listOf(0 to 0, 1 to 0)
     }
     tape {
@@ -66,6 +66,7 @@ solution {
                 rotateClockwise()
                 grab()
                 pivotClockwise()
+                wait(1)
                 pivotClockwise()
                 drop()
                 rotateCounterClockwise()
@@ -102,7 +103,7 @@ solution {
                 rotateClockwise()
                 wait(8)
                 rotateClockwise()
-                wait(9)
+                wait(10)
                 rotateClockwise()
                 wait(3)
                 rotateClockwise()
