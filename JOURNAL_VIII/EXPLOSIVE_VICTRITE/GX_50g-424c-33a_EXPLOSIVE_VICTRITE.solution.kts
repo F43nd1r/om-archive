@@ -1,19 +1,39 @@
 
 solution {
     puzzle = "P100"
-    name = "B GA"
+    name = "B GC"
     arm(ARM1) {
         number = 1
-        position = 0 to 1
+        position = -3 to 1
         rotation = 3
         size = 1
     }
     glyph(BONDER) {
-        position = -1 to 2
+        position = -4 to 2
         rotation = 0
     }
     glyph(TRIPLEX_BONDER) {
-        position = 1 to 1
+        position = -2 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -5 to 4
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -5 to 3
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -5 to 5
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -4 to 5
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -3 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -21,53 +41,41 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -2 to 3
+        position = -1 to 3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to 4
+        position = 0 to 2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 2 to 3
+        position = 0 to 1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to 2
+        position = 1 to -1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to 1
+        position = 1 to -2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 4 to -1
+        position = 1 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 4 to -2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -1 to 4
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 1 to 3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 4 to 0
+        position = -3 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -1 to 1
+        position = -4 to 1
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to -1
+        position = -1 to -1
         rotation = 0
     }
     tape {
@@ -77,9 +85,8 @@ solution {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                rotateClockwise()
                 reset()
-                wait(3)
+                wait(2)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -89,38 +96,27 @@ solution {
                 rotateClockwise()
                 pivotCounterClockwise()
                 rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
                 drop()
+                rotateClockwise()
+                grab()
                 rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
+                pivotClockwise()
                 rotateCounterClockwise()
                 reset()
                 wait(2)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
+                rotateClockwise()
                 pivotCounterClockwise()
                 rotateCounterClockwise()
                 reset()
@@ -128,26 +124,18 @@ solution {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                drop()
+                pivotCounterClockwise()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
-                pivotClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotClockwise()
+                pivotCounterClockwise()
                 rotateCounterClockwise()
-                pivotClockwise()
-                drop()
-                rotateClockwise()
+                reset()
+                wait(2)
                 grab()
-                pivotClockwise()
-                rotateCounterClockwise()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
                 pivotClockwise()
                 rotateCounterClockwise()
                 pivotClockwise()
@@ -155,18 +143,7 @@ solution {
                 rotateClockwise()
                 grab()
                 pivotClockwise()
-                rotateCounterClockwise()
-                pivotClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                rotateClockwise()
-                pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
                 reset()
             }
         }
