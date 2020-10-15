@@ -1,67 +1,83 @@
 
 solution {
     puzzle = "P034"
-    name = "B GAX"
+    name = "B GC"
     arm(ARM1) {
         number = 1
-        position = 2 to -1
+        position = 2 to 2
         rotation = 2
         size = 2
     }
     glyph(BONDER) {
-        position = 2 to -3
+        position = 2 to 0
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 4 to -4
+        position = 4 to -1
         rotation = 0
     }
     glyph(PURIFICATION) {
-        position = -1 to 0
+        position = -1 to 3
         rotation = -2
     }
     glyph(EQUILIBRIUM) {
-        position = -1 to 1
+        position = -1 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to -3
+        position = 0 to 3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 2 to -5
+        position = 2 to -2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to -5
+        position = 3 to -2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -1 to -3
+        position = -1 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 4 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 1 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 2
+        rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = 4 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to -3
-        rotation = 0
-    }
-    io(INPUT) {
-        index = 0
-        position = 4 to -3
+        position = 1 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 3 to -2
+        position = 3 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = 0 to 1
+        position = 0 to 4
         rotation = 0
     }
     track {
-        position = 1 to -1
+        position = 1 to 2
         positions = listOf(0 to 0, 0 to 1, 1 to 0)
     }
     tape {
@@ -114,39 +130,32 @@ solution {
                 rotateClockwise()
                 grab()
                 back()
-                back()
                 pivotClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
                 forward()
+                rotateClockwise()
+                back()
                 drop()
                 rotateCounterClockwise()
                 grab()
                 forward()
                 drop()
                 rotateClockwise()
-                back()
-                grab()
-                pivotClockwise()
-                back()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                back()
-                drop()
-                rotateClockwise()
                 forward()
                 grab()
                 forward()
-                back()
+                forward()
                 pivotClockwise()
-                back()
                 drop()
                 rotateCounterClockwise()
                 back()
                 grab()
                 rotateClockwise()
                 drop()
-                rotateCounterClockwise()
                 back()
+                rotateCounterClockwise()
                 grab()
                 back()
                 pivotCounterClockwise()
