@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P042"
-    name = "B CX"
+    name = "B S"
     arm(ARM1) {
         number = 1
         position = -1 to -2
-        rotation = 0
+        rotation = 3
         size = 3
     }
     arm(ARM1) {
@@ -35,10 +35,6 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = 0 to 2
-        rotation = 5
-    }
-    glyph(BONDER) {
         position = 2 to 0
         rotation = 0
     }
@@ -54,7 +50,7 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = 2 to -2
+        position = -4 to -2
         rotation = 0
     }
     track {
@@ -65,11 +61,12 @@ solution {
         parallel(
         {
             sequence(1) {
-                wait(5)
+                wait(8)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 pivotClockwise()
-                wait(5)
+                wait(1)
                 pivotClockwise()
                 wait(5)
                 pivotClockwise()
@@ -80,28 +77,9 @@ solution {
                 rotateCounterClockwise()
                 wait(3)
                 rotateClockwise()
+                pivotClockwise()
                 rotateCounterClockwise()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(4)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                wait(2)
-                repeat()
-                wait(5)
-                repeat()
-                wait(5)
-                repeat()
-                wait(5)
-                repeat()
-                wait(5)
-                repeat()
             }
         }
         , 
@@ -111,6 +89,26 @@ solution {
                 grab()
                 rotateClockwise()
                 pivotClockwise()
+                reset()
+                wait(2)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(4)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 reset()
                 wait(2)
                 repeat()
