@@ -1,40 +1,46 @@
 
 solution {
     puzzle = "P024"
-    name = "B GC"
+    name = "B X S"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
-        position = 2 to 0
-        rotation = -5
+        position = -2 to 0
+        rotation = 1
+        size = 1
+    }
+    arm(ARM6) {
+        number = 2
+        position = 1 to -1
+        rotation = 7
         size = 1
     }
     arm(ARM1) {
-        number = 2
-        position = -3 to 2
-        rotation = -2
-        size = 2
+        number = 3
+        position = -1 to 1
+        rotation = 6
+        size = 1
     }
     glyph(UNBONDER) {
-        position = -1 to 0
-        rotation = -1
+        position = 0 to 1
+        rotation = 4
     }
     glyph(DUPLICATION) {
-        position = 1 to 0
-        rotation = -2
+        position = -1 to 0
+        rotation = 5
     }
     io(INPUT) {
         index = 0
-        position = -3 to -1
-        rotation = 0
+        position = 1 to 1
+        rotation = 3
     }
     io(OUTPUT) {
         index = 0
-        position = -2 to 3
+        position = 1 to -2
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = 0 to 1
+        position = 2 to -1
         rotation = 0
     }
     io(OUTPUT) {
@@ -44,51 +50,40 @@ solution {
     }
     io(OUTPUT) {
         index = 3
-        position = -2 to -1
+        position = 2 to -2
         rotation = 0
-    }
-    track {
-        position = -2 to 1
-        positions = listOf(0 to 0, -1 to 1)
     }
     tape {
         parallel(
         {
             sequence(2) {
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
-                forward()
-                grab()
-                rotateCounterClockwise()
-                back()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                forward()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateClockwise()
-                back()
+                wait(1)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(3)
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
                 reset()
             }
         }
         , 
         {
             sequence(1) {
-                wait(6)
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
