@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P064"
-    name = "B CA"
+    name = "B CX"
     arm(ARM1) {
         number = 1
         position = 1 to 1
@@ -32,11 +32,11 @@ solution {
         rotation = 3
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 6
-        position = 1 to -2
+        position = 1 to -3
         rotation = 1
-        size = 1
+        size = 2
     }
     arm(ARM1) {
         number = 7
@@ -82,6 +82,10 @@ solution {
         position = 0 to 3
         rotation = 0
     }
+    track {
+        position = 1 to -2
+        positions = listOf(0 to 0, 0 to -1)
+    }
     tape {
         parallel(
         {
@@ -117,9 +121,9 @@ solution {
                 grab()
                 rotateClockwise()
                 pivotClockwise()
-                wait(1)
                 pivotClockwise()
                 pivotCounterClockwise()
+                wait(1)
                 pivotClockwise()
                 reset()
             }
@@ -155,32 +159,6 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(7)
-                grab()
-                pivotClockwise()
-                wait(3)
-                pivotClockwise()
-                wait(1)
-                pivotClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(4)
-                grab()
-                extend()
-                reset()
-                wait(1)
-                repeat()
-                wait(3)
-                repeat()
-            }
-        }
-        , 
-        {
             sequence(5) {
                 wait(2)
                 grab()
@@ -192,6 +170,32 @@ solution {
                 repeat()
                 wait(3)
                 repeat()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(4)
+                grab()
+                back()
+                reset()
+                wait(1)
+                repeat()
+                wait(3)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(7)
+                grab()
+                pivotClockwise()
+                wait(3)
+                pivotClockwise()
+                wait(1)
+                pivotClockwise()
+                reset()
             }
         }
         )
