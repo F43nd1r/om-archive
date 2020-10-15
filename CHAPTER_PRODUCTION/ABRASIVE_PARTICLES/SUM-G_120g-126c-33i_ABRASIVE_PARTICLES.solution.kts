@@ -1,12 +1,12 @@
 
 solution {
     puzzle = "P079"
-    name = "B II 1-3T"
+    name = "B X S"
     arm(PISTON) {
         number = 1
         position = 2 to 0
         rotation = 3
-        size = 1
+        size = 2
     }
     arm(PISTON) {
         number = 2
@@ -58,14 +58,18 @@ solution {
                 wait(1)
                 pivotCounterClockwise()
                 retract()
+                extend()
+                pivotCounterClockwise()
+                wait(1)
+                pivotCounterClockwise()
+                wait(1)
+                pivotCounterClockwise()
+                wait(1)
+                pivotCounterClockwise()
+                retract()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
-                drop()
-                grab()
-                pivotClockwise()
-                rotateClockwise()
-                extend()
-                drop()
+                reset()
             }
         }
         , 
@@ -74,12 +78,19 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                extend()
-                wait(2)
+                wait(3)
                 grab()
                 retract()
                 drop()
-                rotateClockwise()
+                extend()
+                wait(1)
+                grab()
+                retract()
+                drop()
+                extend()
+                grab()
+                retract()
+                reset()
             }
         }
         )
