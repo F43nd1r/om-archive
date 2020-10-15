@@ -1,45 +1,39 @@
 
 solution {
     puzzle = "P077"
-    name = "B IC 1-6T"
+    name = "B IGX 1-6T"
     arm(ARM1) {
         number = 1
         position = 1 to -1
         rotation = 2
         size = 2
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 2
-        position = -3 to 0
-        rotation = 0
+        position = -1 to 2
+        rotation = 4
         size = 2
     }
-    arm(PISTON) {
-        number = 3
-        position = -1 to 2
-        rotation = 5
-        size = 1
-    }
     arm(ARM1) {
-        number = 4
+        number = 3
         position = 2 to -1
         rotation = 3
         size = 2
     }
     arm(ARM1) {
-        number = 5
+        number = 4
         position = 7 to -1
         rotation = 2
         size = 1
     }
     arm(ARM1) {
-        number = 6
+        number = 5
         position = 8 to -2
         rotation = 1
         size = 2
     }
     arm(PISTON) {
-        number = 7
+        number = 6
         position = 6 to 2
         rotation = 4
         size = 2
@@ -95,33 +89,42 @@ solution {
     tape {
         parallel(
         {
-            sequence(3) {
-                wait(15)
+            sequence(2) {
+                wait(2)
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                pivotCounterClockwise()
+                drop()
+                retract()
+                rotateCounterClockwise()
+                wait(6)
                 grab()
                 rotateClockwise()
                 extend()
                 extend()
                 pivotClockwise()
                 retract()
-                reset()
+                drop()
             }
         }
         , 
         {
-            sequence(7) {
+            sequence(6) {
                 wait(17)
                 grab()
                 retract()
-                wait(13)
+                wait(14)
                 rotateCounterClockwise()
                 extend()
-                reset()
+                drop()
+                rotateClockwise()
             }
         }
         , 
         {
-            sequence(5) {
-                wait(30)
+            sequence(4) {
+                wait(31)
                 grab()
                 rotateClockwise()
                 reset()
@@ -147,11 +150,11 @@ solution {
         }
         , 
         {
-            sequence(6) {
+            sequence(5) {
                 wait(20)
                 grab()
                 pivotClockwise()
-                wait(10)
+                wait(11)
                 back()
                 back()
                 drop()
@@ -163,24 +166,13 @@ solution {
         }
         , 
         {
-            sequence(4) {
+            sequence(3) {
                 wait(8)
                 grab()
                 back()
                 pivotCounterClockwise()
                 drop()
                 wait(3)
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(2) {
-                wait(2)
-                grab()
-                pivotClockwise()
-                pivotClockwise()
-                pivotCounterClockwise()
                 reset()
             }
         }
