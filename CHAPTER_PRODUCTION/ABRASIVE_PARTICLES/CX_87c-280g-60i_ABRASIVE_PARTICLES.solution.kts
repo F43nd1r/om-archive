@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P079"
-    name = "B CG"
+    name = "B CX"
     arm(ARM1) {
         number = 1
         position = 0 to -2
@@ -38,7 +38,7 @@ solution {
         rotation = -3
         size = 2
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 7
         position = 7 to 1
         rotation = 0
@@ -173,12 +173,12 @@ solution {
                 wait(12)
                 grab()
                 rotateClockwise()
-                reset()
+                drop()
                 wait(3)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                reset()
+                drop()
             }
         }
         )
