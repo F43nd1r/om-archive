@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P070"
-    name = "B CG 6T"
+    name = "B CX 6T"
     arm(ARM1) {
         number = 1
         position = 0 to -7
@@ -148,8 +148,8 @@ solution {
     }
     arm(ARM1) {
         number = 25
-        position = 12 to -12
-        rotation = 2
+        position = 8 to -8
+        rotation = 5
         size = 2
     }
     arm(ARM1) {
@@ -234,7 +234,7 @@ solution {
     }
     track {
         position = 12 to -8
-        positions = listOf(-3 to 1, -2 to 1, -1 to 0, -1 to -1, -1 to -2, -1 to -3, 0 to -4)
+        positions = listOf(-3 to 1, -2 to 1, -1 to 0, -1 to -1, -1 to -2)
     }
     track {
         position = 6 to -3
@@ -251,6 +251,10 @@ solution {
     track {
         position = -6 to -2
         positions = listOf(-2 to 2, -1 to 2, -1 to 1, 0 to 1, 1 to 0, 1 to -1, 0 to -1, -1 to 0, -2 to 1)
+    }
+    track {
+        position = 7 to -9
+        positions = listOf(0 to 0, 1 to 0, 1 to 1)
     }
     tape {
         parallel(
@@ -438,20 +442,6 @@ solution {
                 wait(15)
                 grab()
                 rotateCounterClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(25) {
-                wait(6)
-                grab()
-                back()
-                drop()
-                rotateCounterClockwise()
-                wait(1)
-                grab()
-                rotateClockwise()
                 reset()
             }
         }
@@ -702,10 +692,10 @@ solution {
                 rotateClockwise()
                 wait(1)
                 pivotCounterClockwise()
-                wait(1)
+                wait(2)
                 pivotClockwise()
                 reset()
-                wait(4)
+                wait(3)
                 grab()
                 rotateClockwise()
                 forward()
@@ -720,8 +710,23 @@ solution {
         }
         , 
         {
-            sequence(23) {
+            sequence(25) {
                 wait(6)
+                grab()
+                rotateCounterClockwise()
+                back()
+                back()
+                drop()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(23) {
+                wait(7)
                 back()
                 grab()
                 rotateCounterClockwise()
@@ -733,7 +738,7 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 drop()
-                wait(3)
+                wait(2)
                 forward()
                 forward()
                 forward()
