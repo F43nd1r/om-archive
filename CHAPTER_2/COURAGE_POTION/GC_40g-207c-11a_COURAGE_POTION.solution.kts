@@ -1,34 +1,38 @@
 
 solution {
     puzzle = "P021"
-    name = "B AA"
-    arm(PISTON) {
+    name = "B GAX"
+    arm(ARM1) {
         number = 1
-        position = -1 to -2
-        rotation = 5
+        position = 2 to 0
+        rotation = 6
         size = 1
     }
     glyph(BONDER) {
-        position = -1 to -1
-        rotation = 5
+        position = 2 to 1
+        rotation = 3
     }
     glyph(CALCIFICATION) {
-        position = -2 to -1
+        position = 1 to 2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -1 to 2
+        rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = 3 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -1 to 0
-        rotation = 0
-    }
-    io(INPUT) {
-        index = 0
-        position = 1 to -2
-        rotation = 0
+        position = 0 to 1
+        rotation = 6
     }
     io(INPUT) {
         index = 1
-        position = 0 to -3
+        position = 2 to -1
         rotation = 0
     }
     tape {
@@ -37,39 +41,35 @@ solution {
             sequence(1) {
                 grab()
                 rotateCounterClockwise()
+                drop()
                 rotateCounterClockwise()
-                reset()
-                wait(2)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
                 drop()
                 rotateClockwise()
-                extend()
+                rotateClockwise()
                 grab()
-                retract()
+                rotateCounterClockwise()
                 drop()
                 rotateCounterClockwise()
                 grab()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                extend()
-                reset()
-                wait(3)
+                drop()
+                rotateClockwise()
+                rotateClockwise()
                 grab()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                extend()
+                rotateCounterClockwise()
                 grab()
-                retract()
-                extend()
+                pivotCounterClockwise()
                 reset()
             }
         }
