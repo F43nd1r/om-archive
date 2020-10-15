@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P082"
-    name = "B S 2T"
+    name = "B X II"
     arm(PISTON) {
         number = 1
         position = 1 to 4
@@ -14,6 +14,18 @@ solution {
         rotation = 1
         size = 3
     }
+    arm(ARM1) {
+        number = 3
+        position = 4 to 0
+        rotation = 2
+        size = 2
+    }
+    arm(ARM6) {
+        number = 4
+        position = -1 to 0
+        rotation = 0
+        size = 1
+    }
     glyph(BONDER) {
         position = 4 to 2
         rotation = 1
@@ -23,32 +35,32 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = 1 to 2
+        position = 2 to 2
         rotation = 1
-    }
-    glyph(DUPLICATION) {
-        position = 2 to 3
-        rotation = 0
-    }
-    io(OUTPUT) {
-        index = 0
-        position = 5 to 2
-        rotation = -2
     }
     io(INPUT) {
         index = 0
         position = 3 to 4
         rotation = -3
     }
-    conduit {
-        id = 100
-        position = 1 to 0
-        rotation = 0
+    io(OUTPUT) {
+        index = 0
+        position = 5 to 2
+        rotation = -2
+    }
+    track {
+        position = 2 to 0
+        positions = listOf(2 to 0, 1 to 0)
     }
     conduit {
         id = 100
-        position = 5 to 0
-        rotation = 1
+        position = 1 to 2
+        rotation = -1
+    }
+    conduit {
+        id = 100
+        position = 0 to 0
+        rotation = -2
     }
     conduit {
         id = 101
@@ -63,13 +75,29 @@ solution {
     tape {
         parallel(
         {
+            sequence(1) {
+                grab()
+                rotateClockwise()
+                pivotClockwise()
+                extend()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                pivotCounterClockwise()
+                wait(1)
+                pivotCounterClockwise()
+                drop()
+                retract()
+            }
+        }
+        , 
+        {
             sequence(2) {
                 wait(2)
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
                 retract()
-                wait(1)
                 pivotCounterClockwise()
                 pivotClockwise()
                 pivotClockwise()
@@ -78,45 +106,25 @@ solution {
                 extend()
                 drop()
                 rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                retract()
-                pivotCounterClockwise()
-                pivotClockwise()
-                retract()
-                pivotClockwise()
-                extend()
-                extend()
-                reset()
             }
         }
         , 
         {
-            sequence(1) {
+            sequence(3) {
+                wait(8)
                 grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                pivotClockwise()
-                rotateCounterClockwise()
-                extend()
+                forward()
                 drop()
-                rotateCounterClockwise()
+                back()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(8)
                 grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
                 rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
             }
         }
         )
