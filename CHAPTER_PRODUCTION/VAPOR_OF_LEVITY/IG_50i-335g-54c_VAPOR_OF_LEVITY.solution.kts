@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P078"
-    name = "B CG 2T"
+    name = "B CIX"
     arm(PISTON) {
         number = 1
         position = 0 to 2
@@ -86,16 +86,16 @@ solution {
     }
     track {
         position = 1 to -1
-        positions = listOf(0 to 0, 0 to 1, 1 to 0, 1 to -1)
-    }
-    conduit {
-        id = 100
-        position = 1 to 1
-        rotation = 0
+        positions = listOf(0 to 0, 0 to 1, 0 to 2, 1 to 1, 1 to 0, 1 to -1)
     }
     conduit {
         id = 100
         position = 2 to 2
+        rotation = 0
+    }
+    conduit {
+        id = 100
+        position = 1 to -2
         rotation = 0
     }
     tape {
@@ -106,8 +106,6 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 reset()
-                wait(5)
-                repeat()
             }
         }
         , 
@@ -119,8 +117,6 @@ solution {
                 pivotCounterClockwise()
                 back()
                 reset()
-                wait(3)
-                repeat()
             }
         }
         , 
@@ -131,8 +127,6 @@ solution {
                 back()
                 wait(1)
                 reset()
-                wait(4)
-                repeat()
             }
         }
         , 
@@ -147,8 +141,6 @@ solution {
                 back()
                 pivotCounterClockwise()
                 drop()
-                wait(5)
-                reset()
             }
         }
         , 
@@ -160,8 +152,6 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 reset()
-                wait(3)
-                repeat()
             }
         }
         , 
@@ -170,11 +160,8 @@ solution {
                 grab()
                 pivotClockwise()
                 retract()
-                wait(1)
                 rotateCounterClockwise()
                 reset()
-                wait(2)
-                repeat()
             }
         }
         , 
@@ -186,16 +173,12 @@ solution {
                 extend()
                 extend()
                 reset()
-                wait(3)
-                repeat()
             }
         }
         , 
         {
             sequence(7) {
-                wait(11)
-                back()
-                wait(2)
+                wait(6)
                 grab()
                 back()
                 back()
@@ -203,7 +186,7 @@ solution {
                 wait(1)
                 back()
                 pivotCounterClockwise()
-                reset()
+                drop()
             }
         }
         )
