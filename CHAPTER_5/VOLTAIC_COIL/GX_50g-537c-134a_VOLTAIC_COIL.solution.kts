@@ -1,47 +1,47 @@
 
 solution {
     puzzle = "P039"
-    name = "B GA 6T"
+    name = "B GX 6T"
     arm(ARM1) {
         number = 1
-        position = 1 to 0
+        position = 5 to -3
         rotation = -1
-        size = 2
+        size = 3
     }
     glyph(BONDER) {
-        position = -1 to 0
+        position = 1 to -2
         rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = 0 to -2
+        position = 4 to -5
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to -4
+        position = 7 to -7
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 4 to -4
+        position = 8 to -7
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 2 to -3
+        position = 6 to -7
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 1 to -3
+        position = 4 to -6
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -2 to -1
+        position = 3 to -5
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -5 to 2
+        position = 2 to -4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 0
+        position = -1 to -2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -49,59 +49,75 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 11
+        position = -1 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -2 to 11
+        position = -2 to 1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -1 to 11
+        position = 0 to -3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to 11
+        position = 1 to -3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 10
+        position = -1 to 1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 9
+        position = 0 to 3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 8
+        position = 0 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 7
+        position = 0 to 5
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 6
+        position = 0 to 6
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 5
+        position = 0 to 7
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 1 to 10
+        position = 0 to 8
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 2 to 10
+        position = 1 to 8
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to 9
+        position = 2 to 8
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 4 to 8
+        position = 3 to 8
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 8 to 5
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 9 to 4
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 10 to 3
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 7 to 6
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -113,50 +129,34 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 7 to 5
+        position = 4 to 7
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 8 to 4
+        position = 5 to -6
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 9 to 3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 9 to 2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 9 to 1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -5 to 3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -4 to 1
+        position = 6 to -4
         rotation = 0
     }
     io(INFINITE) {
         index = 0
-        position = -4 to 3
+        position = 0 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 3 to -2
+        position = 8 to -6
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = 4 to -3
+        position = 7 to -5
         rotation = 0
     }
     track {
-        position = 1 to 0
+        position = 4 to -2
         positions = listOf(0 to 0, 1 to -1)
     }
     tape {
@@ -165,47 +165,41 @@ solution {
             sequence(1) {
                 grab()
                 rotateClockwise()
+                back()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 rotateClockwise()
+                forward()
                 rotateClockwise()
                 back()
-                rotateCounterClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 rotateClockwise()
+                forward()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
-                forward()
                 rotateClockwise()
-                rotateClockwise()
-                pivotClockwise()
                 drop()
                 back()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 grab()
-                rotateClockwise()
+                forward()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -213,67 +207,73 @@ solution {
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
+                back()
                 forward()
                 rotateClockwise()
                 drop()
                 back()
                 grab()
                 forward()
-                pivotClockwise()
-                pivotCounterClockwise()
                 drop()
+                rotateClockwise()
                 back()
-                rotateClockwise()
-                rotateClockwise()
                 grab()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
                 rotateClockwise()
                 back()
-                rotateCounterClockwise()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
-                forward()
                 rotateClockwise()
                 drop()
                 back()
@@ -281,27 +281,17 @@ solution {
                 forward()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
                 back()
                 grab()
-                forward()
-                back()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -309,68 +299,73 @@ solution {
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
+                back()
                 forward()
                 rotateClockwise()
                 drop()
                 back()
                 grab()
                 forward()
-                pivotClockwise()
-                pivotCounterClockwise()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
                 back()
                 grab()
-                forward()
-                back()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
                 rotateClockwise()
                 back()
-                rotateCounterClockwise()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
                 grab()
                 rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
-                forward()
                 rotateClockwise()
                 drop()
                 back()
@@ -378,38 +373,20 @@ solution {
                 forward()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
                 back()
                 grab()
-                forward()
-                back()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
@@ -418,54 +395,23 @@ solution {
                 rotateClockwise()
                 forward()
                 rotateClockwise()
-                drop()
                 back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
                 forward()
-                pivotClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
-                back()
-                grab()
-                forward()
-                back()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                back()
-                rotateCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
+                back()
                 forward()
                 rotateClockwise()
                 drop()
@@ -474,39 +420,21 @@ solution {
                 forward()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
                 back()
                 grab()
-                forward()
-                back()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
                 back()
+                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -514,55 +442,22 @@ solution {
                 rotateClockwise()
                 forward()
                 rotateClockwise()
-                drop()
                 back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
                 forward()
-                pivotClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
-                back()
-                grab()
-                forward()
-                back()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                back()
-                rotateCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
-                forward()
                 rotateClockwise()
                 drop()
                 back()
@@ -570,38 +465,20 @@ solution {
                 forward()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
                 back()
                 grab()
-                forward()
-                back()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
@@ -610,54 +487,23 @@ solution {
                 rotateClockwise()
                 forward()
                 rotateClockwise()
-                drop()
                 back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
                 forward()
-                pivotClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
-                back()
-                grab()
-                forward()
-                back()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                back()
-                rotateCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                grab()
-                rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                forward()
                 grab()
                 rotateClockwise()
+                back()
                 forward()
                 rotateClockwise()
                 drop()
@@ -666,38 +512,28 @@ solution {
                 forward()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
                 back()
                 grab()
-                forward()
-                back()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
+                back()
                 rotateClockwise()
-                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
                 back()
                 drop()
                 rotateCounterClockwise()
@@ -706,36 +542,169 @@ solution {
                 rotateClockwise()
                 forward()
                 rotateClockwise()
+                pivotCounterClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
                 back()
                 grab()
                 forward()
-                pivotClockwise()
-                pivotCounterClockwise()
                 drop()
                 rotateClockwise()
+                back()
                 grab()
+                rotateCounterClockwise()
+                drop()
+                forward()
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
                 pivotCounterClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                rotateClockwise()
+                back()
+                forward()
+                rotateClockwise()
                 drop()
                 back()
                 grab()
                 forward()
+                drop()
+                rotateClockwise()
                 back()
-                pivotClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
                 grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+                forward()
+                grab()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
+                back()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
+                pivotCounterClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                back()
+                grab()
+                forward()
+                drop()
+                rotateClockwise()
+                back()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                forward()
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                forward()
+                rotateClockwise()
+                pivotCounterClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                rotateClockwise()
+                back()
+                forward()
+                rotateClockwise()
+                drop()
+                back()
+                grab()
+                forward()
+                drop()
+                rotateClockwise()
+                back()
+                grab()
+                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 pivotCounterClockwise()
                 rotateClockwise()
+                pivotCounterClockwise()
+                forward()
                 reset()
             }
         }
