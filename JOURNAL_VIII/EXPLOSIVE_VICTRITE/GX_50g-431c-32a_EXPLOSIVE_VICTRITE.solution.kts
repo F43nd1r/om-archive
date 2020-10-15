@@ -1,31 +1,27 @@
 
 solution {
     puzzle = "P100"
-    name = "B GC"
+    name = "B GX"
     arm(ARM1) {
         number = 1
-        position = -3 to 1
+        position = -2 to 1
         rotation = 3
         size = 1
     }
     glyph(BONDER) {
-        position = -4 to 2
+        position = -3 to 2
         rotation = 0
     }
     glyph(TRIPLEX_BONDER) {
-        position = -2 to 1
+        position = -1 to 1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -5 to 4
+        position = -4 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -5 to 3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -5 to 5
+        position = -4 to 3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -33,7 +29,7 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -3 to 4
+        position = -3 to 5
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -41,15 +37,23 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -1 to 3
+        position = -1 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to 2
+        position = 0 to 3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to 1
+        position = 1 to 2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 1 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 1 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -60,17 +64,9 @@ solution {
         position = 1 to -2
         rotation = 0
     }
-    glyph(EQUILIBRIUM) {
-        position = 1 to 0
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -3 to 0
-        rotation = 0
-    }
     io(INPUT) {
         index = 0
-        position = -4 to 1
+        position = -3 to 1
         rotation = 0
     }
     io(OUTPUT) {
@@ -143,6 +139,8 @@ solution {
                 rotateClockwise()
                 grab()
                 pivotClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
                 rotateClockwise()
                 reset()
             }
