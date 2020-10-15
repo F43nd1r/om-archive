@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P094"
-    name = "B IG 1-2T"
+    name = "B X ICX 1-2T"
     arm(PISTON) {
         number = 1
         position = -3 to 4
@@ -14,20 +14,26 @@ solution {
         rotation = 3
         size = 2
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 3
+        position = -3 to 3
+        rotation = 4
+        size = 1
+    }
+    arm(ARM1) {
+        number = 4
         position = 6 to 5
         rotation = -1
         size = 1
     }
     arm(PISTON) {
-        number = 4
+        number = 5
         position = 6 to 1
         rotation = 2
         size = 2
     }
     arm(PISTON) {
-        number = 5
+        number = 6
         position = 7 to 1
         rotation = 2
         size = 3
@@ -71,10 +77,6 @@ solution {
         position = 6 to 1
         positions = listOf(0 to 0, 1 to 0, 2 to 0)
     }
-    track {
-        position = -2 to 3
-        positions = listOf(0 to 0, -1 to 0)
-    }
     conduit {
         id = 100
         position = 4 to 5
@@ -103,8 +105,26 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(18)
+            sequence(2) {
+                wait(2)
+                grab()
+                extend()
+                drop()
+                retract()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                grab()
+                retract()
+                drop()
+                rotateClockwise()
+                extend()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(14)
                 grab()
                 retract()
                 drop()
@@ -120,8 +140,8 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(16)
+            sequence(6) {
+                wait(12)
                 grab()
                 retract()
                 retract()
@@ -144,8 +164,8 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(25)
+            sequence(4) {
+                wait(21)
                 grab()
                 rotateClockwise()
                 rotateCounterClockwise()
@@ -154,19 +174,8 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(2)
-                grab()
-                extend()
-                drop()
-                retract()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                grab()
-                retract()
-                drop()
-                forward()
+            sequence(3) {
+                wait(9)
                 grab()
                 extend()
                 drop()
@@ -178,8 +187,7 @@ solution {
                 wait(7)
                 grab()
                 drop()
-                back()
-                rotateClockwise()
+                retract()
             }
         }
         )
