@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P058"
-    name = "B S 1 2T"
+    name = "B S 2"
     arm(ARM1) {
         number = 1
         position = -5 to -2
@@ -28,8 +28,8 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = -6 to -4
-        rotation = 7
+        position = -6 to -2
+        rotation = 6
         size = 2
     }
     arm(ARM1) {
@@ -72,10 +72,6 @@ solution {
     }
     glyph(CALCIFICATION) {
         position = -4 to -3
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = -6 to -2
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -139,12 +135,10 @@ solution {
                 grab()
                 rotateClockwise()
                 reset()
-                wait(1)
+                wait(3)
                 grab()
                 rotateClockwise()
                 reset()
-                wait(1)
-                repeat()
             }
         }
         , 
@@ -154,16 +148,14 @@ solution {
                 grab()
                 rotateClockwise()
                 reset()
+                wait(3)
+                grab()
+                rotateClockwise()
+                reset()
                 wait(5)
                 grab()
                 rotateClockwise()
                 reset()
-                wait(1)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(1)
-                repeat()
             }
         }
         , 
@@ -184,8 +176,6 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 reset()
-                wait(2)
-                repeat()
             }
         }
         , 
@@ -197,12 +187,11 @@ solution {
                 forward()
                 wait(1)
                 pivotCounterClockwise()
+                wait(4)
                 pivotClockwise()
-                wait(3)
+                wait(1)
                 pivotClockwise()
                 reset()
-                wait(5)
-                repeat()
             }
         }
         , 
@@ -220,8 +209,6 @@ solution {
                 rotateClockwise()
                 pivotCounterClockwise()
                 reset()
-                wait(2)
-                repeat()
             }
         }
         , 
@@ -236,24 +223,7 @@ solution {
                 back()
                 grab()
                 back()
-                drop()
-                forward()
-                grab()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                back()
-                pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                wait(2)
-                grab()
-                back()
-                pivotClockwise()
-                drop()
-                back()
+                reset()
             }
         }
         , 
@@ -273,19 +243,7 @@ solution {
                 grab()
                 back()
                 pivotClockwise()
-                drop()
-                back()
-                wait(4)
-                back()
-                grab()
-                forward()
-                drop()
-                wait(2)
-                back()
-                grab()
-                back()
-                drop()
-                forward()
+                reset()
             }
         }
         , 
@@ -300,25 +258,13 @@ solution {
                 reset()
                 wait(1)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 reset()
-                wait(1)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 reset()
-                wait(1)
-                repeat()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(10)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(13)
-                repeat()
             }
         }
         , 
@@ -339,8 +285,15 @@ solution {
                 rotateCounterClockwise()
                 pivotClockwise()
                 reset()
-                wait(2)
-                repeat()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(11)
+                grab()
+                rotateClockwise()
+                reset()
             }
         }
         )
