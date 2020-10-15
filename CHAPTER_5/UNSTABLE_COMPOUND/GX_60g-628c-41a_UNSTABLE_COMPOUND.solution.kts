@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P040"
-    name = "B GA"
+    name = "B GX"
     arm(ARM1) {
         number = 1
         position = 1 to 1
@@ -21,10 +21,6 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 4 to -1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
         position = 5 to -2
         rotation = 0
     }
@@ -34,10 +30,6 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = 0 to -3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 3 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -78,6 +70,14 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = 5 to -1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 4 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 3 to 1
         rotation = 0
     }
     io(INPUT) {
@@ -126,19 +126,6 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 reset()
@@ -176,15 +163,21 @@ solution {
                 rotateCounterClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
                 drop()
                 rotateCounterClockwise()
                 grab()
                 pivotCounterClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
+                pivotClockwise()
                 rotateClockwise()
                 reset()
-                wait(3)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
