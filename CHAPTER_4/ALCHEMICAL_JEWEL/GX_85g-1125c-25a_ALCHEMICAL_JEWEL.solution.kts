@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P035"
-    name = "B ACX"
+    name = "B AG"
     arm(PISTON) {
         number = 1
         position = -1 to -1
@@ -17,15 +17,15 @@ solution {
         rotation = 2
     }
     glyph(CALCIFICATION) {
-        position = -2 to 3
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
         position = -4 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
         position = -4 to 4
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 3
         rotation = 0
     }
     io(OUTPUT) {
@@ -75,8 +75,8 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 extend()
-                back()
                 pivotCounterClockwise()
+                back()
                 drop()
                 retract()
                 forward()
@@ -131,41 +131,65 @@ solution {
                 retract()
                 drop()
                 rotateCounterClockwise()
+                back()
                 extend()
                 grab()
                 pivotCounterClockwise()
+                forward()
                 drop()
                 retract()
                 rotateClockwise()
                 rotateClockwise()
                 grab()
+                back()
+                back()
                 rotateCounterClockwise()
-                extend()
-                retract()
-                drop()
                 rotateCounterClockwise()
-                extend()
-                grab()
-                pivotCounterClockwise()
-                drop()
-                retract()
                 rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
+                forward()
+                forward()
                 extend()
                 retract()
                 drop()
-                rotateCounterClockwise()
+                back()
+                back()
                 extend()
                 grab()
                 pivotCounterClockwise()
+                extend()
                 drop()
                 retract()
                 rotateClockwise()
-                rotateClockwise()
+                forward()
                 grab()
+                retract()
+                back()
                 rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateClockwise()
+                forward()
+                forward()
+                extend()
+                retract()
+                drop()
+                back()
+                back()
+                extend()
+                grab()
+                pivotCounterClockwise()
+                extend()
+                drop()
+                retract()
+                rotateClockwise()
+                forward()
+                grab()
+                retract()
+                back()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateClockwise()
+                forward()
+                forward()
                 extend()
                 retract()
                 drop()
