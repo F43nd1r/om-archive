@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P077"
-    name = "B CGX"
+    name = "B CI"
     arm(PISTON) {
         number = 1
         position = -3 to 2
@@ -14,7 +14,7 @@ solution {
         rotation = 4
         size = 2
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 3
         position = 2 to -2
         rotation = 2
@@ -72,7 +72,7 @@ solution {
     }
     track {
         position = -2 to 2
-        positions = listOf(-1 to 0, 0 to 0, 1 to 0, 2 to 0, 3 to -1)
+        positions = listOf(-1 to 0, 0 to 0, 1 to 0)
     }
     track {
         position = 8 to 2
@@ -140,24 +140,12 @@ solution {
                 forward()
                 drop()
                 back()
-                wait(2)
+                retract()
                 grab()
+                extend()
                 forward()
                 drop()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(6)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(3)
-                repeat()
-                wait(5)
-                repeat()
             }
         }
         , 
@@ -180,12 +168,6 @@ solution {
                 wait(2)
                 pivotClockwise()
                 pivotCounterClockwise()
-                forward()
-                reset()
-                wait(1)
-                grab()
-                forward()
-                drop()
                 reset()
             }
         }
@@ -210,6 +192,23 @@ solution {
                 wait(1)
                 back()
                 rotateCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(6)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(3)
+                repeat()
+                wait(3)
+                extend()
+                grab()
+                retract()
+                rotateClockwise()
                 reset()
             }
         }
