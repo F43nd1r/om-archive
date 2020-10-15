@@ -1,29 +1,29 @@
 
 solution {
     puzzle = "P013"
-    name = "B AA"
-    arm(PISTON) {
+    name = "B GAX"
+    arm(ARM1) {
         number = 1
-        position = 2 to -1
-        rotation = 3
-        size = 2
+        position = 0 to 2
+        rotation = 1
+        size = 1
     }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = 5
+        position = 1 to 2
+        rotation = 4
     }
     glyph(CALCIFICATION) {
-        position = 3 to -2
+        position = 2 to 1
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to 0
+        position = 0 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 0 to -1
+        position = 0 to 3
         rotation = 0
     }
     tape {
@@ -31,19 +31,24 @@ solution {
         {
             sequence(1) {
                 grab()
-                retract()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 reset()
                 wait(2)
-                repeat()
-                wait(5)
                 grab()
-                retract()
                 rotateClockwise()
+                pivotCounterClockwise()
                 rotateClockwise()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
                 rotateClockwise()
+                drop()
                 rotateClockwise()
-                rotateCounterClockwise()
+                grab()
+                pivotClockwise()
+                rotateClockwise()
                 reset()
             }
         }
