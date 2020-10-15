@@ -1,12 +1,12 @@
 
 solution {
     puzzle = "P037"
-    name = "B CA 6T"
-    arm(PISTON) {
+    name = "B CX 6T"
+    arm(ARM1) {
         number = 1
-        position = 2 to 1
-        rotation = 5
-        size = 1
+        position = 5 to -4
+        rotation = 1
+        size = 3
     }
     arm(ARM1) {
         number = 2
@@ -14,13 +14,13 @@ solution {
         rotation = 3
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 3
-        position = 5 to -2
-        rotation = 3
-        size = 2
+        position = 6 to -5
+        rotation = 2
+        size = 3
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 4
         position = 3 to -4
         rotation = 1
@@ -45,7 +45,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = 3 to 0
+        position = 5 to -1
         rotation = 0
     }
     io(INPUT) {
@@ -55,21 +55,25 @@ solution {
     }
     track {
         position = 4 to -2
-        positions = listOf(0 to 0, 1 to 0, 1 to 1)
+        positions = listOf(0 to 0, 1 to 0)
     }
     track {
-        position = 0 to -2
-        positions = listOf(0 to 0, 1 to -1, 2 to -2, 3 to -2)
+        position = 5 to -3
+        positions = listOf(0 to 0, 0 to -1, 0 to -2, 1 to -2, 1 to -1)
+    }
+    track {
+        position = 0 to -3
+        positions = listOf(0 to 0, 1 to -1, 2 to -2, 3 to -2, 3 to -1)
     }
     tape {
         parallel(
         {
-            sequence(2) {
+            sequence(1) {
                 grab()
-                rotateClockwise()
-                wait(1)
-                forward()
+                rotateCounterClockwise()
                 back()
+                forward()
+                forward()
                 reset()
                 wait(2)
                 repeat()
@@ -85,14 +89,14 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                wait(1)
+            sequence(2) {
                 grab()
+                forward()
                 rotateClockwise()
-                extend()
-                extend()
+                wait(1)
+                back()
                 reset()
-                wait(3)
+                wait(2)
                 repeat()
                 wait(7)
                 repeat()
@@ -113,7 +117,7 @@ solution {
                 reset()
                 wait(1)
                 grab()
-                extend()
+                back()
                 reset()
                 wait(1)
                 repeat()
@@ -132,12 +136,11 @@ solution {
             sequence(4) {
                 wait(4)
                 grab()
-                retract()
                 back()
                 back()
-                extend()
+                back()
                 reset()
-                wait(2)
+                wait(3)
                 repeat()
                 wait(7)
                 repeat()
@@ -147,12 +150,11 @@ solution {
                 repeat()
                 wait(7)
                 grab()
-                retract()
+                back()
                 back()
                 back()
                 back()
                 forward()
-                extend()
                 reset()
             }
         }
