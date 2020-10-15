@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P105"
-    name = "B GCX"
+    name = "B GI 1-6T"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 8 to -1
-        rotation = 2
+        rotation = 1
         size = 1
     }
     arm(ARM1) {
         number = 2
         position = 0 to 0
-        rotation = -1
+        rotation = 3
         size = 2
     }
     arm(ARM1) {
@@ -25,34 +25,30 @@ solution {
         rotation = 2
     }
     glyph(DUPLICATION) {
-        position = 8 to 0
-        rotation = 2
+        position = 7 to 0
+        rotation = 1
     }
     glyph(ANIMISMUS) {
-        position = 0 to -1
-        rotation = -2
+        position = 1 to -1
+        rotation = 5
     }
     glyph(UNIFICATION) {
-        position = 0 to 1
-        rotation = -2
-    }
-    glyph(EQUILIBRIUM) {
-        position = 0 to 2
-        rotation = 0
+        position = -1 to 1
+        rotation = 2
     }
     io(INPUT) {
         index = 0
-        position = 2 to -2
+        position = -2 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
         position = 7 to 2
-        rotation = 6
+        rotation = 12
     }
     track {
-        position = 1 to -1
-        positions = listOf(0 to 0, -1 to 1, -2 to 1, -3 to 2)
+        position = -1 to -1
+        positions = listOf(0 to 0, 1 to 0, 1 to 1, 2 to 1)
     }
     track {
         position = 8 to 1
@@ -74,134 +70,112 @@ solution {
             sequence(2) {
                 grab()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                forward()
-                forward()
-                drop()
-                back()
-                back()
-                grab()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
                 rotateCounterClockwise()
                 drop()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                drop()
-                forward()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                grab()
-                forward()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                back()
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                drop()
-                grab()
-                rotateCounterClockwise()
-                back()
-                drop()
-                forward()
-                forward()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                forward()
-                rotateCounterClockwise()
-                back()
-                back()
-                drop()
-                grab()
-                forward()
-                drop()
-                forward()
-                grab()
-                back()
-                back()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 rotateCounterClockwise()
                 back()
                 grab()
                 forward()
+                drop()
+                back()
+                back()
+                rotateCounterClockwise()
+                grab()
                 rotateClockwise()
-                rotateClockwise()
+                forward()
+                forward()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                back()
                 rotateClockwise()
                 drop()
+                rotateCounterClockwise()
+                back()
+                grab()
+                forward()
+                forward()
+                rotateCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                back()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
                 rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                back()
+                back()
+                grab()
+                forward()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                back()
+                rotateClockwise()
+                drop()
+                forward()
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                forward()
+                grab()
+                back()
+                drop()
+                rotateClockwise()
+                forward()
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                reset()
             }
         }
         , 
         {
             sequence(3) {
-                wait(5)
+                wait(9)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                rotateCounterClockwise()
-                rotateClockwise()
-                forward()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                repeat()
-                wait(11)
-                repeat()
-                wait(13)
-                repeat()
-                wait(11)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateClockwise()
-                forward()
+                reset()
                 wait(4)
                 grab()
                 rotateCounterClockwise()
+                back()
+                reset()
+                wait(16)
+                grab()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 back()
-                drop()
-                rotateClockwise()
+                reset()
+                wait(3)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                back()
+                rotateCounterClockwise()
                 rotateClockwise()
                 forward()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
             }
         }
         , 
         {
             sequence(1) {
-                wait(22)
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                wait(23)
-                rotateCounterClockwise()
+                wait(68)
                 rotateClockwise()
             }
         }
