@@ -1,30 +1,30 @@
 
 solution {
     puzzle = "P011"
-    name = "B AA"
-    arm(PISTON) {
+    name = "B GAX"
+    arm(ARM1) {
         number = 1
-        position = 1 to 1
-        rotation = 3
-        size = 2
+        position = 0 to -1
+        rotation = 0
+        size = 1
     }
     glyph(BONDER) {
-        position = 0 to 1
-        rotation = 1
+        position = -1 to -1
+        rotation = 5
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to 0
-        rotation = 6
+        position = 1 to -3
+        rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 1 to 2
+        position = -1 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -1 to 1
+        position = 1 to -1
         rotation = 0
     }
     tape {
@@ -32,7 +32,8 @@ solution {
         {
             sequence(1) {
                 grab()
-                retract()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
                 rotateClockwise()
                 rotateClockwise()
@@ -44,8 +45,11 @@ solution {
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
+                drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                grab()
+                pivotCounterClockwise()
                 reset()
             }
         }
