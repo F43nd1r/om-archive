@@ -1,19 +1,19 @@
 
 solution {
     puzzle = "P007"
-    name = "B ACX"
-    arm(ARM6) {
+    name = "B GAGX"
+    arm(ARM1) {
         number = 1
         position = 2 to -1
-        rotation = 0
+        rotation = 4
         size = 1
     }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = 5
+        position = 3 to -2
+        rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = 3 to -1
+        position = 1 to -1
         rotation = 0
     }
     io(OUTPUT) {
@@ -23,7 +23,7 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = 3 to -2
+        position = 2 to -2
         rotation = 0
     }
     tape {
@@ -32,13 +32,16 @@ solution {
             sequence(1) {
                 grab()
                 rotateCounterClockwise()
-                drop()
+                reset()
+                wait(1)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
-                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                reset()
             }
         }
         )
