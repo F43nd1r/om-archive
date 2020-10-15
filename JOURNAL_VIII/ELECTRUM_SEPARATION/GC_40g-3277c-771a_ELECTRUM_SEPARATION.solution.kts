@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P103"
-    name = "B GAX NOGIF"
+    name = "B GC NOGIF"
     arm(ARM1) {
         number = 1
         position = -2 to 0
@@ -17,7 +17,7 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 14 to 0
+        position = 13 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -3298,12 +3298,9 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                grab()
-                pivotClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 grab()
                 pivotCounterClockwise()
                 rotateCounterClockwise()
@@ -3313,8 +3310,8 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 grab()
-                pivotClockwise()
                 rotateCounterClockwise()
+                pivotClockwise()
                 rotateCounterClockwise()
                 pivotClockwise()
                 drop()
