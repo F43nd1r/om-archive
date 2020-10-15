@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P079"
-    name = "B GC"
+    name = "B GIX 1-3T"
     arm(ARM1) {
         number = 1
         position = -1 to 2
@@ -27,8 +27,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to 0
-        rotation = -1
+        position = 1 to -1
+        rotation = -2
     }
     track {
         position = 0 to 1
@@ -72,49 +72,14 @@ solution {
                 back()
                 grab()
                 rotateClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
                 forward()
+                drop()
+                grab()
+                back()
                 pivotClockwise()
                 drop()
-                back()
-                rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                forward()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotClockwise()
-                drop()
-                back()
-                grab()
-                rotateClockwise()
-                forward()
-                pivotClockwise()
-                drop()
-                back()
-                rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                forward()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotClockwise()
-                drop()
-                back()
-                grab()
-                rotateClockwise()
-                forward()
-                rotateCounterClockwise()
-                reset()
             }
         }
         )
