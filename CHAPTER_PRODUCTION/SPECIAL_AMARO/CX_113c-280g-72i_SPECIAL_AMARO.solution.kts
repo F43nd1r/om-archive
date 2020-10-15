@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P083"
-    name = "B CG"
+    name = "B CX"
     arm(ARM1) {
         number = 1
         position = 2 to 0
@@ -12,7 +12,7 @@ solution {
         number = 2
         position = -1 to -1
         rotation = 1
-        size = 2
+        size = 3
     }
     arm(ARM1) {
         number = 3
@@ -20,7 +20,7 @@ solution {
         rotation = 3
         size = 1
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 4
         position = -2 to 2
         rotation = -2
@@ -101,16 +101,14 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 forward()
-                wait(1)
                 grab()
                 back()
+                wait(2)
                 drop()
                 forward()
+                wait(2)
                 grab()
-                rotateClockwise()
-                rotateCounterClockwise()
                 back()
-                wait(1)
                 reset()
             }
         }
@@ -120,9 +118,24 @@ solution {
                 wait(4)
                 grab()
                 rotateClockwise()
-                drop()
-                wait(1)
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(2) {
                 grab()
+                retract()
+                back()
+                extend()
+                pivotCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                forward()
+                retract()
+                retract()
+                rotateClockwise()
+                extend()
                 reset()
             }
         }
@@ -159,37 +172,12 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(2)
-                grab()
-                back()
-                extend()
-                pivotCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                retract()
-                forward()
-                wait(1)
-                rotateClockwise()
-                reset()
-                wait(1)
-                back()
-                grab()
-                forward()
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(4) {
                 wait(4)
                 grab()
                 rotateCounterClockwise()
-                wait(2)
-                rotateClockwise()
-                wait(3)
-                rotateCounterClockwise()
+                wait(11)
+                extend()
                 reset()
             }
         }
