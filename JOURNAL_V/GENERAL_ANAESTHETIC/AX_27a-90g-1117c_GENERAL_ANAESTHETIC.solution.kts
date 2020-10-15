@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P086"
-    name = "B AC"
+    name = "B AGX"
     arm(PISTON) {
         number = 1
         position = -3 to -3
@@ -28,6 +28,14 @@ solution {
         position = 1 to -2
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = -1 to -3
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 0 to -3
+        rotation = 0
+    }
     io(OUTPUT) {
         index = 0
         position = 0 to -1
@@ -40,21 +48,13 @@ solution {
     }
     track {
         position = -1 to -3
-        positions = listOf(-2 to 0, -1 to 0, 0 to 0, 1 to 0)
+        positions = listOf(-2 to 0, -1 to 0)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                forward()
-                forward()
-                forward()
-                drop()
-                back()
-                back()
-                back()
-                grab()
                 retract()
                 drop()
                 extend()
@@ -64,14 +64,24 @@ solution {
                 drop()
                 extend()
                 grab()
-                forward()
                 retract()
                 retract()
-                pivotCounterClockwise()
+                rotateClockwise()
                 drop()
-                back()
+                rotateCounterClockwise()
                 back()
                 grab()
+                forward()
+                rotateClockwise()
+                extend()
+                pivotClockwise()
+                drop()
+                rotateCounterClockwise()
+                back()
+                extend()
+                grab()
+                retract()
+                retract()
                 forward()
                 rotateClockwise()
                 extend()
@@ -89,34 +99,36 @@ solution {
                 grab()
                 retract()
                 drop()
-                extend()
-                grab()
-                retract()
-                forward()
-                drop()
-                back()
-                extend()
-                grab()
-                retract()
-                drop()
                 retract()
                 grab()
                 rotateClockwise()
+                extend()
+                pivotClockwise()
+                extend()
                 forward()
-                pivotCounterClockwise()
-                forward()
+                drop()
+                retract()
+                rotateCounterClockwise()
+                extend()
+                grab()
+                retract()
+                retract()
+                rotateClockwise()
                 drop()
                 back()
                 rotateCounterClockwise()
                 extend()
                 extend()
                 grab()
+                retract()
                 forward()
-                retract()
-                retract()
                 drop()
                 back()
-                back()
+                extend()
+                grab()
+                retract()
+                drop()
+                retract()
                 grab()
                 forward()
                 rotateClockwise()
