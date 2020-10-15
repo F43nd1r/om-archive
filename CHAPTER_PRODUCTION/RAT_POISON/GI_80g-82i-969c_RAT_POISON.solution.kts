@@ -1,24 +1,24 @@
 
 solution {
     puzzle = "P074"
-    name = "B GCX"
+    name = "B GI 1-2T"
     arm(ARM1) {
         number = 1
         position = -1 to 1
-        rotation = -3
+        rotation = 3
         size = 2
     }
     glyph(BONDER) {
         position = 0 to 1
-        rotation = -4
+        rotation = 2
     }
     glyph(UNBONDER) {
         position = -4 to 0
-        rotation = -6
+        rotation = 0
     }
     glyph(ANIMISMUS) {
         position = -1 to -2
-        rotation = -4
+        rotation = 2
     }
     glyph(DISPOSAL) {
         position = 1 to -2
@@ -27,12 +27,12 @@ solution {
     io(OUTPUT) {
         index = 0
         position = 1 to 0
-        rotation = -8
+        rotation = -2
     }
     io(INPUT) {
         index = 0
         position = -4 to 1
-        rotation = -6
+        rotation = 0
     }
     track {
         position = -2 to 0
@@ -53,59 +53,46 @@ solution {
         {
             sequence(1) {
                 grab()
-                forward()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                forward()
-                grab()
-                rotateCounterClockwise()
-                forward()
-                drop()
-                rotateClockwise()
-                grab()
-                back()
-                rotateCounterClockwise()
-                back()
-                drop()
-                forward()
-                grab()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                back()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                forward()
-                grab()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                pivotCounterClockwise()
+                drop()
                 rotateClockwise()
                 forward()
+                grab()
+                forward()
+                rotateClockwise()
+                drop()
+                rotateClockwise()
+                grab()
+                forward()
+                back()
                 pivotClockwise()
                 pivotClockwise()
                 drop()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
                 back()
                 grab()
                 forward()
+                rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                pivotClockwise()
+                rotateCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                forward()
+                grab()
+                forward()
+                pivotClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
@@ -119,6 +106,7 @@ solution {
                 rotateClockwise()
                 grab()
                 back()
+                pivotClockwise()
                 rotateCounterClockwise()
                 back()
                 drop()
