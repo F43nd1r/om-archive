@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P022"
-    name = "B GC"
+    name = "B GX"
     arm(ARM1) {
         number = 1
         position = 1 to -1
@@ -20,14 +20,14 @@ solution {
         position = 1 to 1
         rotation = -1
     }
-    io(OUTPUT) {
-        index = 0
-        position = -2 to 0
-        rotation = -1
-    }
     io(INPUT) {
         index = 0
         position = 4 to -1
+        rotation = -1
+    }
+    io(OUTPUT) {
+        index = 0
+        position = -1 to -2
         rotation = -1
     }
     io(INPUT) {
@@ -66,8 +66,10 @@ solution {
                 pivotClockwise()
                 rotateClockwise()
                 rotateClockwise()
-                pivotCounterClockwise()
+                drop()
                 rotateClockwise()
+                grab()
+                pivotClockwise()
                 reset()
             }
         }
