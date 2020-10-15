@@ -1,74 +1,74 @@
 
 solution {
     puzzle = "P093"
-    name = "B CG"
+    name = "B CX"
     arm(PISTON) {
         number = 1
-        position = -2 to 2
-        rotation = -1
-        size = 1
-    }
-    arm(PISTON) {
-        number = 2
-        position = 2 to 0
-        rotation = -3
+        position = 2 to -2
+        rotation = 8
         size = 3
     }
     arm(ARM1) {
-        number = 3
+        number = 2
         position = -2 to 0
-        rotation = -6
+        rotation = 6
         size = 1
+    }
+    arm(PISTON) {
+        number = 3
+        position = 2 to 0
+        rotation = 9
+        size = 3
     }
     arm(ARM1) {
         number = 4
         position = 1 to -2
-        rotation = -3
+        rotation = 9
         size = 1
     }
     arm(PISTON) {
         number = 5
         position = -1 to 2
-        rotation = -8
+        rotation = 4
         size = 1
     }
     arm(PISTON) {
         number = 6
         position = 0 to 2
-        rotation = -8
+        rotation = 4
         size = 1
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 7
         position = 1 to 1
-        rotation = -8
+        rotation = 4
         size = 1
     }
     arm(PISTON) {
         number = 8
         position = 9 to 2
-        rotation = -9
+        rotation = -3
         size = 1
     }
     arm(PISTON) {
         number = 9
         position = 8 to -1
-        rotation = -5
+        rotation = 1
         size = 3
     }
     arm(PISTON) {
         number = 10
         position = 10 to 1
-        rotation = -3
+        rotation = 3
         size = 1
     }
     glyph(MULTI_BONDER) {
         position = 8 to 1
-        rotation = -8
+        rotation = -2
     }
     glyph(UNBONDER) {
         position = 0 to 0
-        rotation = -9
+        rotation = 3
     }
     glyph(CALCIFICATION) {
         position = 1 to 0
@@ -76,17 +76,17 @@ solution {
     }
     glyph(PROJECTION) {
         position = -1 to -1
-        rotation = -6
+        rotation = 6
     }
     io(OUTPUT) {
         index = 0
         position = 10 to -1
-        rotation = -6
+        rotation = 0
     }
     io(INPUT) {
         index = 0
         position = -2 to 1
-        rotation = -6
+        rotation = 6
     }
     io(INPUT) {
         index = 1
@@ -107,7 +107,7 @@ solution {
     }
     track {
         position = 2 to -1
-        positions = listOf(-1 to -1, 0 to -1, 0 to 0, 0 to 1)
+        positions = listOf(0 to 0, 0 to 1)
     }
     conduit {
         id = 100
@@ -184,8 +184,8 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(4)
+            sequence(2) {
+                wait(2)
                 grab()
                 rotateClockwise()
                 reset()
@@ -199,12 +199,21 @@ solution {
                 wait(3)
                 grab()
                 rotateClockwise()
-                drop()
-                wait(2)
-                forward()
-                forward()
+                wait(9)
+                rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(1) {
                 grab()
-                back()
+                retract()
+                retract()
+                reset()
+                wait(5)
+                grab()
+                retract()
                 reset()
             }
         }
@@ -218,7 +227,7 @@ solution {
                 extend()
                 drop()
                 back()
-                wait(7)
+                back()
                 reset()
             }
         }
@@ -233,46 +242,24 @@ solution {
                 back()
                 extend()
                 drop()
-                wait(1)
-                forward()
-                wait(1)
-                grab()
                 back()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
                 reset()
             }
         }
         , 
         {
-            sequence(2) {
-                wait(2)
+            sequence(3) {
+                wait(4)
                 grab()
                 back()
                 reset()
                 wait(1)
                 repeat()
-                wait(7)
+                wait(5)
                 grab()
                 back()
                 retract()
                 retract()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                grab()
-                extend()
-                extend()
-                reset()
-                wait(5)
-                grab()
-                extend()
                 reset()
             }
         }
@@ -285,13 +272,15 @@ solution {
                 back()
                 grab()
                 back()
-                wait(1)
-                rotateCounterClockwise()
-                drop()
-                forward()
-                wait(4)
+                wait(2)
                 back()
-                wait(5)
+                extend()
+                reset()
+                wait(4)
+                forward()
+                grab()
+                extend()
+                back()
                 reset()
             }
         }
