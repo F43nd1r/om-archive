@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P090"
-    name = "B ICX 1-3T"
+    name = "B IG 1-3T"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 7 to 0
@@ -44,18 +44,6 @@ solution {
         rotation = 3
         size = 3
     }
-    arm(ARM1) {
-        number = 8
-        position = 7 to 2
-        rotation = 0
-        size = 1
-    }
-    arm(PISTON) {
-        number = 9
-        position = 2 to -1
-        rotation = 3
-        size = 2
-    }
     glyph(BONDER) {
         position = -1 to -2
         rotation = 1
@@ -90,10 +78,6 @@ solution {
         position = -3 to 1
         positions = listOf(0 to 0, 0 to 1)
     }
-    track {
-        position = 7 to 2
-        positions = listOf(0 to 0, -1 to 0)
-    }
     conduit {
         id = 100
         position = -2 to 0
@@ -108,7 +92,7 @@ solution {
         parallel(
         {
             sequence(4) {
-                wait(13)
+                wait(12)
                 grab()
                 rotateCounterClockwise()
                 wait(1)
@@ -133,7 +117,7 @@ solution {
                 grab()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                wait(5)
+                wait(4)
                 retract()
                 pivotCounterClockwise()
                 wait(1)
@@ -145,16 +129,17 @@ solution {
                 grab()
                 retract()
                 wait(4)
-                back()
-                drop()
+                rotateClockwise()
+                rotateClockwise()
+                wait(20)
                 extend()
-                extend()
+                reset()
             }
         }
         , 
         {
             sequence(6) {
-                wait(10)
+                wait(9)
                 grab()
                 retract()
                 drop()
@@ -168,23 +153,30 @@ solution {
                 rotateClockwise()
                 extend()
                 drop()
+                retract()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                retract()
-                drop()
-                grab()
+                rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 extend()
+                wait(3)
+                grab()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                retract()
+                extend()
+                drop()
                 rotateCounterClockwise()
             }
         }
         , 
         {
             sequence(7) {
-                wait(18)
+                wait(17)
                 grab()
                 retract()
                 retract()
@@ -196,11 +188,11 @@ solution {
         , 
         {
             sequence(1) {
-                wait(15)
+                wait(14)
                 rotateCounterClockwise()
                 wait(1)
                 rotateCounterClockwise()
-                wait(30)
+                wait(31)
                 rotateCounterClockwise()
                 rotateCounterClockwise()
             }
@@ -208,7 +200,7 @@ solution {
         , 
         {
             sequence(2) {
-                wait(28)
+                wait(27)
                 grab()
                 extend()
                 drop()
@@ -218,31 +210,9 @@ solution {
         , 
         {
             sequence(3) {
-                wait(17)
+                wait(16)
                 grab()
                 forward()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(8) {
-                wait(41)
-                back()
-                drop()
-                grab()
-                forward()
-            }
-        }
-        , 
-        {
-            sequence(9) {
-                wait(42)
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                extend()
-                retract()
                 drop()
             }
         }
