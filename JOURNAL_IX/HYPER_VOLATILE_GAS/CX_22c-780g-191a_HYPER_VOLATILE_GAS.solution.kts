@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P106"
-    name = "B CA 6T"
+    name = "B CX 6T"
     arm(ARM1) {
         number = 1
         position = 3 to -7
@@ -22,9 +22,9 @@ solution {
     }
     arm(ARM1) {
         number = 4
-        position = 1 to -7
-        rotation = 3
-        size = 3
+        position = -2 to -8
+        rotation = 7
+        size = 1
     }
     arm(ARM1) {
         number = 5
@@ -70,9 +70,9 @@ solution {
     }
     arm(ARM1) {
         number = 12
-        position = 7 to -1
-        rotation = 7
-        size = 3
+        position = 8 to 2
+        rotation = 9
+        size = 1
     }
     arm(ARM1) {
         number = 13
@@ -218,11 +218,11 @@ solution {
     }
     track {
         position = 2 to -7
-        positions = listOf(2 to -2, 3 to -2, 3 to -1, 2 to 0, 2 to -1, 1 to 0, 1 to -1, 0 to 0, 0 to 1, -1 to 2, -1 to 1, -1 to 0, 0 to -1)
+        positions = listOf(2 to -2, 3 to -2, 3 to -1, 2 to 0, 2 to -1, 1 to 0, 1 to -1, 0 to 0, 0 to 1, -1 to 2, -1 to 1)
     }
     track {
         position = 6 to -2
-        positions = listOf(3 to -2, 3 to -3, 2 to -3, 1 to -2, 2 to -2, 1 to -1, 2 to -1, 1 to 0, 0 to 0, -1 to 1, 0 to 1, 1 to 1, 2 to 0)
+        positions = listOf(3 to -2, 3 to -3, 2 to -3, 1 to -2, 2 to -2, 1 to -1, 2 to -1, 1 to 0, 0 to 0, -1 to 1, 0 to 1)
     }
     tape {
         parallel(
@@ -294,19 +294,6 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(3)
-                grab()
-                forward()
-                reset()
-                wait(1)
-                repeat()
-                wait(3)
-                repeat()
-            }
-        }
-        , 
-        {
             sequence(13) {
                 wait(5)
                 grab()
@@ -321,19 +308,6 @@ solution {
                 wait(6)
                 forward()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(12) {
-                wait(5)
-                grab()
-                forward()
-                reset()
-                wait(1)
-                repeat()
-                wait(3)
-                repeat()
             }
         }
         , 
@@ -504,6 +478,32 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 reset()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(3)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                repeat()
+                wait(3)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(12) {
+                wait(5)
+                grab()
+                rotateCounterClockwise()
+                reset()
+                wait(1)
+                repeat()
+                wait(3)
+                repeat()
             }
         }
         )
