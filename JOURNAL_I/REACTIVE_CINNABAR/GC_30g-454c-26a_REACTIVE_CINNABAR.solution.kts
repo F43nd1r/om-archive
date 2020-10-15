@@ -1,62 +1,30 @@
 
 solution {
     puzzle = "P056"
-    name = "B GAX"
+    name = "B GC"
     arm(ARM1) {
         number = 1
-        position = 0 to -2
+        position = -1 to -1
         rotation = 4
         size = 1
     }
     glyph(BONDER) {
-        position = -1 to -1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 1 to -3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
         position = -2 to 0
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 0 to 1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -1 to 1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -2 to 1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 3 to -1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 2 to 0
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 1 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -1 to -2
+        position = -2 to -1
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to -2
-        rotation = 4
+        position = 1 to -2
+        rotation = 3
     }
     io(INPUT) {
         index = 1
-        position = 0 to -3
+        position = -1 to -2
         rotation = 0
     }
     tape {
@@ -106,8 +74,8 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
+                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -117,27 +85,24 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 grab()
                 pivotCounterClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
+                pivotCounterClockwise()
+                drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                grab()
                 rotateCounterClockwise()
-                rotateClockwise()
-                pivotClockwise()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 pivotClockwise()
+                pivotClockwise()
                 rotateCounterClockwise()
                 rotateClockwise()
-                pivotCounterClockwise()
                 rotateClockwise()
                 reset()
             }
