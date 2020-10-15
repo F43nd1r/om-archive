@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P079"
-    name = "B CG"
+    name = "B CI"
     arm(ARM1) {
         number = 1
         position = 0 to -2
@@ -34,19 +34,31 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = 10 to 1
-        rotation = -3
+        position = 11 to -2
+        rotation = -4
         size = 2
     }
     arm(ARM1) {
         number = 7
-        position = 7 to 1
-        rotation = 0
+        position = 9 to 2
+        rotation = -2
+        size = 2
+    }
+    arm(ARM6) {
+        number = 8
+        position = 10 to 0
+        rotation = -3
+        size = 1
+    }
+    arm(ARM3) {
+        number = 9
+        position = 8 to 1
+        rotation = -1
         size = 1
     }
     glyph(MULTI_BONDER) {
-        position = 9 to 0
-        rotation = -1
+        position = 9 to -1
+        rotation = -2
     }
     glyph(UNBONDER) {
         position = -1 to 1
@@ -67,16 +79,16 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 8 to -1
-        rotation = -2
+        position = 7 to 0
+        rotation = -3
     }
     track {
         position = 1 to 1
         positions = listOf(0 to 0, -1 to 1)
     }
     track {
-        position = 11 to 0
-        positions = listOf(0 to 0, -1 to 1)
+        position = 9 to 1
+        positions = listOf(0 to 0, 0 to 1)
     }
     conduit {
         id = 100
@@ -85,7 +97,7 @@ solution {
     }
     conduit {
         id = 100
-        position = 8 to 1
+        position = 9 to 0
         rotation = 0
     }
     tape {
@@ -102,6 +114,8 @@ solution {
                 wait(1)
                 pivotClockwise()
                 reset()
+                wait(2)
+                extendTape()
             }
         }
         , 
@@ -154,31 +168,39 @@ solution {
         }
         , 
         {
-            sequence(6) {
-                wait(8)
+            sequence(9) {
+                wait(18)
                 grab()
-                rotateCounterClockwise()
-                reset()
-                wait(4)
-                grab()
-                back()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
             }
         }
         , 
         {
             sequence(7) {
+                wait(15)
+                grab()
+                back()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(8)
+                grab()
+                rotateCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(8) {
                 wait(12)
                 grab()
-                rotateClockwise()
-                reset()
-                wait(3)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                reset()
+                rotateCounterClockwise()
+                drop()
             }
         }
         )
