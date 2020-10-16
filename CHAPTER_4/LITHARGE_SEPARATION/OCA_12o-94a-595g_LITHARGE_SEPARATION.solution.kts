@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P031b"
-    name = "OCA"
+    name = "OVERLAP A"
     arm(ARM1) {
         number = 1
         position = 1 to -3
@@ -44,6 +44,12 @@ solution {
         rotation = 3
         size = 1
     }
+    arm(ARM1) {
+        number = 8
+        position = -2 to -4
+        rotation = 2
+        size = 2
+    }
     glyph(BONDER) {
         position = 1 to -1
         rotation = -1
@@ -72,6 +78,18 @@ solution {
         position = -3 to 0
         rotation = 1
     }
+    glyph(BONDER) {
+        position = -4 to -2
+        rotation = 2
+    }
+    glyph(BONDER) {
+        position = -4 to -1
+        rotation = -4
+    }
+    glyph(BONDER) {
+        position = 6 to -2
+        rotation = -1
+    }
     glyph(UNBONDER) {
         position = 1 to -2
         rotation = 1
@@ -82,10 +100,6 @@ solution {
     }
     glyph(UNBONDER) {
         position = 1 to -2
-        rotation = 0
-    }
-    glyph(UNBONDER) {
-        position = 1 to -5
         rotation = 0
     }
     glyph(UNBONDER) {
@@ -113,16 +127,8 @@ solution {
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = -2 to -3
-        rotation = 1
-    }
-    glyph(UNBONDER) {
         position = -4 to -2
         rotation = 1
-    }
-    glyph(UNBONDER) {
-        position = -7 to -1
-        rotation = 0
     }
     glyph(UNBONDER) {
         position = 3 to -1
@@ -143,6 +149,38 @@ solution {
     glyph(UNBONDER) {
         position = 3 to -4
         rotation = -4
+    }
+    glyph(UNBONDER) {
+        position = -5 to -1
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = -5 to -1
+        rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = -2 to -3
+        rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = 1 to -5
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 7 to -4
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = 5 to -4
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = 8 to -3
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = 9 to -3
+        rotation = -1
     }
     io(OUTPUT) {
         index = 0
@@ -173,7 +211,7 @@ solution {
     }
     track {
         position = 4 to -4
-        positions = listOf(-3 to 1, -3 to 0, -2 to 0, -1 to 0, 0 to 0, 1 to 0, 2 to 0, 3 to 0, 4 to 0, 5 to 0)
+        positions = listOf(-3 to 1, -3 to 0, -2 to 0, -1 to 0, 0 to 0, 1 to 0, 2 to 0, 3 to -1)
     }
     tape {
         parallel(
@@ -187,8 +225,6 @@ solution {
                 forward()
                 rotateClockwise()
                 rotateClockwise()
-                forward()
-                forward()
                 forward()
                 forward()
             }
@@ -236,7 +272,8 @@ solution {
                 forward()
                 forward()
                 forward()
-                drop()
+                forward()
+                forward()
             }
         }
         , 
@@ -274,6 +311,16 @@ solution {
                 rotateClockwise()
                 pivotClockwise()
                 rotateClockwise()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(8)
+                grab()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
             }
         }
         )
