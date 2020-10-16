@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P031b"
-    name = "OCX"
+    name = "OCA"
     arm(ARM1) {
         number = 1
         position = 1 to -3
@@ -28,14 +28,20 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = 2 to -7
+        position = 1 to -6
         rotation = 2
-        size = 3
+        size = 2
     }
     arm(ARM1) {
         number = 6
         position = 3 to 0
         rotation = 4
+        size = 1
+    }
+    arm(ARM1) {
+        number = 7
+        position = 4 to -1
+        rotation = 3
         size = 1
     }
     glyph(BONDER) {
@@ -61,6 +67,10 @@ solution {
     glyph(BONDER) {
         position = 4 to -3
         rotation = 2
+    }
+    glyph(BONDER) {
+        position = -3 to 0
+        rotation = 1
     }
     glyph(UNBONDER) {
         position = 1 to -2
@@ -99,8 +109,20 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
+        position = -4 to 0
+        rotation = 1
+    }
+    glyph(UNBONDER) {
         position = -2 to -3
         rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = -4 to -2
+        rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = -7 to -1
+        rotation = 0
     }
     glyph(UNBONDER) {
         position = 3 to -1
@@ -122,10 +144,6 @@ solution {
         position = 3 to -4
         rotation = -4
     }
-    glyph(UNBONDER) {
-        position = -7 to -2
-        rotation = 1
-    }
     io(OUTPUT) {
         index = 0
         position = 1 to -2
@@ -143,7 +161,15 @@ solution {
     }
     track {
         position = 1 to 0
-        positions = listOf(0 to 0, -1 to 1, -2 to 1, -3 to 1, -4 to 1, -5 to 1, -6 to 1, -7 to 1)
+        positions = listOf(0 to 0, -1 to 1, -2 to 1, -3 to 1, -4 to 1, -5 to 1, -6 to 1)
+    }
+    track {
+        position = 1 to -6
+        positions = listOf(0 to 0, 1 to 0)
+    }
+    track {
+        position = 3 to 0
+        positions = listOf(1 to -1, 0 to 0, -1 to 1, -2 to 1)
     }
     track {
         position = 4 to -4
@@ -180,7 +206,7 @@ solution {
                 forward()
                 forward()
                 forward()
-                forward()
+                back()
                 rotateClockwise()
             }
         }
@@ -221,9 +247,19 @@ solution {
                 rotateClockwise()
                 pivotClockwise()
                 pivotClockwise()
+                pivotCounterClockwise()
                 pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
+                forward()
+                forward()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(7) {
+                wait(8)
+                grab()
+                forward()
                 pivotClockwise()
                 pivotCounterClockwise()
             }
@@ -231,8 +267,9 @@ solution {
         , 
         {
             sequence(5) {
-                wait(7)
+                wait(6)
                 grab()
+                forward()
                 pivotCounterClockwise()
                 rotateClockwise()
                 pivotClockwise()
