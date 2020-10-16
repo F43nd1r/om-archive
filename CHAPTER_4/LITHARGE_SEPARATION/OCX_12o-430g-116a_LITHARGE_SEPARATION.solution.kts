@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P031b"
-    name = "OCX"
+    name = "OVERLAP X"
     arm(ARM1) {
         number = 1
         position = 1 to -3
@@ -123,7 +123,7 @@ solution {
         rotation = -4
     }
     glyph(UNBONDER) {
-        position = -7 to -2
+        position = -6 to -2
         rotation = 1
     }
     io(OUTPUT) {
@@ -197,7 +197,7 @@ solution {
                 forward()
                 forward()
                 forward()
-                wait(2)
+                wait(16)
                 extendTape()
             }
         }
