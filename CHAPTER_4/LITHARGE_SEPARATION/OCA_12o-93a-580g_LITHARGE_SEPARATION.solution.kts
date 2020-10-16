@@ -87,7 +87,7 @@ solution {
         rotation = -4
     }
     glyph(BONDER) {
-        position = 6 to -2
+        position = 6 to -3
         rotation = -1
     }
     glyph(UNBONDER) {
@@ -167,20 +167,12 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = 7 to -4
-        rotation = -1
+        position = 5 to -3
+        rotation = -2
     }
     glyph(UNBONDER) {
-        position = 5 to -4
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 8 to -3
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 9 to -3
-        rotation = -1
+        position = 7 to -5
+        rotation = 1
     }
     io(OUTPUT) {
         index = 0
@@ -211,7 +203,7 @@ solution {
     }
     track {
         position = 4 to -4
-        positions = listOf(-3 to 1, -3 to 0, -2 to 0, -1 to 0, 0 to 0, 1 to 0, 2 to 0, 3 to -1)
+        positions = listOf(-3 to 1, -3 to 0, -2 to 0, -1 to 0, 0 to 0, 1 to 0, 2 to 0, 3 to 0, 4 to 0)
     }
     tape {
         parallel(
@@ -224,7 +216,9 @@ solution {
                 rotateCounterClockwise()
                 forward()
                 rotateClockwise()
-                rotateClockwise()
+                forward()
+                wait(1)
+                rotateCounterClockwise()
                 forward()
                 forward()
             }
@@ -269,8 +263,6 @@ solution {
                 wait(5)
                 grab()
                 rotateCounterClockwise()
-                forward()
-                forward()
                 forward()
                 forward()
                 forward()
