@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P031b"
-    name = "OCA 88"
+    name = "OVERLAP A"
     arm(ARM1) {
         number = 1
         position = 1 to -3
@@ -145,10 +145,6 @@ solution {
     glyph(UNBONDER) {
         position = -3 to -1
         rotation = -2
-    }
-    glyph(UNBONDER) {
-        position = -4 to -1
-        rotation = 1
     }
     glyph(UNBONDER) {
         position = -4 to -1
