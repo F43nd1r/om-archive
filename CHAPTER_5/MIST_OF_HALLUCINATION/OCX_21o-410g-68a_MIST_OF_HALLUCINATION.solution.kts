@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P038"
-    name = "OVERLAP A"
+    name = "OVERLAP GX"
     arm(ARM1) {
         number = 1
         position = 0 to -2
-        rotation = 0
+        rotation = -6
         size = 1
     }
     arm(ARM1) {
@@ -16,18 +16,12 @@ solution {
     }
     arm(ARM1) {
         number = 3
-        position = 0 to 2
-        rotation = -1
-        size = 1
-    }
-    arm(ARM1) {
-        number = 4
         position = 6 to -4
         rotation = 1
         size = 3
     }
     arm(ARM1) {
-        number = 5
+        number = 4
         position = 1 to -4
         rotation = 1
         size = 1
@@ -57,6 +51,10 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
+        position = 0 to -2
+        rotation = 0
+    }
+    glyph(BONDER) {
         position = 4 to 0
         rotation = 1
     }
@@ -71,10 +69,6 @@ solution {
     glyph(BONDER) {
         position = 5 to 1
         rotation = -1
-    }
-    glyph(BONDER) {
-        position = 0 to -2
-        rotation = 0
     }
     glyph(UNBONDER) {
         position = 1 to -3
@@ -101,6 +95,10 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
+        position = 1 to 0
+        rotation = 0
+    }
+    glyph(UNBONDER) {
         position = 2 to 0
         rotation = 1
     }
@@ -114,10 +112,6 @@ solution {
     }
     glyph(UNBONDER) {
         position = 3 to 4
-        rotation = 0
-    }
-    glyph(UNBONDER) {
-        position = 1 to 0
         rotation = 0
     }
     glyph(PURIFICATION) {
@@ -148,53 +142,33 @@ solution {
         positions = listOf(0 to -1, 1 to -1, 2 to -1, 2 to -2)
     }
     track {
-        position = 1 to 2
-        positions = listOf(0 to 0, -1 to 0)
+        position = 1 to 4
+        positions = listOf(0 to 0, -1 to 0, -2 to 0, -3 to 0)
     }
     track {
         position = -3 to 2
-        positions = listOf(4 to 2, 3 to 2, 2 to 2, 2 to 1, 2 to 0, 2 to -1, 2 to -2, 2 to -3, 3 to -4)
+        positions = listOf(2 to 2, 2 to 1, 2 to 0, 2 to -1, 2 to -2, 2 to -3, 3 to -4)
     }
     tape {
         parallel(
         {
-            sequence(5) {
-                wait(3)
-                grab()
-                forward()
-                wait(3)
-                rotateClockwise()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                wait(1)
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(4) {
-                wait(9)
-                grab()
-                pivotCounterClockwise()
-                back()
-                back()
-                back()
-                drop()
-                rotateCounterClockwise()
-                wait(2)
+                wait(3)
                 grab()
                 forward()
-                reset()
+                wait(3)
+                rotateClockwise()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
             }
         }
         , 
@@ -218,19 +192,9 @@ solution {
                 forward()
                 wait(1)
                 forward()
+                wait(1)
+                forward()
                 drop()
-                wait(3)
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(17)
-                back()
-                grab()
-                rotateClockwise()
-                reset()
             }
         }
         , 
@@ -251,9 +215,23 @@ solution {
                 back()
                 forward()
                 back()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(9)
+                grab()
+                pivotCounterClockwise()
+                back()
+                back()
+                back()
+                drop()
+                rotateCounterClockwise()
+                wait(2)
+                grab()
                 forward()
-                rotateClockwise()
-                reset()
+                drop()
             }
         }
         )
