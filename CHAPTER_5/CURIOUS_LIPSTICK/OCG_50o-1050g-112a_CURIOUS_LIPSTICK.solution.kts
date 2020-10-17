@@ -58,8 +58,8 @@ solution {
     }
     arm(VAN_BERLOS_WHEEL) {
         number = 10
-        position = 4 to 2
-        rotation = -2
+        position = 2 to 3
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
@@ -139,10 +139,6 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = 3 to -2
-        rotation = 6
-    }
-    glyph(BONDER) {
         position = -2 to 0
         rotation = -2
     }
@@ -157,6 +153,10 @@ solution {
     glyph(BONDER) {
         position = -2 to 0
         rotation = 0
+    }
+    glyph(BONDER) {
+        position = 3 to -2
+        rotation = 6
     }
     glyph(UNBONDER) {
         position = -1 to 3
@@ -188,10 +188,6 @@ solution {
     }
     glyph(UNBONDER) {
         position = -4 to 1
-        rotation = -2
-    }
-    glyph(UNBONDER) {
-        position = -4 to 1
         rotation = -1
     }
     glyph(UNBONDER) {
@@ -215,20 +211,12 @@ solution {
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = -4 to 0
-        rotation = 0
-    }
-    glyph(UNBONDER) {
         position = 2 to -1
         rotation = -3
     }
     glyph(UNBONDER) {
         position = -1 to -3
         rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 4 to -2
-        rotation = 1
     }
     glyph(UNBONDER) {
         position = -2 to 0
@@ -242,6 +230,14 @@ solution {
         position = -2 to 1
         rotation = -1
     }
+    glyph(UNBONDER) {
+        position = -4 to 1
+        rotation = -2
+    }
+    glyph(UNBONDER) {
+        position = 4 to -2
+        rotation = 1
+    }
     glyph(DUPLICATION) {
         position = 1 to 0
         rotation = 2
@@ -251,27 +247,19 @@ solution {
         rotation = 3
     }
     glyph(DUPLICATION) {
-        position = 3 to 2
-        rotation = 3
-    }
-    glyph(DUPLICATION) {
         position = 2 to -1
         rotation = -2
     }
     glyph(DUPLICATION) {
-        position = 3 to 2
-        rotation = 4
+        position = 2 to 2
+        rotation = 5
+    }
+    glyph(DUPLICATION) {
+        position = 2 to 2
+        rotation = 3
     }
     glyph(ANIMISMUS) {
         position = -1 to 2
-        rotation = -1
-    }
-    glyph(ANIMISMUS) {
-        position = -4 to 0
-        rotation = 0
-    }
-    glyph(ANIMISMUS) {
-        position = 3 to -2
         rotation = -1
     }
     glyph(ANIMISMUS) {
@@ -282,12 +270,16 @@ solution {
         position = 0 to -2
         rotation = -4
     }
-    glyph(DISPOSAL) {
-        position = 0 to 2
+    glyph(ANIMISMUS) {
+        position = -4 to 0
         rotation = 0
     }
+    glyph(ANIMISMUS) {
+        position = 3 to -2
+        rotation = -1
+    }
     glyph(DISPOSAL) {
-        position = -4 to 1
+        position = 0 to 2
         rotation = 0
     }
     glyph(DISPOSAL) {
@@ -295,11 +287,15 @@ solution {
         rotation = 0
     }
     glyph(DISPOSAL) {
-        position = 4 to -2
+        position = -1 to -2
         rotation = 0
     }
     glyph(DISPOSAL) {
-        position = -1 to -2
+        position = -4 to 1
+        rotation = 0
+    }
+    glyph(DISPOSAL) {
+        position = 4 to -2
         rotation = 0
     }
     glyph(DISPOSAL) {
@@ -326,12 +322,8 @@ solution {
         positions = listOf(0 to 0, -1 to 0, 0 to -1)
     }
     track {
-        position = -4 to 3
-        positions = listOf(0 to 0, -1 to 1)
-    }
-    track {
         position = -3 to 4
-        positions = listOf(1 to 0, 1 to 1, 0 to 2, 0 to 1, 0 to 0, -1 to 0, 0 to -1)
+        positions = listOf(1 to 0, 1 to 1, 0 to 2, 0 to 1, 0 to 0, -1 to 0, -1 to -1, -2 to 0)
     }
     track {
         position = -4 to -1
@@ -386,11 +378,8 @@ solution {
         , 
         {
             sequence(3) {
-                wait(12)
+                wait(16)
                 grab()
-                rotateClockwise()
-                rotateCounterClockwise()
-                wait(2)
                 rotateCounterClockwise()
                 forward()
                 forward()
@@ -536,20 +525,20 @@ solution {
                 grab()
                 forward()
                 drop()
-                wait(6)
+                wait(7)
                 back()
-                wait(2)
+                wait(1)
                 grab()
                 forward()
                 drop()
-                wait(6)
+                wait(7)
                 back()
-                wait(2)
+                wait(4)
                 grab()
                 forward()
                 drop()
-                wait(6)
-                back()
+                wait(4)
+                reset()
             }
         }
         , 
@@ -559,33 +548,11 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 forward()
-                drop()
-                back()
-                rotateClockwise()
-                wait(6)
-                grab()
-                rotateCounterClockwise()
-                forward()
-                drop()
-                back()
-                rotateClockwise()
-                wait(6)
-                grab()
-                rotateCounterClockwise()
-                forward()
-                drop()
-                back()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                wait(14)
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                reset()
+                wait(8)
+                repeat()
+                wait(11)
+                repeat()
             }
         }
         , 
@@ -630,14 +597,17 @@ solution {
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                wait(11)
+                wait(12)
                 rotateCounterClockwise()
                 rotateClockwise()
-                wait(10)
+                wait(1)
                 rotateCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                wait(8)
                 forward()
-                drop()
-                wait(7)
                 reset()
             }
         }
@@ -672,13 +642,21 @@ solution {
         }
         , 
         {
+            sequence(10) {
+                wait(14)
+                rotateCounterClockwise()
+                wait(1)
+                reset()
+            }
+        }
+        , 
+        {
             sequence(4) {
-                wait(12)
+                wait(13)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
                 rotateCounterClockwise()
-                wait(1)
                 forward()
                 pivotClockwise()
                 forward()
@@ -713,7 +691,7 @@ solution {
                 pivotClockwise()
                 forward()
                 rotateClockwise()
-                rotateClockwise()
+                back()
                 reset()
             }
         }
