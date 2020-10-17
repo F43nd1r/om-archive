@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P040"
-    name = "OVERLAP A"
+    name = "OVERLAP X"
     arm(PISTON) {
         number = 1
         position = 0 to -6
@@ -76,20 +76,20 @@ solution {
     }
     arm(PISTON) {
         number = 13
-        position = 1 to -6
-        rotation = 1
-        size = 1
-    }
-    arm(PISTON) {
-        number = 14
         position = 2 to -1
         rotation = -2
         size = 1
     }
     arm(ARM1) {
-        number = 15
+        number = 14
         position = 2 to -2
         rotation = -2
+        size = 2
+    }
+    arm(ARM1) {
+        number = 15
+        position = 1 to -6
+        rotation = 1
         size = 2
     }
     arm(ARM1) {
@@ -520,23 +520,6 @@ solution {
         }
         , 
         {
-            sequence(16) {
-                wait(18)
-                grab()
-                forward()
-                drop()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(1) {
                 grab()
                 forward()
@@ -580,29 +563,6 @@ solution {
                 back()
                 forward()
                 forward()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(13) {
-                wait(12)
-                grab()
-                extend()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                rotateClockwise()
-                pivotClockwise()
-                wait(1)
-                pivotClockwise()
-                wait(1)
-                pivotClockwise()
-                wait(1)
-                pivotClockwise()
-                wait(1)
-                retract()
                 drop()
             }
         }
@@ -660,7 +620,7 @@ solution {
         }
         , 
         {
-            sequence(15) {
+            sequence(14) {
                 wait(15)
                 forward()
                 wait(3)
@@ -680,7 +640,7 @@ solution {
         }
         , 
         {
-            sequence(14) {
+            sequence(13) {
                 wait(14)
                 rotateCounterClockwise()
                 forward()
@@ -695,6 +655,54 @@ solution {
                 back()
                 back()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(15) {
+                wait(11)
+                forward()
+                grab()
+                back()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                rotateClockwise()
+                pivotClockwise()
+                wait(1)
+                pivotClockwise()
+                wait(1)
+                pivotClockwise()
+                wait(1)
+                pivotClockwise()
+                wait(1)
+                forward()
+                rotateCounterClockwise()
+                forward()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(16) {
+                wait(11)
+                forward()
+                wait(1)
+                back()
+                wait(4)
+                grab()
+                forward()
+                drop()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                forward()
             }
         }
         )
