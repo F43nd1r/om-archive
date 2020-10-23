@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P065"
-    name = "OVERLAP G"
+    name = "OVERLAP X"
     arm(ARM1) {
         number = 1
         position = -3 to 4
@@ -54,7 +54,7 @@ solution {
         number = 9
         position = 1 to -6
         rotation = 0
-        size = 3
+        size = 2
     }
     glyph(BONDER) {
         position = -5 to 1
@@ -157,7 +157,7 @@ solution {
     }
     track {
         position = 0 to -6
-        positions = listOf(-1 to 2, 0 to 1, 1 to 0)
+        positions = listOf(-1 to 3, -1 to 2, 0 to 1, 1 to 0, 2 to -1)
     }
     tape {
         parallel(
@@ -341,24 +341,30 @@ solution {
                 wait(9)
                 grab()
                 rotateClockwise()
+                pivotClockwise()
                 rotateClockwise()
                 rotateClockwise()
+                pivotCounterClockwise()
                 drop()
+                wait(3)
+                rotateClockwise()
             }
         }
         , 
         {
             sequence(9) {
-                wait(13)
+                wait(15)
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                back()
                 pivotCounterClockwise()
-                wait(9)
-                rotateClockwise()
+                wait(2)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                wait(4)
+                back()
+                back()
+                back()
+                back()
             }
         }
         )
