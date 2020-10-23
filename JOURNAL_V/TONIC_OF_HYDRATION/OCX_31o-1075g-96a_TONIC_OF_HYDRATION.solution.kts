@@ -569,10 +569,6 @@ solution {
                 rotateCounterClockwise()
                 back()
                 drop()
-                wait(16)
-                grab()
-                rotateClockwise()
-                drop()
             }
         }
         )
