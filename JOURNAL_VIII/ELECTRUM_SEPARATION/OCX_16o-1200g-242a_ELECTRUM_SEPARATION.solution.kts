@@ -46,8 +46,8 @@ solution {
     }
     arm(ARM1) {
         number = 8
-        position = -2 to -2
-        rotation = 0
+        position = -2 to -1
+        rotation = 1
         size = 3
     }
     arm(ARM1) {
@@ -421,10 +421,6 @@ solution {
         positions = listOf(3 to -1, 2 to -1, 1 to 0, 1 to -1, 0 to -1, -1 to 0, 0 to 0)
     }
     track {
-        position = -4 to 4
-        positions = listOf(0 to 0, -1 to 1)
-    }
-    track {
         position = 2 to -7
         positions = listOf(0 to 0, 0 to 1, 1 to 0, 2 to 0, 3 to -1)
     }
@@ -496,7 +492,6 @@ solution {
                 wait(7)
                 grab()
                 rotateClockwise()
-                back()
                 drop()
             }
         }
@@ -585,19 +580,6 @@ solution {
         }
         , 
         {
-            sequence(8) {
-                wait(7)
-                back()
-                back()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                back()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(13) {
                 wait(8)
                 grab()
@@ -643,6 +625,17 @@ solution {
                 forward()
                 wait(1)
                 extendTape()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(9)
+                grab()
+                back()
+                rotateClockwise()
+                back()
+                drop()
             }
         }
         )
