@@ -34,7 +34,7 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = -3 to 4
+        position = -4 to 4
         rotation = 0
         size = 3
     }
@@ -396,15 +396,11 @@ solution {
     }
     track {
         position = 3 to 2
-        positions = listOf(-3 to 5, -2 to 4, -1 to 3, -1 to 2, -1 to 1, -2 to 2, -3 to 3)
+        positions = listOf(-4 to 5, -3 to 5, -2 to 4, -1 to 3, -1 to 2, -1 to 1, -2 to 2, -3 to 3)
     }
     track {
         position = -3 to -1
         positions = listOf(3 to -1, 2 to -1, 1 to 0, 1 to -1, 0 to -1, -1 to 0, 0 to 0)
-    }
-    track {
-        position = -4 to 4
-        positions = listOf(0 to 0, 1 to 0)
     }
     track {
         position = 6 to -6
@@ -541,29 +537,6 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                grab()
-                back()
-                back()
-                back()
-                back()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(6)
-                grab()
-                back()
-                rotateClockwise()
-                pivotClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(12) {
                 wait(8)
                 grab()
@@ -617,6 +590,29 @@ solution {
                 forward()
                 wait(1)
                 extendTape()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(7)
+                grab()
+                rotateClockwise()
+                pivotClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                grab()
+                back()
+                back()
+                back()
+                back()
+                back()
+                rotateClockwise()
+                drop()
             }
         }
         )
