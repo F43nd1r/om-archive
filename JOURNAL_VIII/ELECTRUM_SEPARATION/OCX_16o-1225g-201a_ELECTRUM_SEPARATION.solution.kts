@@ -271,10 +271,6 @@ solution {
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = 5 to 2
-        rotation = 4
-    }
-    glyph(UNBONDER) {
         position = 5 to -1
         rotation = -2
     }
@@ -326,6 +322,22 @@ solution {
         position = 4 to -3
         rotation = 2
     }
+    glyph(UNBONDER) {
+        position = 5 to 3
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 6 to 3
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 4 to 3
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 5 to 2
+        rotation = 4
+    }
     glyph(CALCIFICATION) {
         position = 1 to -2
         rotation = 0
@@ -370,6 +382,18 @@ solution {
         position = 3 to -2
         rotation = 0
     }
+    glyph(DISPOSAL) {
+        position = 4 to 3
+        rotation = 0
+    }
+    glyph(DISPOSAL) {
+        position = 5 to 3
+        rotation = 0
+    }
+    glyph(DISPOSAL) {
+        position = 6 to 3
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = 5 to -1
@@ -389,10 +413,6 @@ solution {
         index = 2
         position = 5 to -3
         rotation = -3
-    }
-    track {
-        position = 6 to 1
-        positions = listOf(0 to 0, 0 to 1, 0 to 2, 0 to 3, 0 to 4, 0 to 5, 0 to 6, 0 to 7, 0 to 8, 0 to 9, 0 to 10, 0 to 11, 0 to 12, 0 to 13, 0 to 14)
     }
     track {
         position = 3 to 2
@@ -417,6 +437,10 @@ solution {
     track {
         position = 3 to -7
         positions = listOf(2 to -1, 1 to 0, 0 to 0, -1 to 1, -1 to 0)
+    }
+    track {
+        position = 6 to 1
+        positions = listOf(0 to 0, 1 to 0, 1 to 1, 1 to 2, 1 to 3, 1 to 4, 1 to 5, 1 to 6, 1 to 7, 1 to 8, 1 to 9, 1 to 10, 1 to 11, 1 to 12, 1 to 13, 1 to 14)
     }
     tape {
         parallel(
@@ -455,7 +479,7 @@ solution {
         {
             sequence(3) {
                 grab()
-                rotateCounterClockwise()
+                forward()
                 forward()
                 forward()
                 forward()
