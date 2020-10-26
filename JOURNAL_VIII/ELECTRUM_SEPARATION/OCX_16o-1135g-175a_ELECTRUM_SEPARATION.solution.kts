@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P103"
-    name = "OVERLAP A"
-    arm(PISTON) {
+    name = "OVERLAP X"
+    arm(ARM1) {
         number = 1
         position = 9 to -2
         rotation = 3
@@ -426,7 +426,7 @@ solution {
     }
     track {
         position = 9 to -2
-        positions = listOf(0 to 0, 1 to 0)
+        positions = listOf(0 to 0, 0 to 1, 1 to 1)
     }
     track {
         position = 11 to -6
@@ -529,18 +529,6 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                retract()
-                forward()
-                drop()
-                wait(12)
-                extendTape()
             }
         }
         , 
@@ -661,6 +649,18 @@ solution {
                 rotateClockwise()
                 forward()
                 rotateClockwise()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                forward()
+                forward()
+                drop()
+                wait(12)
+                extendTape()
             }
         }
         )
