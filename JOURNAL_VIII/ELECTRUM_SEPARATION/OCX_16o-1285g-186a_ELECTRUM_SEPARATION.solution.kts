@@ -6,7 +6,7 @@ solution {
         number = 1
         position = 9 to -2
         rotation = 3
-        size = 2
+        size = 3
     }
     arm(ARM1) {
         number = 2
@@ -73,6 +73,12 @@ solution {
         position = 5 to -6
         rotation = -3
         size = 1
+    }
+    arm(ARM1) {
+        number = 13
+        position = 11 to -5
+        rotation = -4
+        size = 2
     }
     glyph(BONDER) {
         position = 7 to -2
@@ -174,6 +180,10 @@ solution {
         position = 2 to -5
         rotation = -2
     }
+    glyph(BONDER) {
+        position = 9 to -3
+        rotation = -1
+    }
     glyph(UNBONDER) {
         position = 8 to -3
         rotation = 1
@@ -249,10 +259,6 @@ solution {
     glyph(UNBONDER) {
         position = 6 to -5
         rotation = 2
-    }
-    glyph(UNBONDER) {
-        position = 22 to -3
-        rotation = -2
     }
     glyph(UNBONDER) {
         position = 22 to -4
@@ -337,6 +343,14 @@ solution {
     glyph(UNBONDER) {
         position = 5 to 2
         rotation = 4
+    }
+    glyph(UNBONDER) {
+        position = 9 to -3
+        rotation = -2
+    }
+    glyph(UNBONDER) {
+        position = 22 to -4
+        rotation = 2
     }
     glyph(CALCIFICATION) {
         position = 1 to -2
@@ -423,10 +437,6 @@ solution {
         positions = listOf(3 to -1, 2 to -1, 1 to 0, 1 to -1, 0 to -1, -1 to 0, 0 to 0)
     }
     track {
-        position = 9 to -2
-        positions = listOf(0 to 0, 1 to 0, 2 to 0, 3 to 0, 4 to 0, 5 to 0, 6 to 0, 7 to 0, 8 to 0, 9 to 0, 10 to 0, 11 to 0, 12 to 0, 13 to 0)
-    }
-    track {
         position = -4 to 4
         positions = listOf(0 to 0, 1 to 0)
     }
@@ -437,6 +447,14 @@ solution {
     track {
         position = 3 to -7
         positions = listOf(2 to -1, 1 to 0, 0 to 0, -1 to 1, 0 to 1, 1 to 1, 2 to 1, 2 to 2, 3 to 2, 4 to 1)
+    }
+    track {
+        position = 9 to -2
+        positions = listOf(0 to 0, 1 to 0)
+    }
+    track {
+        position = 11 to -5
+        positions = listOf(0 to 0, 1 to 0, 2 to 0, 3 to 0, 4 to 0, 5 to 0, 6 to 0, 7 to 0, 8 to 0, 9 to 0, 10 to 0, 11 to 0, 12 to 0)
     }
     tape {
         parallel(
@@ -511,29 +529,6 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                retract()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                wait(1)
-                extendTape()
             }
         }
         , 
@@ -638,6 +633,37 @@ solution {
                 rotateClockwise()
                 forward()
                 rotateClockwise()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                retract()
+                forward()
+                reset()
+                wait(12)
+                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(13) {
+                wait(3)
+                grab()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
             }
         }
         )
