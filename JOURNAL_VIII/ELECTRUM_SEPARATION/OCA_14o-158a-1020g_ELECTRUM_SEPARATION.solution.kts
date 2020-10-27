@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P103"
-    name = "OVERLAP A"
+    name = "OVERLAP A (Copy)"
     arm(PISTON) {
         number = 1
         position = -1 to 4
@@ -50,29 +50,35 @@ solution {
         rotation = 1
         size = 2
     }
-    arm(PISTON) {
-        number = 9
-        position = 7 to 4
-        rotation = 3
-        size = 3
-    }
     arm(ARM1) {
-        number = 10
+        number = 9
         position = 6 to -2
         rotation = -3
         size = 3
     }
-    arm(ARM1) {
-        number = 11
+    arm(PISTON) {
+        number = 10
         position = 7 to -4
         rotation = -4
         size = 3
     }
     arm(ARM1) {
-        number = 12
-        position = 4 to 5
-        rotation = 3
+        number = 11
+        position = 5 to 3
+        rotation = 2
         size = 1
+    }
+    arm(ARM1) {
+        number = 12
+        position = 6 to 4
+        rotation = -2
+        size = 2
+    }
+    arm(PISTON) {
+        number = 13
+        position = 5 to 2
+        rotation = 2
+        size = 2
     }
     glyph(BONDER) {
         position = 3 to 1
@@ -107,10 +113,6 @@ solution {
         rotation = 3
     }
     glyph(BONDER) {
-        position = 4 to 3
-        rotation = 0
-    }
-    glyph(BONDER) {
         position = 2 to 4
         rotation = 3
     }
@@ -129,6 +131,10 @@ solution {
     glyph(BONDER) {
         position = -7 to 5
         rotation = 6
+    }
+    glyph(BONDER) {
+        position = 4 to 3
+        rotation = 0
     }
     glyph(BONDER) {
         position = 0 to 5
@@ -223,10 +229,6 @@ solution {
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = 3 to 5
-        rotation = 3
-    }
-    glyph(UNBONDER) {
         position = -10 to 5
         rotation = -1
     }
@@ -241,6 +243,10 @@ solution {
     glyph(UNBONDER) {
         position = 8 to -2
         rotation = 2
+    }
+    glyph(UNBONDER) {
+        position = 3 to 5
+        rotation = 3
     }
     glyph(UNBONDER) {
         position = 2 to 4
@@ -319,10 +325,6 @@ solution {
         positions = listOf(0 to 0, 0 to -1, 0 to -2, 0 to -3, 0 to -4)
     }
     track {
-        position = 11 to -7
-        positions = listOf(-1 to 0, -2 to 1, -3 to 2, -4 to 3, -5 to 4, -5 to 5, -5 to 6, -5 to 7, -5 to 8, -5 to 9)
-    }
-    track {
         position = -1 to 4
         positions = listOf(0 to 0, -1 to 0, -2 to 0, -3 to 0, -4 to 0, -5 to 0, -6 to 0, -7 to 0, -8 to 0, -9 to 0)
     }
@@ -339,8 +341,20 @@ solution {
         positions = listOf(0 to 0, -1 to 1)
     }
     track {
-        position = 5 to 3
-        positions = listOf(-2 to 2, -1 to 2, 0 to 1, 1 to 1, 2 to 1, 3 to 0, 4 to 0, 5 to 0, 4 to 1)
+        position = 6 to 1
+        positions = listOf(0 to 0, 0 to 1, -1 to 1)
+    }
+    track {
+        position = 11 to -7
+        positions = listOf(-1 to 0, -2 to 1, -3 to 2, -4 to 3, -5 to 4, -5 to 5, -5 to 6, -5 to 7, -5 to 8)
+    }
+    track {
+        position = 6 to 2
+        positions = listOf(-3 to 3, -2 to 2, -1 to 1, 0 to 1, 1 to 1, 2 to 1, 3 to 1, 4 to 1, 3 to 2)
+    }
+    track {
+        position = 2 to 5
+        positions = listOf(2 to -1, 3 to -1, 4 to -1)
     }
     tape {
         parallel(
@@ -372,34 +386,6 @@ solution {
                 forward()
                 rotateClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(6)
-                grab()
-                rotateClockwise()
-                wait(1)
-                forward()
-                forward()
-                forward()
-                forward()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                forward()
-                forward()
-                rotateClockwise()
-                forward()
-                forward()
             }
         }
         , 
@@ -476,47 +462,91 @@ solution {
         }
         , 
         {
+            sequence(4) {
+                wait(6)
+                grab()
+                rotateClockwise()
+                wait(1)
+                forward()
+                forward()
+                forward()
+                forward()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(9) {
-                wait(7)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+                forward()
+                forward()
+                rotateClockwise()
+                forward()
+                back()
+                wait(4)
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(11) {
+                wait(2)
+                back()
                 grab()
                 forward()
-                retract()
-                retract()
+                forward()
+                wait(2)
+                rotateCounterClockwise()
                 forward()
                 forward()
+                forward()
+                forward()
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(13) {
+                wait(6)
+                forward()
+                forward()
+                grab()
+                extend()
+                wait(3)
                 forward()
             }
         }
         , 
         {
             sequence(12) {
-                wait(2)
+                wait(6)
                 grab()
-                forward()
+                rotateClockwise()
                 drop()
-                forward()
+                back()
+                back()
                 wait(2)
-                forward()
-                grab()
-                back()
-                back()
-                back()
                 back()
             }
         }
         , 
         {
-            sequence(11) {
+            sequence(10) {
                 grab()
                 rotateClockwise()
                 forward()
                 wait(1)
                 forward()
                 forward()
-                wait(1)
-                forward()
-                forward()
                 drop()
+                forward()
+                forward()
+                retract()
+                wait(3)
+                forward()
             }
         }
         )
