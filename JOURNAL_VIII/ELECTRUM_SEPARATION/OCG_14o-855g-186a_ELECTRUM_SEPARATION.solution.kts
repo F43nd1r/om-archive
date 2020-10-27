@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P103"
-    name = "OVERLAP X"
+    name = "OVERLAP G"
     arm(PISTON) {
         number = 1
         position = -1 to 4
@@ -40,9 +40,9 @@ solution {
     }
     arm(ARM1) {
         number = 7
-        position = -6 to 6
-        rotation = -1
-        size = 1
+        position = -8 to 2
+        rotation = 0
+        size = 3
     }
     arm(ARM1) {
         number = 8
@@ -101,10 +101,6 @@ solution {
         rotation = 3
     }
     glyph(BONDER) {
-        position = -5 to 5
-        rotation = 3
-    }
-    glyph(BONDER) {
         position = 0 to 5
         rotation = 0
     }
@@ -131,6 +127,10 @@ solution {
     glyph(BONDER) {
         position = 1 to 5
         rotation = 0
+    }
+    glyph(BONDER) {
+        position = -5 to 5
+        rotation = 3
     }
     glyph(UNBONDER) {
         position = 3 to -1
@@ -318,7 +318,7 @@ solution {
     }
     track {
         position = 2 to -6
-        positions = listOf(0 to 3, -1 to 3, -2 to 3, -3 to 3, -4 to 3, -4 to 4)
+        positions = listOf(0 to 3, -1 to 3, -2 to 3, -3 to 3, -4 to 3)
     }
     track {
         position = 11 to -7
@@ -326,15 +326,15 @@ solution {
     }
     track {
         position = 8 to -2
-        positions = listOf(-2 to 0, -1 to 0, -1 to 1, -1 to 2, -1 to 3, -2 to 4, -3 to 4)
-    }
-    track {
-        position = 4 to 5
-        positions = listOf(0 to 0, 1 to 0, 2 to 0, 3 to 0, 2 to 1)
+        positions = listOf(-2 to 0, -1 to 0, -1 to 1, -1 to 2, -2 to 3, -3 to 4)
     }
     track {
         position = -1 to 4
         positions = listOf(0 to 0, -1 to 0, -2 to 0, -3 to 0, -4 to 0, -5 to 0, -6 to 0, -7 to 0, -8 to 0, -9 to 0)
+    }
+    track {
+        position = 4 to 5
+        positions = listOf(1 to 0, 2 to 0, 3 to 0, 2 to 1)
     }
     tape {
         parallel(
@@ -365,7 +365,6 @@ solution {
                 forward()
                 forward()
                 rotateCounterClockwise()
-                forward()
                 drop()
             }
         }
@@ -383,13 +382,11 @@ solution {
                 wait(2)
                 grab()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
+                forward()
                 pivotClockwise()
-                forward()
-                wait(1)
+                rotateCounterClockwise()
+                wait(3)
                 back()
-                back()
-                forward()
                 forward()
                 forward()
                 forward()
@@ -454,6 +451,19 @@ solution {
         }
         , 
         {
+            sequence(11) {
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                forward()
+                forward()
+                wait(7)
+                forward()
+                rotateCounterClockwise()
+            }
+        }
+        , 
+        {
             sequence(1) {
                 grab()
                 rotateCounterClockwise()
@@ -475,25 +485,11 @@ solution {
         }
         , 
         {
-            sequence(11) {
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                forward()
-                forward()
-                wait(2)
-                rotateCounterClockwise()
-                wait(4)
-                forward()
-                forward()
-            }
-        }
-        , 
-        {
             sequence(7) {
-                wait(7)
+                wait(6)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
                 drop()
             }
         }
