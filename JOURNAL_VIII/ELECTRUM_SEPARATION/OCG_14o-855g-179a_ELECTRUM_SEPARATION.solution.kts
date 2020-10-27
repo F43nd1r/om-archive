@@ -40,9 +40,9 @@ solution {
     }
     arm(ARM1) {
         number = 7
-        position = -8 to 2
+        position = -10 to 3
         rotation = 0
-        size = 3
+        size = 2
     }
     arm(ARM1) {
         number = 8
@@ -129,8 +129,8 @@ solution {
         rotation = 0
     }
     glyph(BONDER) {
-        position = -5 to 5
-        rotation = 3
+        position = -7 to 5
+        rotation = 6
     }
     glyph(UNBONDER) {
         position = 3 to -1
@@ -365,6 +365,7 @@ solution {
                 forward()
                 forward()
                 rotateCounterClockwise()
+                pivotCounterClockwise()
                 drop()
             }
         }
@@ -486,10 +487,9 @@ solution {
         , 
         {
             sequence(7) {
-                wait(6)
+                wait(7)
                 grab()
                 rotateCounterClockwise()
-                pivotCounterClockwise()
                 drop()
             }
         }
