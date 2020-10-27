@@ -40,9 +40,9 @@ solution {
     }
     arm(ARM1) {
         number = 7
-        position = -6 to 6
-        rotation = -1
-        size = 1
+        position = -8 to 2
+        rotation = 1
+        size = 2
     }
     arm(ARM1) {
         number = 8
@@ -101,10 +101,6 @@ solution {
         rotation = 3
     }
     glyph(BONDER) {
-        position = -5 to 5
-        rotation = 3
-    }
-    glyph(BONDER) {
         position = 0 to 5
         rotation = 0
     }
@@ -131,6 +127,10 @@ solution {
     glyph(BONDER) {
         position = 1 to 5
         rotation = 0
+    }
+    glyph(BONDER) {
+        position = -7 to 5
+        rotation = 6
     }
     glyph(UNBONDER) {
         position = 3 to -1
@@ -334,7 +334,11 @@ solution {
     }
     track {
         position = 2 to -5
-        positions = listOf(-1 to 4, 0 to 3, -1 to 3, -2 to 3, -3 to 3, -4 to 3, -5 to 4)
+        positions = listOf(-1 to 4, 0 to 3, -1 to 3, -2 to 3, -3 to 3, -4 to 3)
+    }
+    track {
+        position = -8 to 2
+        positions = listOf(0 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -451,15 +455,6 @@ solution {
         }
         , 
         {
-            sequence(7) {
-                wait(7)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(5) {
                 grab()
                 forward()
@@ -467,7 +462,7 @@ solution {
                 forward()
                 forward()
                 rotateCounterClockwise()
-                forward()
+                pivotCounterClockwise()
                 drop()
             }
         }
@@ -497,6 +492,16 @@ solution {
                 forward()
                 drop()
                 forward()
+            }
+        }
+        , 
+        {
+            sequence(7) {
+                wait(7)
+                grab()
+                rotateCounterClockwise()
+                forward()
+                drop()
             }
         }
         )
