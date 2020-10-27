@@ -157,14 +157,6 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = -10 to 1
-        rotation = -12
-    }
-    glyph(BONDER) {
-        position = -10 to 2
-        rotation = -5
-    }
-    glyph(BONDER) {
         position = -6 to 0
         rotation = -2
     }
@@ -223,6 +215,14 @@ solution {
     glyph(BONDER) {
         position = -3 to 1
         rotation = 0
+    }
+    glyph(BONDER) {
+        position = -9 to 2
+        rotation = -5
+    }
+    glyph(BONDER) {
+        position = -9 to 1
+        rotation = -12
     }
     glyph(MULTI_BONDER) {
         position = -6 to 1
@@ -421,10 +421,6 @@ solution {
         positions = listOf(0 to 0, -1 to 1)
     }
     track {
-        position = -13 to -4
-        positions = listOf(0 to 0, 1 to -1, 2 to -2, 3 to -3, 4 to -3, 4 to -2, 4 to -1, 4 to 0, 4 to 1, 4 to 2, 4 to 3, 4 to 4, 4 to 5)
-    }
-    track {
         position = -4 to -5
         positions = listOf(0 to 0, 1 to 0, 1 to 1, 1 to 2, 0 to 3, 0 to 2, 0 to 1)
     }
@@ -434,7 +430,7 @@ solution {
     }
     track {
         position = -11 to 5
-        positions = listOf(-2 to -2, -3 to -2, -4 to -1, -3 to -1, -2 to -1, -1 to -1, -2 to 0, -1 to 0, 0 to 0, 1 to -1)
+        positions = listOf(-1 to -2, -2 to -2, -3 to -2, -4 to -1, -3 to -1, -2 to -1, -1 to -1, 0 to -1)
     }
     track {
         position = -11 to 0
@@ -467,6 +463,14 @@ solution {
     track {
         position = 2 to -5
         positions = listOf(0 to 0, -1 to 1, -2 to 2, -3 to 3, -4 to 4, -3 to 4, -4 to 5, -5 to 5, -6 to 6)
+    }
+    track {
+        position = -12 to 5
+        positions = listOf(0 to 0, 1 to 0, 2 to -1)
+    }
+    track {
+        position = -13 to -4
+        positions = listOf(0 to 0, 1 to -1, 2 to -2, 3 to -3, 4 to -3, 4 to -2, 4 to -1, 4 to 0, 4 to 1, 4 to 2, 4 to 3, 4 to 4, 4 to 5)
     }
     tape {
         parallel(
@@ -588,13 +592,13 @@ solution {
                 wait(8)
                 forward()
                 grab()
+                pivotClockwise()
                 rotateCounterClockwise()
                 back()
-                back()
-                rotateCounterClockwise()
                 wait(1)
                 rotateCounterClockwise()
-                forward()
+                pivotCounterClockwise()
+                rotateCounterClockwise()
                 forward()
             }
         }
@@ -611,6 +615,7 @@ solution {
                 forward()
                 wait(2)
                 rotateCounterClockwise()
+                forward()
                 forward()
                 forward()
                 forward()
@@ -631,6 +636,7 @@ solution {
                 rotateCounterClockwise()
                 forward()
                 forward()
+                back()
                 back()
                 extend()
                 extend()
