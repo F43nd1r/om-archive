@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P103"
-    name = "OVERLAP A (Copy)"
+    name = "OVERLAP A"
     arm(PISTON) {
         number = 1
         position = -1 to 4
@@ -58,25 +58,19 @@ solution {
     }
     arm(PISTON) {
         number = 10
-        position = 7 to -4
+        position = 6 to -3
         rotation = -4
-        size = 3
+        size = 2
     }
     arm(ARM1) {
         number = 11
-        position = 5 to 3
-        rotation = 2
-        size = 1
-    }
-    arm(ARM1) {
-        number = 12
-        position = 6 to 4
+        position = 6 to 1
         rotation = -2
         size = 2
     }
     arm(PISTON) {
-        number = 13
-        position = 5 to 2
+        number = 12
+        position = 5 to 3
         rotation = 2
         size = 2
     }
@@ -133,15 +127,15 @@ solution {
         rotation = 6
     }
     glyph(BONDER) {
-        position = 4 to 3
-        rotation = 0
-    }
-    glyph(BONDER) {
         position = 0 to 5
         rotation = 0
     }
     glyph(BONDER) {
         position = 1 to 5
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 4 to 3
         rotation = 0
     }
     glyph(UNBONDER) {
@@ -300,15 +294,15 @@ solution {
         position = 4 to 3
         rotation = 0
     }
-    io(INPUT) {
-        index = 0
-        position = 3 to 0
-        rotation = 4
-    }
     io(INFINITE) {
         index = 0
         position = -15 to 5
         rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = 3 to 0
+        rotation = 4
     }
     io(INFINITE) {
         index = 1
@@ -341,20 +335,16 @@ solution {
         positions = listOf(0 to 0, -1 to 1)
     }
     track {
-        position = 6 to 1
-        positions = listOf(0 to 0, 0 to 1, -1 to 1)
-    }
-    track {
-        position = 11 to -7
-        positions = listOf(-1 to 0, -2 to 1, -3 to 2, -4 to 3, -5 to 4, -5 to 5, -5 to 6, -5 to 7, -5 to 8)
+        position = 6 to 2
+        positions = listOf(-3 to 3, -2 to 2, -1 to 2, 0 to 2, 0 to 1, 1 to 1, 2 to 1, 3 to 1, 4 to 1, 3 to 2)
     }
     track {
         position = 6 to 2
-        positions = listOf(-3 to 3, -2 to 2, -1 to 1, 0 to 1, 1 to 1, 2 to 1, 3 to 1, 4 to 1, 3 to 2)
+        positions = listOf(-1 to 1, 0 to 1, 0 to 0, -1 to 0)
     }
     track {
-        position = 2 to 5
-        positions = listOf(2 to -1, 3 to -1, 4 to -1)
+        position = 11 to -7
+        positions = listOf(-1 to 0, -2 to 1, -3 to 2, -4 to 3, -5 to 4, -5 to 5, -5 to 6, -5 to 7, -5 to 8, -5 to 9)
     }
     tape {
         parallel(
@@ -462,6 +452,76 @@ solution {
         }
         , 
         {
+            sequence(9) {
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+                forward()
+                forward()
+                rotateClockwise()
+                forward()
+                forward()
+                forward()
+                wait(3)
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(12) {
+                wait(2)
+                grab()
+                retract()
+                wait(1)
+                forward()
+                wait(2)
+                rotateCounterClockwise()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(10) {
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                forward()
+                forward()
+                wait(1)
+                forward()
+                forward()
+                forward()
+                wait(1)
+                grab()
+                extend()
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(11) {
+                wait(2)
+                grab()
+                forward()
+                back()
+                back()
+                wait(1)
+                rotateClockwise()
+                drop()
+                back()
+                wait(2)
+                back()
+                back()
+            }
+        }
+        , 
+        {
             sequence(4) {
                 wait(6)
                 grab()
@@ -472,81 +532,6 @@ solution {
                 forward()
                 forward()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(9) {
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                forward()
-                forward()
-                rotateClockwise()
-                forward()
-                back()
-                wait(4)
-                forward()
-            }
-        }
-        , 
-        {
-            sequence(11) {
-                wait(2)
-                back()
-                grab()
-                forward()
-                forward()
-                wait(2)
-                rotateCounterClockwise()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-            }
-        }
-        , 
-        {
-            sequence(13) {
-                wait(6)
-                forward()
-                forward()
-                grab()
-                extend()
-                wait(3)
-                forward()
-            }
-        }
-        , 
-        {
-            sequence(12) {
-                wait(6)
-                grab()
-                rotateClockwise()
-                drop()
-                back()
-                back()
-                wait(2)
-                back()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                grab()
-                rotateClockwise()
-                forward()
-                wait(1)
-                forward()
-                forward()
-                drop()
-                forward()
-                forward()
-                retract()
-                wait(3)
-                forward()
             }
         }
         )
