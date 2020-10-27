@@ -22,15 +22,15 @@ solution {
     }
     arm(ARM1) {
         number = 4
-        position = 2 to -3
-        rotation = 1
-        size = 3
-    }
-    arm(ARM1) {
-        number = 5
         position = 10 to -7
         rotation = 2
         size = 1
+    }
+    arm(ARM1) {
+        number = 5
+        position = 2 to -2
+        rotation = 1
+        size = 2
     }
     arm(ARM1) {
         number = 6
@@ -46,15 +46,15 @@ solution {
     }
     arm(ARM1) {
         number = 8
-        position = 1 to -1
-        rotation = 0
-        size = 1
-    }
-    arm(ARM1) {
-        number = 9
-        position = 1 to -2
+        position = 2 to -4
         rotation = 1
         size = 3
+    }
+    arm(PISTON) {
+        number = 9
+        position = 1 to -1
+        rotation = 1
+        size = 2
     }
     arm(ARM1) {
         number = 10
@@ -309,16 +309,8 @@ solution {
         rotation = -1
     }
     track {
-        position = 1 to -2
-        positions = listOf(0 to 0, 1 to 0)
-    }
-    track {
         position = 5 to -3
         positions = listOf(0 to 0, 0 to -1, 0 to -2, 0 to -3, 0 to -4)
-    }
-    track {
-        position = 2 to -6
-        positions = listOf(0 to 3, -1 to 3, -2 to 3, -3 to 3, -4 to 3, -4 to 4)
     }
     track {
         position = 11 to -7
@@ -335,6 +327,14 @@ solution {
     track {
         position = -1 to 4
         positions = listOf(0 to 0, -1 to 0, -2 to 0, -3 to 0, -4 to 0, -5 to 0, -6 to 0, -7 to 0, -8 to 0, -9 to 0)
+    }
+    track {
+        position = 2 to -4
+        positions = listOf(0 to 0, 0 to -1, 1 to -2)
+    }
+    track {
+        position = 2 to -5
+        positions = listOf(-1 to 4, 0 to 3, -1 to 3, -2 to 3, -3 to 3, -4 to 3, -5 to 4)
     }
     tape {
         parallel(
@@ -358,27 +358,6 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                grab()
-                forward()
-                forward()
-                forward()
-                forward()
-                rotateCounterClockwise()
-                forward()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(8) {
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(6) {
                 wait(2)
                 grab()
@@ -397,24 +376,6 @@ solution {
         }
         , 
         {
-            sequence(9) {
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                wait(2)
-                forward()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-            }
-        }
-        , 
-        {
             sequence(3) {
                 grab()
                 forward()
@@ -427,7 +388,7 @@ solution {
         }
         , 
         {
-            sequence(5) {
+            sequence(4) {
                 wait(6)
                 grab()
                 rotateClockwise()
@@ -495,6 +456,47 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                grab()
+                forward()
+                forward()
+                forward()
+                forward()
+                rotateCounterClockwise()
+                forward()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(9) {
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                wait(1)
+                rotateCounterClockwise()
+                forward()
+                extend()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                grab()
+                forward()
+                drop()
+                forward()
             }
         }
         )
