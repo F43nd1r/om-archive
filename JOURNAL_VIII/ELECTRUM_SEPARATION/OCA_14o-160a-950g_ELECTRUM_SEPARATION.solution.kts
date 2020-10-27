@@ -313,18 +313,6 @@ solution {
         positions = listOf(0 to 0, 0 to -1, 0 to -2, 0 to -3, 0 to -4)
     }
     track {
-        position = 7 to 2
-        positions = listOf(-1 to -1, -1 to 0, -2 to 0)
-    }
-    track {
-        position = 11 to -7
-        positions = listOf(-1 to 0, -2 to 1, -3 to 2, -4 to 3, -5 to 4, -5 to 5, -5 to 6, -5 to 7, -5 to 8)
-    }
-    track {
-        position = 5 to 3
-        positions = listOf(0 to 0, 1 to 0, 2 to 0, 3 to 0, 4 to 0, 5 to 0, 4 to 1)
-    }
-    track {
         position = -1 to 4
         positions = listOf(0 to 0, -1 to 0, -2 to 0, -3 to 0, -4 to 0, -5 to 0, -6 to 0, -7 to 0, -8 to 0, -9 to 0)
     }
@@ -339,6 +327,10 @@ solution {
     track {
         position = -8 to 2
         positions = listOf(0 to 0, -1 to 1)
+    }
+    track {
+        position = 11 to -7
+        positions = listOf(-1 to 0, -2 to 1, -3 to 2, -4 to 3, -5 to 4, -5 to 5, -5 to 6, -5 to 7, -5 to 8, -5 to 9, -6 to 9, -6 to 10, -5 to 10, -4 to 10, -3 to 10, -2 to 10, -1 to 10, -2 to 11)
     }
     tape {
         parallel(
@@ -370,6 +362,8 @@ solution {
                 forward()
                 rotateClockwise()
                 drop()
+                wait(6)
+                forward()
             }
         }
         , 
@@ -399,6 +393,7 @@ solution {
                 forward()
                 forward()
                 forward()
+                wait(3)
                 forward()
             }
         }
@@ -438,22 +433,6 @@ solution {
                 wait(1)
                 rotateCounterClockwise()
                 extend()
-                forward()
-            }
-        }
-        , 
-        {
-            sequence(8) {
-                wait(2)
-                grab()
-                forward()
-                forward()
-                wait(3)
-                rotateCounterClockwise()
-                retract()
-                forward()
-                forward()
-                forward()
                 forward()
             }
         }
@@ -506,6 +485,22 @@ solution {
                 rotateCounterClockwise()
                 forward()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(2)
+                grab()
+                forward()
+                forward()
+                wait(3)
+                rotateCounterClockwise()
+                retract()
+                forward()
+                forward()
+                forward()
+                forward()
             }
         }
         )
