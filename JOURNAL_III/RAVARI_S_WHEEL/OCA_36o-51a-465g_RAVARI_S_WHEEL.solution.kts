@@ -34,24 +34,18 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = 6 to -6
-        rotation = 2
-        size = 1
-    }
-    arm(ARM1) {
-        number = 7
         position = -1 to -3
         rotation = 1
         size = 1
     }
     arm(ARM1) {
-        number = 8
+        number = 7
         position = 1 to -4
         rotation = 2
         size = 1
     }
     arm(ARM1) {
-        number = 9
+        number = 8
         position = 2 to 1
         rotation = -2
         size = 2
@@ -166,49 +160,49 @@ solution {
     }
     track {
         position = 6 to -6
-        positions = listOf(0 to 0, -1 to 1)
+        positions = listOf(0 to 0, -1 to 1, -2 to 1)
     }
     tape {
         parallel(
         {
             sequence(5) {
                 grab()
-                rotateClockwise()
+                back()
                 pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                wait(1)
-                grab()
+                back()
                 pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
+                forward()
                 wait(1)
-                grab()
+                back()
+                wait(1)
                 pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
+                forward()
                 wait(1)
-                grab()
                 pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
+                back()
                 wait(1)
-                grab()
                 pivotClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
+                forward()
                 wait(1)
-                grab()
-                rotateCounterClockwise()
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                forward()
             }
         }
         , 
@@ -238,7 +232,7 @@ solution {
         }
         , 
         {
-            sequence(7) {
+            sequence(6) {
                 wait(2)
                 grab()
                 rotateCounterClockwise()
@@ -343,7 +337,7 @@ solution {
         }
         , 
         {
-            sequence(9) {
+            sequence(8) {
                 wait(6)
                 grab()
                 back()
@@ -363,7 +357,7 @@ solution {
         }
         , 
         {
-            sequence(8) {
+            sequence(7) {
                 wait(9)
                 grab()
                 wait(1)
@@ -420,41 +414,6 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(4)
-                grab()
-                forward()
-                drop()
-                back()
-                wait(1)
-                grab()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                drop()
-                back()
             }
         }
         )
