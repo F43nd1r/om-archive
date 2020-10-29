@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P100"
-    name = "H3"
+    name = "H3 6T"
     arm(ARM1) {
         number = 1
         position = -10 to 2
@@ -98,6 +98,34 @@ solution {
                 drop()
                 back()
                 reset()
+                wait(2)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                grab()
+                extend()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                wait(2)
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                forward()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                extend()
+                drop()
+                back()
+                reset()
             }
         }
         , 
@@ -114,7 +142,17 @@ solution {
                 grab()
                 back()
                 reset()
-                wait(2)
+                wait(3)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(20)
                 extendTape()
             }
         }
@@ -130,6 +168,16 @@ solution {
                 grab()
                 back()
                 reset()
+                wait(8)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
             }
         }
         , 
@@ -149,6 +197,16 @@ solution {
                 grab()
                 back()
                 reset()
+                wait(3)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
             }
         }
         , 
@@ -166,6 +224,14 @@ solution {
                 forward()
                 forward()
                 reset()
+                wait(5)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
             }
         }
         , 
@@ -178,6 +244,18 @@ solution {
                 back()
                 back()
                 wait(5)
+                reset()
+                wait(5)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(21)
+                grab()
+                back()
                 reset()
             }
         }
