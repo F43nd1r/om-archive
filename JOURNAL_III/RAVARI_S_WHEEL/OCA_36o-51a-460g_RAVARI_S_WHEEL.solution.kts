@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P064"
-    name = "OVERLAP A"
+    name = "OVERLAP A (Copy)"
     arm(ARM1) {
         number = 1
         position = -1 to 0
@@ -159,23 +159,20 @@ solution {
         positions = listOf(0 to 0, 0 to 1, 1 to 1, 2 to 0)
     }
     track {
-        position = 6 to -6
-        positions = listOf(0 to 0, -1 to 1, -2 to 1)
+        position = 4 to -5
+        positions = listOf(0 to 0, 1 to -1)
     }
     tape {
         parallel(
         {
             sequence(5) {
                 grab()
-                back()
-                pivotClockwise()
-                back()
+                rotateClockwise()
                 pivotClockwise()
                 forward()
-                wait(1)
+                pivotClockwise()
                 back()
                 wait(1)
-                pivotClockwise()
                 forward()
                 wait(1)
                 pivotClockwise()
@@ -202,7 +199,10 @@ solution {
                 pivotClockwise()
                 forward()
                 wait(1)
-                forward()
+                pivotClockwise()
+                back()
+                wait(1)
+                rotateCounterClockwise()
             }
         }
         , 
