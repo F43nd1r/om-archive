@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P095"
-    name = "OVERLAP AX"
-    arm(PISTON) {
+    name = "OVERLAP G"
+    arm(ARM1) {
         number = 1
         position = -2 to 0
         rotation = -8
@@ -28,9 +28,9 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = 3 to -4
-        rotation = 3
-        size = 3
+        position = 0 to -5
+        rotation = 1
+        size = 1
     }
     glyph(BONDER) {
         position = -3 to -1
@@ -47,10 +47,6 @@ solution {
     glyph(BONDER) {
         position = 0 to -2
         rotation = -3
-    }
-    glyph(UNBONDER) {
-        position = -3 to 0
-        rotation = -1
     }
     glyph(UNBONDER) {
         position = -2 to -4
@@ -80,6 +76,10 @@ solution {
         position = 0 to -1
         rotation = 0
     }
+    glyph(UNBONDER) {
+        position = -3 to 0
+        rotation = -1
+    }
     glyph(PROJECTION) {
         position = -1 to -1
         rotation = 4
@@ -97,7 +97,11 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -2 to -1
+        position = 1 to -4
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 2 to -4
         rotation = 0
     }
     io(INPUT) {
@@ -111,20 +115,20 @@ solution {
         rotation = -3
     }
     track {
+        position = 1 to -6
+        positions = listOf(-1 to 1, -2 to 1)
+    }
+    track {
         position = 2 to -4
         positions = listOf(-1 to 1, 0 to 1, 0 to 2)
     }
     track {
-        position = 3 to -5
-        positions = listOf(0 to 1, -1 to 1, -2 to 1)
+        position = -2 to 0
+        positions = listOf(0 to -2, 0 to -3, -1 to -3)
     }
     track {
         position = -1 to -1
-        positions = listOf(1 to 0, 0 to 0, -1 to 0, -1 to 1, 0 to 1)
-    }
-    track {
-        position = -2 to 0
-        positions = listOf(0 to -2, 0 to -3, -1 to -3)
+        positions = listOf(1 to 0, 0 to 0, -1 to 0, -1 to 1, 0 to 1, -1 to 2, -2 to 2)
     }
     tape {
         parallel(
@@ -147,10 +151,9 @@ solution {
                 wait(2)
                 back()
                 forward()
-                wait(1)
+                wait(2)
                 back()
                 forward()
-                wait(1)
                 rotateClockwise()
                 back()
                 back()
@@ -176,39 +179,22 @@ solution {
                 forward()
                 back()
                 forward()
+                back()
+                forward()
+                back()
+                forward()
                 rotateCounterClockwise()
                 drop()
-                wait(9)
+                wait(5)
                 extendTape()
             }
         }
         , 
         {
-            sequence(1) {
-                wait(4)
-                grab()
-                forward()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                retract()
-                wait(7)
-                grab()
-                rotateClockwise()
-                drop()
-                forward()
-            }
-        }
-        , 
-        {
             sequence(5) {
-                wait(16)
+                wait(20)
                 grab()
-                forward()
-                forward()
-                back()
-                forward()
-                back()
+                rotateCounterClockwise()
                 forward()
                 back()
                 forward()
@@ -229,14 +215,30 @@ solution {
                 wait(2)
                 back()
                 forward()
-                wait(1)
+                wait(2)
                 back()
                 forward()
-                wait(2)
+                wait(1)
                 back()
                 forward()
                 forward()
                 rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(4)
+                grab()
+                forward()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                forward()
+                wait(11)
+                grab()
+                forward()
                 drop()
             }
         }
