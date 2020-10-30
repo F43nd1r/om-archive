@@ -81,10 +81,6 @@ solution {
         rotation = 0
     }
     glyph(PROJECTION) {
-        position = -2 to -1
-        rotation = -1
-    }
-    glyph(PROJECTION) {
         position = -1 to -1
         rotation = 4
     }
@@ -98,6 +94,10 @@ solution {
     }
     glyph(PURIFICATION) {
         position = -2 to -3
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to -1
         rotation = 0
     }
     io(INPUT) {
@@ -147,9 +147,10 @@ solution {
                 wait(2)
                 back()
                 forward()
-                wait(2)
+                wait(1)
                 back()
                 forward()
+                wait(1)
                 rotateClockwise()
                 back()
                 back()
@@ -175,13 +176,9 @@ solution {
                 forward()
                 back()
                 forward()
-                back()
-                forward()
-                back()
-                forward()
                 rotateCounterClockwise()
                 drop()
-                wait(5)
+                wait(9)
                 extendTape()
             }
         }
@@ -195,18 +192,23 @@ solution {
                 drop()
                 rotateCounterClockwise()
                 retract()
-                wait(11)
+                wait(7)
                 grab()
                 rotateClockwise()
                 drop()
+                forward()
             }
         }
         , 
         {
             sequence(5) {
-                wait(20)
+                wait(16)
                 grab()
                 forward()
+                forward()
+                back()
+                forward()
+                back()
                 forward()
                 back()
                 forward()
@@ -227,13 +229,13 @@ solution {
                 wait(2)
                 back()
                 forward()
+                wait(1)
+                back()
+                forward()
                 wait(2)
                 back()
                 forward()
-                wait(1)
-                back()
                 forward()
-                wait(1)
                 rotateCounterClockwise()
                 drop()
             }

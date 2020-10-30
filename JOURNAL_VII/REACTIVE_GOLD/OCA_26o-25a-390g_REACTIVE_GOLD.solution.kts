@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P095"
-    name = "OVERLAP G"
-    arm(ARM1) {
+    name = "OVERLAP AX"
+    arm(PISTON) {
         number = 1
         position = -2 to 0
         rotation = -8
@@ -28,9 +28,9 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = 0 to -5
-        rotation = 1
-        size = 1
+        position = 3 to -4
+        rotation = 3
+        size = 3
     }
     glyph(BONDER) {
         position = -3 to -1
@@ -81,10 +81,6 @@ solution {
         rotation = 0
     }
     glyph(PROJECTION) {
-        position = -2 to -1
-        rotation = -1
-    }
-    glyph(PROJECTION) {
         position = -1 to -1
         rotation = 4
     }
@@ -101,11 +97,7 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 1 to -4
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 2 to -4
+        position = -2 to -1
         rotation = 0
     }
     io(INPUT) {
@@ -119,16 +111,16 @@ solution {
         rotation = -3
     }
     track {
-        position = 1 to -6
-        positions = listOf(-1 to 1, -2 to 1)
-    }
-    track {
         position = 2 to -4
         positions = listOf(-1 to 1, 0 to 1, 0 to 2)
     }
     track {
+        position = 3 to -5
+        positions = listOf(0 to 1, -1 to 1, -2 to 1)
+    }
+    track {
         position = -1 to -1
-        positions = listOf(1 to 0, 0 to 0, -1 to 0, -1 to 1, 0 to 1, -1 to 2, -2 to 2)
+        positions = listOf(1 to 0, 0 to 0, -1 to 0, -1 to 1, 0 to 1)
     }
     track {
         position = -2 to 0
@@ -155,9 +147,10 @@ solution {
                 wait(2)
                 back()
                 forward()
-                wait(2)
+                wait(1)
                 back()
                 forward()
+                wait(1)
                 rotateClockwise()
                 back()
                 back()
@@ -183,22 +176,39 @@ solution {
                 forward()
                 back()
                 forward()
-                back()
-                forward()
-                back()
-                forward()
                 rotateCounterClockwise()
                 drop()
-                wait(5)
+                wait(9)
                 extendTape()
             }
         }
         , 
         {
-            sequence(5) {
-                wait(20)
+            sequence(1) {
+                wait(4)
                 grab()
+                forward()
+                pivotCounterClockwise()
+                drop()
                 rotateCounterClockwise()
+                retract()
+                wait(7)
+                grab()
+                rotateClockwise()
+                drop()
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(16)
+                grab()
+                forward()
+                forward()
+                back()
+                forward()
+                back()
                 forward()
                 back()
                 forward()
@@ -219,30 +229,14 @@ solution {
                 wait(2)
                 back()
                 forward()
+                wait(1)
+                back()
+                forward()
                 wait(2)
                 back()
                 forward()
-                wait(1)
-                back()
                 forward()
-                wait(1)
                 rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                wait(4)
-                grab()
-                forward()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                forward()
-                wait(11)
-                grab()
-                forward()
                 drop()
             }
         }
