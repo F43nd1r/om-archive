@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P040"
-    name = "OVERLAP A"
+    name = "OVERLAP X"
     arm(PISTON) {
         number = 1
         position = 0 to -6
@@ -86,7 +86,7 @@ solution {
         rotation = 3
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 15
         position = 1 to -6
         rotation = 1
@@ -557,10 +557,6 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                drop()
             }
         }
         , 
@@ -582,6 +578,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+                forward()
             }
         }
         , 
@@ -678,6 +675,24 @@ solution {
         }
         , 
         {
+            sequence(10) {
+                wait(18)
+                back()
+                rotateClockwise()
+                back()
+                back()
+                grab()
+                back()
+                rotateCounterClockwise()
+                back()
+                forward()
+                forward()
+                forward()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(15) {
                 wait(11)
                 forward()
@@ -696,24 +711,8 @@ solution {
                 wait(1)
                 pivotClockwise()
                 wait(1)
-                retract()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                wait(18)
-                back()
-                rotateClockwise()
-                back()
-                back()
-                grab()
-                back()
+                forward()
                 rotateCounterClockwise()
-                back()
-                forward()
-                forward()
                 forward()
                 drop()
             }
