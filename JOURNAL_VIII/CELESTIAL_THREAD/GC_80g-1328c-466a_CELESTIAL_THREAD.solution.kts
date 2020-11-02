@@ -32,6 +32,14 @@ solution {
         position = 6 to 5
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = 0 to -9
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -5 to 13
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = 3 to -2
@@ -1380,9 +1388,9 @@ solution {
                 forward()
                 grab()
                 back()
-                rotateClockwise()
-                forward()
                 pivotClockwise()
+                forward()
+                rotateClockwise()
             }
         }
         )
