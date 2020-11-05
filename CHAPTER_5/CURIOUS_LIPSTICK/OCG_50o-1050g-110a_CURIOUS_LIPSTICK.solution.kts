@@ -2,29 +2,29 @@
 solution {
     puzzle = "P041"
     name = "OVERLAP G"
-    arm(ARM1) {
+    arm(VAN_BERLOS_WHEEL) {
         number = 1
-        position = 4 to -3
-        rotation = 2
-        size = 2
+        position = 2 to 3
+        rotation = -1
+        size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -3 to 5
-        rotation = 5
-        size = 2
-    }
-    arm(ARM1) {
-        number = 3
         position = 2 to 1
         rotation = 2
         size = 1
     }
     arm(ARM1) {
-        number = 4
+        number = 3
         position = 4 to 0
         rotation = -2
         size = 1
+    }
+    arm(ARM1) {
+        number = 4
+        position = 4 to -3
+        rotation = 2
+        size = 2
     }
     arm(ARM1) {
         number = 5
@@ -32,11 +32,11 @@ solution {
         rotation = 1
         size = 2
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 6
-        position = -3 to 4
-        rotation = 5
-        size = 3
+        position = 3 to -5
+        rotation = 1
+        size = 1
     }
     arm(PISTON) {
         number = 7
@@ -44,34 +44,34 @@ solution {
         rotation = 2
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 8
-        position = 3 to -5
-        rotation = 1
+        position = -2 to -3
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 9
+        position = -2 to -2
+        rotation = 2
+        size = 1
+    }
+    arm(ARM1) {
+        number = 10
         position = -4 to 3
         rotation = -2
         size = 2
     }
-    arm(VAN_BERLOS_WHEEL) {
-        number = 10
-        position = 2 to 3
-        rotation = -1
-        size = 1
-    }
     arm(ARM1) {
         number = 11
-        position = -4 to -1
-        rotation = 0
-        size = 1
+        position = -3 to 4
+        rotation = 5
+        size = 3
     }
     arm(ARM1) {
         number = 12
-        position = -3 to -2
-        rotation = -1
+        position = -3 to 5
+        rotation = 5
         size = 2
     }
     glyph(BONDER) {
@@ -326,10 +326,6 @@ solution {
         positions = listOf(1 to 0, 1 to 1, 0 to 2, 0 to 1, 0 to 0, -1 to 0, -1 to -1, -2 to 0)
     }
     track {
-        position = -4 to -1
-        positions = listOf(1 to -1, 0 to 0, 1 to 0)
-    }
-    track {
         position = 3 to -4
         positions = listOf(0 to 0, -1 to 0, -2 to 0, -2 to -1)
     }
@@ -341,10 +337,14 @@ solution {
         position = 3 to 2
         positions = listOf(-1 to -1, 0 to -1, 1 to -2, 1 to -3, 0 to -3)
     }
+    track {
+        position = -3 to -1
+        positions = listOf(0 to 0, 1 to -1, 1 to -2)
+    }
     tape {
         parallel(
         {
-            sequence(8) {
+            sequence(6) {
                 wait(16)
                 grab()
                 rotateCounterClockwise()
@@ -377,7 +377,7 @@ solution {
         }
         , 
         {
-            sequence(3) {
+            sequence(2) {
                 wait(16)
                 grab()
                 rotateCounterClockwise()
@@ -441,11 +441,11 @@ solution {
         }
         , 
         {
-            sequence(9) {
+            sequence(10) {
                 wait(10)
                 grab()
-                wait(3)
                 rotateCounterClockwise()
+                wait(3)
                 forward()
                 wait(1)
                 pivotClockwise()
@@ -520,44 +520,7 @@ solution {
         }
         , 
         {
-            sequence(11) {
-                wait(14)
-                grab()
-                forward()
-                drop()
-                wait(7)
-                back()
-                wait(1)
-                grab()
-                forward()
-                drop()
-                wait(7)
-                back()
-                wait(4)
-                grab()
-                forward()
-                drop()
-                wait(4)
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(12) {
-                wait(19)
-                grab()
-                rotateCounterClockwise()
-                forward()
-                reset()
-                wait(8)
-                repeat()
-                wait(11)
-                repeat()
-            }
-        }
-        , 
-        {
-            sequence(1) {
+            sequence(4) {
                 wait(3)
                 grab()
                 rotateClockwise()
@@ -585,7 +548,7 @@ solution {
         }
         , 
         {
-            sequence(6) {
+            sequence(11) {
                 grab()
                 forward()
                 pivotCounterClockwise()
@@ -613,7 +576,7 @@ solution {
         }
         , 
         {
-            sequence(2) {
+            sequence(12) {
                 wait(2)
                 forward()
                 grab()
@@ -642,7 +605,7 @@ solution {
         }
         , 
         {
-            sequence(10) {
+            sequence(1) {
                 wait(14)
                 rotateCounterClockwise()
                 wait(1)
@@ -651,7 +614,7 @@ solution {
         }
         , 
         {
-            sequence(4) {
+            sequence(3) {
                 wait(13)
                 grab()
                 rotateClockwise()
@@ -692,6 +655,51 @@ solution {
                 forward()
                 rotateClockwise()
                 back()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(18)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                back()
+                drop()
+                forward()
+                reset()
+                wait(4)
+                repeat()
+                wait(12)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(9) {
+                wait(14)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                back()
+                wait(5)
+                forward()
+                wait(1)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                back()
+                wait(8)
+                forward()
+                wait(1)
+                grab()
+                rotateClockwise()
+                drop()
+                back()
+                wait(1)
                 reset()
             }
         }
