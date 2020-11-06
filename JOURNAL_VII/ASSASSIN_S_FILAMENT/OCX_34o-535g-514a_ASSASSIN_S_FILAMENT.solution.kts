@@ -38,7 +38,7 @@ solution {
         rotation = -20
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 7
         position = 16 to 6
         rotation = 7
@@ -64,18 +64,12 @@ solution {
     }
     arm(ARM1) {
         number = 11
-        position = 16 to 2
+        position = 12 to 0
         rotation = 0
-        size = 2
+        size = 3
     }
     arm(ARM1) {
         number = 12
-        position = 15 to 0
-        rotation = 0
-        size = 2
-    }
-    arm(ARM1) {
-        number = 13
         position = 5 to 2
         rotation = 0
         size = 3
@@ -153,16 +147,16 @@ solution {
         positions = listOf(0 to 0, 0 to -1, 0 to -2, 0 to -3, 1 to -4, 1 to -5, 2 to -6)
     }
     track {
-        position = 16 to 7
-        positions = listOf(0 to -1, 0 to 0, -1 to 0, -1 to -1, -1 to -2, 0 to -3, 1 to -3)
-    }
-    track {
         position = 16 to 1
         positions = listOf(0 to 0, -1 to 1)
     }
     track {
         position = 14 to -2
-        positions = listOf(-4 to 2, -3 to 2, -2 to 2, -1 to 2, 0 to 2, 1 to 2)
+        positions = listOf(-3 to 1, -3 to 2, -2 to 2, -1 to 2)
+    }
+    track {
+        position = 16 to 7
+        positions = listOf(0 to -1, 0 to 0, -1 to 0, -1 to -1, -1 to -2, 0 to -3, 0 to -4, 0 to -5)
     }
     tape {
         parallel(
@@ -252,9 +246,9 @@ solution {
                 forward()
                 wait(3)
                 forward()
-                wait(2)
                 grab()
                 rotateCounterClockwise()
+                wait(2)
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 forward()
@@ -466,6 +460,16 @@ solution {
         }
         , 
         {
+            sequence(12) {
+                wait(21)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(7) {
                 grab()
                 forward()
@@ -477,40 +481,25 @@ solution {
                 pivotCounterClockwise()
                 drop()
                 forward()
-            }
-        }
-        , 
-        {
-            sequence(12) {
-                wait(12)
-                back()
+                forward()
+                wait(1)
                 grab()
-                back()
-                back()
-                back()
-                back()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(11) {
-                wait(10)
+                wait(14)
+                forward()
                 grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(13) {
-                wait(21)
-                grab()
+                back()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                back()
+                back()
                 drop()
             }
         }
