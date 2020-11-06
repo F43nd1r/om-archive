@@ -203,7 +203,7 @@ solution {
     }
     track {
         position = -1 to 3
-        positions = listOf(0 to 0, 0 to 1, 0 to 2, 1 to 2, 1 to 1, 2 to 1)
+        positions = listOf(0 to 0, 0 to 1, 0 to 2, 1 to 2, 1 to 1)
     }
     track {
         position = -8 to 4
@@ -222,18 +222,19 @@ solution {
                 rotateClockwise()
                 pivotClockwise()
                 forward()
+                wait(1)
                 forward()
                 forward()
-                wait(2)
+                wait(1)
                 rotateCounterClockwise()
                 wait(1)
-                pivotCounterClockwise()
-                pivotClockwise()
                 forward()
-                forward()
+                back()
                 pivotCounterClockwise()
                 back()
                 pivotCounterClockwise()
+                forward()
+                forward()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 wait(1)
