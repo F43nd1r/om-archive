@@ -167,10 +167,6 @@ solution {
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = -4 to 3
-        rotation = -2
-    }
-    glyph(UNBONDER) {
         position = -4 to 5
         rotation = -3
     }
