@@ -353,7 +353,7 @@ solution {
     }
     track {
         position = 1 to -1
-        positions = listOf(0 to 0, 1 to 0, 1 to 1, 2 to 1)
+        positions = listOf(0 to 1, 0 to 0, 1 to 0, 1 to 1)
     }
     track {
         position = 4 to -3
@@ -401,38 +401,6 @@ solution {
                 reset()
                 wait(4)
                 extendTape()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                forward()
-                drop()
-                rotateClockwise()
-                extend()
-                grab()
-                rotateCounterClockwise()
-                retract()
-                back()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                forward()
-                drop()
-                rotateClockwise()
-                extend()
-                grab()
-                rotateCounterClockwise()
-                retract()
-                rotateClockwise()
-                forward()
-                forward()
-                wait(1)
-                back()
-                drop()
             }
         }
         , 
@@ -594,6 +562,38 @@ solution {
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(10) {
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                forward()
+                drop()
+                rotateClockwise()
+                extend()
+                grab()
+                rotateCounterClockwise()
+                retract()
+                back()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                forward()
+                drop()
+                rotateClockwise()
+                extend()
+                grab()
+                rotateCounterClockwise()
+                retract()
+                back()
+                back()
+                back()
+                wait(1)
+                forward()
                 drop()
             }
         }
