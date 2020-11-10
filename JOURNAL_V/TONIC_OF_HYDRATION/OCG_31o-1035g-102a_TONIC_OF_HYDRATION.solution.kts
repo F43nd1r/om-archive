@@ -327,7 +327,7 @@ solution {
     }
     track {
         position = 1 to -1
-        positions = listOf(0 to 0, 1 to 0, 1 to 1, 2 to 1)
+        positions = listOf(0 to 0, 1 to 0, 1 to 1, 0 to 1)
     }
     track {
         position = -4 to -2
@@ -422,11 +422,11 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 retract()
-                rotateClockwise()
-                forward()
-                forward()
-                wait(1)
                 back()
+                back()
+                back()
+                wait(1)
+                forward()
                 drop()
             }
         }
