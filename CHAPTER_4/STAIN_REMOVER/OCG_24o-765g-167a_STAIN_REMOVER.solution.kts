@@ -34,7 +34,7 @@ solution {
     }
     arm(PISTON) {
         number = 6
-        position = 1 to -7
+        position = 1 to -8
         rotation = 1
         size = 3
     }
@@ -206,7 +206,7 @@ solution {
     }
     track {
         position = 2 to -7
-        positions = listOf(-1 to 0, -1 to -1, -1 to -2, -1 to -3, -2 to -2, -2 to -1, -2 to 0, -2 to 1, -2 to 2)
+        positions = listOf(-1 to -1, -1 to -2, -1 to -3, -2 to -2, -2 to -1, -2 to 0, -2 to 1, -2 to 2)
     }
     track {
         position = 5 to -7
@@ -234,31 +234,6 @@ solution {
                 forward()
                 forward()
                 rotateClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(5)
-                grab()
-                retract()
-                wait(1)
-                retract()
-                wait(1)
-                forward()
-                wait(1)
-                forward()
-                wait(1)
-                forward()
-                wait(1)
-                forward()
-                extend()
-                extend()
-                forward()
-                forward()
-                forward()
-                forward()
                 reset()
             }
         }
@@ -332,7 +307,11 @@ solution {
                 forward()
                 drop()
                 rotateClockwise()
-                wait(14)
+                grab()
+                forward()
+                drop()
+                back()
+                wait(10)
                 grab()
                 forward()
                 forward()
@@ -391,6 +370,29 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(7)
+                grab()
+                retract()
+                wait(1)
+                retract()
+                wait(1)
+                forward()
+                wait(1)
+                forward()
+                wait(1)
+                forward()
+                extend()
+                extend()
+                forward()
+                forward()
+                forward()
+                forward()
                 reset()
             }
         }
