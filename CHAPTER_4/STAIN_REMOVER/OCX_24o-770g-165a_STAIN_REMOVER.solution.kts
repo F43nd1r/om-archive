@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P034"
-    name = "OVERLAP G"
+    name = "OVERLAP X"
     arm(ARM1) {
         number = 1
         position = 0 to -1
@@ -10,9 +10,9 @@ solution {
     }
     arm(ARM1) {
         number = 2
-        position = -12 to 4
+        position = -11 to 4
         rotation = 0
-        size = 3
+        size = 2
     }
     arm(PISTON) {
         number = 3
@@ -89,10 +89,6 @@ solution {
         rotation = 0
     }
     glyph(BONDER) {
-        position = -7 to -1
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = 0 to -3
         rotation = 1
     }
@@ -106,6 +102,10 @@ solution {
     }
     glyph(BONDER) {
         position = -1 to 0
+        rotation = 1
+    }
+    glyph(BONDER) {
+        position = -6 to -1
         rotation = 1
     }
     glyph(UNBONDER) {
@@ -197,10 +197,6 @@ solution {
         rotation = 0
     }
     track {
-        position = -12 to 4
-        positions = listOf(0 to 0, 0 to 1, 1 to 0, 2 to -1)
-    }
-    track {
         position = -7 to 0
         positions = listOf(7 to -1, 6 to -1, 5 to -1, 4 to -1, 3 to -1, 2 to -1, 1 to -1, 0 to -1, -1 to -1, -2 to -1, -3 to -1, -4 to -1)
     }
@@ -224,20 +220,12 @@ solution {
         position = 2 to -4
         positions = listOf(0 to 5, 1 to 5, 1 to 4, 0 to 4, -1 to 4, -1 to 5)
     }
+    track {
+        position = -11 to 4
+        positions = listOf(0 to 0, 0 to 1, 1 to 0, 2 to -1, 3 to -2)
+    }
     tape {
         parallel(
-        {
-            sequence(2) {
-                wait(13)
-                grab()
-                forward()
-                forward()
-                forward()
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
@@ -369,6 +357,19 @@ solution {
                 back()
                 rotateClockwise()
                 rotateClockwise()
+                rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(13)
+                grab()
+                forward()
+                forward()
+                forward()
+                forward()
                 rotateClockwise()
                 reset()
             }
