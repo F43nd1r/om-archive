@@ -1,192 +1,190 @@
 
 solution {
     puzzle = "P038"
-    name = "OVERLAP AX"
+    name = "OVERLAP A"
     arm(PISTON) {
         number = 1
-        position = 8 to -3
+        position = 5 to -1
         rotation = 2
         size = 2
     }
     arm(ARM1) {
         number = 2
-        position = 6 to -2
+        position = 3 to 0
         rotation = 3
         size = 1
     }
     arm(ARM1) {
         number = 3
-        position = 8 to -2
+        position = 5 to 0
         rotation = 2
         size = 1
     }
     arm(ARM1) {
         number = 4
-        position = 2 to 2
+        position = -1 to 4
         rotation = 4
         size = 2
     }
     arm(ARM1) {
         number = 5
-        position = 1 to 2
+        position = -2 to 4
         rotation = -3
         size = 1
     }
     arm(ARM1) {
         number = 6
-        position = -1 to 0
+        position = -4 to 2
+        rotation = -1
+        size = 1
+    }
+    arm(ARM1) {
+        number = 7
+        position = -4 to 0
         rotation = -1
         size = 1
     }
     glyph(BONDER) {
-        position = 5 to -2
+        position = 2 to 0
         rotation = 1
     }
     glyph(BONDER) {
-        position = 5 to -2
+        position = 2 to 0
         rotation = 3
     }
     glyph(BONDER) {
-        position = 5 to -2
+        position = 2 to 0
         rotation = 2
     }
     glyph(BONDER) {
-        position = 6 to -1
+        position = 3 to 1
         rotation = 3
     }
     glyph(BONDER) {
-        position = 2 to -1
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = 2 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = 0 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = 6 to -3
-        rotation = 2
-    }
-    glyph(BONDER) {
-        position = 7 to -1
-        rotation = 3
-    }
-    glyph(UNBONDER) {
-        position = 4 to 0
-        rotation = 0
-    }
-    glyph(UNBONDER) {
-        position = 6 to 0
-        rotation = 3
-    }
-    glyph(UNBONDER) {
-        position = 1 to 0
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 3 to -2
-        rotation = 2
-    }
-    glyph(UNBONDER) {
         position = -1 to 1
         rotation = 0
     }
-    glyph(UNBONDER) {
-        position = 1 to -1
-        rotation = -1
+    glyph(BONDER) {
+        position = -3 to 0
+        rotation = 1
     }
-    glyph(UNBONDER) {
-        position = 2 to 0
-        rotation = -3
+    glyph(BONDER) {
+        position = 3 to -1
+        rotation = 2
     }
-    glyph(UNBONDER) {
-        position = 2 to -1
+    glyph(BONDER) {
+        position = 4 to 1
+        rotation = 3
+    }
+    glyph(BONDER) {
+        position = -1 to 0
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = 0 to -3
+        position = 1 to 2
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 3 to 2
+        rotation = 3
+    }
+    glyph(UNBONDER) {
+        position = -2 to 2
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = 1 to -3
+        position = -4 to 3
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = -1 to 2
+        rotation = -3
+    }
+    glyph(UNBONDER) {
+        position = -1 to 1
+        rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = -3 to -1
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = -2 to -1
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = 5 to -3
+        position = 2 to -1
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = 6 to -2
+        position = 3 to 0
         rotation = 2
+    }
+    glyph(UNBONDER) {
+        position = -2 to -2
+        rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = -2 to 1
+        rotation = -1
     }
     glyph(PURIFICATION) {
-        position = 6 to -1
+        position = 3 to 1
         rotation = 2
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to 1
+        position = 0 to 3
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 2 to -4
+        position = -4 to 1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to -4
+        position = -5 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -1 to -2
+        position = -4 to 4
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -3 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
         position = -1 to -1
         rotation = 0
     }
-    glyph(EQUILIBRIUM) {
-        position = -2 to 2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -1 to 2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 0 to 2
-        rotation = 0
-    }
     io(INPUT) {
         index = 0
-        position = 5 to -2
+        position = 2 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 3 to -1
+        position = 0 to 1
         rotation = 1
     }
     io(INPUT) {
         index = 1
-        position = 6 to -1
+        position = 3 to 1
         rotation = 0
     }
     track {
-        position = 1 to 1
+        position = -2 to 3
         positions = listOf(1 to -1, 1 to 0, 1 to 1, 0 to 1, 0 to 0)
     }
     track {
-        position = -1 to 0
-        positions = listOf(0 to 0, 1 to -1, 2 to -2)
+        position = -2 to -1
+        positions = listOf(-2 to 3, -1 to 2, 0 to 1, 0 to 0, -1 to 0, -2 to 1)
     }
     track {
-        position = 8 to -3
+        position = 5 to -1
         positions = listOf(-1 to 2, 0 to 1, 0 to 0, -1 to 0, -2 to 0, -3 to 0, -4 to 0, -5 to 0)
     }
     track {
-        position = 6 to -2
+        position = 3 to 0
         positions = listOf(0 to 0, 1 to 0, 2 to 0)
     }
     tape {
@@ -196,11 +194,11 @@ solution {
                 wait(9)
                 grab()
                 rotateCounterClockwise()
-                wait(1)
-                forward()
                 drop()
                 wait(2)
                 grab()
+                forward()
+                wait(1)
                 forward()
                 drop()
             }
@@ -218,15 +216,15 @@ solution {
                 extend()
                 rotateCounterClockwise()
                 drop()
-                back()
                 rotateClockwise()
-                forward()
                 grab()
                 retract()
                 retract()
                 drop()
-                back()
+                rotateCounterClockwise()
                 grab()
+                back()
+                rotateClockwise()
                 extend()
                 drop()
             }
@@ -287,8 +285,8 @@ solution {
                 grab()
                 forward()
                 wait(1)
-                forward()
                 rotateCounterClockwise()
+                forward()
                 forward()
                 drop()
             }
@@ -309,6 +307,17 @@ solution {
                 forward()
                 drop()
                 forward()
+            }
+        }
+        , 
+        {
+            sequence(7) {
+                wait(12)
+                back()
+                grab()
+                rotateCounterClockwise()
+                back()
+                drop()
             }
         }
         )
