@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P032"
-    name = "H2"
+    name = "H2 6T"
     arm(PISTON) {
         number = 1
         position = -8 to 0
@@ -55,11 +55,11 @@ solution {
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -2 to 0
+        position = -1 to 0
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -10 to -1
+        position = -11 to -1
         rotation = 0
     }
     glyph(ANIMISMUS) {
@@ -94,6 +94,14 @@ solution {
         position = 4 to 0
         positions = listOf(0 to 0, -1 to 0, -2 to 0)
     }
+    track {
+        position = -2 to 0
+        positions = listOf(0 to 0, -1 to 0)
+    }
+    track {
+        position = -10 to -1
+        positions = listOf(0 to 0, 1 to 0)
+    }
     tape {
         parallel(
         {
@@ -110,6 +118,31 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 extend()
+                reset()
+                wait(3)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                extend()
+                drop()
+                retract()
+                wait(1)
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
                 reset()
             }
         }
@@ -128,6 +161,31 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 extend()
+                reset()
+                wait(3)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                extend()
+                drop()
+                retract()
+                wait(1)
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
                 reset()
             }
         }
@@ -148,6 +206,25 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 reset()
+                wait(1)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                back()
+                reset()
             }
         }
         , 
@@ -167,6 +244,25 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 reset()
+                wait(1)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                back()
+                reset()
             }
         }
         , 
@@ -177,6 +273,16 @@ solution {
                 back()
                 back()
                 reset()
+                wait(12)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(14)
+                repeat()
             }
         }
         , 
@@ -187,6 +293,16 @@ solution {
                 back()
                 back()
                 reset()
+                wait(12)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(15)
+                repeat()
+                wait(14)
+                repeat()
             }
         }
         )
