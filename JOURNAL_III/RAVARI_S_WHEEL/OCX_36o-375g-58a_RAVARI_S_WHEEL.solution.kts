@@ -28,7 +28,7 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = 4 to -5
+        position = 4 to -4
         rotation = 2
         size = 1
     }
@@ -49,28 +49,24 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = 1 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = -1 to -2
         rotation = -2
-    }
-    glyph(BONDER) {
-        position = 3 to -4
-        rotation = 0
     }
     glyph(BONDER) {
         position = -2 to -1
         rotation = 0
     }
+    glyph(BONDER) {
+        position = 3 to -3
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 1 to -2
+        rotation = 1
+    }
     glyph(UNBONDER) {
         position = 2 to -1
         rotation = -2
-    }
-    glyph(UNBONDER) {
-        position = 3 to -3
-        rotation = -1
     }
     glyph(UNBONDER) {
         position = -1 to -3
@@ -80,25 +76,29 @@ solution {
         position = -2 to -2
         rotation = -1
     }
+    glyph(UNBONDER) {
+        position = 3 to -2
+        rotation = -1
+    }
     glyph(PROJECTION) {
         position = -2 to -2
         rotation = 1
-    }
-    glyph(PROJECTION) {
-        position = 3 to -3
-        rotation = 2
     }
     glyph(PROJECTION) {
         position = -1 to -2
         rotation = 0
     }
     glyph(PROJECTION) {
-        position = 3 to -4
-        rotation = 2
-    }
-    glyph(PROJECTION) {
         position = 0 to -3
         rotation = 0
+    }
+    glyph(PROJECTION) {
+        position = 3 to -2
+        rotation = 3
+    }
+    glyph(PROJECTION) {
+        position = 3 to -3
+        rotation = 3
     }
     glyph(EQUILIBRIUM) {
         position = -5 to 1
@@ -125,7 +125,7 @@ solution {
     }
     io(INPUT) {
         index = 2
-        position = 3 to -4
+        position = 3 to -3
         rotation = 0
     }
     track {
