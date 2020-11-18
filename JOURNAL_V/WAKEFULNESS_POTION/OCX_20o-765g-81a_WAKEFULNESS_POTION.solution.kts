@@ -71,10 +71,6 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = 4 to 0
-        rotation = 2
-    }
-    glyph(BONDER) {
         position = -3 to 5
         rotation = 0
     }
@@ -85,6 +81,10 @@ solution {
     glyph(BONDER) {
         position = -5 to 7
         rotation = -2
+    }
+    glyph(BONDER) {
+        position = 3 to 2
+        rotation = 4
     }
     glyph(UNBONDER) {
         position = 2 to 0
@@ -251,7 +251,7 @@ solution {
     }
     track {
         position = 3 to -4
-        positions = listOf(0 to 0, 0 to 1, 0 to 2, -1 to 2, -1 to 3)
+        positions = listOf(0 to 0, 0 to 1, -1 to 2, -1 to 3)
     }
     track {
         position = -1 to 3
@@ -307,36 +307,6 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(9)
-                grab()
-                back()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                wait(1)
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(4)
-                grab()
-                forward()
-                rotateClockwise()
-                wait(5)
-                pivotCounterClockwise()
-                drop()
-                forward()
-                grab()
-                pivotCounterClockwise()
-                wait(1)
-                pivotCounterClockwise()
-            }
-        }
-        , 
-        {
             sequence(2) {
                 wait(5)
                 grab()
@@ -368,6 +338,41 @@ solution {
                 forward()
                 wait(1)
                 pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(4)
+                grab()
+                forward()
+                rotateClockwise()
+                drop()
+                back()
+                wait(3)
+                pivotCounterClockwise()
+                grab()
+                pivotCounterClockwise()
+                forward()
+                forward()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(9)
+                grab()
+                back()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                wait(1)
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
             }
