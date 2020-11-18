@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P064"
-    name = "OVERLAP A (Copy)"
+    name = "OVERLAP A"
     arm(ARM1) {
         number = 1
         position = -1 to 0
@@ -28,7 +28,7 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = 4 to -5
+        position = 4 to -4
         rotation = 2
         size = 1
     }
@@ -51,16 +51,8 @@ solution {
         size = 2
     }
     glyph(BONDER) {
-        position = 1 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = -1 to -2
         rotation = -2
-    }
-    glyph(BONDER) {
-        position = 3 to -4
-        rotation = 0
     }
     glyph(BONDER) {
         position = -2 to -1
@@ -73,6 +65,14 @@ solution {
     glyph(BONDER) {
         position = -3 to 1
         rotation = -2
+    }
+    glyph(BONDER) {
+        position = 3 to -3
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 1 to -2
+        rotation = 1
     }
     glyph(UNBONDER) {
         position = 2 to -1
@@ -95,24 +95,16 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = 3 to -3
-        rotation = -1
-    }
-    glyph(UNBONDER) {
         position = -4 to 0
         rotation = 5
     }
-    glyph(PROJECTION) {
-        position = 3 to -3
-        rotation = 2
+    glyph(UNBONDER) {
+        position = 3 to -2
+        rotation = -1
     }
     glyph(PROJECTION) {
         position = -1 to -2
         rotation = 0
-    }
-    glyph(PROJECTION) {
-        position = 3 to -4
-        rotation = 2
     }
     glyph(PROJECTION) {
         position = 0 to -3
@@ -121,6 +113,14 @@ solution {
     glyph(PROJECTION) {
         position = -2 to -2
         rotation = 2
+    }
+    glyph(PROJECTION) {
+        position = 3 to -3
+        rotation = 3
+    }
+    glyph(PROJECTION) {
+        position = 3 to -2
+        rotation = 3
     }
     glyph(EQUILIBRIUM) {
         position = -1 to 3
@@ -147,7 +147,7 @@ solution {
     }
     io(INPUT) {
         index = 2
-        position = 3 to -4
+        position = 3 to -3
         rotation = 0
     }
     track {
@@ -159,53 +159,11 @@ solution {
         positions = listOf(0 to 0, 0 to 1, 1 to 1, 2 to 0)
     }
     track {
-        position = 4 to -5
-        positions = listOf(0 to 0, 1 to -1)
+        position = 6 to -5
+        positions = listOf(-1 to 0, -2 to 1)
     }
     tape {
         parallel(
-        {
-            sequence(5) {
-                grab()
-                rotateClockwise()
-                pivotClockwise()
-                forward()
-                pivotClockwise()
-                back()
-                wait(1)
-                forward()
-                wait(1)
-                pivotClockwise()
-                back()
-                wait(1)
-                pivotClockwise()
-                forward()
-                wait(1)
-                pivotClockwise()
-                back()
-                wait(1)
-                pivotClockwise()
-                forward()
-                wait(1)
-                pivotClockwise()
-                back()
-                wait(1)
-                pivotClockwise()
-                forward()
-                wait(1)
-                pivotClockwise()
-                back()
-                wait(1)
-                pivotClockwise()
-                forward()
-                wait(1)
-                pivotClockwise()
-                back()
-                wait(1)
-                rotateCounterClockwise()
-            }
-        }
-        , 
         {
             sequence(2) {
                 grab()
@@ -414,6 +372,48 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 reset()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                grab()
+                rotateClockwise()
+                pivotClockwise()
+                back()
+                pivotClockwise()
+                forward()
+                wait(1)
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                back()
+                wait(1)
+                pivotClockwise()
+                forward()
+                wait(1)
+                rotateCounterClockwise()
             }
         }
         )
