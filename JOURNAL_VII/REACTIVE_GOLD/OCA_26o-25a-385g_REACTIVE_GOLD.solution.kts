@@ -16,14 +16,14 @@ solution {
     }
     arm(ARM1) {
         number = 3
-        position = -2 to -2
-        rotation = -1
+        position = 1 to -3
+        rotation = -3
         size = 1
     }
     arm(ARM1) {
         number = 4
-        position = 1 to -3
-        rotation = -3
+        position = -2 to -3
+        rotation = 0
         size = 1
     }
     arm(ARM1) {
@@ -124,12 +124,12 @@ solution {
     }
     track {
         position = -2 to 0
-        positions = listOf(0 to -2, 0 to -3, -1 to -3)
+        positions = listOf(0 to -3, -1 to -3)
     }
     tape {
         parallel(
         {
-            sequence(4) {
+            sequence(3) {
                 grab()
                 forward()
                 pivotClockwise()
@@ -159,39 +159,14 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                grab()
-                forward()
-                forward()
-                back()
-                pivotClockwise()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                back()
-                forward()
-                rotateCounterClockwise()
-                drop()
-                wait(9)
-                extendTape()
-            }
-        }
-        , 
-        {
             sequence(1) {
                 wait(4)
                 grab()
                 forward()
                 pivotCounterClockwise()
                 drop()
-                rotateCounterClockwise()
                 retract()
+                rotateCounterClockwise()
                 wait(7)
                 grab()
                 rotateClockwise()
@@ -238,6 +213,31 @@ solution {
                 forward()
                 rotateCounterClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                grab()
+                rotateClockwise()
+                forward()
+                back()
+                pivotClockwise()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                back()
+                forward()
+                rotateCounterClockwise()
+                drop()
+                wait(9)
+                extendTape()
             }
         }
         )
