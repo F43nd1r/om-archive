@@ -153,10 +153,6 @@ solution {
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = 1 to 3
-        rotation = 0
-    }
-    glyph(UNBONDER) {
         position = 2 to 1
         rotation = 0
     }
@@ -248,6 +244,10 @@ solution {
         position = -1 to 0
         rotation = 1
     }
+    glyph(DISPOSAL) {
+        position = -2 to 3
+        rotation = 0
+    }
     glyph(EQUILIBRIUM) {
         position = -7 to 6
         rotation = 0
@@ -258,10 +258,6 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = -4 to 0
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -3 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -286,6 +282,10 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = 3 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -3 to 0
         rotation = 0
     }
     io(INPUT) {
