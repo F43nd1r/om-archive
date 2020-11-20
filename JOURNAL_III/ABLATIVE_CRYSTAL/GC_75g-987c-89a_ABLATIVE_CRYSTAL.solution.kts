@@ -20,15 +20,23 @@ solution {
         position = -3 to 5
         rotation = -2
     }
-    io(INPUT) {
-        index = 0
-        position = -6 to 1
-        rotation = 3
+    glyph(EQUILIBRIUM) {
+        position = 4 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -8 to 6
+        rotation = 0
     }
     io(OUTPUT) {
         index = 0
         position = 2 to -2
         rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = -5 to 1
+        rotation = 4
     }
     track {
         position = -3 to 1
@@ -39,7 +47,6 @@ solution {
         {
             sequence(1) {
                 grab()
-                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
@@ -69,8 +76,8 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                pivotCounterClockwise()
                 forward()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 back()
@@ -88,37 +95,36 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                back()
-                pivotClockwise()
-                pivotClockwise()
-                rotateClockwise()
-                forward()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                back()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                back()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                forward()
-                pivotCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
                 back()
                 pivotClockwise()
+                pivotClockwise()
+                rotateClockwise()
+                forward()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                back()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                forward()
+                pivotCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                back()
+                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -134,8 +140,8 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                pivotCounterClockwise()
                 forward()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
