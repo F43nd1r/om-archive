@@ -24,14 +24,18 @@ solution {
         position = -1 to 0
         rotation = 0
     }
-    io(INFINITE) {
-        index = 0
-        position = 0 to 1
+    glyph(EQUILIBRIUM) {
+        position = 23 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 0
         position = -3 to 1
+        rotation = 0
+    }
+    io(INFINITE) {
+        index = 0
+        position = 0 to 1
         rotation = 0
     }
     io(INPUT) {
@@ -186,9 +190,8 @@ solution {
                 back()
                 rotateCounterClockwise()
                 grab()
-                forward()
                 rotateClockwise()
-                pivotCounterClockwise()
+                forward()
                 pivotCounterClockwise()
                 drop()
                 back()
@@ -293,9 +296,8 @@ solution {
                 back()
                 rotateCounterClockwise()
                 grab()
-                forward()
                 rotateClockwise()
-                pivotCounterClockwise()
+                forward()
                 pivotCounterClockwise()
                 drop()
                 back()
@@ -400,9 +402,8 @@ solution {
                 back()
                 rotateCounterClockwise()
                 grab()
-                forward()
                 rotateClockwise()
-                pivotCounterClockwise()
+                forward()
                 pivotCounterClockwise()
                 drop()
                 back()
@@ -507,9 +508,8 @@ solution {
                 back()
                 rotateCounterClockwise()
                 grab()
-                forward()
                 rotateClockwise()
-                pivotCounterClockwise()
+                forward()
                 pivotCounterClockwise()
                 drop()
                 back()
@@ -614,9 +614,8 @@ solution {
                 back()
                 rotateCounterClockwise()
                 grab()
-                forward()
                 rotateClockwise()
-                pivotCounterClockwise()
+                forward()
                 pivotCounterClockwise()
                 drop()
                 back()
@@ -679,8 +678,10 @@ solution {
                 pivotCounterClockwise()
                 rotateClockwise()
                 pivotClockwise()
-                drop()
                 back()
+                rotateClockwise()
+                rotateClockwise()
+                reset()
             }
         }
         )
