@@ -4,29 +4,29 @@ solution {
     name = "B S 6T"
     arm(ARM1) {
         number = 1
-        position = -2 to -3
-        rotation = 1
+        position = -6 to 1
+        rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -2 to -1
-        rotation = 4
+        position = -4 to 1
+        rotation = 3
         size = 1
     }
     arm(ARM1) {
         number = 3
-        position = -1 to -2
-        rotation = 2
+        position = -5 to 2
+        rotation = -1
         size = 2
     }
     glyph(BONDER) {
-        position = -3 to -2
-        rotation = 1
+        position = -5 to 0
+        rotation = 0
     }
     glyph(BONDER) {
-        position = -2 to 1
-        rotation = 0
+        position = -1 to 1
+        rotation = -3
     }
     glyph(CALCIFICATION) {
         position = -3 to 0
@@ -34,7 +34,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -2 to -2
+        position = -5 to 1
         rotation = 0
     }
     io(INFINITE) {
@@ -43,7 +43,7 @@ solution {
         rotation = 0
     }
     track {
-        position = -1 to -2
+        position = -5 to 2
         positions = listOf(0 to 0, 1 to 0)
     }
     tape {
@@ -51,7 +51,7 @@ solution {
         {
             sequence(1) {
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 reset()
                 wait(1)
                 repeat()
@@ -108,10 +108,11 @@ solution {
             sequence(2) {
                 wait(2)
                 grab()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
                 reset()
-                wait(4)
+                wait(3)
                 repeat()
                 wait(7)
                 repeat()
@@ -134,20 +135,22 @@ solution {
                 wait(7)
                 repeat()
                 wait(7)
-                repeat()
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                reset()
             }
         }
         , 
         {
             sequence(3) {
-                wait(5)
+                wait(6)
                 grab()
+                rotateCounterClockwise()
                 pivotCounterClockwise()
-                rotateClockwise()
-                pivotClockwise()
                 forward()
                 reset()
-                wait(2)
+                wait(3)
                 repeat()
                 wait(7)
                 repeat()
@@ -169,9 +172,9 @@ solution {
                 repeat()
                 wait(7)
                 repeat()
-                wait(7)
+                wait(6)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
                 forward()
                 reset()
             }
