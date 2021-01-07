@@ -36,7 +36,7 @@ solution {
         number = 6
         position = -5 to -2
         rotation = 0
-        size = 3
+        size = 2
     }
     glyph(BONDER) {
         position = -2 to -1
@@ -71,7 +71,7 @@ solution {
     }
     track {
         position = -7 to -2
-        positions = listOf(0 to 0, 1 to 0, 2 to 0)
+        positions = listOf(1 to 0, 2 to 0)
     }
     track {
         position = -3 to 0
@@ -88,8 +88,9 @@ solution {
                 wait(1)
                 grab()
                 extend()
+                back()
                 reset()
-                wait(3)
+                wait(2)
                 repeat()
                 wait(9)
                 repeat()
@@ -197,12 +198,11 @@ solution {
         , 
         {
             sequence(6) {
-                wait(9)
+                wait(10)
                 grab()
                 back()
-                back()
                 reset()
-                wait(6)
+                wait(7)
                 repeat()
                 wait(9)
                 repeat()
