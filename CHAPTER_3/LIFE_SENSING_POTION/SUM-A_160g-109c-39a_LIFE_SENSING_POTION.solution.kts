@@ -39,8 +39,8 @@ solution {
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = -2 to -3
-        rotation = 2
+        position = -2 to -2
+        rotation = 3
     }
     glyph(EQUILIBRIUM) {
         position = 3 to -2
@@ -131,10 +131,10 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                forward()
-                grab()
-                forward()
                 rotateClockwise()
+                back()
+                grab()
+                back()
                 rotateClockwise()
                 reset()
             }
@@ -145,11 +145,11 @@ solution {
                 wait(3)
                 grab()
                 rotateCounterClockwise()
-                drop()
-                forward()
-                wait(6)
-                grab()
                 back()
+                drop()
+                wait(6)
+                forward()
+                grab()
                 rotateClockwise()
                 rotateClockwise()
                 reset()
