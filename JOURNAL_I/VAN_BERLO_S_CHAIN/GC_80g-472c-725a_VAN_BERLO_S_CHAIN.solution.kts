@@ -26,9 +26,13 @@ solution {
         position = 11 to -6
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = 24 to -2
+        rotation = 0
+    }
     io(INFINITE) {
         index = 0
-        position = 1 to -2
+        position = 1 to -3
         rotation = 0
     }
     io(INPUT) {
@@ -459,9 +463,9 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
-                rotateCounterClockwise()
+                pivotCounterClockwise()
                 reset()
-                wait(3)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 pivotClockwise()
