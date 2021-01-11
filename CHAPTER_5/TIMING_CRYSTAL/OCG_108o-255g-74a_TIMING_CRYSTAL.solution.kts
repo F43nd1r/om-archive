@@ -24,7 +24,7 @@ solution {
         number = 4
         position = 6 to -6
         rotation = 2
-        size = 2
+        size = 3
     }
     glyph(BONDER) {
         position = 6 to -1
@@ -49,10 +49,6 @@ solution {
     glyph(BONDER) {
         position = 1 to 1
         rotation = 0
-    }
-    glyph(BONDER) {
-        position = 0 to 1
-        rotation = 1
     }
     glyph(UNBONDER) {
         position = 5 to -2
@@ -118,6 +114,18 @@ solution {
         position = -2 to 2
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = 0 to 2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 4 to -5
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 3 to -4
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = 6 to 0
@@ -143,7 +151,7 @@ solution {
     }
     track {
         position = 5 to -5
-        positions = listOf(-2 to 1, -1 to 0, 0 to 0, 1 to -1)
+        positions = listOf(0 to 0, 1 to 0, 1 to -1)
     }
     tape {
         parallel(
@@ -326,18 +334,19 @@ solution {
         , 
         {
             sequence(4) {
-                wait(19)
+                wait(18)
+                back()
                 grab()
-                back()
-                back()
                 pivotClockwise()
+                back()
                 drop()
-                forward()
-                forward()
+                back()
                 grab()
+                forward()
+                drop()
                 back()
-                back()
-                back()
+                grab()
+                forward()
                 reset()
             }
         }
