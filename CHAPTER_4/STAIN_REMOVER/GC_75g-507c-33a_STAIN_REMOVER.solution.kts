@@ -17,15 +17,11 @@ solution {
         rotation = 0
     }
     glyph(PURIFICATION) {
-        position = -1 to 3
-        rotation = -2
-    }
-    glyph(EQUILIBRIUM) {
-        position = -1 to 4
+        position = -1 to 2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to 3
+        position = -1 to 4
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -54,6 +50,14 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = -2 to 2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 4
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 3
         rotation = 0
     }
     io(INPUT) {
@@ -86,17 +90,16 @@ solution {
             sequence(1) {
                 grab()
                 rotateCounterClockwise()
-                forward()
                 drop()
-                back()
                 rotateClockwise()
                 grab()
+                forward()
                 rotateCounterClockwise()
-                back()
                 drop()
                 forward()
                 grab()
                 rotateCounterClockwise()
+                forward()
                 drop()
                 rotateCounterClockwise()
                 grab()
