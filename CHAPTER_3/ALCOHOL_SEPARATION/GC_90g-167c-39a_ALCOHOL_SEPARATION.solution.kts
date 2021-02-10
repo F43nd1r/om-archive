@@ -11,7 +11,7 @@ solution {
     arm(ARM1) {
         number = 2
         position = -3 to 2
-        rotation = -2
+        rotation = -3
         size = 2
     }
     glyph(UNBONDER) {
@@ -24,27 +24,27 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -3 to -1
-        rotation = 0
+        position = -6 to 2
+        rotation = -1
     }
     io(OUTPUT) {
         index = 0
-        position = -2 to 3
+        position = -2 to -1
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = 0 to 1
-        rotation = 0
-    }
-    io(OUTPUT) {
-        index = 2
         position = -1 to 2
         rotation = 0
     }
     io(OUTPUT) {
+        index = 2
+        position = 0 to 1
+        rotation = 0
+    }
+    io(OUTPUT) {
         index = 3
-        position = -2 to -1
+        position = -3 to 0
         rotation = 0
     }
     track {
@@ -54,47 +54,47 @@ solution {
     tape {
         parallel(
         {
-            sequence(2) {
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
-                forward()
-                grab()
-                rotateCounterClockwise()
-                back()
-                rotateCounterClockwise()
-                drop()
+            sequence(1) {
+                wait(7)
                 rotateClockwise()
                 rotateClockwise()
-                grab()
-                forward()
-                pivotClockwise()
-                rotateCounterClockwise()
-                drop()
                 rotateClockwise()
-                back()
-                grab()
                 rotateClockwise()
-                reset()
+                rotateClockwise()
+                wait(8)
+                rotateClockwise()
             }
         }
         , 
         {
-            sequence(1) {
-                wait(6)
+            sequence(2) {
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
                 rotateClockwise()
+                back()
+                grab()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                forward()
+                grab()
                 rotateClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+                forward()
                 rotateClockwise()
+                grab()
                 rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                reset()
             }
         }
         )
