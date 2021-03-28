@@ -2,95 +2,72 @@
 solution {
     puzzle = "P032"
     name = "B S"
-    arm(ARM1) {
+    arm(ARM6) {
         number = 1
-        position = 0 to -1
-        rotation = 3
+        position = 1 to -2
+        rotation = -9
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -1 to -2
-        rotation = 1
+        position = 2 to -1
+        rotation = -8
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 3
-        position = 3 to -2
-        rotation = 0
+        position = -2 to -1
+        rotation = -9
         size = 1
     }
     arm(ARM1) {
         number = 4
-        position = 4 to -1
-        rotation = 4
+        position = -3 to -2
+        rotation = -11
         size = 1
     }
     glyph(BONDER) {
-        position = 0 to -3
-        rotation = 1
+        position = -2 to -2
+        rotation = -8
     }
     glyph(BONDER) {
-        position = 3 to -1
-        rotation = 1
+        position = 1 to 0
+        rotation = -8
     }
     glyph(CALCIFICATION) {
-        position = -1 to 0
+        position = 2 to -3
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 4 to -3
+        position = -3 to 0
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = 2 to -2
-        rotation = 2
-    }
-    io(INPUT) {
-        index = 0
         position = -1 to -1
+        rotation = -7
+    }
+    io(INPUT) {
+        index = 0
+        position = 2 to -2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -2 to -1
-        rotation = -2
+        position = 2 to 0
+        rotation = -10
     }
     io(INPUT) {
         index = 1
-        position = 4 to -2
+        position = -3 to -1
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = 5 to -2
-        rotation = 4
+        position = -3 to -3
+        rotation = -4
     }
     tape {
         parallel(
-        {
-            sequence(3) {
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                rotateClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                wait(1)
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
@@ -98,25 +75,62 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 drop()
-                rotateClockwise()
                 grab()
                 rotateClockwise()
-                reset()
+                drop()
                 wait(1)
+                grab()
+                rotateCounterClockwise()
+                drop()
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
+                drop()
+                grab()
+                rotateClockwise()
+                drop()
                 wait(1)
+                grab()
+                rotateCounterClockwise()
+                drop()
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(2)
+                grab()
                 rotateClockwise()
                 rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                wait(1)
+                pivotClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotClockwise()
                 reset()
             }
         }
         , 
         {
             sequence(2) {
-                wait(3)
+                wait(2)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -125,35 +139,11 @@ solution {
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
+                wait(1)
+                pivotClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                pivotClockwise()
                 reset()
             }
         }
