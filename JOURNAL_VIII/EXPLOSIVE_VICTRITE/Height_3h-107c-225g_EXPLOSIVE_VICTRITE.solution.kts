@@ -28,12 +28,6 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = -2 to 0
-        rotation = 3
-        size = 2
-    }
-    arm(ARM1) {
-        number = 6
         position = -1 to 1
         rotation = 3
         size = 3
@@ -58,6 +52,14 @@ solution {
         position = -6 to 2
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -1 to 0
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = -8 to 0
@@ -78,7 +80,7 @@ solution {
     }
     track {
         position = -2 to 0
-        positions = listOf(3 to 1, 2 to 1, 1 to 1, 1 to 0, 0 to 0)
+        positions = listOf(3 to 1, 2 to 1, 1 to 1)
     }
     tape {
         parallel(
@@ -211,41 +213,24 @@ solution {
         }
         , 
         {
-            sequence(6) {
-                wait(20)
-                grab()
-                back()
-                back()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                forward()
-                forward()
-                reset()
-                wait(5)
-                repeat()
-                wait(15)
-                repeat()
-                wait(15)
-                repeat()
-                wait(15)
-                repeat()
-            }
-        }
-        , 
-        {
             sequence(5) {
                 wait(18)
                 grab()
                 back()
                 drop()
+                forward()
+                grab()
                 back()
                 back()
-                wait(5)
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                forward()
+                forward()
                 reset()
-                wait(5)
+                wait(1)
                 repeat()
                 wait(15)
                 repeat()
