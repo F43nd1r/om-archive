@@ -28,9 +28,9 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = -7 to -1
-        rotation = 5
-        size = 1
+        position = -8 to 0
+        rotation = 4
+        size = 2
     }
     arm(PISTON) {
         number = 6
@@ -114,7 +114,7 @@ solution {
     }
     track {
         position = -6 to -2
-        positions = listOf(-3 to 1, -2 to 1, -1 to 1, 0 to 0, 0 to 1, 1 to 1, 2 to 1, 2 to 2, 1 to 2, 0 to 2, -1 to 2)
+        positions = listOf(0 to 0, 0 to 1, 1 to 1, 2 to 1, 2 to 2, 1 to 2, 0 to 2, -1 to 2, -2 to 2, -3 to 2)
     }
     track {
         position = 7 to -2
@@ -272,8 +272,9 @@ solution {
                 forward()
                 forward()
                 forward()
+                forward()
                 reset()
-                wait(5)
+                wait(4)
                 back()
                 grab()
                 forward()
@@ -284,6 +285,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
+                forward()
                 forward()
                 forward()
                 reset()
@@ -334,59 +336,6 @@ solution {
                 grab()
                 forward()
                 wait(1)
-                back()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(16)
-                grab()
-                back()
-                back()
-                drop()
-                forward()
-                grab()
-                back()
-                reset()
-                wait(5)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                repeat()
-                wait(12)
-                grab()
-                back()
-                back()
-                drop()
-                forward()
-                grab()
-                back()
-                drop()
-                forward()
-                grab()
-                back()
-                drop()
-                forward()
-                wait(15)
-                grab()
-                back()
-                reset()
-                wait(5)
-                grab()
-                back()
                 back()
                 reset()
             }
@@ -603,6 +552,58 @@ solution {
                 repeat()
                 wait(25)
                 repeat()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(17)
+                back()
+                grab()
+                forward()
+                forward()
+                drop()
+                back()
+                grab()
+                forward()
+                reset()
+                wait(4)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                repeat()
+                wait(12)
+                back()
+                grab()
+                forward()
+                forward()
+                drop()
+                back()
+                grab()
+                forward()
+                drop()
+                wait(1)
+                reset()
+                wait(16)
+                grab()
+                forward()
+                drop()
+                wait(7)
+                back()
+                grab()
+                forward()
+                reset()
             }
         }
         )
