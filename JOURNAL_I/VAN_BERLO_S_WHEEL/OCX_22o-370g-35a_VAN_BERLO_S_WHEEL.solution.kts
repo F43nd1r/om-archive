@@ -8,11 +8,11 @@ solution {
         rotation = 0
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 2
-        position = -2 to 0
+        position = -2 to -1
         rotation = 8
-        size = 1
+        size = 2
     }
     arm(VAN_BERLOS_WHEEL) {
         number = 3
@@ -20,11 +20,11 @@ solution {
         rotation = -1
         size = 1
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 4
         position = -4 to 2
-        rotation = 0
-        size = 2
+        rotation = 5
+        size = 1
     }
     arm(PISTON) {
         number = 5
@@ -108,10 +108,6 @@ solution {
         positions = listOf(0 to 0, 1 to 0)
     }
     track {
-        position = -2 to -1
-        positions = listOf(0 to 0, 0 to 1)
-    }
-    track {
         position = -1 to 3
         positions = listOf(-3 to -1, -3 to 0, -3 to 1, -2 to 1)
     }
@@ -140,26 +136,6 @@ solution {
                 rotateCounterClockwise()
                 pivotClockwise()
                 pivotClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(7)
-                forward()
-                grab()
-                rotateClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                drop()
-                rotateCounterClockwise()
                 reset()
             }
         }
@@ -215,22 +191,8 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                grab()
-                back()
-                extend()
-                rotateClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                drop()
-                wait(12)
-                reset()
-            }
-        }
-        , 
-        {
             sequence(6) {
-                wait(6)
+                wait(5)
                 grab()
                 rotateClockwise()
                 drop()
@@ -250,10 +212,47 @@ solution {
                 rotateCounterClockwise()
                 wait(1)
                 pivotClockwise()
-                rotateCounterClockwise()
                 wait(1)
+                rotateCounterClockwise()
                 rotateClockwise()
                 forward()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                extend()
+                wait(1)
+                forward()
+                grab()
+                rotateClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
+                rotateCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(2)
+                grab()
+                rotateClockwise()
+                pivotClockwise()
+                pivotClockwise()
                 reset()
             }
         }
