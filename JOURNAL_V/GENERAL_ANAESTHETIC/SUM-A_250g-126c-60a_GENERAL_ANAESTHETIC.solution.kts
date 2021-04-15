@@ -28,8 +28,8 @@ solution {
     }
     arm(ARM1) {
         number = 5
-        position = -2 to -3
-        rotation = 1
+        position = -2 to 1
+        rotation = 4
         size = 2
     }
     arm(ARM3) {
@@ -90,8 +90,8 @@ solution {
         rotation = 0
     }
     track {
-        position = -1 to -3
-        positions = listOf(0 to 0, -1 to 0)
+        position = -2 to 1
+        positions = listOf(0 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -237,72 +237,6 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(3)
-                repeat()
-                wait(19)
-                repeat()
-                wait(19)
-                repeat()
-                wait(19)
-                repeat()
-                wait(19)
-                repeat()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(5)
-                grab()
-                pivotClockwise()
-                pivotClockwise()
-                drop()
-                wait(1)
-                grab()
-                back()
-                pivotCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                back()
-                pivotCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                pivotClockwise()
-                pivotClockwise()
-                reset()
-                wait(1)
-                repeat()
-                wait(19)
-                repeat()
-                wait(19)
-                repeat()
-                wait(19)
-                repeat()
-                wait(19)
-                repeat()
-            }
-        }
-        , 
-        {
             sequence(6) {
                 wait(6)
                 grab()
@@ -378,6 +312,72 @@ solution {
                 pivotCounterClockwise()
                 reset()
                 wait(11)
+                repeat()
+                wait(19)
+                repeat()
+                wait(19)
+                repeat()
+                wait(19)
+                repeat()
+                wait(19)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(3)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(2)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(2)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(3)
+                repeat()
+                wait(19)
+                repeat()
+                wait(19)
+                repeat()
+                wait(19)
+                repeat()
+                wait(19)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(5)
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
+                forward()
+                grab()
+                back()
+                pivotCounterClockwise()
+                reset()
+                forward()
+                grab()
+                back()
+                pivotCounterClockwise()
+                reset()
+                wait(1)
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                reset()
+                wait(1)
                 repeat()
                 wait(19)
                 repeat()
