@@ -26,7 +26,7 @@ solution {
         rotation = 2
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 5
         position = -2 to -1
         rotation = 0
@@ -87,7 +87,7 @@ solution {
     }
     track {
         position = 0 to 0
-        positions = listOf(0 to -1, -1 to -1, -2 to -1)
+        positions = listOf(0 to -1, -1 to -1, -2 to -1, -3 to -1)
     }
     track {
         position = -4 to 0
@@ -95,34 +95,6 @@ solution {
     }
     tape {
         parallel(
-        {
-            sequence(3) {
-                wait(3)
-                grab()
-                extend()
-                pivotCounterClockwise()
-                extend()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                repeat()
-                wait(7)
-                repeat()
-                wait(7)
-                repeat()
-                wait(7)
-                repeat()
-                wait(7)
-                grab()
-                extend()
-                pivotCounterClockwise()
-                wait(1)
-                extend()
-                pivotCounterClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(6) {
                 wait(2)
@@ -318,12 +290,40 @@ solution {
                 back()
                 reset()
                 wait(1)
-                retract()
+                forward()
                 wait(34)
                 grab()
-                extend()
+                back()
                 wait(1)
                 back()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(3)
+                grab()
+                extend()
+                pivotCounterClockwise()
+                extend()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                repeat()
+                wait(7)
+                repeat()
+                wait(7)
+                repeat()
+                wait(7)
+                repeat()
+                wait(7)
+                grab()
+                extend()
+                pivotCounterClockwise()
+                wait(1)
+                extend()
+                pivotCounterClockwise()
                 reset()
             }
         }
