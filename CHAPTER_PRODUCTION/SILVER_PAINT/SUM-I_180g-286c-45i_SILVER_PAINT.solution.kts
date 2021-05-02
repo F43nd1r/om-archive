@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P076"
-    name = "B X S 1-3T"
+    name = "B X S II"
     arm(ARM6) {
         number = 1
         position = 4 to 4
@@ -16,7 +16,7 @@ solution {
     }
     arm(ARM6) {
         number = 3
-        position = 10 to 0
+        position = 9 to 0
         rotation = 0
         size = 1
     }
@@ -87,7 +87,7 @@ solution {
         parallel(
         {
             sequence(4) {
-                wait(2)
+                wait(1)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -107,7 +107,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(3)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -119,26 +119,34 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                grab()
+                rotateClockwise()
+                drop()
+                grab()
+                rotateClockwise()
+                drop()
                 wait(1)
+                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(4)
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
-                grab()
-                rotateClockwise()
-                drop()
-                grab()
-                rotateClockwise()
-                drop()
+                rotateCounterClockwise()
             }
         }
         , 
         {
             sequence(3) {
-                grab()
-                back()
-                drop()
-                wait(3)
+                wait(21)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -149,16 +157,9 @@ solution {
                 rotateCounterClockwise()
                 forward()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(5)
                 grab()
-                rotateClockwise()
+                back()
                 drop()
-                rotateCounterClockwise()
             }
         }
         )
