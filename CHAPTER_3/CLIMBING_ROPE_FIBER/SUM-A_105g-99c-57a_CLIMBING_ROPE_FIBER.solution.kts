@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P027"
-    name = "B S 6T"
+    name = "B X S 6T"
     arm(ARM1) {
         number = 1
         position = -6 to 1
@@ -32,6 +32,14 @@ solution {
         position = -3 to 0
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = -4 to -1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -1 to -1
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = -5 to 1
@@ -44,7 +52,7 @@ solution {
     }
     track {
         position = -5 to 2
-        positions = listOf(0 to 0, 1 to 0)
+        positions = listOf(0 to 0, 1 to 0, 2 to 0)
     }
     tape {
         parallel(
@@ -54,8 +62,6 @@ solution {
                 rotateClockwise()
                 reset()
                 wait(1)
-                repeat()
-                wait(3)
                 repeat()
                 wait(3)
                 repeat()
@@ -134,11 +140,6 @@ solution {
                 repeat()
                 wait(7)
                 repeat()
-                wait(7)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
             }
         }
         , 
@@ -171,11 +172,12 @@ solution {
                 wait(7)
                 repeat()
                 wait(7)
-                repeat()
-                wait(6)
                 grab()
                 rotateCounterClockwise()
+                pivotCounterClockwise()
                 forward()
+                forward()
+                back()
                 reset()
             }
         }
