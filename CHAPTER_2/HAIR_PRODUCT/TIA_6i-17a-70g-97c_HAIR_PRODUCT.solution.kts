@@ -1,32 +1,32 @@
 
 solution {
     puzzle = "P016"
-    name = "NEW SOLUTION 9"
+    name = "INSTRUCTIONS NO TRACK 9"
     arm(ARM6) {
         number = 1
-        position = -7 to -5
-        rotation = 0
+        position = -2 to 1
+        rotation = -3
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM3) {
         number = 2
-        position = -5 to -7
+        position = -1 to -1
         rotation = 2
         size = 1
     }
     glyph(BONDER) {
-        position = -7 to -4
-        rotation = 3
+        position = -3 to 2
+        rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -8 to -5
+        position = -3 to 1
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -4 to -6
-        rotation = -5
+        position = 1 to -1
+        rotation = 1
     }
     tape {
         parallel(
@@ -35,6 +35,7 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
+                extendTape()
             }
         }
         , 
@@ -44,7 +45,6 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                extendTape()
             }
         }
         )
