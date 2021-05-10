@@ -4,59 +4,70 @@ solution {
     name = "NEW SOLUTION 6 (Copy)"
     arm(ARM6) {
         number = 1
-        position = -6 to -11
-        rotation = 1
+        position = -5 to -11
+        rotation = 2
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = -6 to -8
+        position = -6 to -9
         rotation = 4
-        size = 2
+        size = 1
     }
     arm(ARM3) {
         number = 3
-        position = -3 to -6
-        rotation = -1
+        position = -6 to -5
+        rotation = 0
         size = 1
     }
     glyph(BONDER) {
-        position = -5 to -6
-        rotation = 0
+        position = -6 to -7
+        rotation = 1
     }
     glyph(TRIPLEX_BONDER) {
         position = -6 to -10
-        rotation = 2
+        rotation = 3
     }
     glyph(TRIPLEX_BONDER) {
-        position = -9 to -7
-        rotation = 5
+        position = -8 to -9
+        rotation = 6
     }
     glyph(TRIPLEX_BONDER) {
-        position = -7 to -6
-        rotation = 2
+        position = -7 to -7
+        rotation = 3
     }
     glyph(CALCIFICATION) {
-        position = -2 to -10
+        position = -3 to -9
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -7 to -11
+        position = -5 to -12
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
         position = -4 to -11
-        rotation = -2
+        rotation = -1
     }
     io(INPUT) {
         index = 1
-        position = -4 to -5
+        position = -7 to -5
         rotation = 0
     }
     tape {
         parallel(
+        {
+            sequence(2) {
+                wait(2)
+                grab()
+                rotateClockwise()
+                drop()
+                wait(1)
+                extendTape()
+            }
+        }
+        , 
         {
             sequence(1) {
                 grab()
@@ -66,18 +77,8 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(2)
-                grab()
-                rotateClockwise()
-                drop()
-                extendTape()
-            }
-        }
-        , 
-        {
             sequence(3) {
-                wait(12)
+                wait(15)
                 grab()
                 rotateCounterClockwise()
                 drop()
