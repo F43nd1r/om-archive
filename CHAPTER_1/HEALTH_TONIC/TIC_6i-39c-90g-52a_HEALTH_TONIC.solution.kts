@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P014"
-    name = "INSTRUCTIONS NO TRACK 11"
+    name = "INSTRUCTIONS NO TRACK 12"
     arm(ARM6) {
         number = 1
         position = 1 to -2
         rotation = -1
         size = 2
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 2
-        position = -3 to -3
-        rotation = 6
+        position = 0 to -5
+        rotation = 2
         size = 1
     }
     glyph(MULTI_BONDER) {
@@ -26,7 +26,7 @@ solution {
     io(INPUT) {
         index = 0
         position = -2 to -4
-        rotation = -2
+        rotation = 1
     }
     io(INPUT) {
         index = 1
@@ -37,7 +37,6 @@ solution {
         parallel(
         {
             sequence(1) {
-                wait(1)
                 grab()
                 rotateClockwise()
                 drop()
@@ -46,8 +45,9 @@ solution {
         , 
         {
             sequence(2) {
+                wait(2)
                 grab()
-                pivotCounterClockwise()
+                rotateClockwise()
                 drop()
             }
         }
