@@ -4,27 +4,27 @@ solution {
     name = "NEW SOLUTION 4 (Copy)"
     arm(ARM1) {
         number = 1
-        position = -14 to -2
+        position = 0 to -1
         rotation = -3
         size = 1
     }
     glyph(BONDER) {
-        position = -14 to -3
+        position = 0 to -2
         rotation = 0
     }
     io(INFINITE) {
         index = 0
-        position = -13 to -2
+        position = 1 to -1
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -15 to -1
+        position = -1 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -15 to -2
+        position = -1 to -1
         rotation = 0
     }
     tape {
