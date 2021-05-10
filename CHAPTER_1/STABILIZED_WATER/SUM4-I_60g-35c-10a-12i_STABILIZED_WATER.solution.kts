@@ -1,58 +1,60 @@
 
 solution {
     puzzle = "P007"
-    name = "NEW SOLUTION 17"
-    arm(ARM6) {
+    name = "NEW SOLUTION 20"
+    arm(ARM1) {
         number = 1
-        position = -8 to -5
+        position = -14 to -5
         rotation = 0
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 2
-        position = -5 to -7
+        position = -15 to -2
         rotation = 0
         size = 1
     }
     glyph(BONDER) {
-        position = -6 to -7
-        rotation = 2
+        position = -15 to -3
+        rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = -7 to -5
+        position = -14 to -3
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -8 to -4
+        position = -14 to -2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -6 to -8
+        position = -16 to -4
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -6 to -6
+        position = -13 to -5
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(1) {
+            sequence(2) {
                 grab()
                 rotateClockwise()
-                drop()
+                rotateClockwise()
+                reset()
             }
         }
         , 
         {
-            sequence(2) {
+            sequence(1) {
                 wait(1)
                 grab()
                 rotateCounterClockwise()
-                drop()
+                rotateCounterClockwise()
+                reset()
             }
         }
         )
