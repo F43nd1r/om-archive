@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P016"
-    name = "TIG"
+    name = "INSTRUCTIONS NO TRACK 8"
     arm(ARM6) {
         number = 1
         position = -1 to 0
-        rotation = 3
+        rotation = -3
         size = 1
     }
     arm(ARM1) {
