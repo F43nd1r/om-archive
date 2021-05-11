@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P060"
-    name = "B X S"
+    name = "SLIGHT IMPROVEMENT"
     arm(ARM1) {
         number = 1
-        position = 3 to -1
-        rotation = 3
+        position = 0 to -2
+        rotation = -22
         size = 2
     }
     arm(ARM1) {
         number = 2
-        position = 0 to -2
-        rotation = 2
+        position = 3 to -1
+        rotation = 3
         size = 2
     }
     arm(ARM1) {
@@ -30,17 +30,17 @@ solution {
     }
     glyph(DUPLICATION) {
         position = -1 to 0
-        rotation = -1
+        rotation = -7
     }
     io(INPUT) {
         index = 0
         position = -2 to 0
-        rotation = 0
+        rotation = -20
     }
     io(OUTPUT) {
         index = 0
         position = 2 to 1
-        rotation = -3
+        rotation = 3
     }
     io(INPUT) {
         index = 1
@@ -51,29 +51,12 @@ solution {
         parallel(
         {
             sequence(2) {
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                pivotCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(1) {
                 wait(12)
                 grab()
                 pivotClockwise()
                 rotateClockwise()
-                reset()
+                drop()
+                rotateCounterClockwise()
             }
         }
         , 
@@ -81,11 +64,30 @@ solution {
             sequence(3) {
                 grab()
                 rotateCounterClockwise()
-                reset()
-                wait(1)
+                drop()
+                rotateClockwise()
                 repeat()
                 wait(3)
                 repeat()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
             }
         }
         )
