@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P013"
-    name = "INSTRUCTIONS NO TRACK 6"
+    name = "NO-TRACK I-6"
     arm(ARM6) {
         number = 1
         position = -2 to 1
-        rotation = 0
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -3 to 0
-        rotation = 0
+        position = 1 to 0
+        rotation = -3
         size = 2
     }
     glyph(BONDER) {
@@ -34,7 +34,7 @@ solution {
     io(OUTPUT) {
         index = 0
         position = -1 to -1
-        rotation = 3
+        rotation = -15
     }
     tape {
         parallel(
@@ -49,7 +49,7 @@ solution {
         , 
         {
             sequence(2) {
-                wait(2)
+                wait(10)
                 grab()
                 pivotClockwise()
                 drop()
