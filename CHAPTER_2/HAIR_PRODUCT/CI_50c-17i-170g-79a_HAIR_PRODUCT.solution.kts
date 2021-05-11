@@ -22,15 +22,15 @@ solution {
     }
     arm(ARM6) {
         number = 4
-        position = -14 to 1
+        position = -13 to 1
         rotation = 0
         size = 2
     }
     arm(ARM1) {
         number = 5
-        position = -14 to 2
+        position = -15 to 3
         rotation = -1
-        size = 2
+        size = 3
     }
     glyph(MULTI_BONDER) {
         position = -10 to -2
@@ -43,11 +43,11 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -13 to -3
+        position = -13 to -2
         rotation = -5
     }
     track {
-        position = -13 to 1
+        position = -14 to 2
         positions = listOf(0 to 0, -1 to 1)
     }
     tape {
@@ -58,24 +58,6 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(5)
-                grab()
-                back()
-                reset()
             }
         }
         , 
@@ -93,6 +75,24 @@ solution {
                 grab()
                 rotateClockwise()
                 reset()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(5)
+                grab()
+                back()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(3)
+                grab()
+                rotateClockwise()
+                drop()
             }
         }
         )
