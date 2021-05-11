@@ -1,54 +1,48 @@
 
 solution {
     puzzle = "P106"
-    name = "B X S"
+    name = "MOUNTAIN BIKE"
     arm(ARM1) {
         number = 1
-        position = -2 to -2
+        position = 1 to -3
         rotation = 2
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -4 to 2
+        position = -1 to 1
         rotation = 5
         size = 2
     }
-    arm(ARM1) {
-        number = 3
-        position = 0 to 2
-        rotation = 4
-        size = 3
-    }
     glyph(BONDER) {
-        position = 0 to -2
+        position = 3 to -3
         rotation = 0
     }
     glyph(TRIPLEX_BONDER) {
-        position = -1 to -1
+        position = 2 to -2
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -3 to 0
+        position = 0 to -1
         rotation = -1
     }
     io(INPUT) {
         index = 0
-        position = -4 to -1
-        rotation = 0
+        position = -1 to -2
+        rotation = -2
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to -1
-        rotation = -1
+        position = 3 to 0
+        rotation = 3
     }
     track {
-        position = -1 to -2
+        position = 2 to -3
         positions = listOf(0 to 0, -1 to 0)
     }
     track {
-        position = -2 to 0
-        positions = listOf(0 to 0, 0 to 1, -1 to 2, -2 to 2, -1 to 1)
+        position = 1 to -1
+        positions = listOf(0 to 0, 0 to 1, -1 to 2, -2 to 2)
     }
     tape {
         parallel(
@@ -63,13 +57,17 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                wait(2)
+                forward()
+                wait(1)
                 grab()
-                rotateClockwise()
+                wait(1)
+                back()
+                wait(1)
+                pivotCounterClockwise()
+                pivotClockwise()
                 drop()
                 forward()
-                reset()
+                rotateCounterClockwise()
             }
         }
         , 
@@ -86,25 +84,20 @@ solution {
                 back()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                pivotClockwise()
-                back()
-                pivotCounterClockwise()
-                rotateCounterClockwise()
-                pivotClockwise()
                 drop()
+                forward()
                 back()
-                back()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(19)
                 grab()
+                pivotClockwise()
+                back()
                 pivotCounterClockwise()
                 rotateCounterClockwise()
-                reset()
+                pivotClockwise()
+                forward()
+                drop()
+                rotateClockwise()
+                forward()
+                forward()
             }
         }
         )
