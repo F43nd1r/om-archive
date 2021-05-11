@@ -4,14 +4,14 @@ solution {
     name = "NEW SOLUTION 10"
     arm(ARM1) {
         number = 1
-        position = -12 to -3
-        rotation = -1
+        position = -8 to -5
+        rotation = -3
         size = 2
     }
     arm(ARM1) {
         number = 2
-        position = -13 to -2
-        rotation = 5
+        position = -7 to -5
+        rotation = 3
         size = 3
     }
     arm(ARM3) {
@@ -26,11 +26,11 @@ solution {
         rotation = 4
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM6) {
         number = 5
-        position = -9 to -1
-        rotation = -3
-        size = 2
+        position = -13 to 0
+        rotation = 0
+        size = 1
     }
     glyph(MULTI_BONDER) {
         position = -10 to -2
@@ -43,8 +43,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -11 to -2
-        rotation = -4
+        position = -12 to -3
+        rotation = -5
     }
     track {
         position = -11 to 0
@@ -52,32 +52,6 @@ solution {
     }
     tape {
         parallel(
-        {
-            sequence(2) {
-                grab()
-                rotateCounterClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(3)
-                grab()
-                extend()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(3) {
                 wait(4)
@@ -95,6 +69,32 @@ solution {
                 rotateClockwise()
                 drop()
                 back()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(2)
+                grab()
+                rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                grab()
+                rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(3)
+                grab()
+                rotateClockwise()
+                drop()
             }
         }
         )
