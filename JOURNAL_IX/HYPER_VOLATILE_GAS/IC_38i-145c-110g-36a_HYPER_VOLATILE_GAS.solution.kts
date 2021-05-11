@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P106"
-    name = "MOUNTAIN BIKE"
+    name = "B X S F"
     arm(ARM1) {
         number = 1
         position = 1 to -3
@@ -41,8 +41,8 @@ solution {
         positions = listOf(0 to 0, -1 to 0)
     }
     track {
-        position = 1 to -1
-        positions = listOf(0 to 0, 0 to 1, -1 to 2, -2 to 2)
+        position = 1 to 0
+        positions = listOf(0 to -1, 0 to 0, -1 to 1, -2 to 1)
     }
     tape {
         parallel(
@@ -55,19 +55,14 @@ solution {
                 wait(1)
                 rotateClockwise()
                 rotateClockwise()
+                wait(1)
                 drop()
                 rotateCounterClockwise()
-                forward()
+                rotateCounterClockwise()
                 wait(1)
                 grab()
-                wait(1)
-                back()
-                wait(1)
-                pivotCounterClockwise()
-                pivotClockwise()
-                drop()
-                forward()
-                rotateCounterClockwise()
+                rotateClockwise()
+                reset()
             }
         }
         , 
@@ -84,20 +79,17 @@ solution {
                 back()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                drop()
                 forward()
+                pivotCounterClockwise()
+                pivotClockwise()
                 back()
-                grab()
                 pivotClockwise()
                 back()
                 pivotCounterClockwise()
                 rotateCounterClockwise()
                 pivotClockwise()
                 forward()
-                drop()
-                rotateClockwise()
-                forward()
-                forward()
+                reset()
             }
         }
         )
