@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P022"
-    name = "NO-TRACK I-10 (COPY)"
-    arm(ARM2) {
+    name = "NO-TRACK I-10 (COPY) (Copy)"
+    arm(ARM1) {
         number = 1
         position = 3 to -3
         rotation = 3
@@ -14,7 +14,7 @@ solution {
         rotation = 1
         size = 3
     }
-    arm(ARM2) {
+    arm(ARM1) {
         number = 3
         position = 4 to -4
         rotation = -4
