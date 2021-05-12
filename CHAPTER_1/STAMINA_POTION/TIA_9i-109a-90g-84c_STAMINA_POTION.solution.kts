@@ -4,42 +4,42 @@ solution {
     name = "NO-TRACK I-12 (Copy)"
     arm(ARM3) {
         number = 1
-        position = 1 to 4
+        position = -1 to 1
         rotation = 1
         size = 3
     }
     arm(ARM6) {
         number = 2
-        position = -2 to 3
+        position = -4 to 0
         rotation = 0
         size = 3
     }
-    glyph(MULTI_BONDER) {
-        position = 1 to 1
-        rotation = 4
+    glyph(BONDER) {
+        position = -1 to -3
+        rotation = 1
     }
     glyph(PROJECTION) {
-        position = -2 to 6
+        position = -4 to 3
         rotation = -5
     }
     io(INPUT) {
         index = 0
-        position = -5 to 6
+        position = -7 to 3
         rotation = -3
     }
     io(OUTPUT) {
         index = 0
-        position = 4 to 1
+        position = 2 to -2
         rotation = -7
     }
     io(INPUT) {
         index = 1
-        position = 1 to 7
+        position = -1 to 4
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = 1 to 3
+        position = -1 to 0
         rotation = 0
     }
     tape {
