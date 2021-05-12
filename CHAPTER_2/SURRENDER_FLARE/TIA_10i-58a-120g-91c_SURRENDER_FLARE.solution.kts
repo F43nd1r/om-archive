@@ -1,69 +1,70 @@
 
 solution {
     puzzle = "P022"
-    name = "INSTRUCTIONS NO TRACK 17"
-    arm(ARM3) {
+    name = "NO-TRACK I-10 (COPY)"
+    arm(ARM2) {
         number = 1
-        position = -3 to -1
-        rotation = 2
-        size = 3
-    }
-    arm(ARM3) {
-        number = 2
-        position = -2 to 5
-        rotation = 5
+        position = 3 to -3
+        rotation = 3
         size = 2
     }
-    arm(ARM3) {
-        number = 3
-        position = 2 to 1
-        rotation = 3
+    arm(ARM1) {
+        number = 2
+        position = 2 to -4
+        rotation = 1
         size = 3
     }
+    arm(ARM2) {
+        number = 3
+        position = 4 to -4
+        rotation = -4
+        size = 2
+    }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = -1
+        position = 5 to -4
+        rotation = 0
     }
     glyph(UNBONDER) {
-        position = -1 to 1
-        rotation = 2
+        position = 2 to -1
+        rotation = -4
     }
     glyph(PROJECTION) {
-        position = -2 to 3
-        rotation = -3
+        position = 4 to -2
+        rotation = 1
     }
     io(INPUT) {
         index = 0
-        position = -6 to 3
+        position = 0 to -2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 0 to -3
+        position = 6 to -6
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 0 to 3
+        position = 2 to -2
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(1) {
+            sequence(2) {
+                wait(2)
                 grab()
                 rotateClockwise()
-                pivotCounterClockwise()
-                drop()
+                reset()
             }
         }
         , 
         {
-            sequence(2) {
-                wait(1)
+            sequence(1) {
                 grab()
                 rotateClockwise()
                 drop()
+                wait(1)
+                extendTape()
             }
         }
         , 
@@ -71,7 +72,7 @@ solution {
             sequence(3) {
                 wait(3)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
             }
         }
