@@ -8,28 +8,28 @@ solution {
         rotation = 0
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM3) {
         number = 2
-        position = -11 to -5
-        rotation = -2
+        position = -9 to -8
+        rotation = 0
         size = 2
     }
-    arm(ARM2) {
+    arm(PISTON) {
         number = 3
-        position = -8 to -4
-        rotation = 0
+        position = -7 to -10
+        rotation = 1
         size = 1
     }
     glyph(BONDER) {
-        position = -9 to -3
+        position = -6 to -10
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -9 to -5
-        rotation = 1
+        position = -7 to -8
+        rotation = -2
     }
     glyph(PROJECTION) {
-        position = -9 to -7
+        position = -9 to -6
         rotation = -3
     }
     io(INPUT) {
@@ -39,45 +39,37 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -11 to -6
-        rotation = 0
+        position = -12 to -5
+        rotation = 1
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                pivotCounterClockwise()
-                pivotClockwise()
                 rotateCounterClockwise()
-                drop()
-                wait(1)
-                grab()
-                rotateClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(2) {
-                wait(4)
+                wait(2)
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 rotateClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(3) {
-                wait(7)
+                wait(5)
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateClockwise()
+                extend()
+                reset()
             }
         }
         )
