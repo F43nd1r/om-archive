@@ -1,28 +1,32 @@
 
 solution {
     puzzle = "P012"
-    name = "INSTRUCTIONS NO TRACK 11"
+    name = "NO-TRACK I-9"
     arm(ARM6) {
         number = 1
         position = 2 to -1
-        rotation = -4
+        rotation = 0
+        size = 2
+    }
+    arm(ARM1) {
+        number = 2
+        position = 1 to -3
+        rotation = 1
         size = 2
     }
     arm(ARM6) {
-        number = 2
+        number = 3
         position = -1 to -2
-        rotation = 1
+        rotation = 2
         size = 1
     }
-    arm(ARM3) {
-        number = 3
-        position = 1 to -3
-        rotation = 7
-        size = 2
-    }
-    glyph(MULTI_BONDER) {
+    glyph(BONDER) {
         position = 2 to -3
-        rotation = 2
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 0 to 1
+        rotation = 0
     }
     glyph(PROJECTION) {
         position = -1 to -1
@@ -35,8 +39,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to 1
-        rotation = 0
+        position = 3 to 0
+        rotation = -1
     }
     io(INPUT) {
         index = 1
@@ -59,7 +63,7 @@ solution {
         }
         , 
         {
-            sequence(3) {
+            sequence(2) {
                 wait(2)
                 grab()
                 rotateClockwise()
@@ -68,7 +72,7 @@ solution {
         }
         , 
         {
-            sequence(2) {
+            sequence(3) {
                 wait(5)
                 grab()
                 rotateClockwise()
