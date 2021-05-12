@@ -1,32 +1,24 @@
 
 solution {
     puzzle = "P021"
-    name = "OA"
-    arm(PISTON) {
+    name = "OG"
+    arm(ARM1) {
         number = 1
-        position = -1 to -1
-        rotation = 0
+        position = 1 to -2
+        rotation = 2
         size = 1
     }
     glyph(BONDER) {
         position = 0 to -1
         rotation = 0
     }
-    glyph(BONDER) {
+    glyph(CALCIFICATION) {
         position = 0 to -2
-        rotation = 1
-    }
-    glyph(CALCIFICATION) {
-        position = -1 to -2
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = -1 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 2 to -1
+        position = 2 to -2
         rotation = 0
     }
     io(OUTPUT) {
@@ -45,14 +37,16 @@ solution {
             sequence(1) {
                 grab()
                 rotateClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
                 rotateClockwise()
                 rotateCounterClockwise()
-                reset()
-                wait(1)
-                extend()
-                extend()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
                 grab()
-                retract()
+                rotateCounterClockwise()
                 reset()
             }
         }
