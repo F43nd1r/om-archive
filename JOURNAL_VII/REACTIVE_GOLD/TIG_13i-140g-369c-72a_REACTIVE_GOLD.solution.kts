@@ -1,45 +1,45 @@
 
 solution {
     puzzle = "P095"
-    name = "NEW SOLUTION 8"
+    name = "TI"
     arm(ARM6) {
         number = 1
-        position = -12 to -6
-        rotation = 0
+        position = -1 to 3
+        rotation = -1
         size = 1
     }
     arm(ARM3) {
         number = 2
-        position = -9 to -8
-        rotation = 0
+        position = -1 to 0
+        rotation = 1
         size = 2
     }
     arm(PISTON) {
         number = 3
-        position = -7 to -10
+        position = -1 to -1
         rotation = 1
-        size = 1
+        size = 2
     }
     glyph(BONDER) {
-        position = -6 to -10
+        position = 1 to -1
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -7 to -8
+        position = -1 to 2
         rotation = -2
     }
     glyph(PROJECTION) {
-        position = -9 to -6
-        rotation = -3
+        position = 0 to 2
+        rotation = -2
     }
     io(INPUT) {
         index = 0
-        position = -11 to -7
-        rotation = -1
+        position = -2 to 3
+        rotation = -2
     }
     io(OUTPUT) {
         index = 0
-        position = -12 to -5
+        position = 0 to 3
         rotation = 1
     }
     tape {
@@ -56,16 +56,15 @@ solution {
             sequence(2) {
                 wait(2)
                 grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateCounterClockwise()
+                pivotClockwise()
                 drop()
+                rotateClockwise()
             }
         }
         , 
         {
             sequence(3) {
-                wait(5)
+                wait(4)
                 grab()
                 rotateClockwise()
                 extend()
