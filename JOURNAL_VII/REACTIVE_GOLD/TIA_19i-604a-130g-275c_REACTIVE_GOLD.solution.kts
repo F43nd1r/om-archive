@@ -1,45 +1,45 @@
 
 solution {
     puzzle = "P095"
-    name = "NEW SOLUTION 3"
+    name = "NEW SOLUTION 8"
     arm(ARM6) {
         number = 1
-        position = -10 to -5
+        position = -12 to -6
         rotation = 0
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 2
-        position = -9 to -4
-        rotation = 4
+        position = -11 to -5
+        rotation = -2
         size = 2
     }
     arm(ARM2) {
         number = 3
-        position = -8 to -3
+        position = -8 to -4
         rotation = 0
         size = 1
     }
     glyph(BONDER) {
-        position = -9 to -2
+        position = -9 to -3
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -7 to -4
+        position = -9 to -5
         rotation = 1
     }
     glyph(PROJECTION) {
-        position = -7 to -6
+        position = -9 to -7
         rotation = -3
     }
     io(INPUT) {
         index = 0
-        position = -9 to -6
-        rotation = -13
+        position = -11 to -7
+        rotation = -1
     }
     io(OUTPUT) {
         index = 0
-        position = -9 to -5
+        position = -11 to -6
         rotation = 0
     }
     tape {
@@ -65,19 +65,19 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateClockwise()
-                reset()
+                drop()
             }
         }
         , 
         {
             sequence(3) {
-                wait(8)
+                wait(7)
                 grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
                 drop()
-                rotateCounterClockwise()
+                rotateClockwise()
             }
         }
         )
