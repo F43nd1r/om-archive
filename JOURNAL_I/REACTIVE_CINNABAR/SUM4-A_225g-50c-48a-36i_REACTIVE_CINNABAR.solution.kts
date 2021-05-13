@@ -1,18 +1,18 @@
 
 solution {
     puzzle = "P056"
-    name = "CI"
+    name = "B CI36"
     arm(ARM1) {
         number = 1
-        position = 1 to 2
-        rotation = -1
+        position = 3 to -2
+        rotation = 1
         size = 2
     }
     arm(ARM1) {
         number = 2
-        position = 4 to 0
-        rotation = 3
-        size = 3
+        position = 1 to 2
+        rotation = 4
+        size = 2
     }
     arm(ARM6) {
         number = 3
@@ -40,12 +40,6 @@ solution {
     }
     arm(ARM1) {
         number = 7
-        position = 3 to -2
-        rotation = 1
-        size = 2
-    }
-    arm(ARM1) {
-        number = 8
         position = 1 to -2
         rotation = 3
         size = 1
@@ -74,27 +68,26 @@ solution {
         rotation = 0
     }
     track {
-        position = 0 to -3
-        positions = listOf(1 to 0, 1 to 1, 2 to 1)
+        position = 2 to -3
+        positions = listOf(0 to 1, -1 to 1, -1 to 0)
     }
     tape {
         parallel(
         {
-            sequence(2) {
-                wait(2)
+            sequence(1) {
                 grab()
-                pivotClockwise()
-                drop()
+                rotateCounterClockwise()
+                reset()
+                wait(1)
+                repeat()
             }
         }
         , 
         {
-            sequence(1) {
+            sequence(5) {
                 grab()
-                rotateClockwise()
-                drop()
                 rotateCounterClockwise()
-                repeat()
+                reset()
             }
         }
         , 
@@ -111,31 +104,15 @@ solution {
         }
         , 
         {
-            sequence(7) {
-                wait(6)
+            sequence(2) {
+                wait(2)
                 grab()
+                pivotClockwise()
+                drop()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
-            sequence(5) {
                 grab()
-                rotateCounterClockwise()
-                drop()
                 rotateClockwise()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(4)
-                grab()
-                forward()
-                drop()
-                back()
+                reset()
             }
         }
         , 
@@ -149,13 +126,23 @@ solution {
         }
         , 
         {
-            sequence(8) {
+            sequence(6) {
+                wait(4)
+                grab()
+                back()
+                drop()
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(7) {
                 wait(2)
                 grab()
-                forward()
+                back()
                 drop()
                 wait(2)
-                back()
+                reset()
             }
         }
         )
