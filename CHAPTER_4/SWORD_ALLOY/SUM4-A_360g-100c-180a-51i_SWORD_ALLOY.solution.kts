@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P033"
-    name = "CI (Copy)"
+    name = "B CI51"
     arm(ARM1) {
         number = 1
         position = -2 to 6
-        rotation = 3
+        rotation = 5
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = -4 to 6
-        rotation = 3
+        position = 0 to 4
+        rotation = 1
         size = 1
     }
     arm(ARM1) {
@@ -75,8 +75,8 @@ solution {
         rotation = -5
     }
     glyph(PURIFICATION) {
-        position = -2 to 5
-        rotation = -3
+        position = -1 to 4
+        rotation = -4
     }
     io(INPUT) {
         index = 0
@@ -90,7 +90,7 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = -3 to 6
+        position = -1 to 5
         rotation = 0
     }
     track {
@@ -145,9 +145,7 @@ solution {
                 rotateClockwise()
                 drop()
                 wait(1)
-                grab()
-                rotateClockwise()
-                drop()
+                repeat()
             }
         }
         , 
@@ -157,9 +155,7 @@ solution {
                 rotateCounterClockwise()
                 reset()
                 wait(1)
-                grab()
-                rotateCounterClockwise()
-                reset()
+                repeat()
             }
         }
         , 
@@ -173,36 +169,32 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(2)
+            sequence(10) {
+                wait(12)
                 grab()
-                rotateClockwise()
-                drop()
-                wait(1)
-                grab()
-                rotateClockwise()
-                drop()
+                forward()
+                reset()
             }
         }
         , 
         {
             sequence(1) {
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 reset()
                 wait(1)
-                grab()
-                rotateCounterClockwise()
-                reset()
+                repeat()
             }
         }
         , 
         {
-            sequence(10) {
-                wait(12)
+            sequence(2) {
+                wait(2)
                 grab()
-                forward()
-                reset()
+                rotateCounterClockwise()
+                drop()
+                wait(1)
+                repeat()
             }
         }
         )
