@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P043"
-    name = "NO TRACK"
+    name = "NO TRACK (Copy)"
     arm(ARM1) {
         number = 1
         position = -11 to 4
@@ -34,8 +34,8 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = -10 to 0
-        rotation = -3
+        position = -7 to 3
+        rotation = -5
         size = 3
     }
     arm(ARM6) {
@@ -209,7 +209,7 @@ solution {
         parallel(
         {
             sequence(3) {
-                wait(2)
+                wait(5)
                 grab()
                 rotateClockwise()
                 drop()
@@ -218,7 +218,7 @@ solution {
         , 
         {
             sequence(2) {
-                wait(2)
+                wait(5)
                 grab()
                 rotateClockwise()
                 drop()
@@ -238,6 +238,7 @@ solution {
         , 
         {
             sequence(1) {
+                wait(3)
                 grab()
                 rotateClockwise()
                 drop()
@@ -300,8 +301,9 @@ solution {
         , 
         {
             sequence(6) {
+                wait(3)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
             }
         }
