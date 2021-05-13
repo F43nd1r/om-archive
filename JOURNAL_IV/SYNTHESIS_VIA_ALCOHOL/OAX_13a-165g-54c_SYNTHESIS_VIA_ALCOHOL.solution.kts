@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P071"
-    name = "OA"
+    name = "OAC"
     arm(ARM1) {
         number = 1
         position = 2 to -1
@@ -15,10 +15,6 @@ solution {
         size = 1
     }
     glyph(UNBONDER) {
-        position = 0 to 1
-        rotation = -1
-    }
-    glyph(UNBONDER) {
         position = 1 to 1
         rotation = -2
     }
@@ -28,6 +24,10 @@ solution {
     }
     glyph(UNBONDER) {
         position = 1 to 0
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = 0 to 1
         rotation = -1
     }
     glyph(DUPLICATION) {
@@ -42,19 +42,19 @@ solution {
         position = 1 to 0
         rotation = 0
     }
-    io(INPUT) {
-        index = 0
-        position = 1 to 0
-        rotation = -1
-    }
     io(OUTPUT) {
         index = 0
         position = 1 to 0
         rotation = 0
     }
+    io(INPUT) {
+        index = 0
+        position = 1 to 0
+        rotation = -1
+    }
     track {
         position = 1 to 1
-        positions = listOf(1 to -1, 1 to -2)
+        positions = listOf(0 to 0, 1 to -1, 1 to -2)
     }
     tape {
         parallel(
@@ -68,15 +68,25 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+                back()
+                grab()
+                pivotClockwise()
+                drop()
                 rotateClockwise()
                 forward()
+                grab()
                 rotateClockwise()
+                drop()
+                forward()
             }
         }
         , 
         {
             sequence(2) {
-                wait(8)
+                wait(7)
+                rotateCounterClockwise()
+                rotateClockwise()
+                wait(7)
                 rotateCounterClockwise()
                 rotateClockwise()
             }
