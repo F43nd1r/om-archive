@@ -1,105 +1,107 @@
 
 solution {
     puzzle = "P015"
-    name = "OA (Copy)"
-    arm(PISTON) {
+    name = "OA"
+    arm(ARM1) {
         number = 1
-        position = -1 to 2
-        rotation = 3
+        position = -1 to -1
+        rotation = 9
         size = 1
     }
     glyph(BONDER) {
-        position = -1 to 2
-        rotation = 3
-    }
-    glyph(MULTI_BONDER) {
-        position = 0 to 2
-        rotation = 3
-    }
-    glyph(UNBONDER) {
-        position = -2 to 1
+        position = -3 to 0
         rotation = 0
     }
+    glyph(BONDER) {
+        position = -2 to 0
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 0 to -1
+        rotation = 2
+    }
     glyph(UNBONDER) {
-        position = -1 to 0
+        position = -2 to -2
         rotation = 1
     }
+    glyph(UNBONDER) {
+        position = -2 to -1
+        rotation = 2
+    }
     glyph(PROJECTION) {
-        position = -2 to 3
-        rotation = -1
+        position = -3 to 0
+        rotation = 1
     }
     io(INPUT) {
         index = 0
-        position = -2 to 2
-        rotation = -1
+        position = -3 to 0
+        rotation = 5
     }
     io(OUTPUT) {
         index = 0
-        position = -1 to 2
+        position = -2 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -1 to 3
+        position = -3 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = -2 to 3
+        position = -3 to 0
         rotation = 0
     }
     track {
-        position = 0 to 2
-        positions = listOf(-1 to 0, 0 to -1, -1 to -1)
+        position = -2 to 0
+        positions = listOf(0 to 0, 1 to -1, 0 to -1)
     }
     tape {
         parallel(
         {
             sequence(1) {
+                back()
                 grab()
                 forward()
-                pivotCounterClockwise()
-                rotateClockwise()
-                forward()
-                extend()
                 drop()
-                retract()
+                back()
                 rotateCounterClockwise()
                 grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                drop()
+                back()
                 rotateClockwise()
                 rotateClockwise()
                 back()
-                extend()
-                drop()
-                retract()
+                grab()
                 forward()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
+                pivotClockwise()
+                drop()
+                back()
                 grab()
+                forward()
+                drop()
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
-                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                back()
+                grab()
                 back()
                 drop()
-                forward()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                extend()
-                grab()
-                retract()
-                drop()
-                forward()
-                rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
                 back()
+                grab()
+                forward()
                 reset()
             }
         }
