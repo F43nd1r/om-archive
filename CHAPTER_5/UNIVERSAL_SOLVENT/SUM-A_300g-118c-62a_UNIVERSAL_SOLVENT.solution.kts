@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P043"
-    name = "B X S"
+    name = "B X S FA"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 2 to -5
