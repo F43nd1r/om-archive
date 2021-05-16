@@ -1,28 +1,32 @@
 
 solution {
     puzzle = "P038"
-    name = "OA"
+    name = "NEW SOLUTION 2"
     arm(PISTON) {
         number = 1
-        position = -2 to 0
-        rotation = -2
-        size = 1
+        position = 0 to -1
+        rotation = -3
+        size = 2
     }
     glyph(BONDER) {
         position = -2 to -1
         rotation = 1
     }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = 3
+        position = 0 to -1
+        rotation = 0
     }
     glyph(MULTI_BONDER) {
         position = -1 to 0
         rotation = 1
     }
+    glyph(UNBONDER) {
+        position = -2 to -1
+        rotation = 0
+    }
     glyph(PURIFICATION) {
         position = -2 to -1
-        rotation = -1
+        rotation = -12
     }
     io(INPUT) {
         index = 0
@@ -40,69 +44,76 @@ solution {
         rotation = 0
     }
     track {
-        position = -2 to 0
-        positions = listOf(0 to 0, 1 to 0, 1 to -1)
+        position = -1 to -1
+        positions = listOf(0 to 0, 0 to 1, 1 to 0)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
+                retract()
+                drop()
+                extend()
+                grab()
+                pivotClockwise()
+                drop()
+                retract()
+                grab()
+                rotateClockwise()
+                drop()
                 forward()
+                rotateClockwise()
+                grab()
                 extend()
                 drop()
                 retract()
+                rotateClockwise()
+                extend()
+                extend()
+                grab()
+                retract()
+                retract()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
                 back()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                extend()
+                extend()
                 grab()
+                retract()
+                retract()
                 rotateCounterClockwise()
                 drop()
+                rotateClockwise()
+                extend()
+                extend()
+                grab()
+                retract()
+                retract()
+                drop()
+                extend()
+                extend()
+                grab()
+                retract()
+                drop()
+                retract()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 back()
-                rotateCounterClockwise()
-                grab()
                 extend()
-                drop()
-                retract()
-                rotateClockwise()
-                extend()
-                extend()
-                grab()
-                retract()
-                retract()
-                drop()
-                forward()
-                rotateClockwise()
-                forward()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                forward()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                extend()
-                extend()
-                grab()
-                retract()
-                retract()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                extend()
-                extend()
-                grab()
-                retract()
-                retract()
-                drop()
-                extend()
-                extend()
-                grab()
-                retract()
-                drop()
-                retract()
-                forward()
-                reset()
             }
         }
         )
