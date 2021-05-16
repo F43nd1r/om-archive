@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P069"
-    name = "LIQUORICE (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)"
+    name = "B FI"
     arm(ARM1) {
         number = 1
         position = 1 to 3
