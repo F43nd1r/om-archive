@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P107"
-    name = "NEW SOLUTION 2"
+    name = "NEW SOLUTION 2 (Copy)"
     arm(ARM3) {
         number = 1
         position = -2 to 2
-        rotation = 0
+        rotation = 2
         size = 2
     }
     arm(ARM3) {
@@ -17,7 +17,7 @@ solution {
     arm(ARM3) {
         number = 3
         position = 2 to 1
-        rotation = 0
+        rotation = -4
         size = 2
     }
     glyph(BONDER) {
@@ -51,8 +51,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 4 to 1
-        rotation = 1
+        position = 4 to 0
+        rotation = -2
     }
     tape {
         parallel(
