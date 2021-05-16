@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P011"
-    name = "B X S"
+    name = "B X S F"
     arm(ARM1) {
         number = 1
         position = -1 to 0

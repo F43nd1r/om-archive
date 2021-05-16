@@ -1,56 +1,59 @@
 
 solution {
     puzzle = "P011"
-    name = "SUM4"
-    arm(ARM6) {
+    name = "B X S F"
+    arm(ARM1) {
         number = 1
-        position = 2 to -1
-        rotation = 0
+        position = -1 to 0
+        rotation = 3
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 2
-        position = 1 to -2
-        rotation = 0
+        position = 0 to -1
+        rotation = 6
         size = 1
     }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = 1
-    }
-    io(INPUT) {
-        index = 0
-        position = 2 to -2
-        rotation = 0
+        position = 0 to -2
+        rotation = 2
     }
     io(OUTPUT) {
         index = 0
-        position = -1 to 0
-        rotation = -2
+        position = 1 to -3
+        rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = -2 to 0
+        rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 3 to -2
+        position = 1 to -1
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(1) {
+            sequence(2) {
                 wait(2)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                drop()
-                extendTape()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                reset()
             }
         }
         , 
         {
-            sequence(2) {
+            sequence(1) {
                 grab()
                 rotateCounterClockwise()
-                drop()
+                reset()
+                wait(1)
+                repeat()
             }
         }
         )
