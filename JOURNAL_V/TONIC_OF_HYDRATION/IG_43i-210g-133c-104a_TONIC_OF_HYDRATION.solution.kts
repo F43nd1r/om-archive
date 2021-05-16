@@ -1,65 +1,59 @@
 
 solution {
     puzzle = "P089"
-    name = "SUM4"
+    name = "SUM4 (Copy)"
     arm(ARM6) {
         number = 1
-        position = -6 to -5
+        position = -7 to -4
         rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -7 to -2
+        position = -8 to -1
         rotation = -3
         size = 2
     }
     arm(ARM1) {
         number = 3
-        position = -4 to -8
+        position = -5 to -7
         rotation = 2
         size = 2
     }
     arm(ARM6) {
         number = 4
-        position = -3 to -8
+        position = -4 to -7
         rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 5
-        position = -4 to -7
-        rotation = 1
-        size = 2
+        position = -5 to -1
+        rotation = -2
+        size = 3
     }
     arm(ARM1) {
         number = 6
-        position = -5 to -2
-        rotation = -2
-        size = 2
-    }
-    arm(ARM1) {
-        number = 7
         position = -3 to -1
         rotation = -2
         size = 3
     }
     arm(ARM1) {
-        number = 8
+        number = 7
         position = -3 to -2
         rotation = 4
         size = 3
     }
     glyph(BONDER) {
-        position = -7 to -4
+        position = -8 to -3
         rotation = 0
     }
     glyph(BONDER) {
-        position = -4 to -6
+        position = -5 to -5
         rotation = -1
     }
     glyph(BONDER) {
-        position = -3 to -5
+        position = -4 to -4
         rotation = -1
     }
     glyph(BONDER) {
@@ -72,7 +66,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -6 to -6
+        position = -7 to -5
         rotation = 0
     }
     io(OUTPUT) {
@@ -82,17 +76,17 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = -2 to -8
+        position = -3 to -7
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = -7 to -5
+        position = -8 to -4
         rotation = 0
     }
     io(INPUT) {
         index = 3
-        position = -9 to -2
+        position = -10 to -1
         rotation = 0
     }
     tape {
@@ -113,6 +107,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                pivotClockwise()
                 reset()
             }
         }
@@ -146,22 +141,13 @@ solution {
                 wait(6)
                 grab()
                 pivotCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(6)
-                grab()
-                pivotClockwise()
                 rotateCounterClockwise()
                 reset()
             }
         }
         , 
         {
-            sequence(7) {
+            sequence(6) {
                 wait(11)
                 grab()
                 rotateCounterClockwise()
@@ -173,7 +159,7 @@ solution {
         }
         , 
         {
-            sequence(8) {
+            sequence(7) {
                 wait(16)
                 grab()
                 rotateCounterClockwise()
