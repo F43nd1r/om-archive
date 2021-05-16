@@ -2,22 +2,22 @@
 solution {
     puzzle = "P107"
     name = "NEW SOLUTION 2"
-    arm(ARM3) {
+    arm(ARM1) {
         number = 1
         position = -2 to 2
-        rotation = 0
+        rotation = 2
         size = 2
     }
-    arm(ARM3) {
+    arm(ARM1) {
         number = 2
         position = -5 to -1
         rotation = 1
         size = 3
     }
-    arm(ARM3) {
+    arm(ARM1) {
         number = 3
         position = 2 to 1
-        rotation = 0
+        rotation = -4
         size = 2
     }
     glyph(BONDER) {
@@ -51,19 +51,11 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 4 to 1
-        rotation = 1
+        position = 1 to 3
+        rotation = 0
     }
     tape {
         parallel(
-        {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
         {
             sequence(2) {
                 wait(2)
@@ -75,11 +67,19 @@ solution {
         }
         , 
         {
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(3) {
                 wait(2)
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
             }
         }
