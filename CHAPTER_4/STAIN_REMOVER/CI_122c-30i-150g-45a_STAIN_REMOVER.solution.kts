@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P034"
-    name = "B S F"
+    name = "SUM4 TIE (Copy)"
     arm(ARM1) {
         number = 1
-        position = -3 to 4
-        rotation = 5
+        position = -5 to 2
+        rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 2
         position = -1 to 3
-        rotation = 3
+        rotation = 4
         size = 3
     }
     arm(ARM6) {
@@ -19,6 +19,12 @@ solution {
         position = 4 to 0
         rotation = 0
         size = 1
+    }
+    arm(ARM1) {
+        number = 4
+        position = -4 to 3
+        rotation = 4
+        size = 3
     }
     glyph(MULTI_BONDER) {
         position = 3 to 0
@@ -29,8 +35,8 @@ solution {
         rotation = 0
     }
     glyph(PURIFICATION) {
-        position = -3 to 3
-        rotation = 2
+        position = -4 to 1
+        rotation = 3
     }
     io(OUTPUT) {
         index = 0
@@ -49,60 +55,35 @@ solution {
     }
     io(INPUT) {
         index = 2
-        position = -2 to 3
+        position = -4 to 2
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(1) {
+            sequence(4) {
+                wait(3)
                 grab()
+                rotateCounterClockwise()
+                drop()
                 rotateClockwise()
-                rotateClockwise()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                reset()
             }
         }
         , 
         {
-            sequence(2) {
-                wait(9)
+            sequence(1) {
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 rotateClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                rotateCounterClockwise()
+                drop()
+                grab()
                 rotateClockwise()
-                rotateCounterClockwise()
-                pivotClockwise()
-                wait(2)
-                rotateClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                rotateCounterClockwise()
-                rotateClockwise()
-                pivotClockwise()
                 reset()
             }
         }
         , 
         {
             sequence(3) {
-                wait(8)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
+                wait(12)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -111,6 +92,21 @@ solution {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(5)
+                grab()
+                rotateCounterClockwise()
+                rotateClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
+                rotateClockwise()
+                pivotClockwise()
                 drop()
             }
         }
