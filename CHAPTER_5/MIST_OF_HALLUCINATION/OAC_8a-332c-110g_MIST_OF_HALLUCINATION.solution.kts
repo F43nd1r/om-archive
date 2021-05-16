@@ -1,12 +1,12 @@
 
 solution {
     puzzle = "P038"
-    name = "NEW SOLUTION 2"
-    arm(PISTON) {
+    name = "OAG"
+    arm(ARM1) {
         number = 1
-        position = 0 to -1
-        rotation = -3
-        size = 2
+        position = -2 to 0
+        rotation = 4
+        size = 1
     }
     glyph(BONDER) {
         position = -2 to -1
@@ -20,17 +20,13 @@ solution {
         position = -1 to 0
         rotation = 1
     }
-    glyph(UNBONDER) {
-        position = -2 to -1
-        rotation = 0
-    }
     glyph(PURIFICATION) {
-        position = -2 to -1
-        rotation = -12
+        position = -1 to 0
+        rotation = -2
     }
     io(INPUT) {
         index = 0
-        position = 2 to -1
+        position = 0 to -2
         rotation = 0
     }
     io(OUTPUT) {
@@ -44,42 +40,53 @@ solution {
         rotation = 0
     }
     track {
-        position = -1 to -1
-        positions = listOf(0 to 0, 0 to 1, 1 to 0)
+        position = 1 to -3
+        positions = listOf(-3 to 3, -2 to 3, -2 to 2, -1 to 2)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                retract()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 drop()
-                extend()
-                grab()
-                pivotClockwise()
-                drop()
-                retract()
-                grab()
                 rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
                 drop()
                 forward()
                 rotateClockwise()
-                grab()
-                extend()
-                drop()
-                retract()
                 rotateClockwise()
-                extend()
-                extend()
+                forward()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 grab()
-                retract()
-                retract()
+                rotateCounterClockwise()
+                back()
                 drop()
+                forward()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                back()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                rotateCounterClockwise()
+                forward()
+                drop()
+                back()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 forward()
-                rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
                 rotateClockwise()
@@ -89,31 +96,13 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
-                extend()
-                extend()
                 grab()
-                retract()
-                retract()
                 rotateCounterClockwise()
                 drop()
                 rotateClockwise()
-                extend()
-                extend()
-                grab()
-                retract()
-                retract()
-                drop()
-                extend()
-                extend()
-                grab()
-                retract()
-                drop()
-                retract()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 back()
-                extend()
+                back()
+                rotateClockwise()
             }
         }
         )
