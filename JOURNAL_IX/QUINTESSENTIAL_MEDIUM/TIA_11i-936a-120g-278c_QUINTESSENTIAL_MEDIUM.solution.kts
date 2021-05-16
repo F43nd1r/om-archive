@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P107"
-    name = "NEW SOLUTION 2"
+    name = "NEW SOLUTION "
     arm(ARM1) {
         number = 1
         position = -2 to 2
