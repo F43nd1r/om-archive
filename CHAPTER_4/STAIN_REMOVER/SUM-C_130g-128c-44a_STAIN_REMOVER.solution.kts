@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P034"
-    name = "B S"
+    name = "B S F"
     arm(ARM1) {
         number = 1
         position = -3 to 4
@@ -25,7 +25,7 @@ solution {
         rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = 3 to -2
+        position = 0 to -2
         rotation = 0
     }
     glyph(PURIFICATION) {
@@ -77,14 +77,16 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 pivotClockwise()
-                wait(4)
+                wait(2)
                 rotateClockwise()
                 pivotClockwise()
                 pivotClockwise()
                 rotateCounterClockwise()
-                pivotClockwise()
                 rotateClockwise()
+                pivotClockwise()
                 reset()
             }
         }
