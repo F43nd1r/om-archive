@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P043"
-    name = "B X S"
+    name = "B S 2 FG"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 2 to -5
@@ -87,8 +87,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -5 to -2
-        rotation = 3
+        position = -6 to -4
+        rotation = 4
     }
     io(INPUT) {
         index = 1
@@ -112,10 +112,6 @@ solution {
     }
     track {
         position = 0 to 1
-        positions = listOf(0 to 0, 1 to -1)
-    }
-    track {
-        position = -4 to -5
         positions = listOf(0 to 0, 1 to -1)
     }
     tape {
@@ -199,7 +195,7 @@ solution {
                 wait(3)
                 grab()
                 rotateCounterClockwise()
-                back()
+                rotateCounterClockwise()
                 reset()
             }
         }
