@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P055"
-    name = "B S 2 6T"
+    name = "B X S F"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = -2 to 1
@@ -33,7 +33,7 @@ solution {
         rotation = -1
     }
     glyph(EQUILIBRIUM) {
-        position = 27 to -3
+        position = 9 to -3
         rotation = 0
     }
     io(INPUT) {
@@ -53,7 +53,7 @@ solution {
     }
     track {
         position = 4 to -3
-        positions = listOf(1 to 0, 0 to 0, -1 to 0, -2 to 0)
+        positions = listOf(0 to 0, -1 to 0, -2 to 0)
     }
     tape {
         parallel(
@@ -82,16 +82,6 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 drop()
-                wait(1)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
             }
         }
         , 
@@ -112,16 +102,6 @@ solution {
                 rotateCounterClockwise()
                 wait(2)
                 reset()
-                wait(5)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
             }
         }
         , 
@@ -148,38 +128,6 @@ solution {
                 grab()
                 rotateClockwise()
                 back()
-                reset()
-                wait(2)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                repeat()
-                wait(23)
-                grab()
-                rotateClockwise()
-                back()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                back()
-                reset()
-                wait(2)
-                grab()
-                rotateClockwise()
-                back()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                back()
-                back()
-                forward()
                 reset()
             }
         }
