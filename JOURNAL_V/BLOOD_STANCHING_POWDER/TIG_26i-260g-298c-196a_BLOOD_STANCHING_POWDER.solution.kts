@@ -1,113 +1,86 @@
 
 solution {
     puzzle = "P087"
-    name = "NO-TRACK"
+    name = "NO-TRACK (Copy)"
     arm(ARM6) {
         number = 1
-        position = 1 to -4
+        position = -4 to -3
         rotation = 1
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = 2 to -6
+        position = -3 to -5
         rotation = 1
         size = 1
     }
-    arm(ARM3) {
+    arm(ARM6) {
         number = 3
-        position = 3 to -5
+        position = -2 to -4
         rotation = 2
         size = 1
     }
     arm(ARM1) {
         number = 4
-        position = 5 to -4
-        rotation = -4
-        size = 1
+        position = -5 to 3
+        rotation = -8
+        size = 3
     }
     arm(ARM6) {
         number = 5
-        position = -4 to 4
-        rotation = -2
-        size = 1
+        position = -4 to 2
+        rotation = 0
+        size = 2
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 6
-        position = -5 to 6
-        rotation = -2
-        size = 1
+        position = 0 to -8
+        rotation = 1
+        size = 2
     }
     arm(ARM3) {
         number = 7
-        position = -6 to 5
-        rotation = -1
-        size = 1
-    }
-    arm(ARM6) {
-        number = 8
-        position = -3 to -2
-        rotation = 1
+        position = 5 to -5
+        rotation = 6
         size = 3
     }
     glyph(BONDER) {
-        position = 1 to -6
+        position = -4 to -5
         rotation = 1
     }
     glyph(BONDER) {
-        position = 0 to -4
+        position = -5 to -3
         rotation = 1
     }
     glyph(BONDER) {
-        position = 1 to -3
+        position = -4 to -2
         rotation = -1
     }
     glyph(BONDER) {
-        position = 2 to 0
-        rotation = -3
+        position = 0 to -1
+        rotation = 0
     }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = -3
+        position = 5 to -2
+        rotation = 1
     }
     glyph(BONDER) {
         position = 4 to 0
-        rotation = -3
-    }
-    glyph(BONDER) {
-        position = -4 to 6
-        rotation = -2
-    }
-    glyph(BONDER) {
-        position = -3 to 4
-        rotation = -2
-    }
-    glyph(BONDER) {
-        position = -4 to 3
-        rotation = -4
+        rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = -1 to -4
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = -2 to 4
+        position = -6 to -3
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 2 to -5
+        position = -3 to -4
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 7 to -3
-        rotation = -6
-    }
-    io(INPUT) {
-        index = 1
-        position = -5 to 5
-        rotation = 0
+        position = 9 to -4
+        rotation = -10
     }
     tape {
         parallel(
@@ -131,10 +104,10 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(28)
+            sequence(5) {
+                wait(34)
                 grab()
-                pivotClockwise()
+                rotateClockwise()
                 drop()
             }
         }
@@ -149,39 +122,31 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(3)
+            sequence(4) {
+                wait(28)
                 grab()
-                rotateClockwise()
-                drop()
+                rotateCounterClockwise()
+                reset()
             }
         }
         , 
         {
             sequence(6) {
-                wait(7)
+                wait(36)
                 grab()
-                rotateCounterClockwise()
-                drop()
+                rotateClockwise()
+                pivotCounterClockwise()
+                reset()
             }
         }
         , 
         {
             sequence(7) {
-                wait(5)
+                wait(47)
                 grab()
                 rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(8) {
-                wait(31)
-                grab()
-                pivotCounterClockwise()
                 rotateClockwise()
-                pivotClockwise()
+                rotateClockwise()
                 drop()
             }
         }
