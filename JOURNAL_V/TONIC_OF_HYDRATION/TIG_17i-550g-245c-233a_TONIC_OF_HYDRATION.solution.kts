@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P089"
-    name = "TI  17"
+    name = "TI  17 (Copy)"
     arm(ARM6) {
         number = 1
         position = -3 to 2
@@ -42,21 +42,25 @@ solution {
         position = -8 to 2
         rotation = 0
     }
-    glyph(MULTI_BONDER) {
+    glyph(BONDER) {
         position = -6 to 5
         rotation = 1
     }
+    glyph(BONDER) {
+        position = -6 to 10
+        rotation = 1
+    }
     glyph(UNBONDER) {
-        position = -7 to 10
+        position = 3 to 5
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -3 to 8
-        rotation = 2
+        position = 5 to 7
+        rotation = 4
     }
     glyph(UNBONDER) {
-        position = -5 to 12
-        rotation = 4
+        position = 7 to 3
+        rotation = 2
     }
     glyph(CALCIFICATION) {
         position = 1 to 9
