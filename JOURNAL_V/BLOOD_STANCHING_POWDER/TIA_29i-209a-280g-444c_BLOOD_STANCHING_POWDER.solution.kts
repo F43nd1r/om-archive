@@ -4,7 +4,7 @@ solution {
     name = "TI 29"
     arm(ARM6) {
         number = 1
-        position = -9 to -5
+        position = -10 to -4
         rotation = 1
         size = 1
     }
@@ -124,15 +124,15 @@ solution {
         position = -5 to 2
         rotation = 0
     }
-    io(INPUT) {
-        index = 0
-        position = -8 to -5
-        rotation = 0
-    }
     io(OUTPUT) {
         index = 0
         position = 1 to -1
         rotation = -1
+    }
+    io(INPUT) {
+        index = 0
+        position = -9 to -5
+        rotation = 0
     }
     io(INPUT) {
         index = 1
@@ -155,15 +155,6 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(4) {
                 wait(6)
                 grab()
@@ -172,19 +163,8 @@ solution {
                 rotateClockwise()
                 pivotClockwise()
                 drop()
-                wait(3)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(3) {
                 wait(2)
-                grab()
-                pivotClockwise()
-                pivotClockwise()
-                rotateClockwise()
-                drop()
+                extendTape()
             }
         }
         , 
@@ -214,6 +194,26 @@ solution {
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(2)
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                rotateClockwise()
                 drop()
             }
         }
