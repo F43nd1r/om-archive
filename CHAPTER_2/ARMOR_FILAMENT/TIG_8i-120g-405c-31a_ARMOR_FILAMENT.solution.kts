@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P020"
-    name = "INSTRUCTIONS NO TRACK 15"
+    name = "INSTRUCTIONS NO TRACK 16"
     arm(ARM6) {
         number = 1
         position = -2 to 1
@@ -53,7 +53,7 @@ solution {
         , 
         {
             sequence(2) {
-                wait(27)
+                wait(12)
                 grab()
                 rotateClockwise()
                 extend()
