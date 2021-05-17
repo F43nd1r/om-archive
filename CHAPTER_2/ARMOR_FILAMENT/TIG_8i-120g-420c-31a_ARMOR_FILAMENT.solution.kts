@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P020"
-    name = "INSTRUCTIONS NO TRACK 12"
+    name = "INSTRUCTIONS NO TRACK 15"
     arm(ARM6) {
         number = 1
         position = -2 to 1
@@ -19,8 +19,12 @@ solution {
         rotation = 0
     }
     glyph(PROJECTION) {
-        position = -1 to 0
-        rotation = -3
+        position = -3 to 1
+        rotation = -5
+    }
+    glyph(PROJECTION) {
+        position = -1 to 1
+        rotation = -4
     }
     io(INFINITE) {
         index = 0
@@ -29,12 +33,12 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -2 to 2
+        position = -1 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -1 to 1
+        position = -2 to 0
         rotation = 0
     }
     tape {
@@ -43,14 +47,13 @@ solution {
             sequence(1) {
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(2) {
-                wait(18)
+                wait(27)
                 grab()
                 rotateClockwise()
                 extend()
