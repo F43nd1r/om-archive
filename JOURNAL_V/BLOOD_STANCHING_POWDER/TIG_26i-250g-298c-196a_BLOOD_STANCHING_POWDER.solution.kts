@@ -38,7 +38,7 @@ solution {
         rotation = 1
         size = 2
     }
-    arm(ARM3) {
+    arm(ARM1) {
         number = 7
         position = 5 to -5
         rotation = 6
