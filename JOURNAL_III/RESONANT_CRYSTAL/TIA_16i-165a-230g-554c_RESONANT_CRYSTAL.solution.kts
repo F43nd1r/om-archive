@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P066"
-    name = "NEW SOLUTION 1"
+    name = "NEW SOLUTION 1 (Copy)"
     arm(ARM6) {
         number = 1
         position = -12 to -6
@@ -28,7 +28,7 @@ solution {
     }
     arm(ARM6) {
         number = 5
-        position = -15 to 0
+        position = -18 to -3
         rotation = -3
         size = 3
     }
@@ -79,6 +79,8 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
+                wait(1)
+                extendTape()
             }
         }
         , 
@@ -110,7 +112,7 @@ solution {
         , 
         {
             sequence(5) {
-                wait(8)
+                wait(9)
                 grab()
                 pivotCounterClockwise()
                 drop()
