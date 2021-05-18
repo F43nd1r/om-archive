@@ -16,15 +16,15 @@ solution {
     }
     arm(ARM1) {
         number = 3
-        position = -18 to 4
-        rotation = -2
-        size = 1
+        position = -17 to 5
+        rotation = -3
+        size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 4
         position = -19 to 3
-        rotation = -1
-        size = 1
+        rotation = 2
+        size = 2
     }
     arm(ARM1) {
         number = 5
@@ -51,7 +51,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -18 to 3
+        position = -19 to 5
         rotation = 0
     }
     io(INPUT) {
@@ -75,8 +75,16 @@ solution {
                 grab()
                 extend()
                 reset()
-                wait(1)
-                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(4)
+                grab()
+                rotateCounterClockwise()
+                pivotClockwise()
+                reset()
             }
         }
         , 
@@ -93,20 +101,8 @@ solution {
             sequence(4) {
                 wait(2)
                 grab()
-                extend()
+                rotateClockwise()
                 drop()
-                retract()
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(4)
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                reset()
             }
         }
         )
