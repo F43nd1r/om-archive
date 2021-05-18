@@ -28,7 +28,7 @@ solution {
     }
     arm(ARM6) {
         number = 5
-        position = -9 to -3
+        position = -15 to 0
         rotation = -3
         size = 3
     }
@@ -83,15 +83,6 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(8)
-                grab()
-                pivotCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(2) {
                 grab()
                 rotateClockwise()
@@ -113,6 +104,15 @@ solution {
             sequence(4) {
                 grab()
                 rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(8)
+                grab()
+                pivotCounterClockwise()
                 drop()
             }
         }
