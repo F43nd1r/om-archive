@@ -4,9 +4,9 @@ solution {
     name = "NEW SOLUTION 1"
     arm(ARM2) {
         number = 1
-        position = -3 to -1
+        position = -2 to -1
         rotation = -1
-        size = 2
+        size = 1
     }
     arm(ARM6) {
         number = 2
@@ -34,9 +34,9 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = 3 to -4
-        rotation = 2
-        size = 1
+        position = 2 to 0
+        rotation = 4
+        size = 3
     }
     glyph(BONDER) {
         position = -2 to 2
@@ -65,7 +65,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -1 to -3
+        position = -1 to -2
         rotation = 0
     }
     io(OUTPUT) {
@@ -80,7 +80,7 @@ solution {
     }
     io(OUTPUT) {
         index = 3
-        position = -4 to 1
+        position = -3 to 0
         rotation = -3
     }
     tape {
