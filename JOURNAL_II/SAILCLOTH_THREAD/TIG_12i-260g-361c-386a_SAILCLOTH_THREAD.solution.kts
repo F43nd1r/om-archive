@@ -1,93 +1,101 @@
 
 solution {
     puzzle = "P061"
-    name = "NEW SOLUTION 2"
+    name = "TI"
     arm(ARM6) {
         number = 1
-        position = -12 to -5
-        rotation = 0
+        position = -15 to 1
+        rotation = -1
         size = 1
     }
     arm(PISTON) {
         number = 2
-        position = -12 to -6
-        rotation = 0
+        position = -16 to 1
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 3
-        position = -9 to -1
-        rotation = -2
+        position = -12 to -6
+        rotation = 1
         size = 3
     }
     glyph(BONDER) {
-        position = -12 to -4
+        position = -14 to 1
+        rotation = -2
+    }
+    glyph(BONDER) {
+        position = -15 to 0
         rotation = -1
     }
     glyph(BONDER) {
-        position = -10 to -6
-        rotation = -3
+        position = -14 to -2
+        rotation = -1
+    }
+    glyph(BONDER) {
+        position = -13 to -1
+        rotation = -1
+    }
+    glyph(BONDER) {
+        position = -13 to -2
+        rotation = -1
     }
     glyph(BONDER) {
         position = -8 to -5
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = -5 to -3
-        rotation = 0
-    }
-    glyph(MULTI_BONDER) {
-        position = -9 to -5
         rotation = -3
     }
-    glyph(UNBONDER) {
-        position = -7 to -6
-        rotation = 0
+    glyph(BONDER) {
+        position = -10 to -4
+        rotation = -4
     }
     glyph(UNBONDER) {
-        position = -5 to -5
+        position = -11 to -4
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = -3 to -6
+        position = -9 to -6
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -2 to -5
-        rotation = 2
+        position = -10 to -3
+        rotation = 0
     }
     glyph(UNBONDER) {
-        position = -5 to -1
+        position = -10 to -1
         rotation = -1
     }
+    glyph(UNBONDER) {
+        position = -6 to -8
+        rotation = -3
+    }
     glyph(CALCIFICATION) {
-        position = -4 to -7
+        position = -15 to -1
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -6 to -4
+        position = -14 to -3
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -5 to -6
+        position = -11 to -2
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -6 to -3
+        position = -10 to -2
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -3 to -5
+        position = -6 to -9
         rotation = 0
     }
     io(INFINITE) {
         index = 0
-        position = -1 to -5
+        position = -8 to -2
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -13 to -4
+        position = -15 to 2
         rotation = 0
     }
     tape {
@@ -105,7 +113,8 @@ solution {
                 wait(2)
                 grab()
                 extend()
-                reset()
+                drop()
+                retract()
             }
         }
         , 
@@ -113,9 +122,10 @@ solution {
             sequence(3) {
                 wait(4)
                 grab()
+                pivotCounterClockwise()
+                rotateClockwise()
+                drop()
                 rotateCounterClockwise()
-                pivotClockwise()
-                reset()
             }
         }
         )
