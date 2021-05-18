@@ -4,8 +4,8 @@ solution {
     name = "NEW SOLUTION 1 (Copy)"
     arm(ARM6) {
         number = 1
-        position = -12 to -6
-        rotation = -3
+        position = -11 to -17
+        rotation = -6
         size = 3
     }
     arm(ARM6) {
@@ -28,24 +28,20 @@ solution {
     }
     arm(ARM6) {
         number = 5
-        position = -18 to -3
-        rotation = -3
+        position = -8 to -23
+        rotation = -6
         size = 3
-    }
-    glyph(BONDER) {
-        position = -12 to -9
-        rotation = -1
     }
     glyph(BONDER) {
         position = -18 to -10
         rotation = 1
     }
-    glyph(BONDER) {
-        position = -16 to -13
-        rotation = -1
-    }
     glyph(MULTI_BONDER) {
         position = -20 to -10
+        rotation = 0
+    }
+    glyph(MULTI_BONDER) {
+        position = -15 to -14
         rotation = 0
     }
     glyph(UNBONDER) {
@@ -54,12 +50,16 @@ solution {
     }
     glyph(UNBONDER) {
         position = -12 to -13
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = -9 to -15
         rotation = -1
     }
     io(OUTPUT) {
         index = 0
-        position = -15 to -6
-        rotation = 0
+        position = -8 to -20
+        rotation = -2
     }
     io(INPUT) {
         index = 1
@@ -68,22 +68,11 @@ solution {
     }
     io(INPUT) {
         index = 2
-        position = -9 to -6
+        position = -14 to -17
         rotation = 0
     }
     tape {
         parallel(
-        {
-            sequence(1) {
-                wait(6)
-                grab()
-                rotateClockwise()
-                drop()
-                wait(1)
-                extendTape()
-            }
-        }
-        , 
         {
             sequence(2) {
                 grab()
@@ -107,6 +96,17 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(6)
+                grab()
+                rotateClockwise()
+                drop()
+                wait(1)
+                extendTape()
             }
         }
         , 
