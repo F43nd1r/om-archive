@@ -40,7 +40,7 @@ solution {
     }
     arm(ARM6) {
         number = 7
-        position = -3 to -6
+        position = 3 to -9
         rotation = -2
         size = 3
     }
@@ -49,20 +49,20 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = -1 to 1
-        rotation = -6
-    }
-    glyph(BONDER) {
-        position = 1 to 0
-        rotation = -8
-    }
-    glyph(BONDER) {
         position = -10 to 3
         rotation = -3
     }
-    glyph(MULTI_BONDER) {
-        position = -10 to 6
-        rotation = -1
+    glyph(BONDER) {
+        position = -11 to 6
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 1 to 0
+        rotation = 4
+    }
+    glyph(BONDER) {
+        position = 0 to 1
+        rotation = 3
     }
     glyph(MULTI_BONDER) {
         position = -11 to 2
@@ -76,14 +76,14 @@ solution {
         position = -6 to 5
         rotation = -3
     }
-    io(OUTPUT) {
-        index = 0
-        position = 3 to -6
-        rotation = 0
-    }
     io(INPUT) {
         index = 0
         position = -13 to 3
+        rotation = 0
+    }
+    io(OUTPUT) {
+        index = 0
+        position = 3 to -6
         rotation = 0
     }
     io(INPUT) {
@@ -103,15 +103,6 @@ solution {
                 wait(44)
                 grab()
                 rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(7) {
-                wait(46)
-                grab()
-                pivotClockwise()
                 drop()
             }
         }
@@ -157,6 +148,15 @@ solution {
                 wait(34)
                 grab()
                 rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(7) {
+                wait(47)
+                grab()
+                pivotClockwise()
                 drop()
             }
         }
