@@ -4,71 +4,71 @@ solution {
     name = "NEW SOLUTION 1"
     arm(ARM6) {
         number = 1
-        position = -12 to -6
+        position = -17 to -9
         rotation = -3
         size = 3
     }
     arm(ARM6) {
         number = 2
-        position = -21 to -10
-        rotation = -1
+        position = -11 to -6
+        rotation = -3
         size = 1
     }
     arm(PISTON) {
         number = 3
-        position = -22 to -10
-        rotation = 0
+        position = -11 to -5
+        rotation = -2
         size = 2
     }
     arm(ARM1) {
         number = 4
-        position = -15 to -10
-        rotation = 3
-        size = 2
+        position = -11 to -11
+        rotation = 1
+        size = 1
     }
     arm(ARM6) {
         number = 5
-        position = -15 to 0
+        position = -14 to -15
         rotation = -3
         size = 3
     }
     glyph(BONDER) {
-        position = -12 to -9
-        rotation = -1
-    }
-    glyph(BONDER) {
-        position = -18 to -10
+        position = -14 to -9
         rotation = 1
     }
     glyph(BONDER) {
-        position = -16 to -13
+        position = -18 to -5
+        rotation = 1
+    }
+    glyph(BONDER) {
+        position = -11 to -9
         rotation = -1
     }
     glyph(MULTI_BONDER) {
-        position = -20 to -10
-        rotation = 0
+        position = -11 to -7
+        rotation = -2
     }
     glyph(UNBONDER) {
-        position = -15 to -13
-        rotation = 1
-    }
-    glyph(UNBONDER) {
-        position = -12 to -13
+        position = -13 to -9
         rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = -21 to -6
+        rotation = 1
     }
     io(OUTPUT) {
         index = 0
-        position = -15 to -6
-        rotation = 0
+        position = -20 to -9
+        rotation = 2
     }
     io(INPUT) {
         index = 1
-        position = -22 to -9
+        position = -10 to -6
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = -9 to -6
+        position = -17 to -12
         rotation = 0
     }
     tape {
@@ -77,7 +77,15 @@ solution {
             sequence(1) {
                 wait(6)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                grab()
+                rotateCounterClockwise()
                 drop()
             }
         }
@@ -97,14 +105,6 @@ solution {
                 extend()
                 drop()
                 retract()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                grab()
-                rotateCounterClockwise()
-                drop()
             }
         }
         , 
