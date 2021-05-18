@@ -26,7 +26,7 @@ solution {
         rotation = 0
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 5
         position = -3 to 5
         rotation = -1
@@ -34,10 +34,6 @@ solution {
     }
     glyph(BONDER) {
         position = -7 to 0
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = -6 to 5
         rotation = 0
     }
     glyph(PROJECTION) {
@@ -107,9 +103,7 @@ solution {
             sequence(5) {
                 grab()
                 rotateClockwise()
-                extend()
                 drop()
-                retract()
             }
         }
         )
