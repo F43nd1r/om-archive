@@ -47,7 +47,7 @@ solution {
     arm(PISTON) {
         number = 8
         position = 2 to 1
-        rotation = 3
+        rotation = 0
         size = 2
     }
     arm(ARM3) {
@@ -68,7 +68,7 @@ solution {
     }
     glyph(BONDER) {
         position = 8 to 1
-        rotation = -1
+        rotation = 5
     }
     glyph(MULTI_BONDER) {
         position = 6 to 0
@@ -159,17 +159,6 @@ solution {
         }
         , 
         {
-            sequence(8) {
-                wait(6)
-                grab()
-                extend()
-                drop()
-                retract()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
             sequence(1) {
                 grab()
                 rotateClockwise()
@@ -195,11 +184,28 @@ solution {
                 pivotClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
+                wait(3)
+                rotateCounterClockwise()
                 drop()
-                wait(2)
+            }
+        }
+        , 
+        {
+            sequence(10) {
+                wait(13)
                 grab()
                 rotateCounterClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(6)
+                grab()
+                extend()
+                drop()
+                retract()
             }
         }
         , 
@@ -211,15 +217,6 @@ solution {
                 pivotClockwise()
                 drop()
                 rotateClockwise()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                wait(14)
-                grab()
-                rotateCounterClockwise()
-                drop()
             }
         }
         )
