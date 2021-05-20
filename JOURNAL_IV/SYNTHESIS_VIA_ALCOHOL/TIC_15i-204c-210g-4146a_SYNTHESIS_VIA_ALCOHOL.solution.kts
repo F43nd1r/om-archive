@@ -1,87 +1,73 @@
 
 solution {
     puzzle = "P071"
-    name = "NEW SOLUTION 2"
-    arm(VAN_BERLOS_WHEEL) {
-        number = 1
-        position = -14 to -5
-        rotation = 0
-        size = 1
-    }
+    name = "B TI15 1-6T"
     arm(ARM6) {
-        number = 2
-        position = -14 to -7
-        rotation = -1
+        number = 1
+        position = -1 to 2
+        rotation = 0
         size = 2
     }
-    arm(ARM6) {
-        number = 3
-        position = -11 to -8
-        rotation = -2
-        size = 1
-    }
-    arm(ARM6) {
-        number = 4
-        position = -9 to -8
+    arm(VAN_BERLOS_WHEEL) {
+        number = 2
+        position = -1 to 4
         rotation = 1
         size = 1
     }
     arm(ARM6) {
-        number = 5
-        position = -9 to -6
+        number = 3
+        position = 2 to 1
         rotation = 0
         size = 1
     }
+    arm(ARM1) {
+        number = 4
+        position = 1 to 3
+        rotation = -1
+        size = 2
+    }
+    arm(ARM2) {
+        number = 5
+        position = 4 to 1
+        rotation = 1
+        size = 1
+    }
     glyph(BONDER) {
-        position = -14 to -10
+        position = -1 to -1
         rotation = 0
     }
     glyph(BONDER) {
-        position = -10 to -9
+        position = 3 to 0
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = -12 to -9
-        rotation = -2
+        position = 1 to -1
+        rotation = 1
     }
     glyph(DUPLICATION) {
-        position = -13 to -6
+        position = 0 to 3
         rotation = -1
     }
     glyph(UNIFICATION) {
-        position = -10 to -7
+        position = 3 to 2
         rotation = -1
     }
-    io(INPUT) {
-        index = 0
-        position = -17 to -7
-        rotation = -5
+    glyph(EQUILIBRIUM) {
+        position = 3 to -4
+        rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -9 to -9
+        position = 5 to 1
         rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = -4 to 2
+        rotation = -3
     }
     tape {
         parallel(
-        {
-            sequence(2) {
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                drop()
-                wait(3)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                wait(3)
-                rotateClockwise()
-            }
-        }
-        , 
         {
             sequence(3) {
                 wait(3)
@@ -92,12 +78,29 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(8)
+            sequence(1) {
                 grab()
                 rotateCounterClockwise()
+                pivotClockwise()
+                drop()
+                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(4)
+                rotateCounterClockwise()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(6)
+                grab()
                 rotateCounterClockwise()
                 drop()
+                rotateCounterClockwise()
             }
         }
         , 
