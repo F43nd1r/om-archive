@@ -1,83 +1,84 @@
 
 solution {
     puzzle = "P071"
-    name = "NO-TRACK"
-    arm(ARM6) {
-        number = 1
-        position = 0 to 0
-        rotation = -1
-        size = 2
-    }
+    name = "NEW SOLUTION 2"
     arm(VAN_BERLOS_WHEEL) {
-        number = 2
-        position = 0 to 2
-        rotation = -3
+        number = 1
+        position = -14 to -5
+        rotation = 0
         size = 1
     }
     arm(ARM6) {
+        number = 2
+        position = -14 to -7
+        rotation = -1
+        size = 2
+    }
+    arm(ARM6) {
         number = 3
-        position = 3 to 0
-        rotation = 0
+        position = -11 to -8
+        rotation = -2
         size = 1
     }
     arm(ARM6) {
         number = 4
-        position = 5 to 0
-        rotation = 0
+        position = -9 to -8
+        rotation = 1
         size = 1
     }
     arm(ARM6) {
         number = 5
-        position = 5 to 2
-        rotation = -8
+        position = -9 to -6
+        rotation = 0
         size = 1
     }
-    arm(PISTON) {
-        number = 6
-        position = 6 to 1
-        rotation = -4
-        size = 2
+    glyph(BONDER) {
+        position = -14 to -10
+        rotation = 0
     }
     glyph(BONDER) {
-        position = 1 to -3
-        rotation = -3
-    }
-    glyph(BONDER) {
-        position = 4 to 3
-        rotation = 2
+        position = -10 to -9
+        rotation = -1
     }
     glyph(UNBONDER) {
-        position = 2 to -2
+        position = -12 to -9
         rotation = -2
     }
     glyph(DUPLICATION) {
-        position = 1 to 1
-        rotation = -6
+        position = -13 to -6
+        rotation = -1
     }
     glyph(UNIFICATION) {
-        position = 4 to 1
-        rotation = -4
+        position = -10 to -7
+        rotation = -1
     }
     io(INPUT) {
         index = 0
-        position = -3 to 0
+        position = -17 to -7
         rotation = -5
     }
     io(OUTPUT) {
         index = 0
-        position = 5 to -1
+        position = -9 to -9
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(1) {
+            sequence(2) {
                 grab()
                 rotateCounterClockwise()
                 pivotClockwise()
                 drop()
                 wait(3)
                 extendTape()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(3)
+                rotateClockwise()
             }
         }
         , 
@@ -101,27 +102,11 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(4)
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
             sequence(5) {
                 wait(6)
                 grab()
                 rotateClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(8)
-                grab()
-                extend()
-                reset()
             }
         }
         )
