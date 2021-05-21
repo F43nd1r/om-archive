@@ -1,38 +1,38 @@
 
 solution {
     puzzle = "P106"
-    name = "NEW SOLUTION 1"
-    arm(ARM2) {
+    name = "NEW SOLUTION 1 (Copy)"
+    arm(ARM1) {
         number = 1
         position = -3 to 0
         rotation = 2
         size = 3
     }
-    arm(ARM2) {
+    arm(ARM1) {
         number = 2
         position = 3 to 1
-        rotation = 2
+        rotation = 5
         size = 3
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 3
         position = -3 to -1
-        rotation = -1
+        rotation = 1
         size = 2
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 4
         position = -3 to -6
-        rotation = -1
+        rotation = -3
         size = 3
     }
-    arm(ARM2) {
+    arm(ARM1) {
         number = 5
         position = 4 to -7
         rotation = 0
         size = 3
     }
-    arm(ARM2) {
+    arm(ARM1) {
         number = 6
         position = 7 to -3
         rotation = -3
