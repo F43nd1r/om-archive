@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P096"
-    name = "NEW SOLUTION 1"
+    name = "B TI18C 1-12T"
     arm(ARM6) {
         number = 1
         position = -4 to 2
@@ -22,8 +22,8 @@ solution {
     }
     arm(ARM1) {
         number = 4
-        position = -4 to 7
-        rotation = 4
+        position = -5 to 3
+        rotation = 8
         size = 2
     }
     arm(ARM2) {
@@ -60,19 +60,15 @@ solution {
         position = -3 to -2
         rotation = -5
     }
-    glyph(DISPOSAL) {
-        position = -7 to 5
-        rotation = 0
-    }
-    io(INPUT) {
-        index = 0
-        position = -4 to 5
-        rotation = -2
-    }
     io(OUTPUT) {
         index = 0
         position = -1 to -1
         rotation = -2
+    }
+    io(INPUT) {
+        index = 0
+        position = -4 to 5
+        rotation = -3
     }
     io(OUTPUT) {
         index = 1
@@ -93,7 +89,7 @@ solution {
         parallel(
         {
             sequence(2) {
-                wait(5)
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -102,7 +98,6 @@ solution {
         , 
         {
             sequence(1) {
-                wait(2)
                 grab()
                 rotateClockwise()
                 drop()
@@ -110,16 +105,8 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                grab()
-                pivotClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(5) {
-                wait(9)
+                wait(7)
                 grab()
                 pivotClockwise()
                 pivotClockwise()
@@ -133,9 +120,18 @@ solution {
         , 
         {
             sequence(3) {
-                wait(7)
+                wait(5)
                 grab()
                 rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(6)
+                grab()
+                pivotClockwise()
                 drop()
             }
         }
