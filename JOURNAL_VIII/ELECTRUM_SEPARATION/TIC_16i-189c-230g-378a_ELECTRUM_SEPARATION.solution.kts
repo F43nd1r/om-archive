@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P103"
-    name = "NO-TRACK"
+    name = "B TI16AC"
     arm(ARM6) {
         number = 1
         position = 0 to 1
@@ -16,9 +16,9 @@ solution {
     }
     arm(ARM6) {
         number = 3
-        position = -8 to 1
+        position = -5 to -1
         rotation = 1
-        size = 3
+        size = 2
     }
     arm(ARM1) {
         number = 4
@@ -85,7 +85,7 @@ solution {
     }
     io(OUTPUT) {
         index = 2
-        position = -8 to 4
+        position = -7 to 1
         rotation = -3
     }
     tape {
@@ -95,23 +95,6 @@ solution {
                 wait(2)
                 grab()
                 rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(2) {
-                grab()
-                pivotCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(2)
-                grab()
-                rotateCounterClockwise()
                 drop()
             }
         }
@@ -131,6 +114,23 @@ solution {
                 wait(187)
                 grab()
                 retract()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                grab()
+                pivotCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                drop()
             }
         }
         )
