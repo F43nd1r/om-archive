@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P096"
-    name = "BAD TI (Copy) (Copy)"
+    name = "BAD TI (Copy) (Copy) (Copy)"
     arm(ARM2) {
         number = 1
         position = -7 to -2
@@ -32,25 +32,21 @@ solution {
         rotation = 0
         size = 1
     }
-    arm(PISTON) {
-        number = 6
-        position = 1 to -4
-        rotation = -7
-        size = 1
-    }
     arm(ARM1) {
-        number = 7
+        number = 6
         position = -7 to -7
         rotation = 1
         size = 1
     }
-    glyph(BONDER) {
-        position = 2 to -6
-        rotation = 1
+    arm(ARM6) {
+        number = 7
+        position = 3 to -6
+        rotation = 0
+        size = 1
     }
-    glyph(BONDER) {
-        position = 4 to -7
-        rotation = 2
+    glyph(MULTI_BONDER) {
+        position = 2 to -5
+        rotation = 0
     }
     glyph(UNBONDER) {
         position = -2 to -4
@@ -143,8 +139,8 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(1)
                 grab()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
             }
@@ -152,17 +148,16 @@ solution {
         , 
         {
             sequence(6) {
-                wait(14)
+                wait(11)
                 grab()
-                extend()
-                extend()
-                reset()
+                rotateClockwise()
+                drop()
             }
         }
         , 
         {
             sequence(7) {
-                wait(11)
+                wait(14)
                 grab()
                 rotateClockwise()
                 drop()
