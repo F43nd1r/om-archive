@@ -28,12 +28,6 @@ solution {
     }
     arm(PISTON) {
         number = 5
-        position = 6 to 1
-        rotation = -3
-        size = 3
-    }
-    arm(PISTON) {
-        number = 6
         position = 22 to 5
         rotation = -3
         size = 3
@@ -69,6 +63,10 @@ solution {
     glyph(UNBONDER) {
         position = 2 to 5
         rotation = -1
+    }
+    glyph(DISPOSAL) {
+        position = 3 to 1
+        rotation = 0
     }
     io(INPUT) {
         index = 0
@@ -130,19 +128,9 @@ solution {
         , 
         {
             sequence(5) {
-                wait(159)
-                grab()
-                retract()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
                 wait(187)
                 grab()
                 retract()
-                drop()
             }
         }
         )
