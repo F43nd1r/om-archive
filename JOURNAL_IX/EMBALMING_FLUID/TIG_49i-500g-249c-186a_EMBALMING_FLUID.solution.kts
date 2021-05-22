@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P108"
-    name = "NO-TRACK (Copy)"
+    name = "NO-TRACK (Copy) (Copy)"
     arm(ARM6) {
         number = 1
         position = -7 to 2
@@ -10,9 +10,9 @@ solution {
     }
     arm(ARM6) {
         number = 2
-        position = -10 to 6
+        position = -9 to 7
         rotation = -15
-        size = 2
+        size = 3
     }
     arm(ARM1) {
         number = 3
@@ -50,11 +50,11 @@ solution {
         rotation = -7
         size = 2
     }
-    arm(ARM6) {
+    arm(ARM3) {
         number = 9
-        position = -8 to 9
+        position = -7 to 8
         rotation = -7
-        size = 3
+        size = 2
     }
     arm(ARM3) {
         number = 10
@@ -102,7 +102,7 @@ solution {
     }
     glyph(UNBONDER) {
         position = -8 to 3
-        rotation = -11
+        rotation = -10
     }
     glyph(PROJECTION) {
         position = -6 to 2
@@ -113,7 +113,7 @@ solution {
         rotation = -4
     }
     glyph(DISPOSAL) {
-        position = -8 to 6
+        position = -9 to 10
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -145,7 +145,7 @@ solution {
     io(INPUT) {
         index = 1
         position = -8 to 2
-        rotation = -16
+        rotation = -15
     }
     io(INPUT) {
         index = 2
@@ -261,7 +261,7 @@ solution {
         , 
         {
             sequence(9) {
-                wait(25)
+                wait(23)
                 grab()
                 rotateClockwise()
                 drop()
@@ -272,7 +272,7 @@ solution {
             sequence(2) {
                 wait(2)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
             }
         }
