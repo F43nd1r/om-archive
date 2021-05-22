@@ -68,7 +68,7 @@ solution {
         rotation = -4
         size = 3
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 12
         position = 8 to -6
         rotation = 2
@@ -92,10 +92,6 @@ solution {
     }
     glyph(UNBONDER) {
         position = -5 to 5
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 3 to 2
         rotation = -1
     }
     glyph(UNBONDER) {
@@ -131,7 +127,7 @@ solution {
     }
     io(OUTPUT) {
         index = 1
-        position = 8 to -2
+        position = 5 to -2
         rotation = 1
     }
     tape {
@@ -251,7 +247,7 @@ solution {
                 wait(14)
                 grab()
                 pivotCounterClockwise()
-                rotateClockwise()
+                pivotClockwise()
                 drop()
             }
         }
