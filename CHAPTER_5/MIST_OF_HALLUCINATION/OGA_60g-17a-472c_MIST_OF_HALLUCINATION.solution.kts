@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P038"
-    name = "OGA"
+    name = "OVERLAP GA"
     arm(ARM1) {
         number = 1
         position = -2 to 1
@@ -29,11 +29,11 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 1 to -1
+        position = 0 to -2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to -2
+        position = 1 to -1
         rotation = 0
     }
     io(INPUT) {
@@ -75,14 +75,12 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                back()
+                rotateCounterClockwise()
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                forward()
                 drop()
                 back()
                 rotateClockwise()
@@ -93,41 +91,25 @@ solution {
                 rotateClockwise()
                 pivotClockwise()
                 drop()
-                forward()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                drop()
-                back()
-                rotateClockwise()
                 rotateClockwise()
                 grab()
                 forward()
                 rotateCounterClockwise()
-                drop()
-                back()
                 rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                back()
                 grab()
+                forward()
+                rotateCounterClockwise()
                 pivotClockwise()
-                forward()
-                drop()
-                back()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                forward()
                 rotateCounterClockwise()
-                drop()
-                back()
-                rotateCounterClockwise()
-                grab()
                 pivotClockwise()
-                forward()
                 drop()
+                rotateClockwise()
+                rotateClockwise()
                 back()
-                rotateClockwise()
-                rotateClockwise()
                 grab()
                 forward()
                 rotateCounterClockwise()
@@ -140,9 +122,16 @@ solution {
                 forward()
                 grab()
                 pivotCounterClockwise()
-                pivotCounterClockwise()
+                back()
+                drop()
+                forward()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
                 back()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 forward()
