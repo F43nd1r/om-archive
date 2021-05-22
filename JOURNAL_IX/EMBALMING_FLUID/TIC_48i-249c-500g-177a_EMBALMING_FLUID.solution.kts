@@ -235,9 +235,7 @@ solution {
                 wait(28)
                 grab()
                 rotateCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                reset()
             }
         }
         , 
