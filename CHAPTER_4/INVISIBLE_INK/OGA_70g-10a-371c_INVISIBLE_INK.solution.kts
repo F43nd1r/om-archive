@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P032"
-    name = "OG (Copy)"
+    name = "OVERLAP GA"
     arm(ARM1) {
         number = 1
         position = -7 to -3
@@ -19,6 +19,14 @@ solution {
     glyph(ANIMISMUS) {
         position = -7 to -3
         rotation = -1
+    }
+    glyph(EQUILIBRIUM) {
+        position = -5 to -3
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -5 to -4
+        rotation = 0
     }
     io(INPUT) {
         index = 0
@@ -54,18 +62,29 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                back()
+                drop()
                 rotateCounterClockwise()
+                back()
+                grab()
                 rotateCounterClockwise()
                 drop()
                 forward()
                 grab()
                 rotateCounterClockwise()
+                drop()
                 back()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
+                grab()
+                rotateClockwise()
                 forward()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                pivotCounterClockwise()
+                rotateCounterClockwise()
                 rotateClockwise()
                 rotateCounterClockwise()
                 drop()
@@ -76,11 +95,20 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                drop()
                 back()
+                grab()
+                rotateClockwise()
                 pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
+                drop()
+                rotateClockwise()
+                grab()
                 forward()
+                pivotClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
                 rotateClockwise()
                 rotateCounterClockwise()
                 reset()
