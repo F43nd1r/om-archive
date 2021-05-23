@@ -64,9 +64,9 @@ solution {
     }
     arm(ARM1) {
         number = 11
-        position = 4 to 6
+        position = 5 to 5
         rotation = 5
-        size = 2
+        size = 3
     }
     arm(VAN_BERLOS_WHEEL) {
         number = 12
@@ -117,27 +117,27 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = 7 to 1
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = -7 to 0
         rotation = 1
     }
+    glyph(BONDER) {
+        position = 9 to -1
+        rotation = 1
+    }
     glyph(UNBONDER) {
-        position = 5 to 2
+        position = 7 to 0
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = 8 to 4
+        position = 7 to 1
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 10 to 3
         rotation = -3
     }
     glyph(UNBONDER) {
-        position = 5 to 3
-        rotation = 0
-    }
-    glyph(UNBONDER) {
-        position = 6 to 8
+        position = 7 to 8
         rotation = 1
     }
     glyph(UNBONDER) {
@@ -167,7 +167,7 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 0 to 8
+        position = 0 to 7
         rotation = -10
     }
     tape {
@@ -270,18 +270,7 @@ solution {
                 wait(14)
                 grab()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
-            sequence(11) {
-                wait(16)
-                grab()
-                rotateCounterClockwise()
-                drop()
+                reset()
             }
         }
         , 
@@ -329,6 +318,15 @@ solution {
                 grab()
                 retract()
                 reset()
+            }
+        }
+        , 
+        {
+            sequence(11) {
+                wait(14)
+                grab()
+                rotateCounterClockwise()
+                drop()
             }
         }
         )
