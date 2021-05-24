@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P038"
-    name = "OAG"
+    name = "OVERLAP AA"
     arm(ARM1) {
         number = 1
         position = -2 to 0
@@ -57,12 +57,8 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 forward()
-                rotateClockwise()
-                rotateClockwise()
                 forward()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
                 grab()
                 rotateCounterClockwise()
                 back()
@@ -102,7 +98,7 @@ solution {
                 rotateClockwise()
                 back()
                 back()
-                rotateClockwise()
+                reset()
             }
         }
         )

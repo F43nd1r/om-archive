@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P038"
-    name = "OAC"
-    arm(PISTON) {
+    name = "OVERLAP AA"
+    arm(ARM1) {
         number = 1
         position = -2 to 0
-        rotation = -2
+        rotation = 4
         size = 1
     }
     glyph(BONDER) {
@@ -41,7 +41,7 @@ solution {
     }
     track {
         position = 1 to -3
-        positions = listOf(-3 to 3, -2 to 2, -1 to 2, -2 to 3)
+        positions = listOf(-3 to 3, -2 to 3, -2 to 2, -1 to 2)
     }
     tape {
         parallel(
@@ -57,37 +57,34 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 forward()
+                forward()
                 rotateCounterClockwise()
                 grab()
                 rotateCounterClockwise()
-                extend()
+                back()
                 drop()
-                retract()
+                forward()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                back()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
+                rotateCounterClockwise()
+                forward()
+                drop()
+                back()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 forward()
                 rotateCounterClockwise()
                 grab()
-                forward()
-                rotateClockwise()
-                drop()
-                back()
-                back()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                extend()
-                drop()
-                retract()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                forward()
-                rotateCounterClockwise()
-                grab()
                 rotateClockwise()
                 rotateClockwise()
                 drop()
@@ -98,9 +95,10 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+                rotateClockwise()
                 back()
-                rotateClockwise()
-                rotateClockwise()
+                back()
+                reset()
             }
         }
         )
