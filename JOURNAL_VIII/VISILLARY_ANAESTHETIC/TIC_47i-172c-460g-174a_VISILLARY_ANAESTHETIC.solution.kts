@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P102"
-    name = "NEW SOLUTION 1"
+    name = "B TI47 1-3T"
     arm(ARM1) {
         number = 1
         position = -5 to 3
@@ -50,33 +50,27 @@ solution {
         rotation = -1
         size = 1
     }
-    arm(ARM6) {
-        number = 9
-        position = -2 to 5
-        rotation = 0
-        size = 3
-    }
     arm(PISTON) {
-        number = 10
-        position = -4 to 7
-        rotation = 2
+        number = 9
+        position = -6 to 6
+        rotation = 5
         size = 1
     }
     arm(ARM2) {
-        number = 11
-        position = -4 to 6
-        rotation = -4
-        size = 3
+        number = 10
+        position = -2 to 3
+        rotation = -8
+        size = 2
     }
     arm(ARM1) {
-        number = 12
+        number = 11
         position = 8 to -6
         rotation = 2
         size = 3
     }
     glyph(BONDER) {
-        position = -6 to 9
-        rotation = -1
+        position = -5 to 6
+        rotation = 0
     }
     glyph(MULTI_BONDER) {
         position = 0 to -1
@@ -143,50 +137,10 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(4)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(4)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(6) {
                 wait(7)
                 grab()
                 rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                wait(2)
-                grab()
-                rotateClockwise()
-                pivotClockwise()
-                drop()
-                rotateClockwise()
-                wait(3)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(7) {
-                wait(7)
-                grab()
-                rotateClockwise()
                 drop()
             }
         }
@@ -214,8 +168,8 @@ solution {
         }
         , 
         {
-            sequence(9) {
-                wait(5)
+            sequence(3) {
+                wait(4)
                 grab()
                 rotateClockwise()
                 drop()
@@ -223,16 +177,27 @@ solution {
         }
         , 
         {
-            sequence(10) {
-                wait(7)
+            sequence(11) {
+                wait(14)
                 grab()
+                pivotCounterClockwise()
+                pivotClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(9) {
+                wait(5)
+                grab()
+                rotateCounterClockwise()
                 extend()
                 reset()
             }
         }
         , 
         {
-            sequence(11) {
+            sequence(10) {
                 wait(5)
                 grab()
                 pivotCounterClockwise()
@@ -243,12 +208,33 @@ solution {
         }
         , 
         {
-            sequence(12) {
-                wait(14)
+            sequence(4) {
+                wait(4)
                 grab()
-                pivotCounterClockwise()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(7) {
+                wait(7)
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(2)
+                grab()
+                rotateClockwise()
                 pivotClockwise()
                 drop()
+                rotateClockwise()
+                wait(3)
+                extendTape()
             }
         }
         )
