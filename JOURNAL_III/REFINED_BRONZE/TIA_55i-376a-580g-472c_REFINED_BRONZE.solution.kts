@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P067"
-    name = "NO-TRACK"
+    name = "B TI55 1-6T"
     arm(ARM2) {
         number = 1
         position = 13 to 1
@@ -134,10 +134,6 @@ solution {
     }
     glyph(UNBONDER) {
         position = 0 to 1
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = 14 to -3
         rotation = 0
     }
     glyph(CALCIFICATION) {
