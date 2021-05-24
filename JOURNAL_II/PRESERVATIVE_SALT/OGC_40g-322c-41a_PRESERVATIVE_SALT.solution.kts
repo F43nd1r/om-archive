@@ -1,29 +1,34 @@
 
 solution {
     puzzle = "P060"
-    name = "OGC"
+    name = "OVERLAP GC"
     arm(ARM1) {
         number = 1
-        position = -1 to 1
-        rotation = 4
+        position = 2 to -3
+        rotation = 1
         size = 1
     }
     glyph(BONDER) {
-        position = -2 to 1
-        rotation = 5
+        position = 1 to -4
+        rotation = 1
     }
-    glyph(CALCIFICATION) {
-        position = 0 to 2
-        rotation = 0
+    glyph(UNBONDER) {
+        position = 3 to -4
+        rotation = 3
+    }
+    io(INPUT) {
+        index = 0
+        position = 1 to -1
+        rotation = 2
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to 1
-        rotation = 0
+        position = 0 to -3
+        rotation = -2
     }
     io(INPUT) {
         index = 1
-        position = -1 to 0
+        position = 1 to -2
         rotation = 0
     }
     tape {
@@ -32,52 +37,48 @@ solution {
             sequence(1) {
                 grab()
                 rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
                 pivotClockwise()
-                pivotClockwise()
-                drop()
                 rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
                 pivotClockwise()
                 drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
                 rotateClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
                 rotateCounterClockwise()
                 pivotClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 pivotClockwise()
                 drop()
