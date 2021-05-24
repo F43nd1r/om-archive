@@ -1,12 +1,20 @@
 
 solution {
     puzzle = "P040"
-    name = "OVERLAP AC"
+    name = "OVERLAP ACX"
     arm(PISTON) {
         number = 1
-        position = 0 to 1
-        rotation = 2
+        position = -1 to 1
+        rotation = 4
         size = 1
+    }
+    glyph(BONDER) {
+        position = -2 to 1
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = -2 to 1
+        rotation = -2
     }
     glyph(BONDER) {
         position = 0 to -1
@@ -17,32 +25,12 @@ solution {
         rotation = 0
     }
     glyph(BONDER) {
-        position = -2 to 1
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = -2 to 1
-        rotation = -2
-    }
-    glyph(BONDER) {
         position = -3 to 2
         rotation = -1
     }
     glyph(BONDER) {
         position = -2 to 3
         rotation = -2
-    }
-    glyph(TRIPLEX_BONDER) {
-        position = -2 to 1
-        rotation = -4
-    }
-    glyph(TRIPLEX_BONDER) {
-        position = -3 to 1
-        rotation = -6
-    }
-    glyph(TRIPLEX_BONDER) {
-        position = -3 to 2
-        rotation = -8
     }
     glyph(TRIPLEX_BONDER) {
         position = -1 to 0
@@ -68,12 +56,28 @@ solution {
         position = -1 to 1
         rotation = -3
     }
+    glyph(TRIPLEX_BONDER) {
+        position = -2 to 1
+        rotation = -4
+    }
+    glyph(TRIPLEX_BONDER) {
+        position = -3 to 1
+        rotation = -6
+    }
+    glyph(TRIPLEX_BONDER) {
+        position = -3 to 2
+        rotation = -8
+    }
     glyph(CALCIFICATION) {
         position = -1 to 1
         rotation = 0
     }
     glyph(CALCIFICATION) {
         position = 0 to -1
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
+        position = -2 to 0
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -92,7 +96,7 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = 0 to -1
+        position = -1 to 0
         rotation = 0
     }
     track {
@@ -104,23 +108,24 @@ solution {
         {
             sequence(1) {
                 grab()
-                rotateCounterClockwise()
                 back()
-                back()
+                rotateClockwise()
                 extend()
                 drop()
                 retract()
-                forward()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
+                grab()
+                extend()
+                drop()
+                retract()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
                 grab()
                 back()
                 rotateCounterClockwise()
@@ -128,16 +133,6 @@ solution {
                 drop()
                 rotateClockwise()
                 rotateClockwise()
-                rotateClockwise()
-                back()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                forward()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 back()
@@ -163,6 +158,8 @@ solution {
                 retract()
                 grab()
                 rotateCounterClockwise()
+                drop()
+                back()
                 reset()
             }
         }
