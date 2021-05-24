@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P086"
-    name = "NO-TRACK"
+    name = "B TI44 1-6T"
     arm(ARM6) {
         number = 1
         position = -4 to -3
@@ -126,8 +126,6 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(3)
-                extendTape()
             }
         }
         , 
@@ -198,7 +196,7 @@ solution {
         , 
         {
             sequence(10) {
-                wait(7)
+                wait(6)
                 grab()
                 extend()
                 pivotClockwise()
@@ -222,7 +220,6 @@ solution {
                 wait(53)
                 grab()
                 rotateCounterClockwise()
-                wait(1)
                 rotateClockwise()
                 drop()
             }
