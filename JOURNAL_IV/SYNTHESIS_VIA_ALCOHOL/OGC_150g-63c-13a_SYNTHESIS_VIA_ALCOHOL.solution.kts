@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P071"
-    name = "OA"
+    name = "OVERLAP AG"
     arm(ARM1) {
         number = 1
         position = 2 to -1
@@ -25,10 +25,6 @@ solution {
     glyph(UNBONDER) {
         position = 1 to 0
         rotation = -2
-    }
-    glyph(UNBONDER) {
-        position = 1 to 0
-        rotation = -1
     }
     glyph(DUPLICATION) {
         position = -1 to 1
@@ -70,7 +66,16 @@ solution {
                 drop()
                 rotateClockwise()
                 forward()
-                rotateClockwise()
+                reset()
+                repeat()
+                wait(10)
+                repeat()
+                wait(10)
+                repeat()
+                wait(10)
+                repeat()
+                wait(10)
+                repeat()
             }
         }
         , 
@@ -78,7 +83,17 @@ solution {
             sequence(2) {
                 wait(8)
                 rotateCounterClockwise()
-                rotateClockwise()
+                reset()
+                wait(9)
+                repeat()
+                wait(10)
+                repeat()
+                wait(10)
+                repeat()
+                wait(10)
+                repeat()
+                wait(2)
+                repeat()
             }
         }
         )
