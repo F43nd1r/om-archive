@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P102"
-    name = "B TI46G 1-3T"
+    name = "B TI46A 1-3T"
     arm(ARM2) {
         number = 1
         position = -5 to 3
@@ -89,12 +89,16 @@ solution {
         rotation = -2
     }
     glyph(UNBONDER) {
-        position = 3 to -3
-        rotation = 1
-    }
-    glyph(UNBONDER) {
         position = -6 to 6
         rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = 2 to -3
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = 3 to -3
+        rotation = 1
     }
     glyph(CALCIFICATION) {
         position = -3 to 2
@@ -142,8 +146,8 @@ solution {
                 wait(16)
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
+                rotateClockwise()
                 pivotCounterClockwise()
                 drop()
                 rotateClockwise()
@@ -155,16 +159,6 @@ solution {
                 wait(14)
                 grab()
                 rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(11) {
-                wait(21)
-                grab()
-                pivotCounterClockwise()
-                pivotClockwise()
                 drop()
             }
         }
@@ -232,6 +226,16 @@ solution {
                 rotateClockwise()
                 extend()
                 reset()
+            }
+        }
+        , 
+        {
+            sequence(11) {
+                wait(21)
+                grab()
+                pivotCounterClockwise()
+                pivotClockwise()
+                drop()
             }
         }
         )
