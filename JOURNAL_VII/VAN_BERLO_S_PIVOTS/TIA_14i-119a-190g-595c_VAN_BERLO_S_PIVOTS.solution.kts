@@ -1,79 +1,79 @@
 
 solution {
     puzzle = "P096"
-    name = "TRACKLESS (Copy)"
+    name = "TRACKLESS"
     arm(ARM6) {
         number = 1
-        position = -1 to -1
+        position = -7 to 0
         rotation = 0
         size = 3
     }
     arm(ARM6) {
         number = 2
-        position = 4 to -1
+        position = -2 to 0
         rotation = 0
         size = 1
     }
     arm(ARM3) {
         number = 3
-        position = 5 to -4
+        position = -1 to -3
         rotation = 1
         size = 3
     }
     arm(ARM6) {
         number = 4
-        position = 7 to -1
+        position = 1 to 0
         rotation = 0
         size = 1
     }
     glyph(BONDER) {
-        position = 5 to -1
+        position = -1 to 0
         rotation = 8
     }
+    glyph(BONDER) {
+        position = 2 to 0
+        rotation = 0
+    }
     glyph(UNBONDER) {
-        position = 2 to -1
+        position = -4 to 0
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 2 to -2
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 5 to 0
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = 9 to -3
+        position = -1 to 1
         rotation = 0
     }
     glyph(DUPLICATION) {
-        position = 0 to -5
-        rotation = 3
-    }
-    glyph(DUPLICATION) {
-        position = 9 to -1
+        position = -6 to -4
         rotation = 3
     }
     io(INPUT) {
         index = 0
-        position = -1 to 2
+        position = -7 to 3
         rotation = 5
     }
     io(OUTPUT) {
         index = 0
-        position = 8 to 0
+        position = 2 to 1
         rotation = 6
     }
     io(OUTPUT) {
         index = 1
-        position = 2 to -4
+        position = -4 to -3
         rotation = 6
     }
     io(OUTPUT) {
         index = 2
-        position = 6 to 1
+        position = 0 to 2
         rotation = 4
     }
     io(OUTPUT) {
         index = 3
-        position = 6 to -2
-        rotation = 8
+        position = 1 to -1
+        rotation = 6
     }
     tape {
         parallel(
