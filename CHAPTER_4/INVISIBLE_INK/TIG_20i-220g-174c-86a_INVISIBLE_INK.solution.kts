@@ -1,84 +1,84 @@
 
 solution {
     puzzle = "P032"
-    name = "TI"
+    name = "NEW SOLUTION 2 (Copy) (Copy)"
     arm(ARM2) {
         number = 1
-        position = 1 to -2
+        position = 0 to -4
         rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -1 to -2
-        rotation = 0
+        position = -2 to -4
+        rotation = -6
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 3
-        position = 0 to 3
-        rotation = 4
-        size = 2
+        position = -3 to -2
+        rotation = -4
+        size = 1
     }
     arm(ARM2) {
         number = 4
-        position = 1 to 0
-        rotation = 3
+        position = 1 to -2
+        rotation = 0
+        size = 3
+    }
+    arm(ARM6) {
+        number = 5
+        position = -1 to 2
+        rotation = 0
         size = 2
     }
     arm(ARM1) {
-        number = 5
-        position = -1 to 3
-        rotation = 8
-        size = 1
-    }
-    arm(ARM1) {
         number = 6
-        position = -2 to 0
-        rotation = -1
+        position = -2 to 2
+        rotation = -4
         size = 1
     }
     glyph(MULTI_BONDER) {
-        position = -2 to 3
-        rotation = 1
+        position = -3 to 2
+        rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = 0 to 5
+        position = 0 to -3
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 1 to -1
+        position = -1 to 4
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = -1 to -1
-        rotation = 6
+        position = -2 to -3
+        rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 0 to 1
+        position = 1 to -4
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 3 to 0
-        rotation = 5
+        position = 4 to -4
+        rotation = 4
     }
     io(INPUT) {
         index = 1
-        position = 2 to -2
+        position = -1 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = 1 to 2
-        rotation = 3
+        position = 3 to -1
+        rotation = 2
     }
     tape {
         parallel(
         {
-            sequence(3) {
-                wait(27)
+            sequence(5) {
+                wait(17)
                 grab()
                 rotateClockwise()
                 drop()
@@ -87,7 +87,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(30)
+                wait(19)
                 grab()
                 rotateClockwise()
                 drop()
@@ -99,33 +99,30 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(2)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(44)
-                grab()
-                rotateCounterClockwise()
-                drop()
             }
         }
         , 
         {
             sequence(2) {
-                wait(3)
+                wait(10)
                 grab()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
+                reset()
             }
         }
         , 
         {
-            sequence(5) {
-                wait(35)
+            sequence(3) {
+                wait(17)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(23)
                 grab()
                 rotateClockwise()
                 drop()
