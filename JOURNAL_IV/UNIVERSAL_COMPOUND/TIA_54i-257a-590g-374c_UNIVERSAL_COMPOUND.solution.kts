@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P072"
-    name = "NO-TRACK 2 (Copy)"
+    name = "B TI54 1-6T"
     arm(ARM1) {
         number = 1
         position = -1 to -1
@@ -28,9 +28,9 @@ solution {
     }
     arm(PISTON) {
         number = 5
-        position = -2 to 6
-        rotation = 14
-        size = 2
+        position = -5 to 7
+        rotation = 1
+        size = 1
     }
     arm(ARM1) {
         number = 6
@@ -91,10 +91,6 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = -5 to 9
-        rotation = -1
-    }
-    glyph(BONDER) {
         position = 3 to 1
         rotation = 1
     }
@@ -105,6 +101,10 @@ solution {
     glyph(BONDER) {
         position = 9 to -1
         rotation = 1
+    }
+    glyph(BONDER) {
+        position = -5 to 9
+        rotation = -2
     }
     glyph(UNBONDER) {
         position = 7 to 0
@@ -216,15 +216,6 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(13)
-                grab()
-                extend()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(6) {
                 wait(3)
                 grab()
@@ -285,6 +276,15 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(9)
+                grab()
+                extend()
+                reset()
             }
         }
         )
