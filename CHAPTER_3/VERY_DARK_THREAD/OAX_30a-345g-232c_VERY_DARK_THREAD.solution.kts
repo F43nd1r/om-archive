@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P029"
-    name = "OVERLAP AC"
+    name = "OVERLAP AX"
     arm(PISTON) {
         number = 1
         position = 3 to -1
@@ -45,6 +45,10 @@ solution {
         rotation = 2
     }
     glyph(BONDER) {
+        position = -1 to -2
+        rotation = 1
+    }
+    glyph(BONDER) {
         position = 0 to -1
         rotation = 2
     }
@@ -63,30 +67,6 @@ solution {
     glyph(BONDER) {
         position = -5 to -1
         rotation = -2
-    }
-    glyph(BONDER) {
-        position = -1 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = -2 to -1
-        rotation = -1
-    }
-    glyph(BONDER) {
-        position = -1 to -1
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = 0 to -1
-        rotation = -1
-    }
-    glyph(BONDER) {
-        position = 1 to -1
-        rotation = 1
-    }
-    glyph(UNBONDER) {
-        position = -2 to -1
-        rotation = 0
     }
     glyph(CALCIFICATION) {
         position = 2 to 0
@@ -226,7 +206,7 @@ solution {
                 wait(8)
                 grab()
                 pivotClockwise()
-                wait(113)
+                wait(119)
                 reset()
             }
         }
@@ -366,32 +346,24 @@ solution {
                 back()
                 back()
                 grab()
-                forward()
-                rotateClockwise()
+                extend()
                 drop()
+                retract()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
                 grab()
                 rotateClockwise()
-                forward()
-                drop()
-                rotateClockwise()
-                grab()
                 pivotClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                grab()
                 forward()
-                rotateCounterClockwise()
-                pivotClockwise()
+                grab()
                 rotateClockwise()
+                pivotClockwise()
                 drop()
                 back()
-                rotateClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
                 extend()
                 drop()
                 retract()
@@ -399,8 +371,18 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
+                extend()
+                grab()
+                pivotCounterClockwise()
+                drop()
+                retract()
                 forward()
-                wait(54)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                wait(6)
+                grab()
+                pivotClockwise()
+                wait(52)
                 reset()
             }
         }
@@ -497,15 +479,6 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 rotateClockwise()
-                back()
-                back()
-                grab()
-                forward()
-                forward()
-                forward()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
                 rotateClockwise()
                 extend()
                 extend()
@@ -514,6 +487,7 @@ solution {
                 retract()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                wait(1)
                 extend()
                 drop()
                 retract()
@@ -530,11 +504,9 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                forward()
-                forward()
                 rotateClockwise()
+                forward()
                 drop()
-                back()
                 rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
@@ -542,8 +514,15 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
                 back()
+                back()
+                grab()
+                extend()
+                pivotCounterClockwise()
+                drop()
+                retract()
+                forward()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
                 rotateClockwise()
@@ -553,6 +532,15 @@ solution {
                 rotateClockwise()
                 grab()
                 extend()
+                drop()
+                retract()
+                forward()
+                grab()
+                back()
+                drop()
+                extend()
+                grab()
+                pivotClockwise()
                 drop()
                 retract()
                 forward()
