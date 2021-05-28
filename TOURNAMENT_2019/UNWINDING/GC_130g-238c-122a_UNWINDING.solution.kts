@@ -1,14 +1,14 @@
 
 solution {
     puzzle = "w1611998067"
-    name = "NEW SOLUTION 1"
-    arm(ARM2) {
+    name = "B TI15G 1-3T"
+    arm(ARM1) {
         number = 1
         position = -6 to -10
         rotation = 4
         size = 1
     }
-    arm(ARM2) {
+    arm(ARM1) {
         number = 2
         position = -11 to -9
         rotation = -1
@@ -68,6 +68,15 @@ solution {
         }
         , 
         {
+            sequence(4) {
+                wait(4)
+                grab()
+                pivotClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(2) {
                 wait(3)
                 grab()
@@ -80,17 +89,6 @@ solution {
             sequence(1) {
                 grab()
                 rotateClockwise()
-                drop()
-                wait(2)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(4)
-                grab()
-                pivotClockwise()
                 drop()
             }
         }
