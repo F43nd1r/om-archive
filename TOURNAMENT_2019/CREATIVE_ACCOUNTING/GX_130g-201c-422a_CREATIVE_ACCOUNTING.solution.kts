@@ -1,73 +1,53 @@
 
 solution {
     puzzle = "w1698785633"
-    name = "NEW SOLUTION 2"
-    arm(ARM2) {
+    name = "TI"
+    arm(ARM6) {
         number = 1
-        position = -12 to -8
-        rotation = 2
-        size = 2
+        position = 1 to 1
+        rotation = 5
+        size = 1
     }
-    arm(ARM2) {
+    arm(ARM1) {
         number = 2
-        position = -8 to -11
-        rotation = 3
-        size = 2
+        position = 1 to -1
+        rotation = 1
+        size = 1
     }
     arm(ARM6) {
         number = 3
-        position = -16 to -9
-        rotation = 1
-        size = 2
-    }
-    arm(ARM1) {
-        number = 4
-        position = -18 to -8
+        position = -1 to 0
         rotation = 1
         size = 1
     }
     glyph(BONDER) {
-        position = -19 to -7
-        rotation = 0
+        position = 2 to -1
+        rotation = 2
     }
     glyph(UNBONDER) {
-        position = -10 to -11
-        rotation = 1
+        position = 0 to 2
+        rotation = 4
     }
     glyph(UNBONDER) {
-        position = -16 to -7
-        rotation = 0
-    }
-    glyph(UNBONDER) {
-        position = -14 to -9
-        rotation = -1
+        position = -1 to 1
+        rotation = 3
     }
     glyph(PROJECTION) {
-        position = -10 to -8
-        rotation = -2
+        position = -1 to -1
+        rotation = 2
     }
     io(INPUT) {
         index = 0
-        position = -14 to -5
-        rotation = 1
+        position = 2 to 1
+        rotation = 3
     }
     io(OUTPUT) {
         index = 0
-        position = -8 to -9
+        position = 0 to -1
         rotation = 0
     }
     tape {
         parallel(
-        {
-            sequence(4) {
-                wait(4)
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
@@ -78,9 +58,12 @@ solution {
         , 
         {
             sequence(2) {
+                wait(2)
                 grab()
                 rotateClockwise()
+                pivotCounterClockwise()
                 drop()
+                rotateCounterClockwise()
             }
         }
         , 
@@ -89,6 +72,7 @@ solution {
                 wait(2)
                 grab()
                 rotateCounterClockwise()
+                pivotClockwise()
                 drop()
             }
         }
