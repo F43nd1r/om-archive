@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w1698784331"
-    name = "NEW SOLUTION 1 (Copy)"
+    name = "NEW SOLUTION 1"
     arm(ARM6) {
         number = 1
         position = -11 to -6
@@ -44,28 +44,28 @@ solution {
         rotation = 3
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 8
         position = -12 to -9
-        rotation = -6
+        rotation = -8
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 9
         position = -19 to -6
-        rotation = 8
+        rotation = 4
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 10
         position = -12 to -8
-        rotation = 6
+        rotation = 4
         size = 2
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 11
         position = -14 to -9
-        rotation = 6
+        rotation = 4
         size = 3
     }
     glyph(BONDER) {
@@ -201,10 +201,12 @@ solution {
         }
         , 
         {
-            sequence(10) {
-                wait(18)
+            sequence(11) {
+                wait(20)
                 grab()
                 rotateCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
                 drop()
             }
         }
@@ -221,12 +223,10 @@ solution {
         }
         , 
         {
-            sequence(11) {
-                wait(20)
+            sequence(10) {
+                wait(18)
                 grab()
                 rotateCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
                 drop()
             }
         }
