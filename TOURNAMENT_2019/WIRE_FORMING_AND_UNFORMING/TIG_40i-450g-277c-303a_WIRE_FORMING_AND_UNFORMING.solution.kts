@@ -1,18 +1,18 @@
 
 solution {
     puzzle = "w1698784331"
-    name = "NEW SOLUTION 1 (Copy)"
+    name = "B TI40G 1-2T"
     arm(ARM6) {
         number = 1
-        position = -11 to -6
-        rotation = 3
-        size = 1
-    }
-    arm(ARM6) {
-        number = 2
         position = -9 to -5
         rotation = 3
         size = 3
+    }
+    arm(ARM6) {
+        number = 2
+        position = -11 to -6
+        rotation = 3
+        size = 1
     }
     arm(ARM6) {
         number = 3
@@ -47,13 +47,13 @@ solution {
     arm(ARM1) {
         number = 8
         position = -12 to -9
-        rotation = -6
+        rotation = -7
         size = 3
     }
     arm(ARM1) {
         number = 9
         position = -19 to -6
-        rotation = 8
+        rotation = 9
         size = 3
     }
     arm(ARM1) {
@@ -65,7 +65,7 @@ solution {
     arm(ARM1) {
         number = 11
         position = -14 to -9
-        rotation = 6
+        rotation = 5
         size = 3
     }
     glyph(BONDER) {
@@ -101,8 +101,8 @@ solution {
         rotation = -3
     }
     glyph(DUPLICATION) {
-        position = -10 to -6
-        rotation = -8
+        position = -10 to -7
+        rotation = -5
     }
     glyph(PROJECTION) {
         position = -15 to -3
@@ -137,17 +137,18 @@ solution {
         parallel(
         {
             sequence(5) {
-                wait(4)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
+                wait(3)
+                extendTape()
             }
         }
         , 
         {
             sequence(3) {
-                wait(31)
+                wait(163)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -155,8 +156,8 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(4)
+            sequence(1) {
+                wait(160)
                 grab()
                 rotateClockwise()
                 drop()
@@ -165,7 +166,7 @@ solution {
         , 
         {
             sequence(6) {
-                wait(10)
+                wait(6)
                 grab()
                 rotateClockwise()
                 drop()
@@ -173,8 +174,25 @@ solution {
         }
         , 
         {
+            sequence(2) {
+                wait(132)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(10) {
+                wait(6)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(7) {
-                wait(12)
                 grab()
                 extend()
                 reset()
@@ -183,7 +201,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(6)
+                wait(2)
                 grab()
                 extend()
                 reset()
@@ -191,27 +209,8 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-                wait(4)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(10) {
-                wait(18)
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(8) {
-                wait(22)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
@@ -222,7 +221,6 @@ solution {
         , 
         {
             sequence(11) {
-                wait(20)
                 grab()
                 rotateCounterClockwise()
                 pivotClockwise()
@@ -233,7 +231,7 @@ solution {
         , 
         {
             sequence(9) {
-                wait(24)
+                wait(4)
                 grab()
                 rotateClockwise()
                 drop()
