@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w2450512232"
-    name = "B IG PENTAPIG 1-8T"
+    name = "B ICX PENTAPIG 1-8T"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 6 to 2
@@ -44,7 +44,7 @@ solution {
         rotation = -1
         size = 3
     }
-    arm(ARM1) {
+    arm(PISTON) {
         number = 8
         position = -2 to 1
         rotation = -1
@@ -145,7 +145,7 @@ solution {
         , 
         {
             sequence(2) {
-                wait(24)
+                wait(21)
                 grab()
                 rotateClockwise()
                 rotateCounterClockwise()
@@ -177,7 +177,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(20)
+                wait(17)
                 grab()
                 rotateClockwise()
                 retract()
@@ -186,7 +186,7 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 extend()
-                wait(7)
+                wait(4)
                 extendTape()
             }
         }
@@ -196,7 +196,6 @@ solution {
                 wait(10)
                 grab()
                 retract()
-                wait(2)
                 extend()
                 forward()
                 drop()
@@ -210,7 +209,7 @@ solution {
         , 
         {
             sequence(7) {
-                wait(12)
+                wait(10)
                 grab()
                 forward()
                 drop()
@@ -229,9 +228,9 @@ solution {
                 grab()
                 back()
                 rotateCounterClockwise()
-                back()
+                retract()
                 drop()
-                forward()
+                extend()
                 forward()
             }
         }
