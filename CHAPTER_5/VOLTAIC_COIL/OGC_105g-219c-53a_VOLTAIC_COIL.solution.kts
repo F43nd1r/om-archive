@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P039"
-    name = "OVERLAP AREA"
+    name = "OVERLAP AA"
     arm(PISTON) {
         number = 1
-        position = -12 to -2
-        rotation = 5
+        position = -11 to -2
+        rotation = 7
         size = 1
     }
     glyph(BONDER) {
@@ -52,53 +52,40 @@ solution {
         {
             sequence(1) {
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                reset()
-                wait(2)
+                rotateClockwise()
+                drop()
+                rotateClockwise()
+                back()
                 grab()
                 forward()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                drop()
                 back()
+                grab()
                 rotateCounterClockwise()
-                grab()
+                rotateCounterClockwise()
                 extend()
-                drop()
-                rotateClockwise()
-                grab()
                 forward()
                 drop()
                 retract()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateClockwise()
                 grab()
                 rotateClockwise()
                 drop()
+                rotateClockwise()
                 back()
-                rotateCounterClockwise()
+                grab()
+                back()
+                back()
+                drop()
+                rotateClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateClockwise()
+                back()
                 grab()
                 extend()
-                drop()
-                retract()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                back()
-                back()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                extend()
+                forward()
                 reset()
             }
         }
