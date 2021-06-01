@@ -33,19 +33,11 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = -4 to 1
-        rotation = 0
-    }
-    glyph(BONDER) {
         position = -1 to -1
         rotation = -4
     }
     glyph(CALCIFICATION) {
         position = -1 to 1
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = -4 to 1
         rotation = 0
     }
     glyph(CALCIFICATION) {
