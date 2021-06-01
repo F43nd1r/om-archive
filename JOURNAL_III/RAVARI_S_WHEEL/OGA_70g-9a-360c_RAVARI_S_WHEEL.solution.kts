@@ -1,45 +1,45 @@
 
 solution {
     puzzle = "P064"
-    name = "OVERLAP AREA"
+    name = "OVERLAP AA"
     arm(ARM1) {
         number = 1
-        position = -1 to -1
-        rotation = 1
+        position = -1 to 2
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -1 to -2
+        position = -1 to 1
         rotation = 0
         size = 2
     }
     glyph(BONDER) {
-        position = 1 to -2
+        position = 1 to 1
         rotation = 1
     }
     glyph(PROJECTION) {
-        position = 0 to -1
+        position = 0 to 2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to -2
+        position = 1 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 1 to -1
+        position = 1 to 2
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 1 to -2
+        position = 1 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = -1 to 0
+        position = 0 to 1
         rotation = 0
     }
     tape {
@@ -53,9 +53,8 @@ solution {
                 pivotClockwise()
                 wait(11)
                 pivotClockwise()
-                wait(7)
+                wait(10)
                 pivotClockwise()
-                wait(3)
                 pivotClockwise()
                 reset()
             }
@@ -64,7 +63,7 @@ solution {
         {
             sequence(1) {
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
                 reset()
                 wait(1)
                 repeat()
