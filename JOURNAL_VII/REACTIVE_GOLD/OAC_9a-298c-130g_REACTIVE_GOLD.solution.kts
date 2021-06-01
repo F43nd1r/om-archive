@@ -1,62 +1,66 @@
 
 solution {
     puzzle = "P095"
-    name = "OVERLAP"
-    arm(PISTON) {
+    name = "OVERLAP AC"
+    arm(ARM1) {
         number = 1
-        position = 1 to -2
-        rotation = 1
+        position = -1 to -1
+        rotation = -2
         size = 1
     }
     glyph(BONDER) {
-        position = 1 to -3
-        rotation = 0
-    }
-    glyph(UNBONDER) {
-        position = 0 to -1
-        rotation = 0
+        position = -1 to -2
+        rotation = -5
     }
     glyph(UNBONDER) {
         position = 0 to -2
-        rotation = -1
-    }
-    glyph(PROJECTION) {
-        position = 1 to -1
-        rotation = -2
-    }
-    glyph(PROJECTION) {
-        position = 2 to -3
-        rotation = -4
-    }
-    glyph(PROJECTION) {
-        position = 2 to -2
         rotation = -3
     }
     glyph(PROJECTION) {
-        position = 1 to -1
+        position = -2 to -1
+        rotation = -6
+    }
+    glyph(PROJECTION) {
+        position = -2 to 0
         rotation = -1
     }
+    glyph(PROJECTION) {
+        position = -1 to 0
+        rotation = -2
+    }
     glyph(PURIFICATION) {
-        position = 0 to -2
-        rotation = 7
+        position = 0 to -1
+        rotation = 4
     }
     glyph(EQUILIBRIUM) {
-        position = 1 to 0
+        position = -1 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to -1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 1 to -1
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to -3
-        rotation = 0
+        position = -1 to -2
+        rotation = -5
     }
     io(INPUT) {
         index = 0
-        position = 1 to -1
-        rotation = -3
+        position = -1 to -2
+        rotation = -6
     }
     track {
-        position = 1 to -2
-        positions = listOf(0 to 0, -1 to 0)
+        position = -1 to -1
+        positions = listOf(0 to 0, 1 to 0)
     }
     tape {
         parallel(
@@ -65,8 +69,8 @@ solution {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                drop()
                 rotateClockwise()
+                drop()
                 rotateClockwise()
                 rotateClockwise()
                 grab()
@@ -75,11 +79,15 @@ solution {
                 rotateClockwise()
                 forward()
                 grab()
+                rotateCounterClockwise()
+                drop()
                 back()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
-                rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
@@ -91,33 +99,21 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 rotateClockwise()
-                rotateClockwise()
-                grab()
-                extend()
-                drop()
-                retract()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 back()
                 drop()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
+                forward()
                 grab()
-                rotateClockwise()
+                back()
                 drop()
                 rotateClockwise()
                 forward()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                back()
                 rotateClockwise()
                 reset()
-                wait(2)
-                extend()
-                grab()
-                retract()
             }
         }
         )
