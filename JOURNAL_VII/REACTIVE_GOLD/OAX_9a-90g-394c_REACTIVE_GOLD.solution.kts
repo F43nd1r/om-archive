@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P095"
-    name = "OVERLAP AC"
+    name = "OVERLAP AGX"
     arm(ARM1) {
         number = 1
         position = -1 to -1
@@ -9,24 +9,16 @@ solution {
         size = 1
     }
     glyph(BONDER) {
-        position = -1 to -2
-        rotation = -5
+        position = 0 to -2
+        rotation = -6
     }
     glyph(UNBONDER) {
         position = 0 to -2
         rotation = -3
     }
     glyph(PROJECTION) {
-        position = -2 to -1
-        rotation = -6
-    }
-    glyph(PROJECTION) {
-        position = -2 to 0
-        rotation = -1
-    }
-    glyph(PROJECTION) {
-        position = -1 to 0
-        rotation = -2
+        position = 0 to -1
+        rotation = -7
     }
     glyph(PURIFICATION) {
         position = 0 to -1
@@ -48,14 +40,14 @@ solution {
         position = 1 to -1
         rotation = 0
     }
-    io(OUTPUT) {
-        index = 0
-        position = -1 to -2
-        rotation = -5
-    }
     io(INPUT) {
         index = 0
         position = -1 to -2
+        rotation = -6
+    }
+    io(OUTPUT) {
+        index = 0
+        position = 0 to -2
         rotation = -6
     }
     track {
@@ -108,9 +100,25 @@ solution {
                 grab()
                 back()
                 drop()
-                rotateClockwise()
-                forward()
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 reset()
