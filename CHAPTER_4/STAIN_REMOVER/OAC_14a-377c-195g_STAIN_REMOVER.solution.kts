@@ -1,47 +1,47 @@
 
 solution {
     puzzle = "P034"
-    name = "NEW SOLUTION 1"
+    name = "OVERLAP AREA REBIX, IMPROVED"
     arm(PISTON) {
         number = 1
         position = -1 to 0
-        rotation = -2
+        rotation = 4
         size = 1
     }
     glyph(BONDER) {
-        position = -2 to -1
-        rotation = 3
+        position = -2 to 1
+        rotation = -2
     }
     glyph(BONDER) {
-        position = -1 to 1
-        rotation = 3
+        position = -2 to -1
+        rotation = -5
+    }
+    glyph(BONDER) {
+        position = -2 to 1
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = -3 to -1
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = -1 to -1
+        rotation = 0
     }
     glyph(BONDER) {
         position = -3 to 1
-        rotation = 3
+        rotation = -1
     }
     glyph(BONDER) {
-        position = -2 to 0
-        rotation = 2
+        position = -4 to 1
+        rotation = 0
     }
     glyph(BONDER) {
-        position = -2 to 0
-        rotation = 5
-    }
-    glyph(BONDER) {
-        position = -2 to 0
-        rotation = 7
-    }
-    glyph(BONDER) {
-        position = -2 to 0
-        rotation = 4
-    }
-    glyph(BONDER) {
-        position = 0 to -1
-        rotation = 3
+        position = -1 to -1
+        rotation = -4
     }
     glyph(CALCIFICATION) {
-        position = -3 to -1
+        position = -1 to 1
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -49,7 +49,7 @@ solution {
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -1 to 1
+        position = -3 to -1
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -57,8 +57,8 @@ solution {
         rotation = 0
     }
     glyph(PURIFICATION) {
-        position = -4 to 0
-        rotation = -1
+        position = -3 to -1
+        rotation = 1
     }
     glyph(EQUILIBRIUM) {
         position = -4 to 2
@@ -86,7 +86,7 @@ solution {
     }
     track {
         position = 0 to -1
-        positions = listOf(0 to 0, -1 to 1, -2 to 1, -3 to 1)
+        positions = listOf(0 to 0, -1 to 1, -2 to 1)
     }
     tape {
         parallel(
@@ -96,31 +96,27 @@ solution {
                 rotateCounterClockwise()
                 forward()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateClockwise()
                 grab()
+                rotateClockwise()
                 extend()
                 drop()
                 retract()
-                forward()
                 rotateCounterClockwise()
+                extend()
                 extend()
                 grab()
                 retract()
-                rotateCounterClockwise()
+                retract()
                 drop()
-                rotateClockwise()
+                extend()
                 extend()
                 grab()
                 back()
+                back()
                 drop()
                 retract()
-                grab()
-                extend()
-                drop()
-                back()
-                back()
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
@@ -132,18 +128,17 @@ solution {
                 rotateCounterClockwise()
                 drop()
                 retract()
-                retract()
-                forward()
                 forward()
                 forward()
                 rotateClockwise()
+                extend()
                 grab()
+                retract()
                 pivotClockwise()
                 drop()
-                back()
-                back()
-                grab()
                 rotateClockwise()
+                grab()
+                back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
