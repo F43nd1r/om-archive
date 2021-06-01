@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P095"
-    name = "OVERLAP AX"
+    name = "OVERLAP AC"
     arm(PISTON) {
         number = 1
         position = -1 to 0
@@ -26,6 +26,10 @@ solution {
     }
     glyph(PROJECTION) {
         position = -2 to 0
+        rotation = 2
+    }
+    glyph(PROJECTION) {
+        position = -1 to 0
         rotation = 2
     }
     glyph(PURIFICATION) {
@@ -63,15 +67,14 @@ solution {
                 forward()
                 pivotCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                grab()
                 back()
-                drop()
-                rotateClockwise()
                 grab()
+                forward()
+                extend()
                 pivotCounterClockwise()
                 drop()
-                back()
+                retract()
+                forward()
                 grab()
                 back()
                 drop()
