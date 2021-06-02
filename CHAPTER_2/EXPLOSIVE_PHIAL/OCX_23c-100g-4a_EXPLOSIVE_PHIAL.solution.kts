@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P017"
-    name = "OA"
+    name = "NEW SOLUTION 4"
     arm(ARM1) {
         number = 1
-        position = 1 to -1
-        rotation = -3
+        position = -1 to 0
+        rotation = -2
         size = 1
     }
     glyph(BONDER) {
@@ -13,19 +13,15 @@ solution {
         rotation = 0
     }
     glyph(TRIPLEX_BONDER) {
-        position = 0 to -1
-        rotation = -4
-    }
-    glyph(TRIPLEX_BONDER) {
         position = -1 to 0
         rotation = -2
     }
     glyph(TRIPLEX_BONDER) {
-        position = -1 to -1
-        rotation = 0
-    }
-    glyph(UNBONDER) {
         position = 0 to -1
+        rotation = -4
+    }
+    glyph(TRIPLEX_BONDER) {
+        position = -1 to -1
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -34,7 +30,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -1 to -1
+        position = 1 to -1
         rotation = 0
     }
     io(OUTPUT) {
@@ -44,19 +40,15 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = 0 to -1
+        position = -1 to -1
         rotation = 0
-    }
-    track {
-        position = 1 to -1
-        positions = listOf(0 to 0, 1 to 0)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                forward()
+                rotateCounterClockwise()
                 reset()
             }
         }
