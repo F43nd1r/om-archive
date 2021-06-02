@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w2450508212"
-    name = "B CAX"
+    name = "B CG"
     arm(ARM1) {
         number = 1
         position = -3 to 5
@@ -14,11 +14,11 @@ solution {
         rotation = -2
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 3
-        position = 0 to 4
+        position = 0 to 6
         rotation = -2
-        size = 1
+        size = 3
     }
     arm(ARM1) {
         number = 4
@@ -139,6 +139,10 @@ solution {
         positions = listOf(0 to 0, 0 to -1, 1 to -1)
     }
     track {
+        position = 2 to 3
+        positions = listOf(0 to 0, 0 to -1, 0 to -2)
+    }
+    track {
         position = 3 to 3
         positions = listOf(1 to 0, 0 to 0, 0 to -1, 0 to -2, 1 to -2, 1 to -1)
     }
@@ -148,7 +152,11 @@ solution {
     }
     track {
         position = 0 to 6
-        positions = listOf(0 to -2, 1 to -3, 2 to -3, 2 to -4, 2 to -5, 1 to -5, 1 to -4)
+        positions = listOf(0 to 0, 0 to -1, 0 to -2, 1 to -3)
+    }
+    track {
+        position = 1 to 1
+        positions = listOf(0 to 0, 0 to 1)
     }
     tape {
         parallel(
@@ -400,11 +408,13 @@ solution {
             sequence(3) {
                 wait(6)
                 grab()
-                extend()
-                extend()
                 forward()
-                reset()
-                wait(3)
+                forward()
+                forward()
+                drop()
+                back()
+                back()
+                back()
                 repeat()
                 wait(7)
                 repeat()
