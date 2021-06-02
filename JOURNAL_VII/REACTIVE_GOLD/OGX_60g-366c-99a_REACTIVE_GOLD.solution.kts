@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P095"
-    name = "OGA"
+    name = "OVERLAP GAX"
     arm(ARM1) {
         number = 1
         position = 0 to 1
@@ -30,10 +30,6 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = -5 to 0
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -4 to -1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -152,6 +148,10 @@ solution {
         position = -3 to 9
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = -4 to -1
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = 0 to 2
@@ -239,11 +239,7 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                grab()
-                pivotClockwise()
-                rotateCounterClockwise()
+                pivotCounterClockwise()
                 drop()
                 rotateClockwise()
                 grab()
