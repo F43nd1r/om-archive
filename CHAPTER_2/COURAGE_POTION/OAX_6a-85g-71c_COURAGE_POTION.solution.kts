@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P021"
-    name = "OAG"
+    name = "OAC"
     arm(ARM1) {
         number = 1
-        position = -2 to 1
-        rotation = -2
+        position = -1 to 0
+        rotation = -4
         size = 1
     }
     glyph(MULTI_BONDER) {
@@ -14,6 +14,10 @@ solution {
     }
     glyph(CALCIFICATION) {
         position = -1 to 0
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
+        position = -2 to 2
         rotation = 0
     }
     io(INPUT) {
@@ -28,12 +32,12 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = -2 to 0
+        position = -2 to 1
         rotation = 0
     }
     track {
-        position = -2 to 1
-        positions = listOf(0 to 0, 1 to 0, 1 to -1)
+        position = 0 to 0
+        positions = listOf(0 to -1, -1 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -41,22 +45,16 @@ solution {
             sequence(1) {
                 grab()
                 forward()
-                rotateClockwise()
+                drop()
+                back()
+                grab()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                forward()
                 grab()
-                rotateClockwise()
-                rotateClockwise()
+                back()
                 drop()
                 forward()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                reset()
             }
         }
         )
