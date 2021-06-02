@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P095"
-    name = "OGC"
+    name = "OVERLAP GC"
     arm(ARM1) {
         number = 1
         position = -1 to 0
@@ -18,6 +18,10 @@ solution {
     }
     glyph(PROJECTION) {
         position = -2 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -1 to -6
         rotation = 0
     }
     io(INPUT) {
@@ -63,18 +67,16 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
@@ -98,18 +100,16 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
@@ -133,18 +133,16 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
@@ -168,18 +166,16 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
@@ -203,18 +199,16 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
@@ -237,9 +231,7 @@ solution {
                 rotateClockwise()
                 grab()
                 pivotClockwise()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
+                extendTape()
             }
         }
         )
