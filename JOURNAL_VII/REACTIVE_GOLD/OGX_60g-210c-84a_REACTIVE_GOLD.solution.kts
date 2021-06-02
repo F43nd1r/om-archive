@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P095"
-    name = "OVERLAP GA"
+    name = "OVERLAP GX"
     arm(ARM1) {
         number = 1
         position = -1 to 0
@@ -18,10 +18,18 @@ solution {
     }
     glyph(PROJECTION) {
         position = -2 to 1
-        rotation = 1
+        rotation = 0
     }
     glyph(EQUILIBRIUM) {
         position = -7 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -7 to -1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -8 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -69,19 +77,7 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to -2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -7 to -1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -8 to 0
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -8 to 1
+        position = -2 to 2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -97,10 +93,6 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -9 to 2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
         position = -6 to 5
         rotation = 0
     }
@@ -113,7 +105,19 @@ solution {
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = -9 to 5
+        position = -8 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -1 to 2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 0 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -9 to 2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -124,6 +128,10 @@ solution {
         position = -9 to 4
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = -9 to 5
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = -3 to 1
@@ -131,8 +139,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -1 to 1
-        rotation = 2
+        position = 0 to 1
+        rotation = 3
     }
     tape {
         parallel(
@@ -140,11 +148,7 @@ solution {
             sequence(1) {
                 grab()
                 rotateClockwise()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -182,11 +186,7 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 grab()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -222,11 +222,7 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 grab()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -262,11 +258,7 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 grab()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -301,11 +293,7 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 grab()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -340,11 +328,7 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 grab()
-                pivotClockwise()
-                drop()
                 rotateClockwise()
-                grab()
-                pivotClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -372,10 +356,6 @@ solution {
                 grab()
                 pivotClockwise()
                 extendTape()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                reset()
             }
         }
         )
