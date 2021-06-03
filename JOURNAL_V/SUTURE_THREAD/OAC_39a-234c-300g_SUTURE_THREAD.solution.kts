@@ -167,6 +167,8 @@ solution {
                 rotateClockwise()
                 forward()
                 extend()
+                drop()
+                back()
                 reset()
             }
         }
