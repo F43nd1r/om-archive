@@ -8,38 +8,32 @@ solution {
         rotation = 0
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM2) {
         number = 2
-        position = -14 to 2
-        rotation = -1
-        size = 1
-    }
-    arm(ARM1) {
-        number = 3
         position = -12 to 1
         rotation = 0
         size = 1
     }
     arm(PISTON) {
-        number = 4
+        number = 3
         position = -8 to 2
         rotation = -3
         size = 3
     }
     arm(ARM1) {
-        number = 5
+        number = 4
         position = -7 to 2
         rotation = 3
         size = 2
     }
     arm(ARM6) {
-        number = 6
+        number = 5
         position = 0 to -3
         rotation = -1
         size = 3
     }
     arm(ARM6) {
-        number = 7
+        number = 6
         position = 3 to -9
         rotation = -2
         size = 3
@@ -99,7 +93,7 @@ solution {
     tape {
         parallel(
         {
-            sequence(6) {
+            sequence(5) {
                 wait(44)
                 grab()
                 rotateClockwise()
@@ -119,7 +113,7 @@ solution {
         }
         , 
         {
-            sequence(4) {
+            sequence(3) {
                 wait(6)
                 grab()
                 retract()
@@ -128,23 +122,7 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(2) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(5) {
+            sequence(4) {
                 wait(34)
                 grab()
                 rotateClockwise()
@@ -153,10 +131,18 @@ solution {
         }
         , 
         {
-            sequence(7) {
+            sequence(6) {
                 wait(47)
                 grab()
                 pivotClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                grab()
+                rotateClockwise()
                 drop()
             }
         }
