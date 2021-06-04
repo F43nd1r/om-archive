@@ -1,60 +1,62 @@
 
 solution {
     puzzle = "P056"
-    name = "OAC"
-    arm(PISTON) {
+    name = "OAX?"
+    arm(ARM1) {
         number = 1
-        position = 4 to -2
-        rotation = 2
-        size = 1
+        position = -4 to 0
+        rotation = 4
+        size = 2
     }
     arm(ARM1) {
         number = 2
-        position = 1 to -1
-        rotation = 0
-        size = 2
+        position = -5 to -2
+        rotation = 1
+        size = 1
     }
     glyph(BONDER) {
-        position = 3 to -1
-        rotation = 2
+        position = -4 to -2
+        rotation = 1
     }
     glyph(BONDER) {
-        position = 2 to -2
+        position = -4 to -2
         rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = -4 to -1
+        rotation = -1
     }
     io(INPUT) {
         index = 0
-        position = 3 to -1
+        position = -4 to -2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to -1
-        rotation = 1
+        position = -4 to -1
+        rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 3 to -2
+        position = -5 to -1
         rotation = 0
     }
     track {
-        position = 0 to -1
-        positions = listOf(0 to 0, 1 to 0)
+        position = -4 to 0
+        positions = listOf(0 to 0, 0 to 1)
     }
     tape {
         parallel(
         {
-            sequence(2) {
-                wait(2)
+            sequence(1) {
                 grab()
-                pivotCounterClockwise()
-                drop()
-                back()
-                grab()
+                forward()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 wait(2)
                 pivotCounterClockwise()
+                pivotCounterClockwise()
+                wait(2)
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 reset()
@@ -62,12 +64,7 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                grab()
-                extend()
-                drop()
-                retract()
-                rotateCounterClockwise()
+            sequence(2) {
                 wait(1)
                 grab()
                 rotateClockwise()
@@ -76,8 +73,11 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                wait(1)
-                extendTape()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
             }
         }
         )
