@@ -1,12 +1,12 @@
 
 solution {
     puzzle = "w2450508212"
-    name = "OVERLAP CAX"
-    arm(PISTON) {
+    name = "OVERLAP CG"
+    arm(ARM1) {
         number = 1
-        position = 1 to 0
+        position = 1 to 1
         rotation = -2
-        size = 1
+        size = 2
     }
     glyph(TRIPLEX_BONDER) {
         position = 2 to -1
@@ -76,20 +76,20 @@ solution {
     }
     track {
         position = 0 to 1
-        positions = listOf(1 to 1, 1 to 0, 1 to -1)
+        positions = listOf(0 to 0, 0 to 1, 0 to 2, 1 to 1, 1 to 0, 1 to -1)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                extend()
+                forward()
                 rotateCounterClockwise()
                 back()
                 back()
-                retract()
-                forward()
-                forward()
+                back()
+                back()
+                back()
                 reset()
             }
         }
