@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P097"
-    name = "NO-TRACK"
+    name = "B TI37 1-6T"
     arm(ARM6) {
         number = 1
         position = -15 to 10
@@ -41,7 +41,7 @@ solution {
     arm(ARM1) {
         number = 7
         position = -4 to -3
-        rotation = -5
+        rotation = -7
         size = 2
     }
     arm(PISTON) {
@@ -124,15 +124,6 @@ solution {
         }
         , 
         {
-            sequence(7) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(8) {
                 wait(1)
                 grab()
@@ -206,6 +197,15 @@ solution {
         , 
         {
             sequence(5) {
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(7) {
+                wait(3)
                 grab()
                 rotateClockwise()
                 drop()
