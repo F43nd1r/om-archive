@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P018"
-    name = "OAG"
+    name = "OVERLAP AG"
     arm(ARM1) {
         number = 1
         position = 1 to -2
-        rotation = 6
+        rotation = 8
         size = 1
     }
     glyph(BONDER) {
@@ -14,7 +14,12 @@ solution {
     }
     glyph(PROJECTION) {
         position = 1 to -1
-        rotation = 9
+        rotation = 11
+    }
+    io(INPUT) {
+        index = 0
+        position = 0 to -2
+        rotation = 0
     }
     io(OUTPUT) {
         index = 0
@@ -22,13 +27,8 @@ solution {
         rotation = 6
     }
     io(INPUT) {
-        index = 0
-        position = 0 to -2
-        rotation = 0
-    }
-    io(INPUT) {
         index = 1
-        position = 2 to -2
+        position = 0 to -1
         rotation = 0
     }
     io(OUTPUT) {
@@ -38,7 +38,7 @@ solution {
     }
     io(INPUT) {
         index = 2
-        position = 0 to -1
+        position = 2 to -2
         rotation = 0
     }
     track {
@@ -50,7 +50,7 @@ solution {
         {
             sequence(1) {
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -64,9 +64,7 @@ solution {
                 drop()
                 rotateClockwise()
                 back()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                reset()
             }
         }
         )
