@@ -21,7 +21,7 @@ solution {
         rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = 1 to 0
+        position = 2 to -3
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -29,7 +29,12 @@ solution {
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 2 to -2
+        position = 1 to 0
+        rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = -1 to 0
         rotation = 0
     }
     io(OUTPUT) {
@@ -38,13 +43,8 @@ solution {
         rotation = 0
     }
     io(INPUT) {
-        index = 0
-        position = 1 to -3
-        rotation = 0
-    }
-    io(INPUT) {
         index = 1
-        position = -1 to 0
+        position = 0 to -2
         rotation = 0
     }
     io(INPUT) {
@@ -53,8 +53,8 @@ solution {
         rotation = 0
     }
     track {
-        position = 1 to -2
-        positions = listOf(0 to 0, -1 to 0)
+        position = 0 to -1
+        positions = listOf(0 to 0, 1 to -1)
     }
     tape {
         parallel(
@@ -64,23 +64,20 @@ solution {
                 extend()
                 drop()
                 retract()
-                forward()
                 rotateClockwise()
+                rotateClockwise()
+                back()
                 rotateClockwise()
                 grab()
+                rotateCounterClockwise()
+                forward()
+                rotateCounterClockwise()
+                drop()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 back()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                extend()
                 grab()
-                retract()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
+                forward()
                 reset()
             }
         }
