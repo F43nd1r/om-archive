@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P026"
-    name = "OAC"
-    arm(ARM1) {
+    name = "OAC??"
+    arm(ARM2) {
         number = 1
         position = -1 to -1
         rotation = 1
@@ -71,7 +71,8 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 rotateCounterClockwise()
-                reset()
+                drop()
+                rotateCounterClockwise()
             }
         }
         )
