@@ -1,12 +1,12 @@
 
 solution {
     puzzle = "P038"
-    name = "OAC"
-    arm(PISTON) {
+    name = "OVERLAP ACX"
+    arm(ARM1) {
         number = 1
-        position = 2 to -2
+        position = 1 to -2
         rotation = 3
-        size = 2
+        size = 1
     }
     glyph(BONDER) {
         position = 0 to -2
@@ -24,13 +24,9 @@ solution {
         position = 1 to -2
         rotation = 0
     }
-    glyph(UNBONDER) {
-        position = 0 to -2
-        rotation = 0
-    }
     glyph(PURIFICATION) {
-        position = 1 to -2
-        rotation = 1
+        position = 1 to -1
+        rotation = 0
     }
     io(INPUT) {
         index = 0
@@ -49,31 +45,26 @@ solution {
     }
     track {
         position = 3 to 0
-        positions = listOf(-1 to -2, -1 to -1, -2 to -1)
+        positions = listOf(-2 to -2, -1 to -2, -1 to -1, -2 to -1)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                retract()
                 forward()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 back()
-                extend()
-                grab()
-                retract()
-                drop()
-                extend()
-                grab()
-                pivotClockwise()
-                drop()
-                retract()
                 grab()
                 forward()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
+                forward()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
@@ -81,8 +72,8 @@ solution {
                 forward()
                 rotateClockwise()
                 drop()
+                rotateCounterClockwise()
                 back()
-                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 reset()
