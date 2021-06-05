@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P038"
-    name = "OVERLAP ACX"
+    name = "OAC"
     arm(ARM1) {
         number = 1
         position = 1 to -2
@@ -13,12 +13,20 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = 3 to -2
-        rotation = -3
-    }
-    glyph(MULTI_BONDER) {
         position = 1 to -1
         rotation = 1
+    }
+    glyph(BONDER) {
+        position = 0 to -1
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 2 to -2
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 2 to -1
+        rotation = 3
     }
     glyph(UNBONDER) {
         position = 1 to -2
@@ -44,27 +52,21 @@ solution {
         rotation = 0
     }
     track {
-        position = 3 to 0
-        positions = listOf(-2 to -2, -1 to -2, -1 to -1, -2 to -1)
+        position = 1 to -2
+        positions = listOf(0 to 1, 0 to 0, 1 to 0, 1 to 1)
     }
     tape {
         parallel(
         {
             sequence(1) {
                 grab()
-                forward()
                 rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                grab()
                 forward()
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
                 forward()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
@@ -72,8 +74,8 @@ solution {
                 forward()
                 rotateClockwise()
                 drop()
-                rotateCounterClockwise()
                 back()
+                rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 reset()
