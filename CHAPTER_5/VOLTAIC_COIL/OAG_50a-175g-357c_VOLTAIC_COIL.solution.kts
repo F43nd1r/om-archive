@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P039"
-    name = "OAG (Copy)"
+    name = "OVERLAP AG"
     arm(PISTON) {
         number = 1
         position = 1 to -2
@@ -53,7 +53,7 @@ solution {
         rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = -1 to 0
+        position = 0 to -2
         rotation = 0
     }
     io(INPUT) {
@@ -88,36 +88,18 @@ solution {
                 rotateClockwise()
                 rotateClockwise()
                 back()
-                forward()
-                rotateClockwise()
                 drop()
-                rotateCounterClockwise()
+                forward()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                rotateClockwise()
-                rotateClockwise()
                 back()
-                forward()
-                rotateCounterClockwise()
-                drop()
-                back()
-                rotateCounterClockwise()
-                grab()
                 extend()
                 drop()
                 retract()
-                forward()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
                 rotateCounterClockwise()
-                back()
-                drop()
+                rotateCounterClockwise()
                 forward()
-                rotateClockwise()
-                rotateClockwise()
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -128,8 +110,8 @@ solution {
                 drop()
                 retract()
                 rotateCounterClockwise()
-                forward()
                 rotateCounterClockwise()
+                forward()
                 rotateCounterClockwise()
                 grab()
                 rotateClockwise()
