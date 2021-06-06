@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P106"
-    name = "OVERLAP AC"
+    name = "OVERLAP AGX"
     arm(PISTON) {
         number = 1
         position = 1 to -1
@@ -24,14 +24,6 @@ solution {
         position = -2 to 0
         rotation = 0
     }
-    glyph(BONDER) {
-        position = -2 to -1
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = -2 to 0
-        rotation = -1
-    }
     glyph(TRIPLEX_BONDER) {
         position = -1 to -1
         rotation = 0
@@ -50,22 +42,18 @@ solution {
     }
     glyph(UNBONDER) {
         position = -1 to -1
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = -1 to -1
         rotation = 1
     }
     glyph(UNBONDER) {
         position = 0 to -2
         rotation = 0
     }
-    io(OUTPUT) {
+    io(INPUT) {
         index = 0
         position = -1 to -1
         rotation = 0
     }
-    io(INPUT) {
+    io(OUTPUT) {
         index = 0
         position = -1 to -1
         rotation = 0
@@ -125,6 +113,10 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
                 reset()
             }
         }
