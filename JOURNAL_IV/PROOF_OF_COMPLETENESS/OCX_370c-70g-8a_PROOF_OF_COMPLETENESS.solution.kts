@@ -111,10 +111,8 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
                 back()
-                rotateClockwise()
+                drop()
                 rotateClockwise()
                 rotateClockwise()
             }
