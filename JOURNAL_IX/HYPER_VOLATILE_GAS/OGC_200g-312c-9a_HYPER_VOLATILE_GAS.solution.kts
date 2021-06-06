@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P106"
-    name = "OA"
+    name = "OVERLAP AC"
     arm(PISTON) {
         number = 1
         position = 1 to -1
@@ -9,32 +9,36 @@ solution {
         size = 2
     }
     glyph(BONDER) {
-        position = 0 to -2
-        rotation = 3
+        position = 0 to -1
+        rotation = -1
     }
     glyph(BONDER) {
         position = -1 to -2
-        rotation = 7
+        rotation = 0
     }
-    glyph(TRIPLEX_BONDER) {
-        position = -1 to 0
-        rotation = 3
-    }
-    glyph(TRIPLEX_BONDER) {
-        position = -1 to -1
+    glyph(BONDER) {
+        position = -1 to -2
         rotation = 1
     }
-    glyph(TRIPLEX_BONDER) {
+    glyph(BONDER) {
+        position = -2 to 0
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = -2 to -1
+        rotation = 0
+    }
+    glyph(BONDER) {
         position = -2 to 0
         rotation = -1
     }
     glyph(TRIPLEX_BONDER) {
         position = -1 to -1
-        rotation = 6
+        rotation = 0
     }
     glyph(TRIPLEX_BONDER) {
         position = -1 to 0
-        rotation = 4
+        rotation = -2
     }
     glyph(TRIPLEX_BONDER) {
         position = 0 to -1
@@ -42,15 +46,18 @@ solution {
     }
     glyph(UNBONDER) {
         position = -1 to 0
-        rotation = 5
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = -1 to -1
+        rotation = -1
     }
     glyph(UNBONDER) {
         position = -1 to -1
         rotation = 1
     }
-    io(INPUT) {
-        index = 0
-        position = -1 to -1
+    glyph(UNBONDER) {
+        position = 0 to -2
         rotation = 0
     }
     io(OUTPUT) {
@@ -58,9 +65,10 @@ solution {
         position = -1 to -1
         rotation = 0
     }
-    track {
-        position = 1 to -1
-        positions = listOf(0 to 0, 0 to -1, -1 to -1)
+    io(INPUT) {
+        index = 0
+        position = -1 to -1
+        rotation = 0
     }
     tape {
         parallel(
@@ -71,53 +79,53 @@ solution {
                 drop()
                 retract()
                 grab()
-                rotateClockwise()
-                drop()
                 rotateCounterClockwise()
+                drop()
+                rotateClockwise()
                 extend()
                 grab()
                 pivotClockwise()
                 drop()
                 retract()
+                rotateCounterClockwise()
                 grab()
-                forward()
+                pivotCounterClockwise()
+                rotateClockwise()
                 drop()
-                back()
+                extend()
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
+                retract()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                rotateClockwise()
                 extend()
                 grab()
                 pivotClockwise()
                 drop()
                 retract()
-                forward()
-                rotateClockwise()
-                grab()
-                rotateClockwise()
-                drop()
                 rotateCounterClockwise()
-                forward()
                 grab()
-                pivotClockwise()
                 pivotCounterClockwise()
                 drop()
-                back()
-                grab()
-                rotateCounterClockwise()
-                drop()
                 rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                extend()
-                drop()
-                retract()
-                back()
-                grab()
-                rotateCounterClockwise()
-                drop()
                 extend()
                 grab()
                 pivotClockwise()
                 drop()
+                retract()
+                grab()
+                pivotClockwise()
+                drop()
+                extend()
+                grab()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                reset()
             }
         }
         )
