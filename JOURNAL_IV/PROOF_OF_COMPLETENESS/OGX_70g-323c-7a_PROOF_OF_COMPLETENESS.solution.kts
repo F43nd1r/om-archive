@@ -1,52 +1,52 @@
 
 solution {
     puzzle = "P069"
-    name = "OG"
+    name = "OAG/OGA"
     arm(ARM1) {
         number = 1
-        position = 2 to 0
-        rotation = -3
+        position = 1 to -1
+        rotation = 3
         size = 1
     }
     glyph(BONDER) {
-        position = 3 to 0
-        rotation = 4
+        position = 1 to -2
+        rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = 2 to -1
+        position = 1 to -2
         rotation = 0
     }
     glyph(DISPERSION) {
-        position = 2 to -1
+        position = 1 to -2
         rotation = 0
+    }
+    io(OUTPUT) {
+        index = 0
+        position = 1 to -2
+        rotation = -1
     }
     io(INPUT) {
         index = 0
-        position = 1 to 0
+        position = 0 to -1
         rotation = 0
-    }
-    io(OUTPUT) {
-        index = 0
-        position = 3 to 0
-        rotation = 4
     }
     io(OUTPUT) {
         index = 1
-        position = 3 to -1
-        rotation = 1
+        position = 1 to -2
+        rotation = -1
     }
     io(OUTPUT) {
         index = 2
-        position = 3 to 0
-        rotation = -2
+        position = 1 to -2
+        rotation = -1
     }
     io(OUTPUT) {
         index = 3
-        position = 2 to -1
-        rotation = 0
+        position = 1 to -2
+        rotation = -1
     }
     track {
-        position = 2 to 0
+        position = 1 to -1
         positions = listOf(0 to 0, 0 to -1)
     }
     tape {
@@ -58,63 +58,54 @@ solution {
                 drop()
                 rotateCounterClockwise()
                 grab()
-                rotateCounterClockwise()
-                drop()
-                forward()
-                rotateClockwise()
-                grab()
-                back()
                 rotateClockwise()
                 drop()
                 forward()
                 grab()
                 rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                rotateCounterClockwise()
                 back()
+                drop()
+                rotateClockwise()
+                grab()
                 rotateCounterClockwise()
                 drop()
                 forward()
-                rotateClockwise()
+                grab()
+                back()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                forward()
+                drop()
                 rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
                 back()
-                rotateCounterClockwise()
                 drop()
-                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
+                forward()
                 grab()
-                rotateClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                back()
                 drop()
                 forward()
                 rotateClockwise()
                 grab()
-                back()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 drop()
-                forward()
-                rotateClockwise()
+                back()
                 grab()
-                back()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                forward()
                 rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
+                reset()
             }
         }
         )
