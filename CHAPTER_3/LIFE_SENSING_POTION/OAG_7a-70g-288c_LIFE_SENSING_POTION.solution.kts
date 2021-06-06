@@ -1,38 +1,38 @@
 
 solution {
     puzzle = "P030b"
-    name = "OVERLAP GG AG"
+    name = "OAG"
     arm(ARM1) {
         number = 1
-        position = -2 to 0
-        rotation = -1
+        position = -2 to 1
+        rotation = -2
         size = 1
     }
     glyph(BONDER) {
-        position = -2 to -1
-        rotation = 0
+        position = -3 to 1
+        rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = -1 to -1
+        position = -2 to 0
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = -2 to 0
-        rotation = -1
+        position = -2 to 1
+        rotation = -2
     }
     io(OUTPUT) {
         index = 0
-        position = -2 to -1
-        rotation = 1
+        position = -3 to 1
+        rotation = 0
     }
     io(INPUT) {
-        index = 2
-        position = -1 to -1
+        index = 1
+        position = -2 to 0
         rotation = 0
     }
     track {
-        position = -3 to 1
-        positions = listOf(0 to 0, 1 to -1)
+        position = -2 to 2
+        positions = listOf(0 to 0, 0 to -1)
     }
     tape {
         parallel(
@@ -40,8 +40,8 @@ solution {
             sequence(1) {
                 grab()
                 back()
-                reset()
-                wait(1)
+                drop()
+                forward()
                 rotateCounterClockwise()
                 grab()
                 rotateCounterClockwise()
@@ -63,9 +63,14 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                rotateCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -77,15 +82,10 @@ solution {
                 rotateCounterClockwise()
                 grab()
                 rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                reset()
             }
         }
         )
