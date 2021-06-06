@@ -1,15 +1,23 @@
 
 solution {
     puzzle = "P039"
-    name = "OVERLAP AC"
+    name = "OVERLAP AX"
     arm(PISTON) {
         number = 1
-        position = 1 to -2
-        rotation = 6
-        size = 1
+        position = 1 to -1
+        rotation = 4
+        size = 2
     }
     glyph(BONDER) {
         position = -1 to -2
+        rotation = 1
+    }
+    glyph(BONDER) {
+        position = -1 to -1
+        rotation = -1
+    }
+    glyph(BONDER) {
+        position = 0 to -2
         rotation = 1
     }
     glyph(BONDER) {
@@ -29,31 +37,19 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = -1 to -1
-        rotation = -1
-    }
-    glyph(BONDER) {
-        position = 0 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = 0 to -3
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = -1 to -1
-        rotation = 1
-    }
-    glyph(UNBONDER) {
         position = 0 to -2
         rotation = -1
     }
-    glyph(CALCIFICATION) {
-        position = -1 to 0
-        rotation = 0
+    glyph(UNBONDER) {
+        position = -1 to -1
+        rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = -10 to -3
+        position = -1 to 0
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -89,6 +85,14 @@ solution {
         {
             sequence(1) {
                 grab()
+                forward()
+                retract()
+                forward()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+                grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 back()
@@ -101,9 +105,12 @@ solution {
                 back()
                 grab()
                 rotateClockwise()
-                forward()
                 drop()
-                back()
+                extend()
+                grab()
+                pivotCounterClockwise()
+                drop()
+                retract()
                 back()
                 rotateClockwise()
                 rotateClockwise()
