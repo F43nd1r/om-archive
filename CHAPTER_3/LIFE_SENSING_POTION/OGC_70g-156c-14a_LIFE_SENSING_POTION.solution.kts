@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P030b"
-    name = "OGC"
+    name = "OVERLAP GC"
     arm(ARM1) {
         number = 1
         position = -2 to 1
@@ -58,10 +58,8 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                forward()
-                back()
-                pivotClockwise()
                 rotateCounterClockwise()
+                pivotClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
