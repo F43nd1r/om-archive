@@ -1,47 +1,57 @@
 
 solution {
     puzzle = "P012"
-    name = "OVERLAP AGX"
+    name = "OAC"
     arm(ARM1) {
         number = 1
-        position = 1 to -1
-        rotation = -1
+        position = -1 to 1
+        rotation = 0
         size = 1
     }
+    arm(PISTON) {
+        number = 2
+        position = 0 to 2
+        rotation = 3
+        size = 2
+    }
     glyph(BONDER) {
-        position = 0 to -1
+        position = -1 to 1
         rotation = 0
     }
     glyph(BONDER) {
-        position = 1 to -1
+        position = -2 to 1
         rotation = 0
     }
     glyph(PROJECTION) {
-        position = 1 to 0
-        rotation = 3
-    }
-    io(INPUT) {
-        index = 0
-        position = 1 to -2
+        position = -2 to 2
         rotation = 0
+    }
+    glyph(PROJECTION) {
+        position = -1 to 2
+        rotation = -1
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to -1
+        position = -1 to 1
+        rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = -1 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 0 to 0
+        position = 0 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = 2 to -2
+        position = -2 to 2
         rotation = 0
     }
     track {
-        position = 1 to 0
+        position = -1 to 2
         positions = listOf(0 to 0, 0 to -1)
     }
     tape {
@@ -51,27 +61,28 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
                 rotateCounterClockwise()
                 drop()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
                 grab()
                 back()
-                reset()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                forward()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(1)
+                grab()
+                drop()
+                wait(1)
+                grab()
+                retract()
+                drop()
+                extend()
             }
         }
         )
