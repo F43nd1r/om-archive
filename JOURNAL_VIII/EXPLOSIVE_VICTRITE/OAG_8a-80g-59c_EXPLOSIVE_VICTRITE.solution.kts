@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P100"
-    name = "OAC"
+    name = "OAG"
     arm(ARM1) {
         number = 1
         position = -1 to 1
@@ -12,10 +12,6 @@ solution {
         position = -3 to 1
         rotation = 5
     }
-    glyph(BONDER) {
-        position = -3 to 2
-        rotation = 4
-    }
     glyph(TRIPLEX_BONDER) {
         position = -2 to 1
         rotation = 9
@@ -23,10 +19,6 @@ solution {
     glyph(TRIPLEX_BONDER) {
         position = -2 to 0
         rotation = 7
-    }
-    glyph(TRIPLEX_BONDER) {
-        position = -3 to 1
-        rotation = 5
     }
     io(INPUT) {
         index = 0
@@ -48,6 +40,7 @@ solution {
             sequence(1) {
                 grab()
                 back()
+                pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
