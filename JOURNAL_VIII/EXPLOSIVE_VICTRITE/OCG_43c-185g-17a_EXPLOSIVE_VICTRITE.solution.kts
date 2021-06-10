@@ -2,11 +2,11 @@
 solution {
     puzzle = "P100"
     name = "OVERLAP CX"
-    arm(PISTON) {
+    arm(ARM1) {
         number = 1
-        position = -2 to -1
+        position = -1 to -2
         rotation = 2
-        size = 1
+        size = 2
     }
     arm(PISTON) {
         number = 2
@@ -58,52 +58,10 @@ solution {
     }
     track {
         position = -2 to -1
-        positions = listOf(0 to 0, 1 to 0)
+        positions = listOf(0 to 0, 1 to 0, 1 to -1)
     }
     tape {
         parallel(
-        {
-            sequence(1) {
-                grab()
-                extend()
-                pivotClockwise()
-                forward()
-                rotateClockwise()
-                pivotCounterClockwise()
-                wait(5)
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
-                retract()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                rotateCounterClockwise()
-                extend()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                pivotClockwise()
-                drop()
-                rotateClockwise()
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(2) {
                 wait(3)
@@ -134,6 +92,50 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 extend()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                grab()
+                forward()
+                pivotClockwise()
+                forward()
+                rotateClockwise()
+                pivotCounterClockwise()
+                wait(5)
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                forward()
+                rotateClockwise()
+                grab()
+                back()
+                pivotClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
+                rotateClockwise()
+                forward()
+                wait(1)
+                grab()
+                back()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
