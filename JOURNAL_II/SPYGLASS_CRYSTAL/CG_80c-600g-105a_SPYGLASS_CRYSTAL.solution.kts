@@ -26,7 +26,7 @@ solution {
         rotation = 0
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 5
         position = -4 to 2
         rotation = 0
@@ -174,7 +174,7 @@ solution {
     }
     track {
         position = -4 to 2
-        positions = listOf(-2 to 0, -1 to 0, 0 to 0, -1 to 1)
+        positions = listOf(-3 to 1, -2 to 0, -1 to 0, 0 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -336,32 +336,6 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                grab()
-                rotateClockwise()
-                drop()
-                retract()
-                back()
-                back()
-                wait(2)
-                grab()
-                forward()
-                rotateCounterClockwise()
-                forward()
-                drop()
-                rotateClockwise()
-                back()
-                back()
-                wait(4)
-                grab()
-                forward()
-                rotateCounterClockwise()
-                forward()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(11) {
                 wait(4)
                 grab()
@@ -455,6 +429,32 @@ solution {
                 reset()
                 wait(4)
                 repeat()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                grab()
+                rotateClockwise()
+                drop()
+                back()
+                back()
+                back()
+                wait(2)
+                grab()
+                forward()
+                rotateCounterClockwise()
+                forward()
+                drop()
+                rotateClockwise()
+                back()
+                back()
+                wait(4)
+                grab()
+                forward()
+                rotateCounterClockwise()
+                forward()
+                reset()
             }
         }
         )
