@@ -1,18 +1,18 @@
 
 solution {
     puzzle = "P100"
-    name = "OVERLAP CX"
+    name = "OVERLAP CG"
     arm(ARM1) {
         number = 1
         position = -1 to -2
         rotation = 2
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 2
-        position = -5 to 1
-        rotation = -1
-        size = 1
+        position = -4 to -2
+        rotation = 1
+        size = 2
     }
     glyph(BONDER) {
         position = -2 to 0
@@ -60,46 +60,12 @@ solution {
         position = -2 to -1
         positions = listOf(0 to 0, 1 to 0, 1 to -1)
     }
+    track {
+        position = -4 to -1
+        positions = listOf(1 to 0, 0 to 0, 0 to -1)
+    }
     tape {
         parallel(
-        {
-            sequence(2) {
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                extend()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
-                retract()
-                rotateClockwise()
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                extend()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
-                retract()
-                rotateClockwise()
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                extend()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
@@ -136,6 +102,44 @@ solution {
                 back()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(3)
+                grab()
+                back()
+                pivotClockwise()
+                back()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                forward()
+                forward()
+                wait(2)
+                grab()
+                back()
+                pivotClockwise()
+                back()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                forward()
+                forward()
+                wait(2)
+                grab()
+                back()
+                back()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
