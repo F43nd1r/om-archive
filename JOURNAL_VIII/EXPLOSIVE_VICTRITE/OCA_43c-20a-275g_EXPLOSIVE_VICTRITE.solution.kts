@@ -49,11 +49,15 @@ solution {
         rotation = -2
     }
     glyph(UNBONDER) {
-        position = 1 to 0
-        rotation = -1
+        position = 2 to -1
+        rotation = 0
     }
     glyph(UNBONDER) {
-        position = 0 to 0
+        position = 2 to 0
+        rotation = -2
+    }
+    glyph(UNBONDER) {
+        position = 1 to 0
         rotation = 0
     }
     io(INPUT) {
@@ -71,12 +75,12 @@ solution {
         positions = listOf(0 to -1, 1 to -1, 0 to 0)
     }
     track {
-        position = 0 to 0
-        positions = listOf(0 to 0, -1 to 0)
-    }
-    track {
         position = 0 to -4
         positions = listOf(0 to 0, 1 to 0, 1 to 1, 0 to 1)
+    }
+    track {
+        position = 0 to 0
+        positions = listOf(0 to 0, -1 to 0)
     }
     tape {
         parallel(
@@ -94,8 +98,8 @@ solution {
                 rotateCounterClockwise()
                 back()
                 grab()
-                pivotClockwise()
                 forward()
+                pivotCounterClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
@@ -104,8 +108,10 @@ solution {
                 pivotCounterClockwise()
                 drop()
                 rotateCounterClockwise()
-                wait(3)
+                back()
+                wait(1)
                 grab()
+                forward()
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
@@ -127,13 +133,9 @@ solution {
                 forward()
                 pivotCounterClockwise()
                 retract()
-                wait(3)
-                pivotCounterClockwise()
-                extend()
-                pivotClockwise()
-                pivotClockwise()
+                wait(7)
                 forward()
-                grab()
+                extend()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
@@ -170,14 +172,9 @@ solution {
                 drop()
                 back()
                 back()
-                extend()
-                wait(8)
-                grab()
-                back()
-                drop()
-                forward()
                 rotateClockwise()
-                wait(1)
+                extend()
+                wait(7)
                 grab()
                 rotateCounterClockwise()
                 back()
