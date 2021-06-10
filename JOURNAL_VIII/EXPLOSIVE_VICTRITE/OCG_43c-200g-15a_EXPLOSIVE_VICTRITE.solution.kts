@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P100"
-    name = "OCA"
+    name = "OVERLAP CX"
     arm(PISTON) {
         number = 1
         position = -2 to -1
@@ -13,12 +13,6 @@ solution {
         position = -5 to 1
         rotation = -1
         size = 1
-    }
-    arm(ARM1) {
-        number = 3
-        position = -2 to 2
-        rotation = -1
-        size = 2
     }
     glyph(BONDER) {
         position = -2 to 0
@@ -84,22 +78,22 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 drop()
+                retract()
+                rotateClockwise()
+                grab()
+                pivotCounterClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                rotateCounterClockwise()
+                extend()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
                 rotateClockwise()
                 wait(3)
                 grab()
-                pivotClockwise()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                drop()
-                retract()
-                rotateClockwise()
-                wait(1)
-                grab()
-                extend()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
@@ -145,15 +139,6 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(10)
-                grab()
-                pivotClockwise()
-                drop()
             }
         }
         )
