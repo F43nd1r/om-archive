@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P038"
-    name = "OAC"
+    name = "OAC (Copy)"
     arm(ARM1) {
         number = 1
         position = 1 to -2
@@ -9,28 +9,28 @@ solution {
         size = 1
     }
     glyph(BONDER) {
-        position = 0 to -2
+        position = 1 to -1
         rotation = 1
     }
     glyph(BONDER) {
-        position = 1 to -1
+        position = 2 to -2
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 0 to -2
         rotation = 1
     }
     glyph(BONDER) {
         position = 0 to -1
         rotation = 0
     }
-    glyph(BONDER) {
-        position = 2 to -2
+    glyph(UNBONDER) {
+        position = 1 to -2
         rotation = 0
     }
     glyph(UNBONDER) {
         position = 2 to -1
         rotation = 3
-    }
-    glyph(UNBONDER) {
-        position = 1 to -2
-        rotation = 0
     }
     glyph(PURIFICATION) {
         position = 1 to -1
@@ -53,7 +53,7 @@ solution {
     }
     track {
         position = 1 to -2
-        positions = listOf(0 to 1, 0 to 0, 1 to 0, 1 to 1)
+        positions = listOf(0 to 0, 1 to 0, 0 to 1, 1 to 1)
     }
     tape {
         parallel(
@@ -64,17 +64,16 @@ solution {
                 forward()
                 rotateClockwise()
                 drop()
-                rotateCounterClockwise()
                 forward()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                forward()
                 grab()
                 rotateClockwise()
-                forward()
+                back()
                 rotateClockwise()
                 drop()
-                back()
+                forward()
                 rotateCounterClockwise()
                 grab()
                 rotateClockwise()
