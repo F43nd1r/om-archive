@@ -164,8 +164,6 @@ solution {
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
-                pivotClockwise()
-                pivotCounterClockwise()
                 drop()
                 rotateCounterClockwise()
                 grab()
