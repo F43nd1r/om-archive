@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P043"
-    name = "TI"
+    name = "TI (Copy)"
     arm(ARM6) {
         number = 1
         position = -11 to -4
@@ -29,7 +29,7 @@ solution {
     arm(VAN_BERLOS_WHEEL) {
         number = 5
         position = -12 to -1
-        rotation = -6
+        rotation = -8
         size = 1
     }
     arm(ARM1) {
@@ -46,8 +46,8 @@ solution {
     }
     arm(ARM1) {
         number = 8
-        position = -9 to -2
-        rotation = -1
+        position = -6 to -8
+        rotation = 1
         size = 3
     }
     arm(ARM1) {
@@ -77,10 +77,6 @@ solution {
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = 3 to -8
-        rotation = 1
-    }
-    glyph(UNBONDER) {
         position = -1 to -11
         rotation = 0
     }
@@ -88,9 +84,9 @@ solution {
         position = 3 to -11
         rotation = 1
     }
-    glyph(CALCIFICATION) {
-        position = -4 to -7
-        rotation = 0
+    glyph(UNBONDER) {
+        position = 3 to -8
+        rotation = 1
     }
     glyph(CALCIFICATION) {
         position = -6 to -6
@@ -101,15 +97,7 @@ solution {
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -1 to -12
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
         position = 2 to -9
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = 4 to -10
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -120,12 +108,24 @@ solution {
         position = 4 to -7
         rotation = 0
     }
+    glyph(CALCIFICATION) {
+        position = -7 to -6
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
+        position = -1 to -10
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
+        position = 4 to -10
+        rotation = 0
+    }
     glyph(DUPLICATION) {
         position = -12 to -2
         rotation = -1
     }
     glyph(DUPLICATION) {
-        position = -11 to -2
+        position = -11 to -1
         rotation = -1
     }
     glyph(DUPLICATION) {
@@ -133,20 +133,20 @@ solution {
         rotation = -2
     }
     glyph(DUPLICATION) {
-        position = 2 to -12
-        rotation = 0
-    }
-    glyph(DUPLICATION) {
         position = 5 to -12
         rotation = 2
+    }
+    glyph(DUPLICATION) {
+        position = 2 to -12
+        rotation = 1
     }
     glyph(PURIFICATION) {
         position = -5 to -3
         rotation = 1
     }
     glyph(ANIMISMUS) {
-        position = -11 to -5
-        rotation = -3
+        position = -12 to -5
+        rotation = -6
     }
     io(INPUT) {
         index = 0
@@ -156,7 +156,7 @@ solution {
     io(OUTPUT) {
         index = 0
         position = 0 to -5
-        rotation = 0
+        rotation = 3
     }
     io(INPUT) {
         index = 1
@@ -170,7 +170,7 @@ solution {
     }
     io(INPUT) {
         index = 3
-        position = -10 to -2
+        position = -9 to -2
         rotation = 0
     }
     io(INPUT) {
@@ -182,7 +182,6 @@ solution {
         parallel(
         {
             sequence(4) {
-                wait(2)
                 grab()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
@@ -194,7 +193,7 @@ solution {
         , 
         {
             sequence(1) {
-                wait(8)
+                wait(14)
                 grab()
                 rotateClockwise()
                 drop()
@@ -203,6 +202,7 @@ solution {
         , 
         {
             sequence(2) {
+                wait(6)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -213,6 +213,7 @@ solution {
         , 
         {
             sequence(3) {
+                wait(6)
                 grab()
                 rotateClockwise()
                 drop()
@@ -220,16 +221,8 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(10)
-                rotateClockwise()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
             sequence(7) {
-                wait(3)
+                wait(9)
                 grab()
                 rotateClockwise()
                 drop()
@@ -238,7 +231,7 @@ solution {
         , 
         {
             sequence(6) {
-                wait(6)
+                wait(12)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -248,8 +241,17 @@ solution {
         }
         , 
         {
+            sequence(9) {
+                wait(14)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(8) {
-                wait(8)
+                wait(14)
                 grab()
                 pivotClockwise()
                 drop()
@@ -257,11 +259,8 @@ solution {
         }
         , 
         {
-            sequence(9) {
-                wait(8)
-                grab()
+            sequence(5) {
                 rotateCounterClockwise()
-                drop()
             }
         }
         )
