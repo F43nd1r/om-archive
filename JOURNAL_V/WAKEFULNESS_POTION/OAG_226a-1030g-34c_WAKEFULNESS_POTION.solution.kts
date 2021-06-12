@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P088"
-    name = "B CI192 2T (COPY)"
+    name = "B CI192 2T"
     arm(ARM1) {
         number = 1
         position = 13 to -4
@@ -281,7 +281,11 @@ solution {
     }
     track {
         position = -1 to 8
-        positions = listOf(-2 to -1, -3 to 0, -3 to 1, -2 to 1, -1 to 0, 0 to -1, 0 to -2, -1 to -1, -2 to 0)
+        positions = listOf(-2 to -1, -3 to 0, -3 to 1, -2 to 1, -1 to 0)
+    }
+    track {
+        position = -2 to 7
+        positions = listOf(2 to 0, 1 to 0, 1 to -1, 0 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -477,6 +481,19 @@ solution {
         }
         , 
         {
+            sequence(27) {
+                wait(20)
+                grab()
+                back()
+                back()
+                back()
+                back()
+                drop()
+                rotateCounterClockwise()
+            }
+        }
+        , 
+        {
             sequence(25) {
                 wait(29)
                 grab()
@@ -493,6 +510,22 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateClockwise()
+            }
+        }
+        , 
+        {
+            sequence(20) {
+                wait(22)
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                wait(1)
+                grab()
+                pivotCounterClockwise()
+                rotateClockwise()
+                drop()
             }
         }
         , 
@@ -564,19 +597,6 @@ solution {
         }
         , 
         {
-            sequence(27) {
-                wait(20)
-                grab()
-                back()
-                back()
-                back()
-                back()
-                drop()
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
             sequence(21) {
                 wait(4)
                 grab()
@@ -585,22 +605,6 @@ solution {
                 back()
                 drop()
                 rotateCounterClockwise()
-            }
-        }
-        , 
-        {
-            sequence(20) {
-                wait(22)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                wait(1)
-                grab()
-                pivotCounterClockwise()
-                rotateClockwise()
-                drop()
             }
         }
         )
