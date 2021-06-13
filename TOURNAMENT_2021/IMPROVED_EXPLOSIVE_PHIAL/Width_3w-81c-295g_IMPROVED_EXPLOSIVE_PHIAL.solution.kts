@@ -4,93 +4,97 @@ solution {
     name = "NEW SOLUTION 1"
     arm(ARM1) {
         number = 1
-        position = 0 to -4
+        position = -1 to -2
         rotation = 1
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = 0 to -1
+        position = -1 to 1
         rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 3
-        position = 2 to -2
+        position = 1 to 0
         rotation = 3
         size = 1
     }
     arm(PISTON) {
         number = 4
-        position = 3 to 1
+        position = 2 to 3
         rotation = -2
         size = 2
     }
     arm(ARM1) {
         number = 5
-        position = -1 to -4
+        position = -2 to -2
         rotation = 1
         size = 1
     }
     arm(ARM1) {
         number = 6
-        position = -2 to -5
-        rotation = 1
-        size = 2
+        position = -2 to -3
+        rotation = 2
+        size = 1
     }
     glyph(BONDER) {
-        position = -2 to -4
+        position = -3 to -2
         rotation = 1
     }
     glyph(BONDER) {
-        position = -3 to -5
+        position = -4 to -3
         rotation = 1
     }
     glyph(TRIPLEX_BONDER) {
-        position = 2 to -1
+        position = 1 to 1
         rotation = 0
     }
     glyph(TRIPLEX_BONDER) {
-        position = 4 to -1
+        position = 3 to 1
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = -1 to -2
+        position = -2 to 0
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 4 to 3
+        position = 3 to 5
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 4 to 1
+        position = 3 to 3
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 5 to 2
+        position = 4 to 4
         rotation = 1
     }
     io(INPUT) {
         index = 0
-        position = 1 to -3
+        position = 0 to -1
         rotation = -3
     }
     track {
-        position = 1 to 0
-        positions = listOf(0 to 0, 0 to -1, -1 to -1, 0 to -2, 1 to -2, 2 to -2)
-    }
-    track {
-        position = 2 to 1
+        position = 1 to 3
         positions = listOf(0 to 0, 1 to 0, 1 to 1, 2 to 1)
     }
     track {
-        position = 0 to -4
+        position = -1 to -2
         positions = listOf(0 to 0, -1 to 1, -1 to 0)
     }
     track {
-        position = -2 to -5
-        positions = listOf(-1 to -2, 0 to -2, 0 to -1, 0 to 0)
+        position = -2 to -3
+        positions = listOf(0 to 0, 0 to -1, -1 to -1)
+    }
+    track {
+        position = 0 to 2
+        positions = listOf(0 to 0, 0 to -1, -1 to -1)
+    }
+    track {
+        position = 1 to 0
+        positions = listOf(0 to 0, 1 to 0)
     }
     tape {
         parallel(
@@ -152,18 +156,6 @@ solution {
         }
         , 
         {
-            sequence(6) {
-                wait(8)
-                grab()
-                back()
-                pivotClockwise()
-                back()
-                back()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(4) {
                 wait(13)
                 back()
@@ -171,6 +163,21 @@ solution {
                 retract()
                 forward()
                 rotateCounterClockwise()
+                forward()
+                forward()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(7)
+                grab()
+                forward()
+                reset()
+                wait(1)
+                grab()
+                pivotClockwise()
                 forward()
                 forward()
                 reset()
