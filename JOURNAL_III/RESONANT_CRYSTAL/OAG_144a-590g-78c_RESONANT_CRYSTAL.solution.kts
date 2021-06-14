@@ -16,9 +16,9 @@ solution {
     }
     arm(ARM1) {
         number = 3
-        position = 0 to -8
+        position = 0 to -7
         rotation = 1
-        size = 3
+        size = 2
     }
     arm(ARM6) {
         number = 4
@@ -157,10 +157,6 @@ solution {
         positions = listOf(0 to 0, 0 to -1, -1 to -1, -1 to 0)
     }
     track {
-        position = 1 to -8
-        positions = listOf(0 to 0, -1 to 0, -1 to 1)
-    }
-    track {
         position = -2 to -5
         positions = listOf(0 to 0, 1 to 0)
     }
@@ -171,6 +167,10 @@ solution {
     track {
         position = -3 to 3
         positions = listOf(1 to 0, 0 to 0, -1 to 1, 0 to 1)
+    }
+    track {
+        position = 1 to -7
+        positions = listOf(0 to 0, -1 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -196,24 +196,6 @@ solution {
                 reset()
                 wait(1)
                 extendTape()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(4)
-                grab()
-                forward()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                back()
-                reset()
-                wait(3)
-                repeat()
-                wait(11)
-                repeat()
             }
         }
         , 
@@ -427,6 +409,24 @@ solution {
                 drop()
                 back()
                 wait(7)
+                repeat()
+                wait(11)
+                repeat()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(4)
+                grab()
+                forward()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                back()
+                reset()
+                wait(3)
                 repeat()
                 wait(11)
                 repeat()
