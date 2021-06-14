@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P055"
-    name = "B CI70"
+    name = "B CI66"
     arm(ARM1) {
         number = 1
         position = 3 to -3
@@ -32,25 +32,25 @@ solution {
         rotation = 3
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 6
         position = -1 to 5
         rotation = 4
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 7
         position = -2 to 5
         rotation = 5
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 8
         position = 0 to 2
         rotation = 4
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 9
         position = 0 to 3
         rotation = 5
@@ -125,20 +125,6 @@ solution {
         }
         , 
         {
-            sequence(6) {
-                wait(2)
-                grab()
-                forward()
-                rotateCounterClockwise()
-                forward()
-                forward()
-                drop()
-                forward()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
             sequence(1) {
                 grab()
                 forward()
@@ -177,7 +163,7 @@ solution {
         }
         , 
         {
-            sequence(8) {
+            sequence(6) {
                 wait(2)
                 grab()
                 forward()
@@ -186,7 +172,6 @@ solution {
                 forward()
                 drop()
                 forward()
-                rotateClockwise()
             }
         }
         , 
@@ -194,7 +179,7 @@ solution {
             sequence(7) {
                 wait(4)
                 forward()
-                rotateClockwise()
+                wait(1)
                 grab()
                 forward()
                 rotateCounterClockwise()
@@ -208,13 +193,26 @@ solution {
             sequence(9) {
                 wait(4)
                 forward()
-                rotateClockwise()
+                wait(1)
                 grab()
                 forward()
                 rotateCounterClockwise()
                 forward()
                 forward()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(2)
+                grab()
+                forward()
+                rotateCounterClockwise()
+                forward()
+                forward()
+                drop()
+                forward()
             }
         }
         )
