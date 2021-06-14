@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P062"
-    name = "B CI"
+    name = "B CI63"
     arm(ARM1) {
         number = 1
         position = 1 to 1
@@ -111,7 +111,7 @@ solution {
     }
     track {
         position = -4 to -2
-        positions = listOf(-1 to 0, 0 to 0, 0 to 1)
+        positions = listOf(1 to -1, 0 to 0, 0 to 1)
     }
     tape {
         parallel(
@@ -205,6 +205,19 @@ solution {
         }
         , 
         {
+            sequence(9) {
+                wait(19)
+                grab()
+                rotateClockwise()
+                wait(1)
+                pivotCounterClockwise()
+                back()
+                drop()
+                forward()
+            }
+        }
+        , 
+        {
             sequence(10) {
                 wait(10)
                 grab()
@@ -213,18 +226,6 @@ solution {
                 back()
                 drop()
                 back()
-            }
-        }
-        , 
-        {
-            sequence(9) {
-                wait(19)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                back()
-                drop()
-                forward()
             }
         }
         )
