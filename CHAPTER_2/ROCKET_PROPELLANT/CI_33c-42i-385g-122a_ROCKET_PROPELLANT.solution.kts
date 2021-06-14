@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P019"
-    name = "B CIG"
+    name = "B CI42 2T"
     arm(ARM6) {
         number = 1
         position = -6 to 3
@@ -34,8 +34,8 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = 4 to -3
-        rotation = 2
+        position = 4 to -1
+        rotation = 3
         size = 2
     }
     arm(ARM6) {
@@ -98,16 +98,16 @@ solution {
         positions = listOf(0 to 0, 0 to 1)
     }
     track {
-        position = 4 to -2
-        positions = listOf(1 to -1, 0 to 0, 0 to -1)
-    }
-    track {
         position = 1 to 2
         positions = listOf(0 to 0, 1 to -1)
     }
     track {
         position = 1 to -2
         positions = listOf(0 to 0, 1 to -1)
+    }
+    track {
+        position = 4 to 0
+        positions = listOf(1 to -1, 0 to 0, 0 to -1)
     }
     tape {
         parallel(
@@ -159,24 +159,21 @@ solution {
         }
         , 
         {
-            sequence(5) {
+            sequence(8) {
+                wait(8)
                 grab()
+                back()
                 rotateCounterClockwise()
                 drop()
+                forward()
             }
         }
         , 
         {
-            sequence(6) {
-                wait(2)
+            sequence(5) {
                 grab()
-                back()
-                reset()
-                wait(1)
-                grab()
-                forward()
-                forward()
-                reset()
+                rotateCounterClockwise()
+                drop()
             }
         }
         , 
@@ -192,13 +189,16 @@ solution {
         }
         , 
         {
-            sequence(8) {
-                wait(8)
+            sequence(6) {
+                wait(2)
                 grab()
                 back()
-                rotateCounterClockwise()
-                drop()
+                reset()
+                wait(1)
+                grab()
                 forward()
+                forward()
+                reset()
             }
         }
         )
