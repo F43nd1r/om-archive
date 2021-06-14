@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P063"
-    name = "B CI259 2T"
+    name = "B CI258 2T"
     arm(ARM1) {
         number = 1
         position = -1 to 3
@@ -62,7 +62,7 @@ solution {
         rotation = 1
         size = 3
     }
-    arm(ARM3) {
+    arm(ARM6) {
         number = 11
         position = -5 to 0
         rotation = 0
@@ -314,8 +314,8 @@ solution {
                 drop()
                 rotateClockwise()
                 wait(2)
-                back()
                 grab()
+                back()
                 rotateClockwise()
                 forward()
                 rotateClockwise()
@@ -428,15 +428,6 @@ solution {
         }
         , 
         {
-            sequence(11) {
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(1) {
                 wait(2)
                 grab()
@@ -448,6 +439,14 @@ solution {
                 reset()
                 wait(5)
                 repeat()
+            }
+        }
+        , 
+        {
+            sequence(11) {
+                grab()
+                rotateClockwise()
+                drop()
             }
         }
         )
