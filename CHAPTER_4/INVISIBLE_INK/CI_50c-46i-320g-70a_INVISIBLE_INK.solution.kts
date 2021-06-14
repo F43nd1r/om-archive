@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P032"
-    name = "B CI36G"
+    name = "B CI46"
     arm(ARM2) {
         number = 1
         position = 1 to -1
@@ -14,7 +14,7 @@ solution {
         rotation = -2
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 3
         position = 2 to -1
         rotation = 0
@@ -38,7 +38,7 @@ solution {
         rotation = 1
         size = 3
     }
-    arm(ARM1) {
+    arm(ARM3) {
         number = 7
         position = -3 to -1
         rotation = 3
@@ -85,7 +85,7 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -2 to 1
+        position = -3 to 1
         rotation = 1
     }
     io(INPUT) {
@@ -95,7 +95,7 @@ solution {
     }
     io(OUTPUT) {
         index = 1
-        position = 1 to -3
+        position = 2 to -3
         rotation = -5
     }
     track {
@@ -114,7 +114,6 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 back()
-                rotateClockwise()
                 reset()
             }
         }
@@ -135,19 +134,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 back()
-                rotateClockwise()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(7) {
-                wait(2)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(1)
-                repeat()
             }
         }
         , 
@@ -182,13 +169,30 @@ solution {
         }
         , 
         {
+            sequence(7) {
+                wait(2)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(3) {
                 wait(2)
                 grab()
                 rotateClockwise()
                 reset()
                 wait(1)
-                repeat()
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
             }
         }
         )
