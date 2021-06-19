@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P040"
-    name = "OGA (Copy)"
+    name = "OGA (COPY)"
     arm(ARM1) {
         number = 1
         position = -2 to -1
