@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P038"
-    name = "OAC (Copy)"
+    name = "OAC (COPY)"
     arm(ARM1) {
         number = 1
         position = 1 to -2
