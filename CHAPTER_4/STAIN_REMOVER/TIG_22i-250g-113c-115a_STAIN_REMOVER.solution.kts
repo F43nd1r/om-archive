@@ -28,15 +28,15 @@ solution {
     }
     arm(ARM3) {
         number = 5
-        position = -12 to -2
+        position = -13 to -2
         rotation = 1
-        size = 3
+        size = 2
     }
     arm(ARM6) {
         number = 6
-        position = -11 to -3
+        position = -12 to -3
         rotation = 0
-        size = 2
+        size = 1
     }
     glyph(BONDER) {
         position = -21 to -4
@@ -51,30 +51,26 @@ solution {
         rotation = 0
     }
     glyph(BONDER) {
-        position = -9 to -2
+        position = -11 to -2
         rotation = -2
     }
     glyph(CALCIFICATION) {
-        position = -20 to -3
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = -11 to 0
+        position = -17 to 0
         rotation = 0
     }
     glyph(PURIFICATION) {
         position = -21 to 1
         rotation = 2
     }
-    io(INPUT) {
-        index = 0
-        position = -9 to -5
-        rotation = 0
-    }
     io(OUTPUT) {
         index = 0
         position = -16 to 1
         rotation = 2
+    }
+    io(INPUT) {
+        index = 0
+        position = -11 to -4
+        rotation = 0
     }
     io(INPUT) {
         index = 1
