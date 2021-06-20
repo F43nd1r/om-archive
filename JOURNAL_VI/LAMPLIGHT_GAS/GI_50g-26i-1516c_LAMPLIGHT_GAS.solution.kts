@@ -13,18 +13,18 @@ solution {
         rotation = 0
     }
     glyph(DUPLICATION) {
-        position = 5 to 4
-        rotation = 9
-    }
-    io(INPUT) {
-        index = 0
-        position = 4 to 2
-        rotation = 0
+        position = 4 to 4
+        rotation = 12
     }
     io(OUTPUT) {
         index = 0
         position = 7 to 3
-        rotation = -2
+        rotation = 0
+    }
+    io(INPUT) {
+        index = 0
+        position = 4 to 2
+        rotation = 1
     }
     tape {
         parallel(
@@ -49,17 +49,13 @@ solution {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
                 drop()
+                rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
                 drop()
+                rotateClockwise()
             }
         }
         )
