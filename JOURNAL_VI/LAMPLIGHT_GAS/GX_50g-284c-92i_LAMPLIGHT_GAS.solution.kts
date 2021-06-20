@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P092"
-    name = "B GX"
+    name = "GX"
     arm(ARM1) {
         number = 1
         position = 5 to 3
@@ -19,12 +19,12 @@ solution {
     io(OUTPUT) {
         index = 0
         position = 3 to 4
-        rotation = -1
+        rotation = 0
     }
     io(INPUT) {
         index = 0
         position = 6 to 4
-        rotation = 1
+        rotation = 0
     }
     tape {
         parallel(
@@ -38,32 +38,10 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                pivotClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
@@ -93,9 +71,57 @@ solution {
                 pivotCounterClockwise()
                 rotateClockwise()
                 drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                grab()
+                pivotClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
                 rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                drop()
+                rotateClockwise()
+                rotateClockwise()
+                rotateClockwise()
             }
         }
         )
