@@ -1,42 +1,34 @@
 
 solution {
     puzzle = "P008"
-    name = "OVERLAP GA"
+    name = "OGA"
     arm(ARM1) {
         number = 1
-        position = 2 to -3
-        rotation = 4
+        position = -1 to 1
+        rotation = -2
         size = 1
     }
     glyph(BONDER) {
-        position = 1 to -2
-        rotation = -2
+        position = -2 to 1
+        rotation = 1
     }
     glyph(CALCIFICATION) {
-        position = 1 to -1
+        position = -3 to 2
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 3 to -3
+        position = 0 to 1
         rotation = 0
     }
-    glyph(EQUILIBRIUM) {
-        position = 0 to -2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 0 to -1
+    io(INPUT) {
+        index = 0
+        position = -1 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to -3
-        rotation = -5
-    }
-    io(INPUT) {
-        index = 1
-        position = 2 to -4
-        rotation = 0
+        position = -2 to 1
+        rotation = 1
     }
     tape {
         parallel(
@@ -49,9 +41,9 @@ solution {
                 wait(2)
                 grab()
                 rotateClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
                 pivotClockwise()
+                rotateClockwise()
                 rotateClockwise()
                 reset()
                 wait(3)
@@ -63,8 +55,6 @@ solution {
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
-                rotateClockwise()
-                rotateCounterClockwise()
                 pivotCounterClockwise()
                 drop()
                 rotateClockwise()
