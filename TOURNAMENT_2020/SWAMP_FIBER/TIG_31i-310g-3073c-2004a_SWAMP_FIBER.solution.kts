@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w2501727889"
-    name = "B TI31A 1-48T"
+    name = "B TI31G 1-48T"
     arm(ARM6) {
         number = 1
         position = 1 to -3
@@ -46,7 +46,7 @@ solution {
     }
     arm(ARM1) {
         number = 8
-        position = -12 to 12
+        position = -4 to 4
         rotation = 1
         size = 3
     }
@@ -82,10 +82,6 @@ solution {
         position = -2 to 8
         rotation = -3
     }
-    glyph(UNBONDER) {
-        position = -1 to 18
-        rotation = -2
-    }
     glyph(CALCIFICATION) {
         position = 0 to -1
         rotation = 0
@@ -103,31 +99,7 @@ solution {
         rotation = 2
     }
     glyph(EQUILIBRIUM) {
-        position = -4 to 5
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -4 to 6
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -4 to 4
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -5 to 5
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -6 to 6
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -6 to 8
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -7 to 10
+        position = -28 to 8
         rotation = 0
     }
     io(INPUT) {
@@ -137,7 +109,7 @@ solution {
     }
     io(INFINITE) {
         index = 0
-        position = -25 to 16
+        position = -29 to 8
         rotation = 0
     }
     io(OUTPUT) {
@@ -223,7 +195,7 @@ solution {
         , 
         {
             sequence(8) {
-                wait(2687)
+                wait(3071)
                 grab()
                 pivotCounterClockwise()
             }
