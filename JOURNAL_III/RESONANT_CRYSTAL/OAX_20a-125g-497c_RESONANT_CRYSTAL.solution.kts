@@ -1,8 +1,8 @@
 
 solution {
     puzzle = "P066"
-    name = "OVERLAP AG"
-    arm(ARM1) {
+    name = "OVERLAP AX"
+    arm(PISTON) {
         number = 1
         position = -1 to 1
         rotation = -2
@@ -17,7 +17,7 @@ solution {
         rotation = -2
     }
     glyph(BONDER) {
-        position = -4 to -1
+        position = -3 to -2
         rotation = 0
     }
     glyph(MULTI_BONDER) {
@@ -40,7 +40,7 @@ solution {
     }
     track {
         position = -2 to 1
-        positions = listOf(1 to 0, 0 to 0, -1 to 0, -1 to -1, 0 to -2)
+        positions = listOf(1 to 0, 0 to 0, 0 to -1)
     }
     tape {
         parallel(
@@ -66,60 +66,51 @@ solution {
                 pivotCounterClockwise()
                 drop()
                 forward()
-                forward()
-                forward()
                 rotateCounterClockwise()
                 grab()
-                forward()
+                extend()
                 drop()
+                retract()
                 rotateClockwise()
-                back()
-                back()
-                back()
                 back()
                 grab()
                 rotateClockwise()
-                forward()
                 forward()
                 pivotClockwise()
+                drop()
                 forward()
+                grab()
+                extend()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                retract()
+                back()
+                back()
+                grab()
+                rotateClockwise()
                 forward()
                 drop()
-                back()
-                back()
-                back()
                 back()
                 rotateCounterClockwise()
                 grab()
                 rotateClockwise()
                 forward()
-                forward()
-                pivotClockwise()
-                forward()
-                forward()
                 drop()
-                back()
-                back()
-                back()
-                back()
-                rotateCounterClockwise()
+                extend()
                 grab()
-                rotateClockwise()
-                forward()
-                forward()
                 pivotClockwise()
                 forward()
                 drop()
-                back()
+                retract()
                 back()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                forward()
+                rotateClockwise()
                 forward()
                 drop()
-                rotateClockwise()
-                back()
                 back()
                 back()
                 grab()
