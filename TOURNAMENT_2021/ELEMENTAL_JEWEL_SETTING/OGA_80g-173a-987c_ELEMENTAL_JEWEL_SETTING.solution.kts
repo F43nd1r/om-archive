@@ -1,35 +1,35 @@
 
 solution {
     puzzle = "w2450512809"
-    name = "B"
+    name = "B (Copy)"
     arm(ARM1) {
         number = 1
-        position = 1 to 1
+        position = 1 to -2
         rotation = 2
         size = 1
     }
     arm(VAN_BERLOS_WHEEL) {
         number = 2
-        position = -2 to 1
-        rotation = 3
+        position = 0 to -3
+        rotation = 4
         size = 1
     }
     glyph(BONDER) {
-        position = 1 to 2
+        position = 1 to -1
         rotation = -1
     }
     glyph(DUPLICATION) {
-        position = -2 to 2
-        rotation = 0
+        position = -1 to -2
+        rotation = 1
     }
     io(INPUT) {
         index = 0
-        position = 0 to 1
-        rotation = 1
+        position = -1 to 0
+        rotation = -1
     }
     io(OUTPUT) {
         index = 0
-        position = 5 to -8
+        position = 6 to -11
         rotation = 1
     }
     tape {
@@ -37,7 +37,7 @@ solution {
         {
             sequence(1) {
                 grab()
-                pivotClockwise()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -49,32 +49,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
-                rotateClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                pivotClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                pivotClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -87,7 +62,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -99,32 +74,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
-                rotateClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                pivotClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(2)
-                grab()
-                pivotClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -137,7 +87,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -149,7 +99,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -162,7 +112,7 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -174,7 +124,57 @@ solution {
                 reset()
                 wait(2)
                 grab()
-                pivotClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                pivotCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                pivotCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                pivotCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                reset()
+                wait(2)
+                grab()
+                pivotCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -185,8 +185,11 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 rotateClockwise()
-                rotateClockwise()
-                reset()
+                pivotClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
             }
         }
         , 
