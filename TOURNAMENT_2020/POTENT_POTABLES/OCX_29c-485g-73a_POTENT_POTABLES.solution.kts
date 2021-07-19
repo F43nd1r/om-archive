@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w2501727721"
-    name = "B CA 2T"
+    name = "B CX 2T"
     arm(ARM1) {
         number = 1
         position = 0 to -2
@@ -40,14 +40,14 @@ solution {
     }
     arm(ARM1) {
         number = 7
-        position = 5 to -1
-        rotation = 2
+        position = 5 to 0
+        rotation = 3
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 8
-        position = 4 to 1
-        rotation = 4
+        position = 6 to -1
+        rotation = 3
         size = 1
     }
     arm(ARM1) {
@@ -144,12 +144,12 @@ solution {
         positions = listOf(-1 to 1, -1 to 0, 0 to 0, 0 to 1)
     }
     track {
-        position = 2 to -3
-        positions = listOf(1 to 0, 0 to 1, 0 to 0, -1 to 1)
+        position = 5 to -1
+        positions = listOf(1 to 0, 0 to 0, 0 to 1)
     }
     track {
-        position = 5 to -2
-        positions = listOf(0 to 0, 0 to 1)
+        position = 2 to -3
+        positions = listOf(1 to 0, 0 to 1, 0 to 0, -1 to 1)
     }
     tape {
         parallel(
@@ -284,6 +284,30 @@ solution {
         }
         , 
         {
+            sequence(7) {
+                wait(4)
+                grab()
+                pivotCounterClockwise()
+                back()
+                drop()
+                back()
+                wait(2)
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(7)
+                back()
+                grab()
+                pivotCounterClockwise()
+                back()
+                reset()
+            }
+        }
+        , 
+        {
             sequence(3) {
                 wait(2)
                 grab()
@@ -302,26 +326,6 @@ solution {
                 reset()
                 wait(1)
                 repeat()
-            }
-        }
-        , 
-        {
-            sequence(7) {
-                wait(4)
-                grab()
-                pivotCounterClockwise()
-                back()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(8) {
-                wait(8)
-                grab()
-                pivotCounterClockwise()
-                extend()
-                reset()
             }
         }
         )
