@@ -246,8 +246,9 @@ solution {
                 pivotCounterClockwise()
                 extend()
                 drop()
+                wait(1)
                 forward()
-                wait(2)
+                wait(1)
                 forward()
                 retract()
                 retract()
@@ -306,12 +307,13 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
+                wait(1)
+                rotateClockwise()
                 extend()
                 forward()
-                wait(2)
-                rotateClockwise()
                 forward()
                 forward()
+                wait(1)
                 forward()
                 forward()
                 drop()
@@ -418,24 +420,6 @@ solution {
                 forward()
                 forward()
                 drop()
-                back()
-            }
-        }
-        , 
-        {
-            sequence(15) {
-                wait(4)
-                back()
-                wait(1)
-                back()
-                wait(1)
-                grab()
-                forward()
-                forward()
-                drop()
-                wait(2)
-                forward()
-                wait(1)
                 back()
             }
         }
@@ -554,6 +538,24 @@ solution {
                 extend()
                 drop()
                 retract()
+            }
+        }
+        , 
+        {
+            sequence(15) {
+                wait(4)
+                back()
+                wait(1)
+                back()
+                wait(1)
+                grab()
+                forward()
+                forward()
+                drop()
+                wait(2)
+                forward()
+                wait(1)
+                back()
             }
         }
         )
