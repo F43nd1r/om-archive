@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w2450511665"
-    name = "OVERLAP AX"
+    name = "OVERLAP AC"
     arm(ARM1) {
         number = 1
         position = 1 to -1
@@ -20,6 +20,22 @@ solution {
         position = 2 to 0
         rotation = -1
     }
+    glyph(BONDER) {
+        position = 1 to -1
+        rotation = 1
+    }
+    glyph(BONDER) {
+        position = 1 to -2
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = 2 to -1
+        rotation = 2
+    }
+    glyph(UNBONDER) {
+        position = 2 to -1
+        rotation = -1
+    }
     glyph(UNBONDER) {
         position = 2 to -2
         rotation = 1
@@ -29,11 +45,11 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = 2 to -1
-        rotation = 2
+        position = 1 to -1
+        rotation = 0
     }
     glyph(UNBONDER) {
-        position = 2 to -1
+        position = 0 to -1
         rotation = -1
     }
     glyph(CALCIFICATION) {
@@ -48,23 +64,19 @@ solution {
         position = 2 to -1
         rotation = 0
     }
-    glyph(EQUILIBRIUM) {
-        position = 0 to -1
-        rotation = 0
+    io(INPUT) {
+        index = 0
+        position = 3 to -1
+        rotation = -3
     }
     io(OUTPUT) {
         index = 0
         position = 3 to -1
         rotation = -6
     }
-    io(INPUT) {
-        index = 0
-        position = 3 to -1
-        rotation = -3
-    }
     track {
         position = 1 to -1
-        positions = listOf(0 to -1, 0 to 0, 1 to 0)
+        positions = listOf(1 to -1, 0 to -1, 0 to 0, 1 to 0)
     }
     tape {
         parallel(
@@ -94,10 +106,9 @@ solution {
                 grab()
                 forward()
                 back()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
+                back()
+                pivotClockwise()
+                forward()
                 rotateClockwise()
                 drop()
                 forward()
@@ -107,15 +118,11 @@ solution {
                 drop()
                 back()
                 rotateClockwise()
-                rotateClockwise()
                 grab()
+                rotateClockwise()
                 rotateCounterClockwise()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
                 forward()
                 grab()
                 back()
@@ -127,10 +134,9 @@ solution {
                 grab()
                 forward()
                 back()
-                rotateClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
+                back()
+                pivotClockwise()
+                forward()
                 rotateClockwise()
                 drop()
                 forward()
@@ -153,13 +159,9 @@ solution {
                 rotateClockwise()
                 forward()
                 drop()
-                back()
                 rotateClockwise()
-                grab()
-                forward()
-                drop()
-                back()
                 rotateClockwise()
+                back()
                 grab()
                 forward()
                 rotateClockwise()
