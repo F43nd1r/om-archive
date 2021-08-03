@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "w2450511665"
-    name = "OG"
+    name = "OVERLAP GC"
     arm(ARM1) {
         number = 1
         position = 2 to -1
-        rotation = 1
+        rotation = 3
         size = 1
     }
     glyph(BONDER) {
@@ -45,21 +45,21 @@ solution {
                 grab()
                 rotateClockwise()
                 rotateClockwise()
-                rotateCounterClockwise()
-                pivotClockwise()
-                pivotClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
                 rotateClockwise()
                 forward()
                 drop()
                 rotateCounterClockwise()
                 grab()
-                pivotCounterClockwise()
-                drop()
                 rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
+                pivotClockwise()
+                drop()
                 rotateClockwise()
+                grab()
+                pivotClockwise()
+                pivotClockwise()
                 back()
                 drop()
                 rotateClockwise()
@@ -115,8 +115,8 @@ solution {
                 rotateCounterClockwise()
                 grab()
                 pivotCounterClockwise()
-                pivotCounterClockwise()
                 rotateClockwise()
+                pivotCounterClockwise()
                 back()
                 drop()
                 rotateClockwise()
