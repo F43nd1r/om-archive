@@ -1,52 +1,48 @@
 
 solution {
     puzzle = "P031b"
-    name = "INSTRUCTIONS NO TRACK 9"
+    name = "NEW SOLUTION 2"
     arm(ARM6) {
         number = 1
-        position = -2 to 1
+        position = -9 to -5
         rotation = 0
         size = 3
     }
-    arm(ARM6) {
+    arm(ARM1) {
         number = 2
-        position = 2 to -1
-        rotation = 1
-        size = 1
+        position = -10 to -4
+        rotation = -3
+        size = 2
     }
     glyph(BONDER) {
-        position = -4 to 5
+        position = -11 to -1
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -5 to 4
-        rotation = 2
+        position = -13 to -1
+        rotation = -1
     }
     glyph(UNBONDER) {
-        position = -2 to 4
-        rotation = 0
+        position = -12 to -1
+        rotation = -1
     }
     glyph(UNBONDER) {
-        position = -4 to 4
-        rotation = 2
-    }
-    glyph(UNBONDER) {
-        position = 2 to 0
+        position = -9 to -2
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -5 to 2
-        rotation = 1
+        position = -12 to -4
+        rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to 0
+        position = -6 to -8
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = 1 to 1
+        position = -6 to -5
         rotation = 0
     }
     tape {
@@ -62,9 +58,9 @@ solution {
         , 
         {
             sequence(2) {
-                wait(2)
+                wait(70)
                 grab()
-                rotateCounterClockwise()
+                pivotClockwise()
                 drop()
             }
         }
