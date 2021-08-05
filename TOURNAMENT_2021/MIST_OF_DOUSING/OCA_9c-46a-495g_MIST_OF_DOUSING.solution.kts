@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "w2450512021"
-    name = "OVERLAP CG"
+    name = "OVERLAP CAX"
     arm(ARM1) {
         number = 1
-        position = 0 to 1
-        rotation = 2
+        position = -4 to 1
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -4 to 1
-        rotation = -1
+        position = 0 to 1
+        rotation = 2
         size = 1
     }
     arm(VAN_BERLOS_WHEEL) {
@@ -22,9 +22,9 @@ solution {
     }
     arm(ARM1) {
         number = 4
-        position = -4 to 5
-        rotation = -2
-        size = 2
+        position = -7 to 3
+        rotation = 0
+        size = 3
     }
     arm(ARM1) {
         number = 5
@@ -34,17 +34,13 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = -5 to -1
-        rotation = 1
-        size = 3
+        position = -7 to 6
+        rotation = 5
+        size = 1
     }
     glyph(BONDER) {
         position = -3 to 0
         rotation = 3
-    }
-    glyph(BONDER) {
-        position = 0 to 1
-        rotation = 2
     }
     glyph(BONDER) {
         position = -3 to 1
@@ -60,6 +56,10 @@ solution {
     }
     glyph(BONDER) {
         position = -5 to 2
+        rotation = 2
+    }
+    glyph(BONDER) {
+        position = 0 to 1
         rotation = 2
     }
     glyph(UNBONDER) {
@@ -75,6 +75,10 @@ solution {
         rotation = 2
     }
     glyph(UNBONDER) {
+        position = -5 to 3
+        rotation = 1
+    }
+    glyph(UNBONDER) {
         position = -4 to 3
         rotation = 3
     }
@@ -83,11 +87,7 @@ solution {
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = -5 to 3
-        rotation = 1
-    }
-    glyph(UNBONDER) {
-        position = -5 to 4
+        position = -2 to 1
         rotation = 2
     }
     glyph(CALCIFICATION) {
@@ -111,16 +111,16 @@ solution {
         rotation = 4
     }
     glyph(DUPLICATION) {
-        position = -2 to 3
-        rotation = -1
-    }
-    glyph(DUPLICATION) {
         position = -4 to 1
         rotation = 2
     }
     glyph(DUPLICATION) {
         position = -5 to 3
         rotation = 4
+    }
+    glyph(DUPLICATION) {
+        position = -2 to 3
+        rotation = -1
     }
     io(INPUT) {
         index = 0
@@ -139,44 +139,56 @@ solution {
     }
     track {
         position = -6 to 1
-        positions = listOf(0 to 1, 0 to 0, 1 to 0, 2 to 0)
+        positions = listOf(-1 to 2, -1 to 1, 0 to 1, 0 to 0, 1 to 0, 2 to 0)
     }
     track {
         position = 2 to -1
         positions = listOf(-2 to 0, -1 to 0, -1 to -1, 0 to -1, 0 to 0, -1 to 1, -2 to 2)
     }
     track {
-        position = -5 to 1
-        positions = listOf(0 to 0, 0 to -1, 0 to -2)
-    }
-    track {
-        position = -4 to 4
-        positions = listOf(0 to 0, 0 to 1)
+        position = -4 to 3
+        positions = listOf(0 to 0, -1 to 1, -2 to 2, -3 to 3)
     }
     tape {
         parallel(
         {
-            sequence(2) {
+            sequence(1) {
                 grab()
                 back()
                 back()
                 rotateCounterClockwise()
                 back()
                 drop()
+                wait(2)
+                reset()
+                wait(11)
+                extendTape()
             }
         }
         , 
         {
-            sequence(1) {
+            sequence(2) {
                 grab()
                 back()
                 back()
                 back()
                 back()
                 back()
-                wait(1)
                 back()
                 pivotClockwise()
+                forward()
+                forward()
+                rotateCounterClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(4)
+                grab()
+                forward()
+                reset()
             }
         }
         , 
@@ -187,6 +199,8 @@ solution {
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
+                rotateCounterClockwise()
+                reset()
             }
         }
         , 
@@ -194,26 +208,20 @@ solution {
             sequence(3) {
                 wait(3)
                 rotateClockwise()
+                wait(4)
+                reset()
             }
         }
         , 
         {
             sequence(6) {
-                wait(3)
-                back()
-                back()
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(4)
+                wait(5)
                 grab()
                 back()
-                drop()
+                back()
+                back()
+                rotateCounterClockwise()
+                reset()
             }
         }
         )
