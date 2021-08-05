@@ -1,48 +1,44 @@
 
 solution {
     puzzle = "P031b"
-    name = "NEW SOLUTION 2"
+    name = "INSTRUCTIONS NO TRACK 13"
     arm(ARM6) {
         number = 1
-        position = -9 to -5
-        rotation = 0
+        position = 0 to 3
+        rotation = 3
         size = 3
     }
     arm(ARM1) {
         number = 2
-        position = -10 to -4
-        rotation = -3
+        position = -1 to 4
+        rotation = 3
         size = 2
     }
     glyph(BONDER) {
-        position = -11 to -1
+        position = -2 to 7
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -13 to -1
+        position = -4 to 7
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = -12 to -1
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = -9 to -2
+        position = 0 to 6
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -12 to -4
+        position = -3 to 4
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -6 to -8
+        position = 3 to 0
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = -6 to -5
+        position = 3 to 3
         rotation = 0
     }
     tape {
