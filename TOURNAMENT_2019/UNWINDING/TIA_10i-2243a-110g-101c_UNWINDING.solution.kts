@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w1611998067"
-    name = "B TI10C 1-3T"
+    name = "B TI10A 1-3T"
     arm(ARM6) {
         number = 1
         position = -3 to 0
@@ -10,14 +10,14 @@ solution {
     }
     arm(ARM6) {
         number = 2
-        position = -1 to -1
+        position = 0 to -2
         rotation = 0
         size = 2
     }
     arm(ARM1) {
         number = 3
-        position = 0 to -1
-        rotation = 0
+        position = 1 to -3
+        rotation = -1
         size = 1
     }
     glyph(BONDER) {
@@ -25,7 +25,7 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = 1 to -3
+        position = 2 to -3
         rotation = 1
     }
     glyph(UNBONDER) {
@@ -39,8 +39,8 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to -2
-        rotation = -4
+        position = -1 to -4
+        rotation = -3
     }
     tape {
         parallel(
@@ -65,7 +65,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(5)
+                wait(6)
                 grab()
                 pivotCounterClockwise()
                 drop()
