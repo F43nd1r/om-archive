@@ -1,109 +1,101 @@
 
 solution {
     puzzle = "P026"
-    name = "B CI26G"
-    arm(ARM6) {
+    name = "NEW SOLUTION 5"
+    arm(ARM3) {
         number = 1
-        position = 2 to 2
-        rotation = 4
-        size = 1
-    }
-    arm(ARM3) {
-        number = 2
-        position = -1 to 3
-        rotation = 6
-        size = 1
-    }
-    arm(ARM3) {
-        number = 3
-        position = 1 to 3
-        rotation = 2
+        position = -13 to -4
+        rotation = 0
         size = 3
+    }
+    arm(ARM6) {
+        number = 2
+        position = -17 to -1
+        rotation = 0
+        size = 1
+    }
+    arm(ARM1) {
+        number = 3
+        position = -16 to 0
+        rotation = -2
+        size = 1
     }
     arm(ARM6) {
         number = 4
-        position = -3 to 6
-        rotation = 6
-        size = 1
-    }
-    arm(ARM1) {
-        number = 5
-        position = -2 to 7
-        rotation = 4
-        size = 1
-    }
-    arm(ARM1) {
-        number = 6
-        position = -1 to 4
-        rotation = 2
+        position = -15 to -3
+        rotation = 0
         size = 3
     }
+    arm(ARM3) {
+        number = 5
+        position = -15 to -4
+        rotation = 0
+        size = 1
+    }
+    arm(ARM6) {
+        number = 6
+        position = -12 to -6
+        rotation = 0
+        size = 1
+    }
     glyph(BONDER) {
-        position = -4 to 7
+        position = -18 to 0
         rotation = 0
     }
     glyph(MULTI_BONDER) {
-        position = -2 to 3
-        rotation = 1
+        position = -16 to -4
+        rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = -4 to 4
+        position = -18 to -1
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -4 to 5
+        position = -18 to -2
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -4 to 6
+        position = -18 to -3
         rotation = 0
     }
     glyph(PROJECTION) {
-        position = 1 to 2
-        rotation = 3
-    }
-    io(OUTPUT) {
-        index = 0
-        position = 1 to -1
-        rotation = 6
+        position = -13 to -5
+        rotation = -3
     }
     io(INPUT) {
         index = 0
-        position = -2 to 6
+        position = -16 to -1
+        rotation = 0
+    }
+    io(OUTPUT) {
+        index = 0
+        position = -13 to -8
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = 0 to 3
+        position = -14 to -4
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = 2 to 1
+        position = -12 to -5
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(6) {
+            sequence(1) {
                 wait(6)
                 grab()
                 rotateCounterClockwise()
-                reset()
+                rotateCounterClockwise()
+                drop()
             }
         }
         , 
         {
-            sequence(5) {
-                wait(2)
-                grab()
-                rotateClockwise()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(4) {
+            sequence(2) {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -116,28 +108,37 @@ solution {
         }
         , 
         {
-            sequence(2) {
+            sequence(3) {
                 wait(2)
                 grab()
                 rotateClockwise()
-                rotateClockwise()
-                drop()
+                reset()
             }
         }
         , 
         {
-            sequence(1) {
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(3) {
+            sequence(4) {
                 wait(6)
                 grab()
                 rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(5)
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(5)
+                grab()
                 rotateCounterClockwise()
                 drop()
             }
