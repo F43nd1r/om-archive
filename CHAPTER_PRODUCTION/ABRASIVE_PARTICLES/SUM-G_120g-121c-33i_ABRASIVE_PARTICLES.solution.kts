@@ -1,18 +1,18 @@
 
 solution {
     puzzle = "P079"
-    name = "B X S"
+    name = "SUM"
     arm(PISTON) {
         number = 1
         position = 2 to 0
-        rotation = 3
-        size = 2
+        rotation = 2
+        size = 1
     }
     arm(PISTON) {
         number = 2
         position = -2 to -1
-        rotation = 0
-        size = 3
+        rotation = 6
+        size = 2
     }
     glyph(BONDER) {
         position = -1 to -1
@@ -24,7 +24,7 @@ solution {
     }
     glyph(PROJECTION) {
         position = 2 to -1
-        rotation = -3
+        rotation = 3
     }
     io(INPUT) {
         index = 0
@@ -49,47 +49,47 @@ solution {
     tape {
         parallel(
         {
-            sequence(2) {
-                wait(2)
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                extend()
+                drop()
+                rotateCounterClockwise()
+                wait(1)
                 grab()
                 retract()
+                drop()
                 extend()
-                pivotCounterClockwise()
                 wait(1)
-                pivotCounterClockwise()
+                grab()
                 retract()
+                drop()
                 extend()
-                pivotCounterClockwise()
-                wait(1)
-                pivotCounterClockwise()
-                wait(1)
-                pivotCounterClockwise()
-                wait(1)
-                pivotCounterClockwise()
+                grab()
                 retract()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
                 reset()
             }
         }
         , 
         {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                drop()
+            sequence(2) {
                 wait(3)
                 grab()
-                retract()
-                drop()
                 extend()
+                pivotCounterClockwise()
                 wait(1)
-                grab()
+                pivotCounterClockwise()
                 retract()
-                drop()
                 extend()
-                grab()
+                pivotCounterClockwise()
+                wait(1)
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                wait(2)
+                pivotCounterClockwise()
                 retract()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
                 reset()
             }
         }
