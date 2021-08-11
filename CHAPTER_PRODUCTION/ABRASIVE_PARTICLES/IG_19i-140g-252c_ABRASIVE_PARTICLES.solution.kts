@@ -1,11 +1,11 @@
 
 solution {
     puzzle = "P079"
-    name = "II"
-    arm(PISTON) {
+    name = "IG"
+    arm(ARM1) {
         number = 1
-        position = 2 to 0
-        rotation = 3
+        position = -2 to 0
+        rotation = 6
         size = 2
     }
     arm(PISTON) {
@@ -46,6 +46,10 @@ solution {
         position = -1 to -2
         positions = listOf(0 to 0, 1 to 0)
     }
+    track {
+        position = -3 to 0
+        positions = listOf(0 to 0, 1 to 0)
+    }
     conduit {
         id = 100
         position = 6 to 0
@@ -53,7 +57,7 @@ solution {
     }
     conduit {
         id = 100
-        position = -3 to 2
+        position = 2 to 0
         rotation = 0
     }
     tape {
@@ -88,11 +92,11 @@ solution {
         {
             sequence(1) {
                 grab()
-                extend()
+                back()
                 pivotCounterClockwise()
-                reset()
-                wait(8)
-                extendTape()
+                drop()
+                wait(9)
+                forward()
             }
         }
         )
