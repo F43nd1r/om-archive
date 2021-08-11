@@ -1,18 +1,18 @@
 
 solution {
     puzzle = "P079"
-    name = "B II 1-3T"
+    name = "II"
     arm(PISTON) {
         number = 1
         position = 2 to 0
-        rotation = 3
+        rotation = 2
         size = 1
     }
     arm(PISTON) {
         number = 2
         position = -2 to -1
-        rotation = 0
-        size = 3
+        rotation = 6
+        size = 2
     }
     glyph(BONDER) {
         position = -1 to -1
@@ -24,7 +24,7 @@ solution {
     }
     glyph(PROJECTION) {
         position = 2 to -1
-        rotation = -3
+        rotation = 3
     }
     io(INPUT) {
         index = 0
@@ -49,10 +49,23 @@ solution {
     tape {
         parallel(
         {
-            sequence(2) {
-                wait(2)
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                extend()
+                drop()
+                rotateCounterClockwise()
+                wait(1)
                 grab()
                 retract()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(3)
+                grab()
                 extend()
                 pivotCounterClockwise()
                 wait(1)
@@ -64,22 +77,7 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateClockwise()
-                extend()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-                extend()
-                wait(2)
-                grab()
-                retract()
-                drop()
-                rotateClockwise()
             }
         }
         )
