@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P081"
-    name = "INSTR. V2"
+    name = "INSTRUCTIONS"
     arm(ARM6) {
         number = 1
         position = -2 to 5
@@ -34,9 +34,9 @@ solution {
     }
     arm(PISTON) {
         number = 6
-        position = 11 to 2
+        position = 12 to 1
         rotation = -3
-        size = 1
+        size = 2
     }
     arm(PISTON) {
         number = 7
@@ -57,22 +57,22 @@ solution {
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 3 to 5
+        position = 3 to 2
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = 10 to 1
-        rotation = 0
-    }
-    io(OUTPUT) {
-        index = 0
-        position = 5 to 3
+        position = 11 to 1
         rotation = -3
     }
     io(INPUT) {
         index = 0
-        position = -2 to 6
-        rotation = -21
+        position = -3 to 6
+        rotation = -24
+    }
+    io(OUTPUT) {
+        index = 0
+        position = 5 to 3
+        rotation = -1
     }
     io(OUTPUT) {
         index = 1
@@ -127,29 +127,14 @@ solution {
         }
         , 
         {
-            sequence(6) {
-                wait(15)
-                grab()
-                extend()
-                drop()
-                back()
-                grab()
-                retract()
-                reset()
-                wait(10)
-                extendTape()
-            }
-        }
-        , 
-        {
             sequence(3) {
                 wait(1)
                 grab()
                 retract()
                 drop()
                 grab()
-                pivotClockwise()
-                pivotClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
                 reset()
             }
         }
@@ -172,8 +157,6 @@ solution {
                 wait(8)
                 grab()
                 rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotClockwise()
                 drop()
             }
         }
@@ -183,6 +166,22 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
+                wait(14)
+                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(15)
+                grab()
+                retract()
+                drop()
+                forward()
+                grab()
+                back()
+                extend()
+                reset()
             }
         }
         )
