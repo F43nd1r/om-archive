@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P018"
-    name = "TIA?"
+    name = "TIA"
     arm(ARM6) {
         number = 1
         position = 2 to -2
@@ -28,18 +28,13 @@ solution {
         position = 0 to -2
         rotation = 3
     }
-    io(OUTPUT) {
-        index = 0
-        position = 3 to -2
-        rotation = 1
-    }
     io(INPUT) {
         index = 0
         position = 1 to -2
         rotation = 0
     }
     io(OUTPUT) {
-        index = 1
+        index = 0
         position = 2 to -1
         rotation = 2
     }
@@ -47,6 +42,11 @@ solution {
         index = 1
         position = -2 to -1
         rotation = 0
+    }
+    io(OUTPUT) {
+        index = 1
+        position = 3 to -2
+        rotation = 1
     }
     io(INPUT) {
         index = 2
