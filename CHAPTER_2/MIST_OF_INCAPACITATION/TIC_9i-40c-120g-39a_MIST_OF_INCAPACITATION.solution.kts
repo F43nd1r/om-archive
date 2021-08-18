@@ -1,50 +1,56 @@
 
 solution {
     puzzle = "P018"
-    name = "B F SPEED"
+    name = "TIC"
     arm(ARM6) {
         number = 1
-        position = 0 to 1
+        position = 2 to -2
         rotation = 0
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = 1 to -2
-        rotation = 0
+        position = -1 to 0
+        rotation = 3
         size = 1
     }
+    arm(ARM3) {
+        number = 3
+        position = -2 to 1
+        rotation = 3
+        size = 2
+    }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = 1
+        position = 0 to -1
+        rotation = 0
     }
     glyph(PROJECTION) {
-        position = 0 to -2
+        position = -1 to -1
+        rotation = 3
+    }
+    io(OUTPUT) {
+        index = 0
+        position = 2 to -1
+        rotation = 2
+    }
+    io(INPUT) {
+        index = 0
+        position = 1 to -2
+        rotation = 0
+    }
+    io(OUTPUT) {
+        index = 1
+        position = 3 to -2
         rotation = 1
     }
-    io(OUTPUT) {
-        index = 0
-        position = 1 to 1
-        rotation = -1
-    }
-    io(INPUT) {
-        index = 0
-        position = -1 to 1
-        rotation = 0
-    }
-    io(OUTPUT) {
-        index = 1
-        position = 0 to 2
-        rotation = 0
-    }
     io(INPUT) {
         index = 1
-        position = 2 to -2
+        position = -2 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = 2 to -3
+        position = -4 to 1
         rotation = 0
     }
     tape {
@@ -53,21 +59,23 @@ solution {
             sequence(1) {
                 wait(1)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
-                wait(1)
-                repeat()
             }
         }
         , 
         {
             sequence(2) {
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
                 grab()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
                 drop()
             }
         }
