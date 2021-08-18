@@ -23,7 +23,7 @@ solution {
     arm(ARM1) {
         number = 4
         position = -7 to 2
-        rotation = 3
+        rotation = 2
         size = 2
     }
     arm(ARM6) {
@@ -94,7 +94,7 @@ solution {
         parallel(
         {
             sequence(5) {
-                wait(44)
+                wait(4)
                 grab()
                 rotateClockwise()
                 drop()
@@ -107,14 +107,14 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                wait(2)
+                wait(1)
                 extendTape()
             }
         }
         , 
         {
             sequence(3) {
-                wait(6)
+                wait(5)
                 grab()
                 retract()
                 reset()
@@ -122,17 +122,8 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(34)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(6) {
-                wait(47)
+                wait(7)
                 grab()
                 pivotClockwise()
                 drop()
@@ -141,6 +132,15 @@ solution {
         , 
         {
             sequence(2) {
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(3)
                 grab()
                 rotateClockwise()
                 drop()
