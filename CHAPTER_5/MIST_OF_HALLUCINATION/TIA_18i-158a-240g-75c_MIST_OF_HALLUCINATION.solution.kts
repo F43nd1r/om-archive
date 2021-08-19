@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P038"
-    name = "INSTRUCTIONS"
+    name = "B TI18 1-3T"
     arm(ARM6) {
         number = 1
         position = -3 to 2
@@ -11,13 +11,13 @@ solution {
     arm(ARM2) {
         number = 2
         position = -2 to -1
-        rotation = 0
+        rotation = -1
         size = 2
     }
     arm(ARM2) {
         number = 3
         position = -3 to -2
-        rotation = 1
+        rotation = -1
         size = 3
     }
     arm(ARM6) {
@@ -35,7 +35,7 @@ solution {
     arm(ARM2) {
         number = 6
         position = 5 to -2
-        rotation = -12
+        rotation = -11
         size = 3
     }
     glyph(BONDER) {
@@ -77,7 +77,7 @@ solution {
         parallel(
         {
             sequence(1) {
-                wait(6)
+                wait(1)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -85,17 +85,7 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(8)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(4) {
-                wait(5)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -104,16 +94,8 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(5) {
-                wait(7)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -122,9 +104,27 @@ solution {
         , 
         {
             sequence(6) {
-                wait(5)
+                wait(4)
                 grab()
                 rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(7)
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(7)
+                grab()
+                rotateClockwise()
                 drop()
             }
         }
