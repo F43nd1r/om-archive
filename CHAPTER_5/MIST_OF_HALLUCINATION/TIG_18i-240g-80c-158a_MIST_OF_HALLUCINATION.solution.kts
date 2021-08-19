@@ -43,10 +43,6 @@ solution {
         rotation = -2
     }
     glyph(BONDER) {
-        position = 1 to 0
-        rotation = -4
-    }
-    glyph(BONDER) {
         position = 1 to -1
         rotation = -1
     }
