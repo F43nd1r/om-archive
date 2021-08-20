@@ -1,40 +1,40 @@
 
 solution {
     puzzle = "P084"
-    name = "NEW SOLUTION 1"
-    arm(ARM1) {
-        number = 1
-        position = 7 to 4
-        rotation = 10
-        size = 2
-    }
+    name = "G"
     arm(VAN_BERLOS_WHEEL) {
-        number = 2
+        number = 1
         position = 9 to 1
         rotation = 1
         size = 1
     }
+    arm(ARM1) {
+        number = 2
+        position = 7 to 4
+        rotation = 4
+        size = 2
+    }
     glyph(BONDER) {
-        position = 5 to 3
-        rotation = 0
+        position = 6 to 3
+        rotation = -3
     }
     glyph(DUPLICATION) {
         position = 8 to 1
-        rotation = -3
+        rotation = 3
     }
     glyph(PURIFICATION) {
         position = 8 to 5
-        rotation = -4
-    }
-    io(INPUT) {
-        index = 0
-        position = 7 to 2
-        rotation = 0
+        rotation = 2
     }
     io(OUTPUT) {
         index = 0
         position = 5 to 4
         rotation = -2
+    }
+    io(INPUT) {
+        index = 0
+        position = 7 to 2
+        rotation = 0
     }
     io(INPUT) {
         index = 1
@@ -43,64 +43,62 @@ solution {
     }
     track {
         position = 7 to 4
-        positions = listOf(0 to 0, 0 to -1, 1 to -1)
+        positions = listOf(0 to 0, 1 to -1, 0 to -1)
     }
     tape {
         parallel(
         {
-            sequence(2) {
-                extendTape()
-                wait(43)
-                rotateClockwise()
+            sequence(1) {
+                wait(25)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                wait(18)
                 rotateClockwise()
                 rotateClockwise()
                 wait(6)
                 rotateClockwise()
                 rotateClockwise()
+                rotateClockwise()
                 wait(5)
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
-                wait(2)
                 rotateCounterClockwise()
-                wait(18)
-                reset()
+                wait(16)
+                rotateCounterClockwise()
             }
         }
         , 
         {
-            sequence(1) {
+            sequence(2) {
                 grab()
                 rotateClockwise()
-                back()
+                forward()
                 drop()
-                rotateClockwise()
-                rotateClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                grab()
+                back()
+                rotateCounterClockwise()
+                drop()
+                forward()
                 rotateClockwise()
                 grab()
+                rotateCounterClockwise()
+                drop()
+                forward()
+                grab()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 forward()
                 drop()
-                rotateClockwise()
+                rotateCounterClockwise()
+                grab()
                 back()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                back()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateClockwise()
-                reset()
-                wait(3)
-                grab()
-                forward()
                 rotateClockwise()
                 drop()
-                rotateClockwise()
+                forward()
                 grab()
                 forward()
-                rotateCounterClockwise()
                 rotateClockwise()
                 pivotCounterClockwise()
                 rotateClockwise()
@@ -108,43 +106,46 @@ solution {
                 wait(4)
                 grab()
                 rotateClockwise()
-                back()
-                reset()
-                wait(2)
-                grab()
                 forward()
-                rotateClockwise()
-                pivotCounterClockwise()
-                forward()
-                reset()
-                wait(2)
-                grab()
-                forward()
-                rotateClockwise()
-                pivotCounterClockwise()
-                forward()
-                reset()
-                wait(2)
-                grab()
-                forward()
-                rotateClockwise()
-                forward()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                back()
-                rotateCounterClockwise()
                 drop()
                 back()
+                rotateCounterClockwise()
+                grab()
+                back()
+                rotateClockwise()
+                pivotCounterClockwise()
+                back()
+                drop()
+                back()
+                rotateCounterClockwise()
+                grab()
+                back()
+                rotateClockwise()
+                pivotCounterClockwise()
+                back()
+                drop()
+                rotateCounterClockwise()
+                back()
+                grab()
+                back()
+                rotateClockwise()
+                back()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                forward()
+                rotateCounterClockwise()
+                drop()
+                forward()
                 rotateClockwise()
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
+                forward()
                 rotateCounterClockwise()
                 back()
-                forward()
                 reset()
             }
         }
