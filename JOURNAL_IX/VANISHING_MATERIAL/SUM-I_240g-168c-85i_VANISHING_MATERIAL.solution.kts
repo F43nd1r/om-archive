@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P105"
-    name = "WR 495"
+    name = "WR 495 (Copy)"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 0 to 1
@@ -86,15 +86,15 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                drop()
                 wait(1)
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
+                wait(1)
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
@@ -109,11 +109,12 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
+                wait(1)
                 grab()
                 rotateCounterClockwise()
                 drop()
                 rotateClockwise()
-                wait(8)
+                wait(6)
                 grab()
                 rotateCounterClockwise()
                 extend()
@@ -126,7 +127,7 @@ solution {
         , 
         {
             sequence(5) {
-                wait(19)
+                wait(20)
                 grab()
                 retract()
                 rotateCounterClockwise()
@@ -135,13 +136,13 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
+                wait(1)
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 extend()
                 grab()
                 retract()
                 rotateClockwise()
-                wait(3)
                 rotateClockwise()
                 extend()
                 reset()
@@ -150,13 +151,13 @@ solution {
         , 
         {
             sequence(1) {
-                wait(7)
+                wait(4)
                 rotateClockwise()
-                wait(2)
+                wait(4)
                 rotateClockwise()
-                wait(2)
+                wait(4)
                 rotateClockwise()
-                wait(5)
+                wait(4)
                 rotateClockwise()
                 wait(4)
                 rotateCounterClockwise()
@@ -180,11 +181,11 @@ solution {
                 drop()
                 grab()
                 rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
                 grab()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateClockwise()
                 drop()
                 grab()
                 rotateCounterClockwise()
