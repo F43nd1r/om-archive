@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P090"
-    name = "SUM-C 587"
+    name = "B S 2"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 1 to -1
@@ -96,10 +96,9 @@ solution {
                 drop()
                 wait(1)
                 grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
-                wait(1)
+                wait(2)
                 grab()
                 rotateClockwise()
                 drop()
@@ -134,10 +133,9 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 retract()
-                extend()
+                wait(1)
                 pivotClockwise()
                 pivotClockwise()
-                retract()
                 retract()
                 reset()
             }
@@ -207,11 +205,11 @@ solution {
                 grab()
                 forward()
                 reset()
-                wait(2)
+                wait(1)
                 grab()
                 back()
                 reset()
-                wait(9)
+                wait(10)
                 grab()
                 back()
                 rotateClockwise()
