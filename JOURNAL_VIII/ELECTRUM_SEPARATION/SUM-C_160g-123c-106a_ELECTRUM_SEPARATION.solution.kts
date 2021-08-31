@@ -1,92 +1,86 @@
 
 solution {
     puzzle = "P103"
-    name = "SUM + 64"
+    name = "SUM 389"
     arm(ARM1) {
         number = 1
-        position = -2 to 6
+        position = -9 to 0
         rotation = -1
         size = 3
     }
     arm(ARM1) {
         number = 2
-        position = -1 to 0
+        position = -8 to -6
         rotation = 1
         size = 2
     }
     arm(ARM1) {
         number = 3
-        position = 4 to -3
+        position = -3 to -9
         rotation = 2
         size = 2
     }
     arm(ARM1) {
         number = 4
-        position = 5 to -2
+        position = -2 to -8
         rotation = 3
         size = 1
     }
-    arm(ARM1) {
-        number = 5
-        position = 7 to -2
-        rotation = 2
-        size = 1
-    }
     glyph(BONDER) {
-        position = 4 to 0
+        position = -3 to -7
         rotation = 0
     }
     glyph(BONDER) {
-        position = 4 to -1
+        position = -3 to -6
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -2 to 4
-        rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = -2 to 2
+        position = -9 to -4
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = 2 to 0
+        position = -9 to -2
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = 6 to -1
+        position = -5 to -6
+        rotation = -1
+    }
+    glyph(UNBONDER) {
+        position = -1 to -7
         rotation = 1
     }
     glyph(DISPOSAL) {
-        position = -5 to 6
+        position = -12 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 1 to 3
+        position = -6 to -3
         rotation = 0
     }
     io(INFINITE) {
         index = 0
-        position = 7 to -1
+        position = 0 to -7
         rotation = 0
     }
     io(INFINITE) {
         index = 1
-        position = 7 to 0
+        position = 0 to -6
         rotation = 0
     }
     io(OUTPUT) {
         index = 2
-        position = 2 to -3
+        position = -5 to -9
         rotation = -3
     }
     track {
-        position = -2 to 7
+        position = -9 to 1
         positions = listOf(0 to 0, 0 to -1)
     }
     track {
-        position = 6 to -2
-        positions = listOf(1 to 0, 0 to 0, -1 to 0)
+        position = -1 to -8
+        positions = listOf(0 to 0, -1 to 0)
     }
     tape {
         parallel(
@@ -100,12 +94,23 @@ solution {
                 pivotClockwise()
                 forward()
                 back()
-                wait(1)
                 pivotClockwise()
                 pivotClockwise()
                 forward()
                 rotateClockwise()
                 reset()
+                wait(5)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
             }
         }
         , 
@@ -123,6 +128,25 @@ solution {
                 wait(2)
                 grab()
                 rotateClockwise()
+                reset()
+                wait(5)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
                 reset()
             }
         }
@@ -145,15 +169,18 @@ solution {
                 pivotClockwise()
                 rotateCounterClockwise()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(119)
-                forward()
-                grab()
-                back()
+                wait(3)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
+                wait(17)
+                repeat()
             }
         }
         , 
@@ -165,10 +192,49 @@ solution {
                 back()
                 drop()
                 forward()
-                reset()
+                rotateCounterClockwise()
                 repeat()
                 wait(5)
                 repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                repeat()
+                wait(5)
+                grab()
+                rotateClockwise()
+                back()
+                drop()
+                rotateClockwise()
+                forward()
+                grab()
+                back()
             }
         }
         )
