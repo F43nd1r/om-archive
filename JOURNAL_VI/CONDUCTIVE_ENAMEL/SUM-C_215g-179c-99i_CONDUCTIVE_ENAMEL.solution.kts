@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P093"
-    name = "SUM"
+    name = "B X S"
     arm(ARM6) {
         number = 1
         position = 1 to 0
@@ -41,7 +41,7 @@ solution {
         rotation = 3
     }
     glyph(CALCIFICATION) {
-        position = -1 to 1
+        position = 10 to 1
         rotation = 0
     }
     glyph(PROJECTION) {
@@ -56,7 +56,7 @@ solution {
     io(INPUT) {
         index = 0
         position = 0 to 1
-        rotation = 1
+        rotation = 2
     }
     io(INPUT) {
         index = 1
@@ -83,12 +83,12 @@ solution {
         parallel(
         {
             sequence(4) {
-                wait(8)
+                wait(6)
                 grab()
                 back()
                 back()
                 reset()
-                wait(4)
+                wait(3)
                 grab()
                 back()
                 pivotClockwise()
@@ -114,23 +114,24 @@ solution {
             sequence(1) {
                 grab()
                 rotateCounterClockwise()
-                pivotCounterClockwise()
                 drop()
                 repeat()
-                wait(3)
+                wait(2)
                 repeat()
                 wait(3)
                 grab()
-                pivotCounterClockwise()
                 rotateCounterClockwise()
                 drop()
+                wait(1)
                 repeat()
+                wait(13)
+                extendTape()
             }
         }
         , 
         {
             sequence(2) {
-                wait(5)
+                wait(2)
                 grab()
                 rotateClockwise()
                 reset()
@@ -154,10 +155,10 @@ solution {
         , 
         {
             sequence(3) {
-                wait(5)
+                wait(4)
                 grab()
                 rotateCounterClockwise()
-                wait(12)
+                wait(10)
                 rotateCounterClockwise()
                 drop()
                 rotateClockwise()
@@ -171,7 +172,7 @@ solution {
         , 
         {
             sequence(5) {
-                wait(12)
+                wait(9)
                 grab()
                 retract()
                 pivotClockwise()
