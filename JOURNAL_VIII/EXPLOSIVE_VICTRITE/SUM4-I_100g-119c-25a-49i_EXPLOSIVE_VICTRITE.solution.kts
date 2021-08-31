@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P100"
-    name = "SUM4 - 245"
+    name = "B F"
     arm(ARM1) {
         number = 1
         position = 0 to -2
@@ -46,9 +46,9 @@ solution {
         parallel(
         {
             sequence(1) {
-                wait(7)
                 grab()
                 rotateClockwise()
+                wait(1)
                 rotateClockwise()
                 pivotClockwise()
                 pivotClockwise()
@@ -66,12 +66,9 @@ solution {
         , 
         {
             sequence(2) {
-                wait(5)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
-                rotateCounterClockwise()
-                wait(1)
-                rotateClockwise()
                 reset()
                 wait(1)
                 grab()
@@ -89,7 +86,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(14)
+                wait(8)
                 grab()
                 rotateClockwise()
                 back()
