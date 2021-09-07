@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P064"
-    name = "308 SUM4"
+    name = "BETTER SUM4"
     arm(ARM1) {
         number = 1
         position = 1 to -4
@@ -17,7 +17,7 @@ solution {
     arm(ARM1) {
         number = 3
         position = 0 to -1
-        rotation = -6
+        rotation = -4
         size = 1
     }
     arm(ARM1) {
@@ -64,11 +64,12 @@ solution {
         parallel(
         {
             sequence(5) {
-                wait(5)
                 grab()
                 rotateClockwise()
                 reset()
                 wait(1)
+                repeat()
+                wait(3)
                 repeat()
                 wait(3)
                 repeat()
@@ -84,22 +85,6 @@ solution {
                 wait(2)
                 grab()
                 rotateCounterClockwise()
-                reset()
-                wait(2)
-                repeat()
-                wait(3)
-                repeat()
-                wait(3)
-                repeat()
-                wait(3)
-                repeat()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                grab()
-                rotateClockwise()
                 reset()
                 wait(1)
                 repeat()
@@ -120,7 +105,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 pivotClockwise()
-                wait(5)
+                wait(6)
                 pivotClockwise()
                 wait(4)
                 pivotClockwise()
@@ -134,21 +119,53 @@ solution {
         , 
         {
             sequence(2) {
-                wait(2)
+                wait(7)
                 grab()
                 rotateClockwise()
                 reset()
                 wait(1)
-                repeat()
-                wait(3)
-                repeat()
-                wait(3)
-                repeat()
-                wait(3)
-                repeat()
-                wait(3)
                 grab()
                 rotateClockwise()
+                reset()
+                wait(1)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                grab()
+                rotateClockwise()
+                reset()
+                wait(1)
+                grab()
+                rotateClockwise()
+                rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(2)
+                grab()
+                rotateCounterClockwise()
+                drop()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                wait(1)
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
                 rotateClockwise()
                 reset()
             }
