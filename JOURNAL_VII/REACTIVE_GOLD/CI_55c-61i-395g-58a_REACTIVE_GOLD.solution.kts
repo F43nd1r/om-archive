@@ -2,9 +2,9 @@
 solution {
     puzzle = "P095"
     name = "NEW SOLUTION 5 (Copy)"
-    arm(ARM1) {
+    arm(PISTON) {
         number = 1
-        position = -11 to -2
+        position = -11 to -3
         rotation = -2
         size = 2
     }
@@ -105,10 +105,6 @@ solution {
         positions = listOf(0 to -1, 1 to -1, 0 to 0, -1 to 0)
     }
     track {
-        position = -13 to -3
-        positions = listOf(1 to 1, 1 to 0, 2 to 0, 2 to 1)
-    }
-    track {
         position = -12 to -5
         positions = listOf(0 to -1, 1 to -1, 0 to 0, -1 to 0)
     }
@@ -184,16 +180,6 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                grab()
-                rotateCounterClockwise()
-                back()
-                drop()
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
             sequence(10) {
                 wait(5)
                 back()
@@ -229,6 +215,16 @@ solution {
                 back()
                 back()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                extend()
+                drop()
+                rotateClockwise()
             }
         }
         )
