@@ -2,11 +2,11 @@
 solution {
     puzzle = "P095"
     name = "NEW SOLUTION 5 (Copy)"
-    arm(PISTON) {
+    arm(ARM1) {
         number = 1
-        position = -11 to -3
+        position = -11 to -2
         rotation = -2
-        size = 2
+        size = 3
     }
     arm(ARM6) {
         number = 2
@@ -107,6 +107,10 @@ solution {
     track {
         position = -12 to -5
         positions = listOf(0 to -1, 1 to -1, 0 to 0, -1 to 0)
+    }
+    track {
+        position = -11 to -3
+        positions = listOf(0 to 0, 0 to 1)
     }
     tape {
         parallel(
@@ -222,7 +226,7 @@ solution {
             sequence(1) {
                 grab()
                 rotateCounterClockwise()
-                extend()
+                back()
                 drop()
                 rotateClockwise()
             }
