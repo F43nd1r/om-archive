@@ -2,7 +2,7 @@
 solution {
     puzzle = "P072"
     name = "B TI54 1-6T"
-    arm(ARM1) {
+    arm(ARM6) {
         number = 1
         position = -1 to -1
         rotation = 0
@@ -155,36 +155,21 @@ solution {
     tape {
         parallel(
         {
-            sequence(11) {
-                wait(2)
+            sequence(2) {
+                wait(6)
                 grab()
+                rotateClockwise()
                 rotateClockwise()
                 drop()
             }
         }
         , 
         {
-            sequence(13) {
-                wait(5)
-                grab()
-                retract()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(9) {
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
-            sequence(1) {
+            sequence(3) {
+                wait(3)
                 grab()
                 rotateCounterClockwise()
-                reset()
-                wait(4)
-                extendTape()
+                drop()
             }
         }
         , 
@@ -197,36 +182,17 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(11)
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(2) {
+            sequence(5) {
                 wait(5)
                 grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                drop()
+                extend()
+                reset()
             }
         }
         , 
         {
             sequence(7) {
-                wait(54)
+                wait(56)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -237,8 +203,24 @@ solution {
         }
         , 
         {
+            sequence(8) {
+                wait(61)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(9) {
+                wait(2)
+                rotateCounterClockwise()
+            }
+        }
+        , 
+        {
             sequence(10) {
-                wait(53)
+                wait(55)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -251,8 +233,17 @@ solution {
         }
         , 
         {
-            sequence(8) {
-                wait(59)
+            sequence(11) {
+                wait(4)
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(12) {
+                wait(9)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -260,8 +251,17 @@ solution {
         }
         , 
         {
+            sequence(13) {
+                wait(7)
+                grab()
+                retract()
+                reset()
+            }
+        }
+        , 
+        {
             sequence(14) {
-                wait(3)
+                wait(5)
                 grab()
                 extend()
                 rotateClockwise()
@@ -271,20 +271,22 @@ solution {
         }
         , 
         {
-            sequence(12) {
-                wait(7)
+            sequence(1) {
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
+                wait(4)
+                extendTape()
             }
         }
         , 
         {
-            sequence(5) {
-                wait(9)
+            sequence(6) {
+                wait(5)
                 grab()
-                extend()
-                reset()
+                rotateCounterClockwise()
+                drop()
             }
         }
         )
