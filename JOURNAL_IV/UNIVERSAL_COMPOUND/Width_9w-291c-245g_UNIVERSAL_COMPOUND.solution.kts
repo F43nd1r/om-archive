@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P072"
-    name = "621+157=778"
+    name = "621+155=776"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = -3 to 3
@@ -217,12 +217,11 @@ solution {
                 back()
                 pivotCounterClockwise()
                 forward()
+                wait(1)
                 forward()
                 pivotCounterClockwise()
-                pivotClockwise()
+                wait(2)
                 back()
-                wait(1)
-                pivotCounterClockwise()
                 pivotCounterClockwise()
                 back()
                 pivotCounterClockwise()
