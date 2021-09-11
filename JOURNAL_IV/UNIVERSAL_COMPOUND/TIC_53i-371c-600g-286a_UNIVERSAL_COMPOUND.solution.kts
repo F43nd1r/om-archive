@@ -35,7 +35,7 @@ solution {
     arm(ARM1) {
         number = 6
         position = -3 to 8
-        rotation = -8
+        rotation = -7
         size = 3
     }
     arm(ARM1) {
@@ -83,7 +83,7 @@ solution {
     arm(PISTON) {
         number = 14
         position = 5 to -3
-        rotation = 0
+        rotation = -1
         size = 1
     }
     glyph(BONDER) {
@@ -156,7 +156,6 @@ solution {
         parallel(
         {
             sequence(2) {
-                wait(1)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -166,7 +165,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(7)
+                wait(6)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -175,7 +174,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(4)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -184,7 +183,7 @@ solution {
         , 
         {
             sequence(5) {
-                wait(5)
+                wait(4)
                 grab()
                 extend()
                 reset()
@@ -193,7 +192,7 @@ solution {
         , 
         {
             sequence(7) {
-                wait(53)
+                wait(51)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -204,17 +203,8 @@ solution {
         }
         , 
         {
-            sequence(8) {
-                wait(58)
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(10) {
-                wait(52)
+                wait(50)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -228,6 +218,7 @@ solution {
         , 
         {
             sequence(11) {
+                wait(6)
                 grab()
                 rotateClockwise()
                 drop()
@@ -236,7 +227,7 @@ solution {
         , 
         {
             sequence(12) {
-                wait(5)
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -245,7 +236,7 @@ solution {
         , 
         {
             sequence(13) {
-                wait(3)
+                wait(1)
                 grab()
                 retract()
                 reset()
@@ -253,8 +244,32 @@ solution {
         }
         , 
         {
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(9) {
+                wait(5)
+                rotateCounterClockwise()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(5)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
             sequence(14) {
-                wait(1)
+                wait(7)
                 grab()
                 extend()
                 rotateClockwise()
@@ -264,26 +279,11 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                wait(2)
+            sequence(8) {
+                wait(56)
                 grab()
                 rotateCounterClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(9) {
-                wait(7)
-                rotateCounterClockwise()
             }
         }
         )
