@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P072"
-    name = "B TI54 1-6T"
+    name = "B TI53 1-6T"
     arm(ARM6) {
         number = 1
         position = -1 to -1
@@ -53,7 +53,7 @@ solution {
     arm(VAN_BERLOS_WHEEL) {
         number = 9
         position = -2 to 1
-        rotation = 4
+        rotation = 5
         size = 1
     }
     arm(ARM2) {
@@ -156,7 +156,7 @@ solution {
         parallel(
         {
             sequence(2) {
-                wait(6)
+                wait(1)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -166,7 +166,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(3)
+                wait(7)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -175,6 +175,7 @@ solution {
         , 
         {
             sequence(4) {
+                wait(4)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -192,7 +193,7 @@ solution {
         , 
         {
             sequence(7) {
-                wait(56)
+                wait(53)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -204,7 +205,7 @@ solution {
         , 
         {
             sequence(8) {
-                wait(61)
+                wait(58)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -212,15 +213,8 @@ solution {
         }
         , 
         {
-            sequence(9) {
-                wait(2)
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
             sequence(10) {
-                wait(55)
+                wait(52)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -234,7 +228,6 @@ solution {
         , 
         {
             sequence(11) {
-                wait(4)
                 grab()
                 rotateClockwise()
                 drop()
@@ -243,7 +236,7 @@ solution {
         , 
         {
             sequence(12) {
-                wait(9)
+                wait(5)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -252,7 +245,7 @@ solution {
         , 
         {
             sequence(13) {
-                wait(7)
+                wait(3)
                 grab()
                 retract()
                 reset()
@@ -261,7 +254,7 @@ solution {
         , 
         {
             sequence(14) {
-                wait(5)
+                wait(1)
                 grab()
                 extend()
                 rotateClockwise()
@@ -276,17 +269,21 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(4)
-                extendTape()
             }
         }
         , 
         {
             sequence(6) {
-                wait(5)
                 grab()
                 rotateCounterClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(9) {
+                wait(7)
+                rotateCounterClockwise()
             }
         }
         )
