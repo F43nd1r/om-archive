@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P019"
-    name = "NO-TRACK I-9 (Copy)"
+    name = "TIC"
     arm(ARM6) {
         number = 1
         position = -3 to 1
@@ -59,18 +59,16 @@ solution {
         parallel(
         {
             sequence(1) {
-                wait(2)
                 grab()
                 rotateClockwise()
                 drop()
-                wait(1)
                 extendTape()
             }
         }
         , 
         {
             sequence(2) {
-                wait(5)
+                wait(1)
                 grab()
                 rotateClockwise()
                 drop()
@@ -79,7 +77,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(7)
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
