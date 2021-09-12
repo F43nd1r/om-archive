@@ -2,7 +2,7 @@
 solution {
     puzzle = "P035"
     name = "OAG"
-    arm(PISTON) {
+    arm(ARM1) {
         number = 1
         position = -1 to -3
         rotation = 5
@@ -104,11 +104,11 @@ solution {
                 back()
                 grab()
                 rotateClockwise()
-                extend()
+                forward()
                 pivotClockwise()
                 pivotClockwise()
                 drop()
-                retract()
+                back()
                 rotateCounterClockwise()
                 grab()
                 forward()
@@ -133,9 +133,9 @@ solution {
                 wait(2)
                 grab()
                 rotateCounterClockwise()
-                extend()
+                back()
                 drop()
-                retract()
+                forward()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
