@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P035"
-    name = "OAG"
+    name = "OAG (Copy)"
     arm(ARM1) {
         number = 1
         position = -1 to -3
@@ -10,64 +10,72 @@ solution {
     }
     glyph(BONDER) {
         position = 0 to -3
-        rotation = 2
-    }
-    glyph(BONDER) {
-        position = 0 to -3
         rotation = 0
-    }
-    glyph(BONDER) {
-        position = 1 to -4
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = -1 to -2
-        rotation = 1
     }
     glyph(BONDER) {
         position = 0 to -2
         rotation = -1
     }
     glyph(BONDER) {
+        position = -1 to -1
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = 0 to -3
+        rotation = 2
+    }
+    glyph(BONDER) {
+        position = -1 to -2
+        rotation = 1
+    }
+    glyph(BONDER) {
+        position = -2 to -1
+        rotation = -7
+    }
+    glyph(BONDER) {
+        position = -1 to -3
+        rotation = -5
+    }
+    glyph(BONDER) {
+        position = -2 to -2
+        rotation = -6
+    }
+    glyph(BONDER) {
         position = -1 to 0
         rotation = -1
     }
     glyph(BONDER) {
-        position = -1 to -1
-        rotation = 0
+        position = 1 to -4
+        rotation = 1
     }
     glyph(MULTI_BONDER) {
         position = -1 to -1
         rotation = -1
     }
     glyph(MULTI_BONDER) {
-        position = -1 to -2
-        rotation = 0
-    }
-    glyph(MULTI_BONDER) {
         position = 0 to -3
         rotation = 1
-    }
-    glyph(CALCIFICATION) {
-        position = 1 to -4
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = -1 to 0
-        rotation = 0
     }
     glyph(CALCIFICATION) {
         position = -2 to -1
         rotation = 0
     }
     glyph(CALCIFICATION) {
+        position = -1 to 0
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
         position = -1 to -3
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
+        position = 1 to -4
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
         position = 0 to -2
-        rotation = -6
+        rotation = -12
     }
     io(INPUT) {
         index = 0
@@ -119,8 +127,10 @@ solution {
                 pivotClockwise()
                 forward()
                 drop()
-                forward()
-                forward()
+                back()
+                back()
+                back()
+                back()
                 rotateCounterClockwise()
                 grab()
                 forward()
@@ -136,13 +146,9 @@ solution {
                 back()
                 drop()
                 forward()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                grab()
-                rotateClockwise()
-                drop()
                 forward()
                 forward()
+                rotateCounterClockwise()
                 grab()
                 forward()
                 drop()
