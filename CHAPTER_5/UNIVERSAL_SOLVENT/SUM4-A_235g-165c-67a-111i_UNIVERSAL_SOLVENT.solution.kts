@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P043"
-    name = "469 PRIME"
+    name = "468 FINAL FORM"
     arm(ARM1) {
         number = 1
         position = -3 to -1
@@ -10,8 +10,8 @@ solution {
     }
     arm(ARM1) {
         number = 2
-        position = -3 to -5
-        rotation = 2
+        position = -1 to -5
+        rotation = 3
         size = 2
     }
     arm(ARM1) {
@@ -62,15 +62,15 @@ solution {
         position = -3 to -3
         rotation = -10
     }
-    io(INPUT) {
-        index = 0
-        position = -5 to -3
-        rotation = 0
-    }
     io(OUTPUT) {
         index = 0
         position = 2 to -6
         rotation = 2
+    }
+    io(INPUT) {
+        index = 0
+        position = -3 to -5
+        rotation = 0
     }
     io(INPUT) {
         index = 2
@@ -89,7 +89,7 @@ solution {
     }
     track {
         position = -2 to -5
-        positions = listOf(0 to 1, 0 to 0, -1 to 0)
+        positions = listOf(0 to 1, 0 to 0, 1 to 0)
     }
     tape {
         parallel(
@@ -155,28 +155,6 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                reset()
-                wait(1)
-                grab()
-                back()
-                back()
-                drop()
-                forward()
-                grab()
-                back()
-                rotateClockwise()
-                drop()
-                forward()
-                forward()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(6) {
                 wait(11)
                 grab()
@@ -210,6 +188,30 @@ solution {
                 rotateCounterClockwise()
                 wait(4)
                 rotateCounterClockwise()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(2)
+                grab()
+                rotateClockwise()
+                forward()
+                drop()
+                back()
+                reset()
+                grab()
+                rotateClockwise()
+                drop()
+                back()
+                grab()
+                back()
+                rotateClockwise()
+                drop()
+                forward()
+                wait(1)
+                forward()
+                reset()
             }
         }
         )

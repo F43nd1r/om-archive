@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P043"
-    name = "468 OMEGA"
+    name = "468 FINAL FORM"
     arm(ARM1) {
         number = 1
         position = -3 to -1
@@ -10,7 +10,7 @@ solution {
     }
     arm(ARM1) {
         number = 2
-        position = -2 to -4
+        position = -1 to -5
         rotation = 3
         size = 2
     }
@@ -69,7 +69,7 @@ solution {
     }
     io(INPUT) {
         index = 0
-        position = -4 to -4
+        position = -3 to -5
         rotation = 0
     }
     io(INPUT) {
@@ -196,21 +196,21 @@ solution {
                 wait(2)
                 grab()
                 rotateClockwise()
-                back()
-                drop()
                 forward()
+                drop()
+                back()
                 reset()
                 grab()
                 rotateClockwise()
                 drop()
-                forward()
+                back()
                 grab()
                 back()
                 rotateClockwise()
                 drop()
                 forward()
                 wait(1)
-                back()
+                forward()
                 reset()
             }
         }
