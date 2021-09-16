@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P055"
-    name = "SUM4"
+    name = "B F"
     arm(ARM1) {
         number = 1
         position = 3 to -2
@@ -22,16 +22,16 @@ solution {
     }
     arm(ARM1) {
         number = 4
-        position = 4 to -2
-        rotation = 2
-        size = 1
+        position = 4 to -1
+        rotation = 3
+        size = 2
     }
     glyph(BONDER) {
         position = 1 to -1
         rotation = 0
     }
     glyph(BONDER) {
-        position = 3 to 0
+        position = 3 to 1
         rotation = 0
     }
     glyph(DUPLICATION) {
@@ -45,7 +45,7 @@ solution {
     }
     io(INFINITE) {
         index = 0
-        position = 5 to 0
+        position = 5 to 1
         rotation = 0
     }
     io(INPUT) {
@@ -54,8 +54,8 @@ solution {
         rotation = 0
     }
     track {
-        position = 5 to -2
-        positions = listOf(1 to 0, 0 to 0, -1 to 0)
+        position = 4 to -1
+        positions = listOf(2 to 0, 1 to 0, 0 to 0)
     }
     tape {
         parallel(
@@ -67,7 +67,6 @@ solution {
                 wait(1)
                 grab()
                 rotateClockwise()
-                pivotClockwise()
                 pivotClockwise()
                 reset()
                 wait(1)
@@ -85,7 +84,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 reset()
-                wait(2)
+                wait(1)
                 repeat()
             }
         }
@@ -95,13 +94,13 @@ solution {
                 wait(3)
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                wait(2)
+                wait(3)
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                wait(4)
-                rotateClockwise()
-                rotateClockwise()
                 wait(2)
+                rotateClockwise()
+                rotateClockwise()
+                wait(3)
                 rotateClockwise()
                 rotateClockwise()
             }
@@ -109,13 +108,14 @@ solution {
         , 
         {
             sequence(4) {
-                wait(8)
+                wait(7)
                 grab()
                 pivotClockwise()
+                rotateClockwise()
                 back()
                 back()
                 reset()
-                wait(5)
+                wait(3)
                 repeat()
             }
         }
