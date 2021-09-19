@@ -1,24 +1,22 @@
 
 solution {
     puzzle = "P037"
-    name = "B F"
-    arm(ARM1) {
-        number = 1
-        position = -3 to 0
-        rotation = 1
-        size = 1
-    }
+    name = "SUM4 - 284"
     arm(ARM6) {
-        number = 2
-        position = -2 to 1
-        rotation = 0
+        number = 1
+        position = -2 to 0
+        rotation = -3
         size = 1
     }
     arm(ARM1) {
-        number = 3
-        position = -4 to 2
-        rotation = 0
-        size = 2
+        number = 2
+        position = 0 to -1
+        rotation = -3
+        size = 1
+    }
+    glyph(BONDER) {
+        position = -2 to 1
+        rotation = -1
     }
     glyph(BONDER) {
         position = 1 to 1
@@ -27,10 +25,6 @@ solution {
     glyph(BONDER) {
         position = 0 to 1
         rotation = -1
-    }
-    glyph(BONDER) {
-        position = -2 to 0
-        rotation = 0
     }
     io(INPUT) {
         index = 0
@@ -44,55 +38,46 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = -3 to 1
+        position = -1 to -1
         rotation = 0
     }
     track {
-        position = -4 to 2
-        positions = listOf(0 to 0, 1 to 0, 2 to 0)
+        position = 1 to -1
+        positions = listOf(1 to 0, 0 to 0, -1 to 0)
     }
     tape {
         parallel(
-        {
-            sequence(2) {
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
                 rotateClockwise()
                 drop()
-                rotateClockwise()
                 grab()
                 rotateCounterClockwise()
-                reset()
-                wait(1)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                drop()
                 grab()
+                rotateCounterClockwise()
                 rotateClockwise()
-                reset()
+                drop()
+                wait(1)
+                extendTape()
             }
         }
         , 
         {
-            sequence(3) {
-                wait(9)
+            sequence(2) {
+                wait(7)
                 grab()
-                forward()
-                forward()
+                rotateClockwise()
                 drop()
-                back()
+                wait(2)
                 grab()
-                forward()
+                rotateClockwise()
+                back()
+                back()
                 reset()
             }
         }
