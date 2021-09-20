@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P037"
-    name = "NEW SOLUTION 8"
+    name = "B F"
     arm(ARM6) {
         number = 1
         position = -5 to 0
@@ -58,8 +58,6 @@ solution {
                 drop()
                 grab()
                 rotateCounterClockwise()
-                drop()
-                grab()
                 rotateCounterClockwise()
                 drop()
             }
@@ -70,11 +68,12 @@ solution {
                 wait(3)
                 grab()
                 back()
-                rotateCounterClockwise()
                 back()
+                rotateCounterClockwise()
                 drop()
-                wait(4)
+                rotateCounterClockwise()
                 grab()
+                rotateClockwise()
                 pivotClockwise()
                 forward()
                 forward()
