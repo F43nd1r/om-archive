@@ -1,118 +1,42 @@
 
 solution {
     puzzle = "P037"
-    name = "B GAX NOGIF"
+    name = "OVERLAP GAX"
     arm(ARM1) {
         number = 1
-        position = -1 to -2
-        rotation = -2
+        position = 6 to -1
+        rotation = 0
         size = 1
     }
     glyph(BONDER) {
-        position = 0 to -3
-        rotation = -5
+        position = 6 to 0
+        rotation = -3
     }
     glyph(EQUILIBRIUM) {
-        position = 11 to -13
+        position = -5 to 1
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 9 to -13
+        position = 10 to -8
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
-        position = 0 to -4
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 12 to -11
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 12 to -6
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 11 to -5
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 11 to -3
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 10 to -2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 10 to -1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 8 to 1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 8 to 2
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 3 to 7
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = 2 to 7
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -1 to 10
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -2 to 10
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -3 to 11
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -7 to 12
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -9 to 12
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -9 to 11
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -6 to 11
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -12 to 11
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -12 to 1
+        position = 5 to 8
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -2 to -2
+        position = 7 to -2
         rotation = 0
     }
     io(INFINITE) {
         index = 0
-        position = -11 to 0
+        position = -6 to 1
         rotation = 0
     }
     io(INPUT) {
         index = 1
-        position = -1 to -3
+        position = 7 to -1
         rotation = 0
     }
     tape {
@@ -560,14 +484,6 @@ solution {
                 rotateClockwise()
                 grab()
                 rotateCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
-                pivotCounterClockwise()
             }
         }
         )
