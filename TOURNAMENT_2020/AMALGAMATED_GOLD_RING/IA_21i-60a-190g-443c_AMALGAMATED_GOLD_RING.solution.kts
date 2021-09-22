@@ -4,72 +4,72 @@ solution {
     name = "NEW SOLUTION 1 (Copy) (Copy) (Copy)"
     arm(ARM3) {
         number = 1
-        position = -3 to 2
-        rotation = -2
+        position = -2 to -1
+        rotation = -7
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -1 to -1
-        rotation = 1
+        position = 1 to -2
+        rotation = -4
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM3) {
         number = 3
-        position = 0 to 2
-        rotation = 4
+        position = -2 to 2
+        rotation = -1
         size = 1
     }
     arm(ARM1) {
         number = 4
-        position = 3 to -2
-        rotation = 1
+        position = 2 to 1
+        rotation = -4
         size = 2
     }
     arm(ARM6) {
         number = 5
-        position = -7 to 3
-        rotation = 0
+        position = -5 to 0
+        rotation = -5
         size = 2
     }
     glyph(BONDER) {
-        position = -2 to 2
-        rotation = -2
+        position = -2 to 0
+        rotation = -7
     }
     glyph(BONDER) {
-        position = 0 to 1
-        rotation = -1
+        position = -1 to 1
+        rotation = -6
     }
     glyph(BONDER) {
-        position = 1 to -1
-        rotation = 0
+        position = 1 to 0
+        rotation = -5
     }
     glyph(UNBONDER) {
-        position = -4 to 2
-        rotation = 2
+        position = -2 to -2
+        rotation = -3
     }
     glyph(PROJECTION) {
-        position = -3 to 1
-        rotation = -1
+        position = -1 to -2
+        rotation = -6
     }
     glyph(DISPOSAL) {
-        position = -5 to 1
+        position = -5 to -2
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -1 to 1
-        rotation = -8
+        position = -1 to 0
+        rotation = -13
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to 2
-        rotation = -1
+        position = -2 to 4
+        rotation = -6
     }
     io(INPUT) {
         index = 1
-        position = -4 to 4
-        rotation = -2
+        position = -4 to 0
+        rotation = -7
     }
     tape {
         parallel(
@@ -88,7 +88,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(11)
+                wait(5)
                 grab()
                 rotateCounterClockwise()
                 reset()
@@ -96,10 +96,10 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(7)
+            sequence(1) {
+                wait(3)
                 grab()
-                pivotCounterClockwise()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
             }
@@ -115,10 +115,10 @@ solution {
         }
         , 
         {
-            sequence(1) {
-                wait(3)
+            sequence(3) {
+                wait(7)
                 grab()
-                rotateCounterClockwise()
+                pivotCounterClockwise()
                 rotateCounterClockwise()
                 drop()
             }
