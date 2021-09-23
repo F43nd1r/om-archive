@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "w2501727808"
-    name = "NEW SOLUTION 1"
-    arm(ARM1) {
+    name = "TIC 16"
+    arm(ARM6) {
         number = 1
-        position = -7 to -4
-        rotation = 4
+        position = -9 to -1
+        rotation = -3
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 2
-        position = -8 to -6
-        rotation = 8
+        position = -12 to -2
+        rotation = 1
         size = 2
     }
     arm(ARM1) {
@@ -23,18 +23,18 @@ solution {
     arm(ARM1) {
         number = 4
         position = -1 to -3
-        rotation = 3
+        rotation = -13
         size = 3
     }
     arm(ARM1) {
         number = 5
         position = -3 to 3
-        rotation = 1
+        rotation = 7
         size = 2
     }
     glyph(BONDER) {
-        position = -7 to -3
-        rotation = 1
+        position = -8 to -1
+        rotation = 0
     }
     glyph(BONDER) {
         position = -4 to 0
@@ -45,21 +45,16 @@ solution {
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -6 to -6
-        rotation = 1
-    }
-    glyph(PROJECTION) {
-        position = -6 to -4
-        rotation = 7
-    }
-    glyph(DISPOSAL) {
-        position = -6 to -8
+        position = -10 to -2
         rotation = 0
     }
-    io(INPUT) {
-        index = 0
-        position = -5 to -3
-        rotation = 2
+    glyph(PROJECTION) {
+        position = -8 to -2
+        rotation = 0
+    }
+    glyph(DISPOSAL) {
+        position = -10 to -4
+        rotation = 0
     }
     io(OUTPUT) {
         index = 0
@@ -67,21 +62,17 @@ solution {
         rotation = 0
     }
     io(INPUT) {
+        index = 0
+        position = -5 to -3
+        rotation = -4
+    }
+    io(INPUT) {
         index = 1
-        position = -8 to -5
-        rotation = 6
+        position = -11 to 0
+        rotation = -1
     }
     tape {
         parallel(
-        {
-            sequence(2) {
-                wait(2)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
@@ -91,16 +82,16 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(2)
+            sequence(2) {
                 grab()
-                pivotClockwise()
+                rotateClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(4) {
+                wait(15)
                 grab()
                 rotateClockwise()
                 drop()
@@ -109,12 +100,20 @@ solution {
         , 
         {
             sequence(5) {
-                wait(3)
+                wait(13)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(1)
+                grab()
                 pivotClockwise()
                 drop()
-                rotateClockwise()
             }
         }
         )
