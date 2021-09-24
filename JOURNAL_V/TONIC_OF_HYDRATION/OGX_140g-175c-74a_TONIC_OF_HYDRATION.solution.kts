@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P089"
-    name = "391"
+    name = "B S"
     arm(ARM1) {
         number = 1
         position = -7 to 3
@@ -72,53 +72,35 @@ solution {
         parallel(
         {
             sequence(3) {
-                wait(4)
+                wait(2)
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 reset()
                 wait(4)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(4)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
+                repeat()
+                wait(8)
+                repeat()
             }
         }
         , 
         {
             sequence(4) {
-                wait(2)
                 grab()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 reset()
                 wait(4)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(4)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                reset()
+                repeat()
+                wait(8)
+                repeat()
             }
         }
         , 
         {
             sequence(1) {
-                wait(2)
                 grab()
                 rotateCounterClockwise()
                 reset()
@@ -128,45 +110,25 @@ solution {
                 pivotCounterClockwise()
                 reset()
                 wait(1)
-                grab()
-                rotateCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                reset()
+                repeat()
+                wait(8)
+                repeat()
             }
         }
         , 
         {
             sequence(5) {
-                wait(10)
+                wait(8)
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                pivotCounterClockwise()
                 rotateClockwise()
+                pivotCounterClockwise()
                 reset()
                 wait(2)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                rotateClockwise()
-                reset()
-                wait(2)
+                repeat()
+                wait(8)
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
@@ -181,15 +143,6 @@ solution {
         , 
         {
             sequence(2) {
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                reset()
                 wait(1)
                 grab()
                 rotateCounterClockwise()
@@ -200,14 +153,9 @@ solution {
                 pivotClockwise()
                 reset()
                 wait(1)
-                grab()
-                rotateCounterClockwise()
-                reset()
-                wait(1)
-                grab()
-                rotateCounterClockwise()
-                pivotClockwise()
-                reset()
+                repeat()
+                wait(8)
+                repeat()
             }
         }
         )
