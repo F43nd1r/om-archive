@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P083"
-    name = "INSTRU"
+    name = "INSTRU (Copy) (Copy)"
     arm(PISTON) {
         number = 1
         position = 0 to -1
@@ -23,10 +23,10 @@ solution {
     arm(PISTON) {
         number = 4
         position = 7 to -1
-        rotation = -11
-        size = 1
+        rotation = -12
+        size = 3
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 5
         position = 10 to 0
         rotation = -3
@@ -64,10 +64,6 @@ solution {
         position = 7 to 2
         rotation = 0
     }
-    track {
-        position = 9 to 0
-        positions = listOf(0 to 0, 1 to 0)
-    }
     conduit {
         id = 100
         position = 0 to 1
@@ -87,25 +83,17 @@ solution {
                 wait(4)
                 grab()
                 rotateClockwise()
+                wait(1)
                 drop()
             }
         }
         , 
         {
             sequence(3) {
-                wait(7)
+                wait(9)
                 grab()
                 rotateClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(11)
-                grab()
-                extend()
-                reset()
             }
         }
         , 
@@ -120,32 +108,38 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(9)
+            sequence(1) {
+                wait(1)
                 grab()
-                pivotClockwise()
-                drop()
-                rotateCounterClockwise()
-                grab()
+                wait(1)
                 rotateClockwise()
                 extend()
-                extend()
-                back()
-                drop()
-                forward()
-                retract()
-                retract()
+                rotateClockwise()
+                reset()
             }
         }
         , 
         {
-            sequence(1) {
-                wait(1)
+            sequence(4) {
+                wait(7)
                 grab()
-                wait(2)
+                rotateCounterClockwise()
+                retract()
+                retract()
+                rotateCounterClockwise()
+                drop()
                 rotateClockwise()
+                grab()
                 extend()
-                rotateClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(12)
+                grab()
+                pivotClockwise()
                 reset()
             }
         }
