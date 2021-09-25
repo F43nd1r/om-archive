@@ -29,7 +29,7 @@ solution {
     arm(PISTON) {
         number = 5
         position = 10 to 0
-        rotation = -2
+        rotation = -3
         size = 1
     }
     arm(ARM1) {
@@ -64,6 +64,10 @@ solution {
         position = 7 to 2
         rotation = 0
     }
+    track {
+        position = 9 to 0
+        positions = listOf(0 to 0, 1 to 0)
+    }
     conduit {
         id = 100
         position = 0 to 1
@@ -93,35 +97,12 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                wait(10)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(9)
-                grab()
-                rotateClockwise()
-                extend()
-                extend()
-                drop()
-                retract()
-                retract()
-                grab()
-                pivotClockwise()
-                reset()
             }
         }
         , 
         {
             sequence(4) {
-                wait(13)
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                wait(1)
+                wait(11)
                 grab()
                 extend()
                 reset()
@@ -135,6 +116,25 @@ solution {
                 pivotClockwise()
                 pivotClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(9)
+                grab()
+                pivotClockwise()
+                drop()
+                rotateCounterClockwise()
+                grab()
+                rotateClockwise()
+                extend()
+                extend()
+                back()
+                drop()
+                forward()
+                retract()
+                retract()
             }
         }
         , 
