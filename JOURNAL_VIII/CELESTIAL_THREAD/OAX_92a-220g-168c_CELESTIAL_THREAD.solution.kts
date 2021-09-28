@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P101"
-    name = "NEARLY GOT IT (SUM4)"
+    name = "NEARLY GOT IT (Copy) (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)"
     arm(ARM1) {
         number = 1
         position = -5 to 2
@@ -108,6 +108,16 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
+                wait(1)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
             }
         }
         , 
@@ -139,6 +149,15 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
             }
         }
         , 
@@ -166,6 +185,16 @@ solution {
                 pivotCounterClockwise()
                 drop()
                 rotateClockwise()
+                wait(4)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
             }
         }
         , 
@@ -181,7 +210,7 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                wait(1)
+                wait(2)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -192,12 +221,51 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
+                wait(3)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
             }
         }
         , 
         {
             sequence(5) {
                 wait(22)
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                forward()
+                drop()
+                back()
+                rotateCounterClockwise()
+                wait(1)
+                grab()
+                forward()
+                back()
+                rotateClockwise()
+                pivotClockwise()
+                back()
+                pivotClockwise()
+                back()
+                drop()
+                back()
+                back()
+                rotateCounterClockwise()
+                wait(5)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
+                repeat()
+                wait(24)
                 grab()
                 rotateClockwise()
                 pivotCounterClockwise()
