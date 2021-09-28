@@ -77,7 +77,7 @@ solution {
     }
     track {
         position = 1 to -1
-        positions = listOf(1 to 0, 1 to 1, 0 to 1, 0 to 0)
+        positions = listOf(2 to 1, 1 to 1, 0 to 1, 0 to 0, 1 to 0)
     }
     tape {
         parallel(
@@ -214,17 +214,12 @@ solution {
                 back()
                 pivotClockwise()
                 back()
-                drop()
-                forward()
-                rotateClockwise()
-                grab()
                 back()
                 forward()
                 drop()
-                rotateCounterClockwise()
                 forward()
                 rotateCounterClockwise()
-                extendTape()
+                forward()
             }
         }
         )

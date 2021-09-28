@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P101"
-    name = "NEARLY GOT IT (Copy) (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)"
+    name = "NEARLY GOT IT (SUM4)"
     arm(ARM1) {
         number = 1
         position = -5 to 2
@@ -77,7 +77,7 @@ solution {
     }
     track {
         position = 1 to -1
-        positions = listOf(1 to 0, 1 to 1, 0 to 1, 0 to 0)
+        positions = listOf(2 to 1, 1 to 1, 0 to 1, 0 to 0, 1 to 0)
     }
     tape {
         parallel(
@@ -108,16 +108,6 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                wait(1)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
             }
         }
         , 
@@ -149,15 +139,6 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 drop()
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
             }
         }
         , 
@@ -185,16 +166,6 @@ solution {
                 pivotCounterClockwise()
                 drop()
                 rotateClockwise()
-                wait(4)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
             }
         }
         , 
@@ -210,7 +181,7 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                wait(2)
+                wait(1)
                 grab()
                 rotateClockwise()
                 rotateClockwise()
@@ -221,16 +192,6 @@ solution {
                 rotateClockwise()
                 drop()
                 rotateCounterClockwise()
-                wait(3)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
             }
         }
         , 
@@ -253,46 +214,12 @@ solution {
                 back()
                 pivotClockwise()
                 back()
-                drop()
-                back()
-                back()
-                rotateCounterClockwise()
-                wait(5)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                repeat()
-                wait(24)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                forward()
-                drop()
-                back()
-                rotateCounterClockwise()
-                wait(1)
-                grab()
-                forward()
-                back()
-                rotateClockwise()
-                pivotClockwise()
-                back()
-                pivotClockwise()
-                back()
-                drop()
-                forward()
-                rotateClockwise()
-                grab()
                 back()
                 forward()
                 drop()
-                rotateCounterClockwise()
                 forward()
                 rotateCounterClockwise()
-                extendTape()
+                forward()
             }
         }
         )
