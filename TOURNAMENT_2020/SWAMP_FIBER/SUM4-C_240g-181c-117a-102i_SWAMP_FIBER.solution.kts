@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "w2501727889"
-    name = "SUM"
+    name = "SUM ALT"
     arm(ARM1) {
         number = 1
         position = -12 to -9
@@ -34,7 +34,7 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = -7 to -8
+        position = -5 to -8
         rotation = 2
         size = 2
     }
@@ -84,7 +84,7 @@ solution {
     }
     track {
         position = -7 to -8
-        positions = listOf(0 to 0, 1 to 0, 2 to 0)
+        positions = listOf(-1 to 0, 0 to 0, 1 to 0, 2 to 0)
     }
     tape {
         parallel(
@@ -161,30 +161,6 @@ solution {
         }
         , 
         {
-            sequence(6) {
-                wait(41)
-                grab()
-                forward()
-                forward()
-                drop()
-                back()
-                back()
-                rotateClockwise()
-                grab()
-                forward()
-                forward()
-                drop()
-                back()
-                rotateCounterClockwise()
-                grab()
-                forward()
-                wait(5)
-                back()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(2) {
                 wait(3)
                 grab()
@@ -197,6 +173,27 @@ solution {
                 reset()
                 wait(2)
                 repeat()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(35)
+                back()
+                drop()
+                back()
+                back()
+                grab()
+                wait(2)
+                forward()
+                forward()
+                forward()
+                drop()
+                back()
+                back()
+                grab()
+                forward()
+                forward()
             }
         }
         )
