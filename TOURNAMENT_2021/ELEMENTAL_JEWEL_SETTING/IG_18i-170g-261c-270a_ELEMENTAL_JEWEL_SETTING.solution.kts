@@ -1,62 +1,56 @@
 
 solution {
     puzzle = "w2450512809"
-    name = "NEW SOLUTION 1"
+    name = "NEW SOLUTION 1 (Copy)"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
-        position = -3 to -4
-        rotation = 2
+        position = -5 to 2
+        rotation = -1
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = 1 to -4
-        rotation = 2
+        position = -9 to 2
+        rotation = -1
         size = 2
     }
     arm(ARM6) {
         number = 3
-        position = -4 to 1
-        rotation = 0
+        position = -4 to 0
+        rotation = -4
         size = 3
     }
-    arm(PISTON) {
+    arm(ARM6) {
         number = 4
-        position = -3 to 1
-        rotation = 0
-        size = 2
-    }
-    arm(ARM2) {
-        number = 5
-        position = 3 to 2
-        rotation = 3
+        position = -2 to -2
+        rotation = -7
         size = 3
     }
     glyph(BONDER) {
-        position = -1 to -3
-        rotation = 1
+        position = -7 to 1
+        rotation = -2
     }
     glyph(BONDER) {
-        position = 2 to -2
-        rotation = 2
+        position = -2 to -5
+        rotation = -4
     }
     glyph(BONDER) {
-        position = -1 to 2
-        rotation = 1
+        position = -7 to -3
+        rotation = -6
     }
     glyph(DUPLICATION) {
-        position = -2 to -4
-        rotation = 0
+        position = -6 to 2
+        rotation = -3
     }
     io(INPUT) {
         index = 0
-        position = 0 to -5
-        rotation = -7
+        position = -8 to 3
+        rotation = -10
     }
     io(OUTPUT) {
         index = 0
-        position = 0 to 5
-        rotation = -1
+        position = -1 to 1
+        rotation = -7
     }
     tape {
         parallel(
@@ -86,23 +80,17 @@ solution {
                 wait(5)
                 grab()
                 rotateCounterClockwise()
+                pivotCounterClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(4) {
-                wait(7)
+                wait(9)
                 grab()
-                extend()
-                reset()
-            }
-        }
-        , 
-        {
-            sequence(5) {
-                wait(10)
-                grab()
+                pivotClockwise()
+                pivotClockwise()
                 rotateClockwise()
                 drop()
             }
