@@ -35,7 +35,7 @@ solution {
     arm(ARM3) {
         number = 6
         position = 2 to -3
-        rotation = 0
+        rotation = 2
         size = 3
     }
     arm(ARM3) {
@@ -56,11 +56,11 @@ solution {
         rotation = -1
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 10
-        position = -3 to -3
-        rotation = 0
-        size = 3
+        position = 5 to -7
+        rotation = 8
+        size = 1
     }
     glyph(BONDER) {
         position = 6 to -4
@@ -77,10 +77,6 @@ solution {
     glyph(BONDER) {
         position = -2 to 1
         rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 4 to 0
-        rotation = -2
     }
     glyph(UNBONDER) {
         position = 5 to -3
@@ -121,18 +117,18 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -4 to 2
-        rotation = -2
+        position = -2 to 0
+        rotation = -1
     }
     io(OUTPUT) {
         index = 1
-        position = -2 to 0
-        rotation = 2
+        position = -4 to 2
+        rotation = 1
     }
     io(INPUT) {
         index = 1
-        position = -1 to -3
-        rotation = -3
+        position = 5 to -6
+        rotation = -1
     }
     io(INPUT) {
         index = 2
@@ -141,8 +137,8 @@ solution {
     }
     io(INPUT) {
         index = 3
-        position = 1 to -3
-        rotation = -3
+        position = 4 to -7
+        rotation = 1
     }
     tape {
         parallel(
@@ -160,15 +156,6 @@ solution {
                 wait(7)
                 grab()
                 rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(8)
-                grab()
-                rotateCounterClockwise()
                 drop()
             }
         }
@@ -227,10 +214,19 @@ solution {
         }
         , 
         {
-            sequence(10) {
-                wait(52)
+            sequence(6) {
+                wait(16)
                 grab()
-                retract()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(10) {
+                wait(60)
+                grab()
+                rotateClockwise()
                 reset()
             }
         }
