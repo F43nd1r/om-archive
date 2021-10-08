@@ -56,11 +56,11 @@ solution {
         rotation = -1
         size = 1
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 10
-        position = -3 to -3
-        rotation = 0
-        size = 3
+        position = -2 to -2
+        rotation = 9
+        size = 1
     }
     glyph(BONDER) {
         position = 6 to -4
@@ -77,10 +77,6 @@ solution {
     glyph(BONDER) {
         position = -2 to 1
         rotation = -1
-    }
-    glyph(UNBONDER) {
-        position = 4 to 0
-        rotation = -2
     }
     glyph(UNBONDER) {
         position = 5 to -3
@@ -141,8 +137,8 @@ solution {
     }
     io(INPUT) {
         index = 3
-        position = 1 to -3
-        rotation = -3
+        position = -3 to -2
+        rotation = 1
     }
     tape {
         parallel(
@@ -230,7 +226,7 @@ solution {
             sequence(10) {
                 wait(52)
                 grab()
-                retract()
+                rotateCounterClockwise()
                 reset()
             }
         }
