@@ -117,18 +117,18 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -4 to 2
-        rotation = -2
-    }
-    io(OUTPUT) {
-        index = 1
         position = -2 to 0
-        rotation = 2
+        rotation = -1
     }
     io(INPUT) {
         index = 1
         position = -1 to -3
         rotation = -3
+    }
+    io(OUTPUT) {
+        index = 1
+        position = -4 to 2
+        rotation = 1
     }
     io(INPUT) {
         index = 2
