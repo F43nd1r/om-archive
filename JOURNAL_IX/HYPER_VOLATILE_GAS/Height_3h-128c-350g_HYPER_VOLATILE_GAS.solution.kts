@@ -1,98 +1,112 @@
 
 solution {
     puzzle = "P106"
-    name = "H"
+    name = "H3"
     arm(ARM1) {
         number = 1
-        position = -4 to -1
+        position = -14 to -1
         rotation = 0
         size = 3
     }
     arm(ARM1) {
         number = 2
-        position = -3 to -2
+        position = -13 to -2
         rotation = 0
         size = 3
     }
     arm(PISTON) {
         number = 3
-        position = 2 to -2
+        position = -8 to -2
         rotation = 2
         size = 1
     }
     arm(PISTON) {
         number = 4
-        position = 1 to 0
+        position = -9 to 0
         rotation = -2
         size = 1
     }
     arm(ARM1) {
         number = 5
-        position = 5 to -2
+        position = -5 to -2
         rotation = 2
         size = 1
     }
     arm(ARM1) {
         number = 6
-        position = 8 to 0
+        position = -2 to 0
         rotation = 3
         size = 3
     }
     arm(ARM1) {
         number = 7
-        position = 12 to -2
+        position = 0 to -1
+        rotation = 3
+        size = 3
+    }
+    arm(ARM1) {
+        number = 8
+        position = 1 to -1
         rotation = 3
         size = 3
     }
     glyph(BONDER) {
-        position = 2 to 0
+        position = -8 to 0
         rotation = 0
     }
     glyph(BONDER) {
-        position = 4 to -1
+        position = -6 to -1
         rotation = 1
     }
     glyph(BONDER) {
-        position = 7 to 0
+        position = -3 to 0
         rotation = -1
     }
     glyph(TRIPLEX_BONDER) {
-        position = 3 to -2
+        position = -7 to -2
         rotation = 1
     }
     glyph(TRIPLEX_BONDER) {
-        position = 9 to -2
+        position = -1 to -2
         rotation = 6
     }
     glyph(UNBONDER) {
-        position = 1 to -1
+        position = -9 to -1
         rotation = -2
     }
     glyph(EQUILIBRIUM) {
-        position = 8 to -2
+        position = -10 to 0
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -2 to -2
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -1 to -1
+        position = -11 to -1
         rotation = -2
     }
     io(OUTPUT) {
         index = 0
-        position = 6 to -1
+        position = -4 to -1
         rotation = -4
     }
     track {
-        position = 4 to -2
+        position = -6 to -2
         positions = listOf(0 to 0, 1 to 0)
     }
     track {
-        position = -4 to -1
+        position = -14 to -1
         positions = listOf(0 to 0, 1 to 0, 1 to -1, 2 to -1)
     }
     track {
-        position = 10 to -1
-        positions = listOf(-2 to 1, -1 to 1, 0 to 1, 1 to 0, 0 to 0, 1 to -1, 2 to -1, 3 to -1)
+        position = 0 to -1
+        positions = listOf(-2 to 1, -1 to 1)
+    }
+    track {
+        position = 0 to 0
+        positions = listOf(2 to -1, 1 to -1, 0 to -1, 1 to -2, 2 to -2, 3 to -2)
     }
     tape {
         parallel(
@@ -132,8 +146,6 @@ solution {
                 rotateClockwise()
                 extend()
                 reset()
-                wait(2)
-                extendTape()
             }
         }
         , 
@@ -162,17 +174,15 @@ solution {
                 wait(11)
                 back()
                 grab()
-                forward()
                 rotateClockwise()
                 pivotClockwise()
+                forward()
                 drop()
                 wait(2)
                 back()
                 grab()
                 pivotClockwise()
-                pivotCounterClockwise()
                 forward()
-                pivotClockwise()
                 reset()
             }
         }
@@ -192,11 +202,8 @@ solution {
                 wait(16)
                 grab()
                 pivotCounterClockwise()
-                forward()
-                forward()
-                forward()
                 reset()
-                wait(3)
+                wait(4)
                 grab()
                 pivotCounterClockwise()
                 forward()
@@ -204,24 +211,43 @@ solution {
                 wait(3)
                 grab()
                 back()
-                drop()
+                reset()
             }
         }
         , 
         {
             sequence(7) {
-                wait(21)
+                wait(18)
                 grab()
                 forward()
+                forward()
+                forward()
+                drop()
+                forward()
+                forward()
+                forward()
+                grab()
+                pivotClockwise()
+                pivotClockwise()
+                pivotClockwise()
+                reset()
+            }
+        }
+        , 
+        {
+            sequence(8) {
+                wait(19)
+                forward()
+                forward()
+                forward()
+                grab()
                 pivotCounterClockwise()
+                forward()
                 back()
                 back()
                 drop()
-                back()
-                grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
+                forward()
+                forward()
                 reset()
             }
         }
