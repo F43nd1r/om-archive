@@ -32,7 +32,7 @@ solution {
         rotation = 1
         size = 2
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 6
         position = 0 to -2
         rotation = 3
@@ -162,6 +162,10 @@ solution {
         position = -1 to 3
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = 2 to 2
+        rotation = 0
+    }
     io(OUTPUT) {
         index = 0
         position = -3 to -1
@@ -183,7 +187,7 @@ solution {
     }
     track {
         position = 0 to -2
-        positions = listOf(0 to 0, 0 to 1, 1 to 1, 1 to 2, 2 to 2, 2 to 3)
+        positions = listOf(0 to 0, 0 to 1, 1 to 1, 1 to 2, 2 to 2, 2 to 3, 3 to 3, 3 to 4, 4 to 4)
     }
     tape {
         parallel(
@@ -202,9 +206,25 @@ solution {
                 forward()
                 pivotClockwise()
                 drop()
+                retract()
+                rotateClockwise()
                 wait(2)
                 grab()
+                pivotCounterClockwise()
+                forward()
+                pivotCounterClockwise()
+                drop()
+                forward()
                 back()
+                grab()
+                pivotClockwise()
+                back()
+                drop()
+                forward()
+                forward()
+                rotateCounterClockwise()
+                grab()
+                extend()
                 drop()
                 retract()
             }
@@ -235,8 +255,20 @@ solution {
                 grab()
                 extend()
                 drop()
+                retract()
+                wait(1)
+                grab()
+                pivotCounterClockwise()
+                forward()
+                wait(1)
+                pivotClockwise()
+                extend()
                 back()
-                back()
+                pivotClockwise()
+                wait(2)
+                forward()
+                pivotClockwise()
+                drop()
                 retract()
                 rotateClockwise()
             }
@@ -248,6 +280,8 @@ solution {
                 grab()
                 pivotCounterClockwise()
                 drop()
+                wait(15)
+                repeat()
             }
         }
         , 
@@ -257,26 +291,33 @@ solution {
                 grab()
                 extend()
                 reset()
+                wait(15)
+                repeat()
             }
         }
         , 
         {
             sequence(6) {
-                wait(18)
+                wait(16)
                 grab()
-                retract()
                 forward()
                 forward()
                 forward()
                 forward()
                 forward()
-                retract()
-                extend()
+                forward()
+                forward()
+                forward()
                 back()
                 back()
                 back()
                 back()
-                reset()
+                back()
+                drop()
+                back()
+                back()
+                back()
+                repeat()
             }
         }
         )
