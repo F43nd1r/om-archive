@@ -2,11 +2,11 @@
 solution {
     puzzle = "w2450512021"
     name = "W"
-    arm(PISTON) {
+    arm(ARM1) {
         number = 1
         position = 0 to -2
-        rotation = -4
-        size = 1
+        rotation = 1
+        size = 3
     }
     arm(ARM1) {
         number = 2
@@ -144,95 +144,20 @@ solution {
         positions = listOf(0 to 0, 1 to 0, 1 to 1, 1 to 2)
     }
     track {
-        position = 3 to 2
-        positions = listOf(0 to 0, 0 to -1)
+        position = 3 to 1
+        positions = listOf(0 to 0, 0 to 1)
     }
     tape {
         parallel(
         {
-            sequence(1) {
-                wait(5)
-                grab()
-                rotateClockwise()
-                extend()
-                extend()
-                forward()
-                forward()
-                wait(2)
-                back()
-                back()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                forward()
-                wait(1)
-                back()
-                back()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                forward()
-                wait(1)
-                back()
-                back()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                forward()
-                wait(1)
-                back()
-                back()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                forward()
-                wait(1)
-                back()
-                back()
-                forward()
-                drop()
-                back()
-                wait(2)
-                grab()
-                forward()
-                forward()
-                wait(1)
-                back()
-                back()
-                forward()
-                reset()
-            }
-        }
-        , 
-        {
             sequence(2) {
-                wait(15)
+                wait(4)
                 grab()
                 forward()
                 pivotClockwise()
                 forward()
                 forward()
                 reset()
-                wait(5)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
             }
         }
         , 
@@ -248,16 +173,6 @@ solution {
                 grab()
                 rotateClockwise()
                 reset()
-                wait(8)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
             }
         }
         , 
@@ -266,29 +181,8 @@ solution {
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
-                wait(1)
-                repeat()
-                wait(4)
-                repeat()
-                wait(5)
-                repeat()
-                wait(4)
-                repeat()
-                wait(5)
-                repeat()
-                wait(4)
-                repeat()
-                wait(5)
-                repeat()
-                wait(4)
-                repeat()
-                wait(5)
-                repeat()
-                wait(4)
-                repeat()
-                wait(5)
+                reset()
+                wait(2)
                 repeat()
             }
         }
@@ -302,16 +196,6 @@ solution {
                 extend()
                 extend()
                 reset()
-                wait(5)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
             }
         }
         , 
@@ -319,21 +203,25 @@ solution {
             sequence(7) {
                 wait(8)
                 grab()
-                back()
+                forward()
                 extend()
                 pivotClockwise()
                 pivotClockwise()
                 reset()
-                wait(5)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
-                wait(10)
-                repeat()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(9)
+                grab()
+                forward()
+                forward()
+                wait(1)
+                back()
+                back()
+                forward()
+                reset()
             }
         }
         )
