@@ -1,46 +1,46 @@
 
 solution {
     puzzle = "P095"
-    name = "ZORFLAX TI (Copy) (Copy)"
+    name = "ZORFLAX TI (Copy) (Copy) (Copy)"
     arm(ARM6) {
         number = 1
-        position = -3 to 0
+        position = 2 to -4
         rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 2
-        position = -1 to 0
-        rotation = -3
-        size = 1
+        position = 0 to -1
+        rotation = -1
+        size = 3
     }
-    arm(PISTON) {
+    arm(ARM1) {
         number = 3
-        position = 1 to -3
+        position = 1 to -1
         rotation = 1
-        size = 2
+        size = 3
     }
     glyph(BONDER) {
-        position = 0 to -2
-        rotation = 0
+        position = 4 to -2
+        rotation = 1
     }
     glyph(UNBONDER) {
-        position = 1 to -1
+        position = 1 to 2
         rotation = 3
     }
     glyph(PROJECTION) {
-        position = -2 to 1
-        rotation = -9
+        position = 0 to -4
+        rotation = -12
     }
     io(INPUT) {
         index = 0
-        position = -2 to 0
+        position = 3 to -4
         rotation = -8
     }
     io(OUTPUT) {
         index = 0
-        position = -4 to 0
-        rotation = 7
+        position = 1 to -3
+        rotation = 0
     }
     tape {
         parallel(
@@ -48,7 +48,7 @@ solution {
             sequence(1) {
                 wait(4)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
             }
         }
@@ -57,8 +57,7 @@ solution {
             sequence(3) {
                 wait(4)
                 grab()
-                retract()
-                pivotClockwise()
+                rotateClockwise()
                 reset()
             }
         }
