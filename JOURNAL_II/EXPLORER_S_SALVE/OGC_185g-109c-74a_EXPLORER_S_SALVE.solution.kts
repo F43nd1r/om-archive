@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P059"
-    name = "408 SUM4"
+    name = "403 SUM4"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = -6 to 5
@@ -17,7 +17,7 @@ solution {
     arm(ARM6) {
         number = 3
         position = -1 to 3
-        rotation = 3
+        rotation = 4
         size = 1
     }
     glyph(BONDER) {
@@ -52,12 +52,12 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = -1 to 4
-        rotation = 2
+        position = -2 to 4
+        rotation = 3
     }
     io(INPUT) {
         index = 2
-        position = -2 to 4
+        position = -2 to 3
         rotation = 0
     }
     track {
@@ -65,31 +65,11 @@ solution {
         positions = listOf(0 to 0, -1 to 1, -2 to 2)
     }
     track {
-        position = 0 to 2
-        positions = listOf(0 to 0, -1 to 1)
+        position = 0 to 3
+        positions = listOf(0 to -1, -1 to 0)
     }
     tape {
         parallel(
-        {
-            sequence(3) {
-                wait(6)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                repeat()
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                back()
-                rotateCounterClockwise()
-                drop()
-                forward()
-            }
-        }
-        , 
         {
             sequence(2) {
                 wait(2)
@@ -119,6 +99,25 @@ solution {
                 rotateCounterClockwise()
                 rotateClockwise()
                 rotateClockwise()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(7)
+                grab()
+                rotateCounterClockwise()
+                drop()
+                wait(1)
+                repeat()
+                wait(3)
+                grab()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                back()
+                rotateCounterClockwise()
+                drop()
+                forward()
             }
         }
         )
