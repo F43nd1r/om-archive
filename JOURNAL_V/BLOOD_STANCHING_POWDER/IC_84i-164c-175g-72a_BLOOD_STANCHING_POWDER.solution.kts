@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P087"
-    name = "SUM4 514"
+    name = "SUM4 - 495"
     arm(ARM6) {
         number = 1
         position = -4 to -2
@@ -22,8 +22,8 @@ solution {
     }
     arm(ARM1) {
         number = 4
-        position = 2 to 1
-        rotation = 8
+        position = 1 to 2
+        rotation = 6
         size = 2
     }
     glyph(BONDER) {
@@ -42,13 +42,17 @@ solution {
         position = 0 to 1
         rotation = -1
     }
+    glyph(BONDER) {
+        position = 4 to 1
+        rotation = 1
+    }
     glyph(CALCIFICATION) {
         position = -3 to -1
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = 0 to 3
+        position = 3 to 2
         rotation = 0
     }
     io(OUTPUT) {
@@ -68,7 +72,7 @@ solution {
     }
     track {
         position = 1 to 3
-        positions = listOf(0 to -1, 1 to -2, 2 to -3)
+        positions = listOf(0 to -1, 1 to -2, 1 to -1)
     }
     tape {
         parallel(
@@ -77,18 +81,6 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                grab()
-                rotateClockwise()
-                drop()
-                grab()
-                rotateClockwise()
-                drop()
-                grab()
-                rotateClockwise()
-                drop()
-                grab()
-                rotateClockwise()
-                drop()
                 wait(1)
                 grab()
                 rotateClockwise()
@@ -104,13 +96,20 @@ solution {
                 drop()
                 wait(1)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
+                drop()
+                grab()
+                rotateClockwise()
+                drop()
+                grab()
+                rotateClockwise()
+                drop()
             }
         }
         , 
         {
             sequence(1) {
-                wait(2)
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -141,7 +140,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(14)
+                wait(15)
                 grab()
                 rotateCounterClockwise()
                 pivotCounterClockwise()
@@ -156,34 +155,31 @@ solution {
         , 
         {
             sequence(4) {
-                wait(5)
+                wait(10)
                 grab()
+                back()
+                reset()
+                wait(1)
+                grab()
+                forward()
+                rotateClockwise()
+                back()
+                pivotClockwise()
+                rotateClockwise()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
+                rotateClockwise()
+                pivotCounterClockwise()
+                forward()
+                rotateCounterClockwise()
+                drop()
+                back()
+                grab()
+                rotateClockwise()
                 rotateCounterClockwise()
                 forward()
                 reset()
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                forward()
-                rotateCounterClockwise()
-                pivotClockwise()
-                rotateClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                back()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                drop()
-                back()
-                grab()
-                wait(4)
-                rotateClockwise()
-                rotateCounterClockwise()
-                forward()
-                drop()
-                rotateClockwise()
-                rotateClockwise()
-                rotateClockwise()
             }
         }
         )
