@@ -66,7 +66,6 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                extendTape()
             }
         }
         , 
