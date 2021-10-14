@@ -1,16 +1,16 @@
 
 solution {
     puzzle = "P087"
-    name = "SUM4 - 495"
+    name = "B F"
     arm(ARM6) {
         number = 1
-        position = -4 to -2
+        position = -1 to -3
         rotation = 0
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = -1 to -3
+        position = -4 to -2
         rotation = 0
         size = 1
     }
@@ -77,7 +77,7 @@ solution {
     tape {
         parallel(
         {
-            sequence(2) {
+            sequence(1) {
                 grab()
                 rotateClockwise()
                 drop()
@@ -108,7 +108,7 @@ solution {
         }
         , 
         {
-            sequence(1) {
+            sequence(2) {
                 wait(3)
                 grab()
                 rotateCounterClockwise()
@@ -122,19 +122,8 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                grab()
-                rotateCounterClockwise()
-                drop()
                 wait(1)
-                grab()
-                rotateCounterClockwise()
-                drop()
-                grab()
-                rotateCounterClockwise()
-                drop()
-                grab()
-                rotateCounterClockwise()
-                drop()
+                repeat()
             }
         }
         , 
@@ -146,10 +135,7 @@ solution {
                 pivotCounterClockwise()
                 reset()
                 wait(9)
-                grab()
-                rotateCounterClockwise()
-                pivotCounterClockwise()
-                reset()
+                repeat()
             }
         }
         , 
@@ -166,15 +152,14 @@ solution {
                 back()
                 pivotClockwise()
                 rotateClockwise()
-                rotateCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                rotateClockwise()
                 pivotCounterClockwise()
                 forward()
                 rotateCounterClockwise()
                 drop()
                 back()
+                wait(2)
                 grab()
                 rotateClockwise()
                 rotateCounterClockwise()
