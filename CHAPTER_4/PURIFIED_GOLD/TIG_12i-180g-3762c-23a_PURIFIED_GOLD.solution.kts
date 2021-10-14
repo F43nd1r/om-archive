@@ -1,64 +1,55 @@
 
 solution {
     puzzle = "P036"
-    name = "HMMM"
+    name = "TI 12 (Copy)"
     arm(ARM6) {
         number = 1
-        position = -1 to -1
-        rotation = 1
+        position = -1 to -3
+        rotation = 0
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = -1 to 1
-        rotation = 1
+        position = -1 to -1
+        rotation = 0
         size = 1
     }
     arm(ARM6) {
         number = 3
-        position = 1 to -1
-        rotation = 2
+        position = 1 to -3
+        rotation = 0
         size = 1
     }
     arm(ARM6) {
         number = 4
-        position = 2 to 0
-        rotation = -3
+        position = 2 to -2
+        rotation = 0
         size = 1
     }
     glyph(PURIFICATION) {
-        position = -2 to 0
-        rotation = 6
+        position = -1 to -2
+        rotation = 2
+    }
+    glyph(PURIFICATION) {
+        position = 0 to -4
+        rotation = 0
     }
     glyph(PURIFICATION) {
         position = 1 to -2
-        rotation = 14
-    }
-    glyph(PURIFICATION) {
-        position = 0 to 1
-        rotation = -1
+        rotation = 1
     }
     io(OUTPUT) {
         index = 0
-        position = 2 to -2
+        position = 0 to -2
         rotation = 0
     }
     io(INPUT) {
-        index = 3
-        position = -2 to -1
+        index = 1
+        position = 2 to -1
         rotation = 0
     }
     tape {
         parallel(
-        {
-            sequence(2) {
-                wait(3)
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
         {
             sequence(1) {
                 grab()
@@ -66,6 +57,15 @@ solution {
                 drop()
                 wait(5)
                 extendTape()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(6)
+                grab()
+                rotateCounterClockwise()
+                drop()
             }
         }
         , 
@@ -79,9 +79,9 @@ solution {
         , 
         {
             sequence(3) {
-                wait(6)
+                wait(3)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
                 drop()
             }
         }
