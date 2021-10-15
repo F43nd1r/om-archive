@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P041"
-    name = "NEW SOLUTION 3 (Copy) (Copy)"
+    name = "NEW SOLUTION 3 (Copy) (Copy) (Copy)"
     arm(ARM1) {
         number = 1
         position = -7 to 0
@@ -147,15 +147,27 @@ solution {
                 wait(5)
                 grab()
                 back()
+                wait(1)
+                back()
+                drop()
+                wait(1)
+                back()
+                wait(3)
+                grab()
+                back()
                 pivotClockwise()
                 back()
                 drop()
                 wait(1)
                 back()
                 wait(3)
-                repeat()
-                wait(9)
-                repeat()
+                grab()
+                back()
+                pivotClockwise()
+                back()
+                drop()
+                wait(1)
+                back()
             }
         }
         , 
