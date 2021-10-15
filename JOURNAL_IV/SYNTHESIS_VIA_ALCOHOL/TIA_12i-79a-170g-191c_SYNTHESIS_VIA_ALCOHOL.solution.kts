@@ -1,23 +1,23 @@
 
 solution {
     puzzle = "P071"
-    name = "TI"
-    arm(ARM1) {
+    name = "B TI12 1-6T"
+    arm(VAN_BERLOS_WHEEL) {
         number = 1
+        position = -2 to 3
+        rotation = -3
+        size = 1
+    }
+    arm(ARM1) {
+        number = 2
         position = 4 to -4
         rotation = -3
         size = 3
     }
     arm(ARM6) {
-        number = 2
+        number = 3
         position = 1 to 1
         rotation = 0
-        size = 1
-    }
-    arm(VAN_BERLOS_WHEEL) {
-        number = 3
-        position = -2 to 3
-        rotation = -3
         size = 1
     }
     arm(ARM3) {
@@ -55,15 +55,14 @@ solution {
     tape {
         parallel(
         {
-            sequence(3) {
+            sequence(1) {
                 wait(2)
                 rotateCounterClockwise()
             }
         }
         , 
         {
-            sequence(2) {
-                wait(1)
+            sequence(3) {
                 grab()
                 rotateClockwise()
                 drop()
@@ -72,7 +71,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(4)
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -80,7 +79,7 @@ solution {
         }
         , 
         {
-            sequence(1) {
+            sequence(2) {
                 grab()
                 rotateClockwise()
                 drop()
