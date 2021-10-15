@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P099"
-    name = "NEW SOLUTION 6 (Copy)"
+    name = "TI"
     arm(ARM6) {
         number = 1
         position = 0 to -2
@@ -38,27 +38,27 @@ solution {
         rotation = -5
         size = 1
     }
-    arm(ARM2) {
+    arm(ARM6) {
         number = 7
-        position = -1 to 1
+        position = -2 to 1
         rotation = -1
         size = 1
     }
     arm(ARM6) {
         number = 8
-        position = -4 to 3
+        position = -4 to 4
         rotation = -1
         size = 1
     }
     arm(ARM6) {
         number = 9
-        position = -5 to 1
+        position = -4 to 2
         rotation = -1
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 10
-        position = -6 to 3
+        position = -6 to 4
         rotation = 0
         size = 1
     }
@@ -75,12 +75,20 @@ solution {
         rotation = 6
     }
     glyph(PURIFICATION) {
-        position = -5 to 3
-        rotation = 4
+        position = -3 to 2
+        rotation = 6
     }
     glyph(PURIFICATION) {
-        position = -2 to 1
-        rotation = 7
+        position = -5 to 4
+        rotation = 1
+    }
+    glyph(PURIFICATION) {
+        position = -6 to 3
+        rotation = -1
+    }
+    glyph(PURIFICATION) {
+        position = 0 to -3
+        rotation = 2
     }
     glyph(UNIFICATION) {
         position = 3 to 0
@@ -88,7 +96,7 @@ solution {
     }
     io(OUTPUT) {
         index = 0
-        position = -6 to 2
+        position = -4 to 3
         rotation = 0
     }
     io(INPUT) {
@@ -104,11 +112,37 @@ solution {
     tape {
         parallel(
         {
+            sequence(1) {
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(2) {
+                wait(7)
+                grab()
+                pivotCounterClockwise()
+                pivotClockwise()
+                drop()
+                rotateClockwise()
+            }
+        }
+        , 
+        {
             sequence(3) {
                 wait(2)
                 grab()
                 rotateClockwise()
                 drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(3)
+                rotateCounterClockwise()
             }
         }
         , 
@@ -132,23 +166,19 @@ solution {
         }
         , 
         {
-            sequence(1) {
+            sequence(7) {
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
+                wait(5)
+                extendTape()
             }
         }
         , 
         {
-            sequence(4) {
-                wait(3)
-                rotateCounterClockwise()
-            }
-        }
-        , 
-        {
-            sequence(9) {
-                wait(6)
+            sequence(8) {
+                wait(9)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -157,40 +187,19 @@ solution {
         , 
         {
             sequence(10) {
-                wait(9)
+                wait(3)
                 grab()
                 rotateClockwise()
-                reset()
+                drop()
             }
         }
         , 
         {
-            sequence(8) {
+            sequence(9) {
                 wait(6)
                 grab()
                 rotateClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(7) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                drop()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
-            sequence(2) {
-                wait(3)
-                grab()
-                pivotCounterClockwise()
-                pivotClockwise()
-                drop()
-                rotateClockwise()
             }
         }
         )
