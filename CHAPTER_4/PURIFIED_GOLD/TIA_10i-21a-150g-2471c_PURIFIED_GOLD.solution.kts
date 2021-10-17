@@ -1,83 +1,75 @@
 
 solution {
     puzzle = "P036"
-    name = "TI???"
-    arm(ARM6) {
+    name = "????"
+    arm(ARM2) {
         number = 1
         position = -1 to -1
-        rotation = 2
+        rotation = -10
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = -4 to 1
-        rotation = 2
-        size = 1
-    }
-    arm(ARM1) {
-        number = 3
         position = -2 to 2
-        rotation = 5
+        rotation = -10
         size = 1
     }
-    glyph(PURIFICATION) {
-        position = -1 to 1
-        rotation = 3
-    }
-    glyph(PURIFICATION) {
-        position = -2 to -1
-        rotation = -5
+    arm(ARM6) {
+        number = 3
+        position = -4 to 1
+        rotation = 4
+        size = 1
     }
     glyph(PURIFICATION) {
         position = -4 to 2
-        rotation = 5
+        rotation = -37
+    }
+    glyph(PURIFICATION) {
+        position = -1 to 1
+        rotation = -27
+    }
+    glyph(PURIFICATION) {
+        position = -2 to -1
+        rotation = -23
     }
     io(INPUT) {
         index = 0
-        position = -1 to -2
+        position = -5 to 2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = -1 to 2
-        rotation = 0
-    }
-    io(INPUT) {
-        index = 1
-        position = 0 to -2
-        rotation = 0
-    }
-    io(INPUT) {
-        index = 2
         position = 0 to -1
         rotation = 0
     }
     tape {
         parallel(
         {
-            sequence(1) {
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(2) {
                 wait(3)
                 grab()
-                rotateCounterClockwise()
+                rotateClockwise()
+                wait(1)
                 drop()
             }
         }
         , 
         {
             sequence(3) {
-                wait(6)
                 grab()
-                rotateCounterClockwise()
-                drop()
                 rotateClockwise()
+                drop()
+                wait(3)
+                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(4)
+                grab()
+                rotateClockwise()
+                drop()
                 rotateClockwise()
             }
         }
