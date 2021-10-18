@@ -5,7 +5,7 @@ solution {
     arm(ARM2) {
         number = 1
         position = -1 to -1
-        rotation = -10
+        rotation = -9
         size = 1
     }
     arm(ARM6) {
