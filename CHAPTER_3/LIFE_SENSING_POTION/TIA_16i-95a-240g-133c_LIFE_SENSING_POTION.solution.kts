@@ -1,90 +1,82 @@
 
 solution {
     puzzle = "P030b"
-    name = "NEW SOLUTION 5 (Copy) (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)"
+    name = "NEW SOLUTION 5 (Copy) (Copy) (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)"
     arm(ARM3) {
         number = 1
-        position = 4 to 2
+        position = 3 to 1
         rotation = 5
         size = 2
     }
     arm(ARM3) {
         number = 2
-        position = 3 to 0
-        rotation = 2
-        size = 1
+        position = -2 to 1
+        rotation = -6
+        size = 2
     }
     arm(ARM3) {
         number = 3
-        position = 3 to -1
+        position = 2 to -1
+        rotation = 2
+        size = 1
+    }
+    arm(ARM6) {
+        number = 4
+        position = -4 to 2
+        rotation = 0
+        size = 1
+    }
+    arm(ARM3) {
+        number = 5
+        position = 2 to -2
         rotation = 2
         size = 3
     }
-    arm(ARM3) {
-        number = 4
-        position = -1 to 2
-        rotation = -3
-        size = 2
-    }
-    arm(ARM6) {
-        number = 5
-        position = -3 to 3
-        rotation = 7
-        size = 1
-    }
     glyph(BONDER) {
-        position = 0 to 1
+        position = -1 to 0
         rotation = 1
     }
     glyph(BONDER) {
-        position = 1 to 0
+        position = 0 to -1
         rotation = 0
     }
     glyph(BONDER) {
-        position = 1 to -4
+        position = -4 to 1
+        rotation = 0
+    }
+    glyph(BONDER) {
+        position = -2 to -1
         rotation = -1
     }
     glyph(BONDER) {
-        position = -3 to 2
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = -1 to 0
-        rotation = -1
+        position = -3 to 0
+        rotation = -2
     }
     glyph(CALCIFICATION) {
-        position = 1 to -1
+        position = 1 to 3
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 2 to 4
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = 1 to -3
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = 3 to -5
+        position = -5 to 2
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = 3 to 1
+        position = 2 to 0
         rotation = 8
+    }
+    io(INPUT) {
+        index = 0
+        position = -5 to 3
+        rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 7 to -4
-        rotation = 4
-    }
-    io(INPUT) {
-        index = 0
-        position = -2 to 3
-        rotation = 0
+        position = 2 to -6
+        rotation = 2
     }
     io(INPUT) {
         index = 1
-        position = 4 to 4
+        position = 3 to 3
         rotation = 0
     }
     tape {
@@ -98,27 +90,18 @@ solution {
         }
         , 
         {
-            sequence(4) {
-                wait(16)
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(3) {
+            sequence(5) {
                 wait(4)
                 grab()
-                rotateCounterClockwise()
                 pivotCounterClockwise()
+                rotateCounterClockwise()
                 drop()
                 extendTape()
             }
         }
         , 
         {
-            sequence(2) {
+            sequence(3) {
                 wait(3)
                 grab()
                 rotateCounterClockwise()
@@ -127,10 +110,19 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(9)
+            sequence(2) {
+                wait(1)
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(4)
+                grab()
+                rotateCounterClockwise()
                 drop()
             }
         }
