@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P099"
-    name = "565!"
+    name = "B X S F"
     arm(VAN_BERLOS_WHEEL) {
         number = 1
         position = 4 to -3
@@ -115,7 +115,7 @@ solution {
         parallel(
         {
             sequence(6) {
-                wait(7)
+                wait(4)
                 grab()
                 pivotClockwise()
                 rotateCounterClockwise()
@@ -164,11 +164,11 @@ solution {
         , 
         {
             sequence(7) {
-                wait(10)
+                wait(7)
                 grab()
                 rotateCounterClockwise()
                 pivotClockwise()
-                wait(1)
+                wait(3)
                 rotateClockwise()
                 wait(3)
                 rotateClockwise()
@@ -187,7 +187,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                wait(3)
+                wait(2)
                 rotateCounterClockwise()
                 reset()
             }
@@ -199,7 +199,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
-                wait(2)
+                wait(1)
                 rotateCounterClockwise()
                 reset()
                 wait(3)
@@ -212,7 +212,7 @@ solution {
         , 
         {
             sequence(8) {
-                wait(13)
+                wait(12)
                 grab()
                 rotateCounterClockwise()
                 drop()
