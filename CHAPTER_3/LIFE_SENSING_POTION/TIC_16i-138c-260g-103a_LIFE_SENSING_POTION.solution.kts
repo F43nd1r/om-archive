@@ -48,9 +48,9 @@ solution {
         position = -3 to 2
         rotation = 0
     }
-    glyph(MULTI_BONDER) {
+    glyph(BONDER) {
         position = -1 to 0
-        rotation = 1
+        rotation = -1
     }
     glyph(CALCIFICATION) {
         position = 1 to -1

@@ -26,11 +26,11 @@ solution {
         rotation = -3
         size = 2
     }
-    arm(ARM3) {
+    arm(ARM6) {
         number = 5
-        position = -3 to 1
+        position = -3 to 3
         rotation = 7
-        size = 2
+        size = 1
     }
     glyph(BONDER) {
         position = 0 to 1
@@ -44,9 +44,13 @@ solution {
         position = 1 to -4
         rotation = -1
     }
-    glyph(MULTI_BONDER) {
+    glyph(BONDER) {
+        position = -3 to 2
+        rotation = 0
+    }
+    glyph(BONDER) {
         position = -1 to 0
-        rotation = 1
+        rotation = -1
     }
     glyph(CALCIFICATION) {
         position = 1 to -1
@@ -68,24 +72,19 @@ solution {
         position = 3 to 1
         rotation = 8
     }
-    io(INPUT) {
-        index = 0
-        position = -3 to 2
-        rotation = 0
-    }
     io(OUTPUT) {
         index = 0
         position = 7 to -4
         rotation = 4
     }
     io(INPUT) {
-        index = 1
-        position = 4 to 4
+        index = 0
+        position = -2 to 3
         rotation = 0
     }
     io(INPUT) {
-        index = 2
-        position = -3 to 3
+        index = 1
+        position = 4 to 4
         rotation = 0
     }
     tape {
@@ -108,15 +107,6 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(18)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(3) {
                 wait(4)
                 grab()
@@ -132,6 +122,15 @@ solution {
                 wait(3)
                 grab()
                 rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(9)
+                grab()
+                rotateClockwise()
                 drop()
             }
         }
