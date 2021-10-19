@@ -1,104 +1,97 @@
 
 solution {
     puzzle = "P030b"
-    name = "NO-TRACK I-19"
-    arm(ARM6) {
+    name = "NEW SOLUTION 5 (Copy) (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)"
+    arm(ARM3) {
         number = 1
-        position = -1 to 2
-        rotation = 0
-        size = 1
+        position = 4 to 2
+        rotation = 5
+        size = 2
     }
-    arm(ARM6) {
+    arm(ARM3) {
         number = 2
-        position = -1 to -1
-        rotation = 0
+        position = 3 to 0
+        rotation = 2
         size = 1
     }
-    arm(ARM6) {
+    arm(ARM3) {
         number = 3
-        position = 6 to -4
-        rotation = 1
-        size = 1
+        position = 3 to -1
+        rotation = 2
+        size = 3
     }
-    arm(PISTON) {
+    arm(ARM3) {
         number = 4
-        position = 2 to -2
-        rotation = -9
+        position = -1 to 2
+        rotation = -3
         size = 2
     }
     arm(ARM3) {
         number = 5
-        position = 4 to -3
-        rotation = 6
-        size = 3
-    }
-    arm(ARM3) {
-        number = 6
-        position = 2 to -3
-        rotation = -2
-        size = 3
+        position = -3 to 1
+        rotation = 7
+        size = 2
     }
     glyph(BONDER) {
-        position = -1 to 0
+        position = 0 to 1
         rotation = 1
     }
     glyph(BONDER) {
-        position = 5 to -3
-        rotation = 0
-    }
-    glyph(BONDER) {
-        position = 1 to 2
-        rotation = -1
-    }
-    glyph(BONDER) {
-        position = 4 to 1
-        rotation = 0
-    }
-    glyph(MULTI_BONDER) {
         position = 1 to 0
         rotation = 0
     }
+    glyph(BONDER) {
+        position = 1 to -4
+        rotation = -1
+    }
+    glyph(MULTI_BONDER) {
+        position = -1 to 0
+        rotation = 1
+    }
     glyph(CALCIFICATION) {
-        position = -2 to 2
+        position = 1 to -1
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = -1 to -2
+        position = 2 to 4
         rotation = 0
     }
     glyph(CALCIFICATION) {
-        position = 5 to -4
+        position = 1 to -3
+        rotation = 0
+    }
+    glyph(CALCIFICATION) {
+        position = 3 to -5
         rotation = 0
     }
     glyph(ANIMISMUS) {
-        position = 0 to -2
-        rotation = 0
+        position = 3 to 1
+        rotation = 8
     }
     io(INPUT) {
         index = 0
-        position = -2 to -1
+        position = -3 to 2
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 8 to -5
-        rotation = -5
+        position = 7 to -4
+        rotation = 4
     }
     io(INPUT) {
         index = 1
-        position = 6 to -5
+        position = 4 to 4
         rotation = 0
     }
     io(INPUT) {
         index = 2
-        position = -2 to 3
+        position = -3 to 3
         rotation = 0
     }
     tape {
         parallel(
         {
             sequence(1) {
-                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -106,25 +99,8 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                grab()
-                rotateCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(3) {
-                wait(6)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(9)
+            sequence(4) {
+                wait(16)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -133,6 +109,7 @@ solution {
         , 
         {
             sequence(5) {
+                wait(18)
                 grab()
                 rotateClockwise()
                 drop()
@@ -140,13 +117,22 @@ solution {
         }
         , 
         {
-            sequence(4) {
+            sequence(3) {
+                wait(4)
+                grab()
+                rotateCounterClockwise()
+                pivotCounterClockwise()
+                drop()
+                extendTape()
+            }
+        }
+        , 
+        {
+            sequence(2) {
                 wait(3)
                 grab()
-                retract()
-                reset()
-                wait(1)
-                extendTape()
+                rotateCounterClockwise()
+                drop()
             }
         }
         )
