@@ -8,10 +8,10 @@ solution {
         rotation = 0
         size = 3
     }
-    arm(ARM6) {
+    arm(ARM2) {
         number = 2
         position = -2 to -2
-        rotation = 1
+        rotation = 2
         size = 1
     }
     arm(ARM1) {
@@ -49,7 +49,7 @@ solution {
                 grab()
                 rotateClockwise()
                 drop()
-                wait(2)
+                wait(1)
                 extendTape()
             }
         }
