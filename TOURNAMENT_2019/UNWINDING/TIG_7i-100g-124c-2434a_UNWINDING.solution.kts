@@ -1,45 +1,43 @@
 
 solution {
     puzzle = "w1611998067"
-    name = "BETTER TI"
+    name = "TI"
     arm(ARM6) {
         number = 1
-        position = -4 to 0
+        position = 3 to -5
         rotation = 0
         size = 3
     }
-    arm(ARM2) {
+    arm(ARM6) {
         number = 2
-        position = -2 to -2
-        rotation = 2
-        size = 1
-    }
-    arm(ARM1) {
-        number = 3
-        position = -4 to 1
+        position = 4 to -3
         rotation = 1
         size = 2
     }
     glyph(BONDER) {
-        position = -1 to -2
+        position = 0 to -6
+        rotation = -1
+    }
+    glyph(BONDER) {
+        position = 6 to -7
         rotation = 1
     }
     glyph(BONDER) {
-        position = -2 to 2
-        rotation = -1
+        position = 6 to -4
+        rotation = 1
     }
     glyph(UNBONDER) {
-        position = 0 to -1
-        rotation = 2
+        position = 2 to -7
+        rotation = -1
     }
     io(INPUT) {
         index = 0
-        position = -8 to 4
-        rotation = -5
+        position = -1 to -2
+        rotation = 2
     }
     io(OUTPUT) {
         index = 0
-        position = -2 to -3
+        position = 10 to -5
         rotation = 0
     }
     tape {
@@ -47,7 +45,8 @@ solution {
         {
             sequence(1) {
                 grab()
-                rotateClockwise()
+                rotateCounterClockwise()
+                pivotClockwise()
                 drop()
                 wait(1)
                 extendTape()
@@ -55,17 +54,8 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(3)
-                grab()
-                pivotCounterClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(2) {
-                wait(3)
+                wait(4)
                 grab()
                 rotateCounterClockwise()
                 drop()
