@@ -19,10 +19,6 @@ solution {
         rotation = -1
     }
     glyph(BONDER) {
-        position = 6 to -7
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = 6 to -4
         rotation = 1
     }
