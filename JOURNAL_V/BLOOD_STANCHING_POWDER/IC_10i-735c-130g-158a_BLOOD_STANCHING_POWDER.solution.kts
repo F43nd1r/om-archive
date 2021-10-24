@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P087"
-    name = "NEW SOLUTION 2"
+    name = "NEW SOLUTION 2 (Copy)"
     arm(ARM2) {
         number = 1
         position = 3 to 0
@@ -16,26 +16,20 @@ solution {
     }
     arm(ARM1) {
         number = 3
-        position = 1 to 7
-        rotation = 1
-        size = 2
-    }
-    arm(ARM1) {
-        number = 4
-        position = 8 to 2
-        rotation = 2
-        size = 1
+        position = 2 to 7
+        rotation = -5
+        size = 3
     }
     glyph(BONDER) {
         position = 5 to -3
         rotation = 1
     }
     glyph(BONDER) {
-        position = 5 to 0
+        position = 6 to 1
         rotation = 1
     }
     glyph(BONDER) {
-        position = 6 to 1
+        position = 5 to 0
         rotation = 1
     }
     glyph(BONDER) {
@@ -49,7 +43,7 @@ solution {
     io(OUTPUT) {
         index = 0
         position = 1 to -1
-        rotation = 1
+        rotation = 7
     }
     io(INPUT) {
         index = 1
@@ -60,6 +54,7 @@ solution {
         parallel(
         {
             sequence(2) {
+                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -70,7 +65,7 @@ solution {
         , 
         {
             sequence(1) {
-                wait(2)
+                wait(5)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -79,19 +74,11 @@ solution {
         , 
         {
             sequence(3) {
+                wait(7)
                 grab()
-                rotateCounterClockwise()
+                pivotCounterClockwise()
                 drop()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(2)
-                grab()
                 rotateCounterClockwise()
-                drop()
-                rotateClockwise()
             }
         }
         )
