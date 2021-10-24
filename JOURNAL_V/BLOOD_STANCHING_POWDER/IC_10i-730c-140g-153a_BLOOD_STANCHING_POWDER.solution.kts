@@ -1,60 +1,55 @@
 
 solution {
     puzzle = "P087"
-    name = "NEW SOLUTION 2 (Copy)"
+    name = "NEW SOLUTION 2"
     arm(ARM2) {
         number = 1
-        position = 3 to 0
-        rotation = 0
+        position = -2 to -2
+        rotation = -1
         size = 1
     }
     arm(ARM6) {
         number = 2
-        position = 4 to -2
-        rotation = 1
+        position = -3 to -3
+        rotation = 0
         size = 1
     }
     arm(ARM1) {
         number = 3
-        position = 2 to 7
-        rotation = -5
+        position = 4 to -1
+        rotation = -6
         size = 3
     }
     glyph(BONDER) {
-        position = 5 to -3
-        rotation = 1
+        position = -3 to -4
+        rotation = 0
     }
     glyph(BONDER) {
-        position = 6 to 1
-        rotation = 1
+        position = 1 to 0
+        rotation = -2
     }
-    glyph(BONDER) {
-        position = 5 to 0
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = 2 to 3
-        rotation = 1
+    glyph(MULTI_BONDER) {
+        position = 1 to -4
+        rotation = -1
     }
     glyph(CALCIFICATION) {
-        position = 4 to -1
+        position = -2 to -3
         rotation = 0
     }
     io(OUTPUT) {
         index = 0
-        position = 1 to -1
-        rotation = 7
+        position = -3 to 2
+        rotation = 2
     }
     io(INPUT) {
         index = 1
-        position = 4 to -3
+        position = -4 to -3
         rotation = 0
     }
     tape {
         parallel(
         {
             sequence(2) {
-                wait(3)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -65,7 +60,7 @@ solution {
         , 
         {
             sequence(1) {
-                wait(5)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -74,7 +69,7 @@ solution {
         , 
         {
             sequence(3) {
-                wait(7)
+                wait(4)
                 grab()
                 pivotCounterClockwise()
                 drop()
