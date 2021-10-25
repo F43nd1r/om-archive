@@ -124,7 +124,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(4)
+                wait(3)
                 extendTape()
             }
         }
@@ -139,7 +139,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(20)
+                wait(18)
                 grab()
                 rotateClockwise()
                 drop()
@@ -158,7 +158,7 @@ solution {
         , 
         {
             sequence(5) {
-                wait(38)
+                wait(34)
                 grab()
                 rotateClockwise()
                 drop()
@@ -167,7 +167,7 @@ solution {
         , 
         {
             sequence(7) {
-                wait(12)
+                wait(11)
                 grab()
                 pivotCounterClockwise()
                 retract()
