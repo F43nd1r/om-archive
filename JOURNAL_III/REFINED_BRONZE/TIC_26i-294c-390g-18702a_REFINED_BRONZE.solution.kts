@@ -1,117 +1,117 @@
 
 solution {
     puzzle = "P067"
-    name = "TI??"
+    name = "TI?? (Copy)"
     arm(ARM6) {
         number = 1
-        position = -5 to 1
+        position = -3 to 3
         rotation = 0
         size = 3
     }
     arm(ARM3) {
         number = 2
-        position = 0 to -4
+        position = 2 to -2
         rotation = 2
         size = 2
     }
     arm(ARM3) {
         number = 3
-        position = -1 to -2
+        position = 1 to 0
         rotation = -4
         size = 1
     }
-    arm(ARM1) {
+    arm(ARM6) {
         number = 4
-        position = 1 to 0
+        position = 0 to 3
         rotation = 2
-        size = 2
+        size = 1
     }
     arm(ARM6) {
         number = 5
-        position = -1 to 6
+        position = 0 to 8
         rotation = -1
         size = 3
     }
     arm(ARM6) {
         number = 6
-        position = -4 to 12
+        position = -3 to 14
         rotation = -1
         size = 3
     }
     arm(ARM6) {
         number = 7
-        position = 1 to -2
+        position = 3 to 0
         rotation = -1
         size = 1
     }
     arm(PISTON) {
         number = 8
-        position = 0 to -3
+        position = 2 to -1
         rotation = 0
         size = 2
     }
     glyph(BONDER) {
-        position = -9 to 2
+        position = -7 to 4
         rotation = 1
     }
     glyph(BONDER) {
-        position = 1 to -1
+        position = 3 to 1
         rotation = -1
     }
     glyph(BONDER) {
-        position = 2 to -3
+        position = 4 to -1
         rotation = 0
     }
     glyph(BONDER) {
-        position = 2 to 2
+        position = 3 to 4
         rotation = 1
     }
     glyph(MULTI_BONDER) {
-        position = 5 to -2
+        position = 7 to 0
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = -5 to 3
-        rotation = 1
-    }
-    glyph(UNBONDER) {
-        position = -6 to -2
+        position = -4 to 0
         rotation = 0
     }
     glyph(UNBONDER) {
-        position = -2 to 3
+        position = 6 to -1
+        rotation = 0
+    }
+    glyph(UNBONDER) {
+        position = -6 to 5
+        rotation = 1
+    }
+    glyph(UNBONDER) {
+        position = -1 to 5
         rotation = -1
     }
     glyph(UNBONDER) {
-        position = 3 to 2
+        position = 4 to 4
         rotation = 1
-    }
-    glyph(UNBONDER) {
-        position = 4 to -3
-        rotation = 0
     }
     glyph(PROJECTION) {
-        position = -1 to 0
-        rotation = -2
+        position = 0 to 2
+        rotation = -1
     }
     io(INFINITE) {
         index = 0
-        position = 6 to -2
+        position = 8 to 0
         rotation = 0
     }
     io(INPUT) {
         index = 0
-        position = -3 to 1
+        position = -4 to 6
         rotation = 0
     }
     io(OUTPUT) {
         index = 1
-        position = -4 to 6
+        position = -3 to 8
         rotation = -1
     }
     io(INPUT) {
         index = 1
-        position = 2 to 6
+        position = 3 to 8
         rotation = 3
     }
     tape {
@@ -123,16 +123,6 @@ solution {
                 pivotClockwise()
                 drop()
                 extendTape()
-            }
-        }
-        , 
-        {
-            sequence(4) {
-                wait(25)
-                grab()
-                rotateCounterClockwise()
-                drop()
-                rotateClockwise()
             }
         }
         , 
@@ -155,26 +145,8 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(23)
-                grab()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
-            sequence(6) {
-                wait(25)
-                grab()
-                pivotClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(3) {
-                wait(23)
+                wait(18)
                 grab()
                 rotateClockwise()
                 drop()
@@ -183,9 +155,36 @@ solution {
         , 
         {
             sequence(2) {
-                wait(23)
+                wait(18)
                 grab()
                 rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(4) {
+                wait(10)
+                grab()
+                rotateCounterClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                wait(8)
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(6) {
+                wait(10)
+                grab()
+                pivotClockwise()
                 drop()
             }
         }
