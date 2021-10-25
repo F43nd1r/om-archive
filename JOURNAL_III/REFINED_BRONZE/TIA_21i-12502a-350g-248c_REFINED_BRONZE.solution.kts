@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P067"
-    name = "TI?? (Copy) (Copy) (Copy)"
+    name = "TI  21I+SECONDARIES"
     arm(ARM6) {
         number = 1
         position = 13 to -14
@@ -29,13 +29,13 @@ solution {
     arm(ARM1) {
         number = 5
         position = 16 to -12
-        rotation = -6
+        rotation = -8
         size = 1
     }
     arm(ARM3) {
         number = 6
         position = 13 to -12
-        rotation = 1
+        rotation = 0
         size = 1
     }
     glyph(BONDER) {
@@ -112,41 +112,29 @@ solution {
         position = 18 to -10
         rotation = 0
     }
-    io(INPUT) {
-        index = 1
-        position = 16 to -15
-        rotation = -2
-    }
     io(OUTPUT) {
         index = 1
         position = 9 to -8
         rotation = -3
     }
+    io(INPUT) {
+        index = 1
+        position = 16 to -15
+        rotation = -2
+    }
     tape {
         parallel(
         {
             sequence(2) {
-                wait(10)
                 grab()
                 rotateClockwise()
-                drop()
-                wait(2)
-                extendTape()
-            }
-        }
-        , 
-        {
-            sequence(1) {
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
                 drop()
             }
         }
         , 
         {
             sequence(4) {
-                wait(1)
+                wait(2)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -154,19 +142,8 @@ solution {
         }
         , 
         {
-            sequence(5) {
-                wait(3)
-                grab()
-                rotateClockwise()
-                pivotCounterClockwise()
-                drop()
-                rotateClockwise()
-            }
-        }
-        , 
-        {
             sequence(6) {
-                wait(3)
+                wait(11)
                 grab()
                 rotateClockwise()
                 drop()
@@ -175,9 +152,29 @@ solution {
         , 
         {
             sequence(3) {
-                wait(12)
+                wait(2)
                 grab()
                 pivotClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(5) {
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
+                drop()
+                rotateClockwise()
+            }
+        }
+        , 
+        {
+            sequence(1) {
+                wait(8)
+                grab()
+                rotateClockwise()
+                pivotCounterClockwise()
                 drop()
             }
         }
