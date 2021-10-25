@@ -1,17 +1,17 @@
 
 solution {
     puzzle = "P067"
-    name = "TI"
+    name = "TI (Copy)"
     arm(ARM6) {
         number = 1
-        position = -9 to 5
+        position = -9 to 2
         rotation = 3
         size = 3
     }
     arm(ARM3) {
         number = 2
-        position = -7 to 3
-        rotation = 6
+        position = -7 to 2
+        rotation = 4
         size = 1
     }
     arm(ARM6) {
@@ -51,7 +51,7 @@ solution {
         rotation = 4
     }
     glyph(BONDER) {
-        position = -10 to 9
+        position = -11 to 6
         rotation = 3
     }
     glyph(MULTI_BONDER) {
@@ -67,16 +67,16 @@ solution {
         rotation = 1
     }
     glyph(UNBONDER) {
-        position = -8 to 8
-        rotation = 3
+        position = 1 to 3
+        rotation = 0
     }
     glyph(UNBONDER) {
-        position = -12 to 8
+        position = -12 to 5
         rotation = 2
     }
     glyph(UNBONDER) {
-        position = 1 to 3
-        rotation = 0
+        position = -9 to 5
+        rotation = 3
     }
     glyph(CALCIFICATION) {
         position = 2 to -6
@@ -103,7 +103,7 @@ solution {
     }
     io(INPUT) {
         index = 1
-        position = -13 to 6
+        position = -13 to 3
         rotation = 4
     }
     tape {
@@ -145,22 +145,22 @@ solution {
         }
         , 
         {
-            sequence(2) {
-                wait(8)
+            sequence(1) {
+                wait(10)
                 grab()
-                drop()
+                pivotCounterClockwise()
                 rotateClockwise()
+                drop()
+                extendTape()
             }
         }
         , 
         {
-            sequence(1) {
-                wait(5)
+            sequence(2) {
+                wait(13)
                 grab()
-                rotateClockwise()
-                pivotCounterClockwise()
                 drop()
-                extendTape()
+                rotateClockwise()
             }
         }
         )
