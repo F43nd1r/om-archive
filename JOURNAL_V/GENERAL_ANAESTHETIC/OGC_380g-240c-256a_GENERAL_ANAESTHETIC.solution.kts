@@ -52,8 +52,8 @@ solution {
     }
     arm(ARM1) {
         number = 9
-        position = 1 to 6
-        rotation = 0
+        position = 4 to 6
+        rotation = -1
         size = 3
     }
     glyph(BONDER) {
@@ -124,7 +124,7 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
-                wait(5)
+                wait(4)
                 extendTape()
             }
         }
@@ -149,7 +149,7 @@ solution {
         , 
         {
             sequence(4) {
-                wait(13)
+                wait(12)
                 grab()
                 rotateClockwise()
                 drop()
@@ -197,12 +197,11 @@ solution {
         , 
         {
             sequence(9) {
-                wait(8)
+                wait(9)
                 grab()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
-                pivotCounterClockwise()
                 rotateClockwise()
+                pivotCounterClockwise()
+                pivotCounterClockwise()
                 drop()
                 rotateCounterClockwise()
             }
