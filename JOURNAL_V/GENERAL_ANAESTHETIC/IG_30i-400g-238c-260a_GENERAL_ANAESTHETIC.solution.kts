@@ -14,11 +14,11 @@ solution {
         rotation = 3
         size = 1
     }
-    arm(ARM3) {
+    arm(ARM6) {
         number = 3
-        position = 13 to -8
+        position = 12 to -7
         rotation = 0
-        size = 3
+        size = 2
     }
     arm(ARM6) {
         number = 4
@@ -138,16 +138,6 @@ solution {
         }
         , 
         {
-            sequence(3) {
-                wait(2)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
-            }
-        }
-        , 
-        {
             sequence(4) {
                 wait(20)
                 grab()
@@ -198,6 +188,15 @@ solution {
         {
             sequence(9) {
                 wait(11)
+                grab()
+                rotateClockwise()
+                drop()
+            }
+        }
+        , 
+        {
+            sequence(3) {
+                wait(3)
                 grab()
                 rotateClockwise()
                 drop()
