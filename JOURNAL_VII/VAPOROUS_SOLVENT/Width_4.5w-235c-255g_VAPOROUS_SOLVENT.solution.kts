@@ -2,7 +2,7 @@
 solution {
     puzzle = "P098"
     name = "W"
-    arm(PISTON) {
+    arm(ARM1) {
         number = 1
         position = 4 to 0
         rotation = 1
@@ -16,7 +16,7 @@ solution {
     }
     arm(ARM1) {
         number = 3
-        position = -2 to 0
+        position = -1 to 0
         rotation = 0
         size = 3
     }
@@ -38,14 +38,8 @@ solution {
         rotation = -1
         size = 2
     }
-    arm(ARM1) {
-        number = 7
-        position = 4 to 1
-        rotation = 3
-        size = 3
-    }
     arm(VAN_BERLOS_WHEEL) {
-        number = 8
+        number = 7
         position = -4 to -4
         rotation = -1
         size = 1
@@ -67,8 +61,8 @@ solution {
         rotation = -1
     }
     glyph(PURIFICATION) {
-        position = 2 to 3
-        rotation = 3
+        position = 3 to 2
+        rotation = 2
     }
     glyph(EQUILIBRIUM) {
         position = 0 to 2
@@ -76,10 +70,6 @@ solution {
     }
     glyph(EQUILIBRIUM) {
         position = -1 to 1
-        rotation = 0
-    }
-    glyph(EQUILIBRIUM) {
-        position = -1 to 0
         rotation = 0
     }
     glyph(EQUILIBRIUM) {
@@ -134,6 +124,22 @@ solution {
         position = 2 to 4
         rotation = 0
     }
+    glyph(EQUILIBRIUM) {
+        position = 4 to 1
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 1 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = 0 to -2
+        rotation = 0
+    }
+    glyph(EQUILIBRIUM) {
+        position = -1 to -2
+        rotation = 0
+    }
     io(INPUT) {
         index = 0
         position = -2 to -4
@@ -151,34 +157,14 @@ solution {
     }
     track {
         position = -3 to -1
-        positions = listOf(0 to -1, 0 to 0, 1 to 0, 1 to 1)
+        positions = listOf(0 to -1, 0 to 0, 1 to 0, 1 to 1, 2 to 1)
     }
     track {
-        position = 4 to 1
+        position = 4 to 0
         positions = listOf(0 to 0, 1 to 0)
     }
     tape {
         parallel(
-        {
-            sequence(1) {
-                wait(2)
-                grab()
-                rotateCounterClockwise()
-                extend()
-                drop()
-                retract()
-                grab()
-                rotateCounterClockwise()
-                extend()
-                drop()
-                retract()
-                rotateClockwise()
-                rotateClockwise()
-                wait(25)
-                extendTape()
-            }
-        }
-        , 
         {
             sequence(2) {
                 grab()
@@ -239,9 +225,24 @@ solution {
         }
         , 
         {
+            sequence(7) {
+                wait(6)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                wait(11)
+                rotateCounterClockwise()
+                wait(12)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+                rotateCounterClockwise()
+            }
+        }
+        , 
+        {
             sequence(3) {
-                wait(10)
+                wait(9)
                 grab()
+                back()
                 back()
                 wait(2)
                 back()
@@ -257,30 +258,24 @@ solution {
                 back()
                 forward()
                 forward()
+                forward()
                 drop()
             }
         }
         , 
         {
-            sequence(7) {
-                wait(43)
+            sequence(1) {
+                wait(2)
                 grab()
+                rotateCounterClockwise()
                 forward()
+                drop()
+                back()
+                grab()
+                rotateCounterClockwise()
                 reset()
-            }
-        }
-        , 
-        {
-            sequence(8) {
-                wait(6)
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                wait(11)
-                rotateCounterClockwise()
-                wait(12)
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                rotateCounterClockwise()
+                wait(29)
+                extendTape()
             }
         }
         )
