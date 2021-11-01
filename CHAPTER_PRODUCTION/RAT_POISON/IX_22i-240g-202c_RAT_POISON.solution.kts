@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P074"
-    name = "24I"
+    name = "22I"
     arm(ARM6) {
         number = 1
         position = 0 to 1
@@ -34,9 +34,9 @@ solution {
     }
     arm(ARM1) {
         number = 6
-        position = 1 to -2
-        rotation = 1
-        size = 2
+        position = 2 to -1
+        rotation = 2
+        size = 1
     }
     glyph(BONDER) {
         position = 0 to -1
@@ -77,7 +77,7 @@ solution {
         positions = listOf(0 to 0, 1 to 0)
     }
     track {
-        position = 2 to -3
+        position = 2 to -2
         positions = listOf(0 to 0, 0 to 1, -1 to 1, -1 to 0)
     }
     conduit {
@@ -138,17 +138,17 @@ solution {
                 grab()
                 rotateCounterClockwise()
                 drop()
+                wait(3)
+                extendTape()
             }
         }
         , 
         {
             sequence(6) {
-                wait(34)
+                wait(40)
                 grab()
-                forward()
+                back()
                 drop()
-                back()
-                back()
             }
         }
         )
