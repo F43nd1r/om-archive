@@ -61,23 +61,11 @@ solution {
         rotation = 1
     }
     glyph(BONDER) {
-        position = 2 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
-        position = 0 to -2
-        rotation = 1
-    }
-    glyph(BONDER) {
         position = 1 to -1
         rotation = 3
     }
     glyph(BONDER) {
         position = 0 to -1
-        rotation = 2
-    }
-    glyph(BONDER) {
-        position = 0 to -2
         rotation = 2
     }
     glyph(BONDER) {
@@ -87,6 +75,18 @@ solution {
     glyph(BONDER) {
         position = 0 to -2
         rotation = 0
+    }
+    glyph(BONDER) {
+        position = 0 to -2
+        rotation = 1
+    }
+    glyph(BONDER) {
+        position = 0 to -2
+        rotation = 2
+    }
+    glyph(BONDER) {
+        position = 2 to -2
+        rotation = 1
     }
     glyph(BONDER) {
         position = 1 to -2
@@ -142,10 +142,6 @@ solution {
     }
     glyph(CALCIFICATION) {
         position = 0 to -1
-        rotation = 0
-    }
-    glyph(CALCIFICATION) {
-        position = 0 to -2
         rotation = 0
     }
     glyph(CALCIFICATION) {
@@ -217,10 +213,6 @@ solution {
         rotation = 2
     }
     glyph(DUPLICATION) {
-        position = 0 to -1
-        rotation = -2
-    }
-    glyph(DUPLICATION) {
         position = -1 to 0
         rotation = -2
     }
@@ -230,15 +222,19 @@ solution {
     }
     glyph(DUPLICATION) {
         position = 2 to -3
-        rotation = 1
-    }
-    glyph(DUPLICATION) {
-        position = 2 to -3
         rotation = 2
     }
     glyph(DUPLICATION) {
         position = 1 to -2
         rotation = 2
+    }
+    glyph(DUPLICATION) {
+        position = 0 to -1
+        rotation = -2
+    }
+    glyph(DUPLICATION) {
+        position = 2 to -3
+        rotation = 1
     }
     io(INPUT) {
         index = 0
@@ -280,32 +276,28 @@ solution {
                 drop()
                 retract()
                 rotateClockwise()
-                back()
-                back()
-                back()
-                back()
-                back()
-                back()
-                extend()
-                extend()
-                grab()
-                retract()
-                drop()
-                retract()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
-                forward()
                 grab()
                 rotateCounterClockwise()
+                drop()
+                rotateClockwise()
+                back()
+                back()
+                back()
+                back()
+                back()
+                back()
                 extend()
+                extend()
+                grab()
+                retract()
                 pivotCounterClockwise()
                 drop()
                 retract()
-                rotateClockwise()
-                back()
+                forward()
+                forward()
+                forward()
+                forward()
+                forward()
                 extend()
                 grab()
                 pivotClockwise()
@@ -366,8 +358,8 @@ solution {
                 rotateCounterClockwise()
                 rotateCounterClockwise()
                 grab()
-                back()
                 rotateClockwise()
+                back()
                 drop()
                 rotateCounterClockwise()
                 rotateCounterClockwise()
