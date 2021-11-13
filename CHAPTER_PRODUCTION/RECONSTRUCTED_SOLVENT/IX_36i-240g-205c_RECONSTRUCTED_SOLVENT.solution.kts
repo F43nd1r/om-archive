@@ -1,7 +1,7 @@
 
 solution {
     puzzle = "P084"
-    name = "NEW SOLUTION 1 (Copy) (Copy)"
+    name = "36I"
     arm(ARM6) {
         number = 1
         position = 8 to 4
@@ -71,6 +71,7 @@ solution {
         parallel(
         {
             sequence(3) {
+                wait(1)
                 grab()
                 rotateCounterClockwise()
                 drop()
@@ -79,14 +80,14 @@ solution {
         , 
         {
             sequence(4) {
-                wait(3)
+                wait(4)
                 grab()
                 extend()
                 retract()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
                 pivotCounterClockwise()
-                wait(12)
+                wait(4)
                 extend()
                 retract()
                 retract()
@@ -96,34 +97,29 @@ solution {
         , 
         {
             sequence(1) {
-                wait(3)
                 grab()
-                rotateCounterClockwise()
-                drop()
-                wait(2)
-                grab()
-                rotateCounterClockwise()
+                rotateClockwise()
+                rotateClockwise()
                 drop()
                 grab()
                 rotateCounterClockwise()
-                wait(2)
+                drop()
+                grab()
                 rotateCounterClockwise()
-                wait(2)
+                rotateCounterClockwise()
+                rotateCounterClockwise()
                 rotateCounterClockwise()
                 back()
                 drop()
                 forward()
-                wait(2)
-                grab()
-                rotateClockwise()
-                rotateClockwise()
-                drop()
+                wait(1)
+                extendTape()
             }
         }
         , 
         {
             sequence(5) {
-                wait(20)
+                wait(13)
                 grab()
                 retract()
                 reset()
@@ -132,15 +128,9 @@ solution {
         , 
         {
             sequence(2) {
-                wait(1)
+                wait(2)
                 rotateCounterClockwise()
-                wait(11)
-                rotateCounterClockwise()
-                rotateCounterClockwise()
-                wait(1)
-                rotateClockwise()
-                rotateClockwise()
-                wait(1)
+                wait(9)
                 rotateCounterClockwise()
                 rotateCounterClockwise()
             }
